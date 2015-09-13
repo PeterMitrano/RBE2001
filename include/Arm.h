@@ -8,6 +8,9 @@
 class Arm {
   public:
 
+    /* initializes servos and other stuff. called by main arduino setup */
+    void setup();
+
     /* raise arm all the way to the top */
     void lower();
 
@@ -25,12 +28,12 @@ class Arm {
 
   private:
 
-    /* convert position enum to servo value */
-    void positionToServoValue();
+    /* convert position enum to servo value. return value is from 0 to 180 */
+    int positionToServoValue(Position p);
 
     enum Position {LOW, HIGH, TRAVEL};
 
-
+    int motorPin = -1;
 
     Gripper gripper;
     Servo motor;

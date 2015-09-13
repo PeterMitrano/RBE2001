@@ -9,6 +9,12 @@
 class Robot {
   public:
 
+    /* setup servos and stuff. called by main setup */
+    void setup();
+
+    /* uses line sensor to follow line */
+    void follow_line();
+
     /* drives until line inifitely */
     void driveUntilLine();
 
@@ -31,5 +37,7 @@ class Robot {
     Servo leftWheel;
     Servo rightWheel;
     LineSensor lineSensor;
+
+    reactor_tube_limit_pin = -1;
     Arm arm;
 }
