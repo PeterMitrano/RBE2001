@@ -8,6 +8,22 @@ LineSensor::setup(){
   digitalWrite(LED_PIN,HIGH);
 }
 
+void LineSensor::setMin(int min){
+  min_intensity = min;
+}
+
+void LineSensor::setMax(int max){
+  max_intensity = max;
+}
+
+void LineSensor::calculateThreshold(){
+  line_threshold = min + THRESHOLD_PERCENT * (max - min);
+}
+
+int LineSensor::rawCenterSensor(){
+  return analogRead(PIN0+3);
+}
+
 int LineSensor::avgSet(int offset){
   int sum;
   for (int i=g_PIN0 + offset;i<4;i++){
@@ -25,7 +41,19 @@ int LineSensor::avgRightIntensity(){
 }
 
 bool LineSensor::atIntersection(){
+ return rightSideOnLine() && leftSideOnLine();
+}
 
+bool LineSensor::onLine(){
+  return rightSideOnLine() || leftSideOnLine();
+}
+
+bool LineSensor::rightSideOnLine(){
+  return avgRightIntensity() < line_threshold;
+}
+
+bool LineSensor::rightSideOnLine(){
+  return avgLeftIntensity() < line_threshold;
 }
 
 int[8] LineSensor::readRaw(){
