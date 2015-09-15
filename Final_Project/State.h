@@ -3,6 +3,8 @@
 class State {
   public:
 
+    State();
+
     /* I am before s */
     void before(State s);
 
@@ -12,10 +14,14 @@ class State {
     bool isAfter(State s);
     bool isBefore(State s);
 
+    bool operator==(const State& s2);
+    bool operator!=(const State& s2);
+
   private:
 
-    /* private constructor
-     * this is because states are static and can't be created by anyone else
-     */
-    void State();
-}
+    static int GLOBAL_ID;
+    State* beforeState;
+    State* afterState;
+    int id;
+
+};

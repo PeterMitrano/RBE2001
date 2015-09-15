@@ -2,16 +2,16 @@
  *  functions here control the robot as a whole, and should be called from main.ino
  */
 
-#include <Arm.h>
-#include <LineSensor.h>
-#include <Servo.h>
+#include "Arm.h"
+#include "State.h"
+#include "LineSensor.h"
+#include <Arduino.h>
 
 class Robot {
   public:
 
     /* setup servos and stuff. called by main setup */
     void setup();
-    void drawWhip(); //call setup
 
     /* scans back and forth to gather intensity line sensor data */
     void calibrateLineSensor();
@@ -42,11 +42,14 @@ class Robot {
 
   private:
 
-    /* state machin functions */
-    void is(State s):
-    void isNot(State s);
-    void isDone(State s);
-    void isNotDone(State s);
+    /* state machine functions */
+    bool is(State s);
+    bool isNot(State s);
+    bool isDone(State s);
+    bool isNotDone(State s);
+
+    /* actual states */
+    const static State SETUP, CALIBRATING;
 
     /* rotate right at fixed power until right line sensor detects line */
     void rotateRightUntilLine();
@@ -73,14 +76,16 @@ class Robot {
 
     Servo leftWheel;
     Servo rightWheel;
+    const static int leftWheelPin = -1;
+    const static int rightWheelPin = -1;
+    
     LineSensor lineSensor;
-
-    const static int reactor_tube_limit_pin = -1;
     Arm arm;
-
+    
+    const static int reactor_tube_limit_pin = -1;
     const static int rotateSpeed = -1;
     const static int travelSpeed = -1;
 
     /* used to track calibration */
-    unsigned long calibrate_time = 0;
-}
+    unsigned long calibrationTime = 0;
+};

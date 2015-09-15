@@ -1,42 +1,42 @@
-#include <Arm.h>
+#include "Arm.h"
 
 void Arm::setup(){
-  motor.attachPin(motorPin);
+  motor.attach(motorPin);
 
   gripper.setup();
 }
 
 void Arm::lower(){
-  int val = positionToServoValue(Position.LOW);
-  motor.set(val);
+  int val = positionToServoValue(LOW_P);
+  motor.write(val);
 }
 
 
 void Arm::raise(){
-  int val = positionToServoValue(Position.HIGH);
-  motor.set(val);
+  int val = positionToServoValue(HIGH_P);
+  motor.write(val);
 }
 
 void Arm::setToTravelPosition(){
-  int val = positionToServoValue(Position.TRAVEL);
-  motor.set(val);
+  int val = positionToServoValue(TRAVEL_P);
+  motor.write(val);
 }
 
-int positionToServoValue(Position p){
+int Arm::positionToServoValue(Position p){
   switch(p){
-    case LOW:
+    case LOW_P:
       return -1;
-    case TRAVEL:
+    case TRAVEL_P:
       return -2;
-    case HIGH:
+    case HIGH_P:
       return -3;
   }
 }
 
 void Arm::openGripper(){
-  gripper.open();
+  gripper.opn();
 }
 
 void Arm::closeGripper(){
-  gripper.close();
+  gripper.cls();
 }

@@ -1,27 +1,29 @@
-#include <Gripper.h>
+#include "Gripper.h"
+#include <Arduino.h>
 
 void Gripper::setup(){
-  motor.attachPin(motorPin);
+  motor.attach(motorPin);
+  pinMode(rodSensorPin,INPUT_PULLUP);
 }
 
-bool grabRod(){
-  close();
+bool Gripper::grabRod(){
+  cls();
   return hasRod();
 }
 
-bool releaseRod(){
-  open();
+bool Gripper::releaseRod(){
+  opn();
   return !hasRod();
 }
 
-void Gripper::close(){
-  motor.set(0);
+void Gripper::cls(){
+  motor.write(0);
 }
 
-void Gripper::open(){
-  motor.set(180);
+void Gripper::opn(){
+  motor.write(180);
 }
 
-bool hasRod(){
-  return !digitalRead(rodSensorPin);
+bool Gripper::hasRod(){
+  return digitalRead(rodSensorPin);
 }

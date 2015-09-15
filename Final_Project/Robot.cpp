@@ -1,19 +1,18 @@
-#include <Robot.h>
+#include "Robot.h"
 
 void Robot::setup(){
-  leftWheel.attachPin(leftWheelPin);
-  rightWheel.attatchPin(rightWheelPin);
+  leftWheel.attach(leftWheelPin);
+  rightWheel.attach(rightWheelPin);
 
   lineSensor.setup();
   arm.setup();
 
-  state = State.SETUP;
+  state = Robot::SETUP;
 }
-void drawWhip(){setup();}
 
 void Robot::calibrateLineSensor(){
-  if (Robot.isNot(State.CALIBRATING)){
-    calibration_time = millis();
+  if (isNot(Robot::CALIBRATING)){
+    calibrationTime = millis();
   }
 
   int dt = 0;
@@ -21,7 +20,7 @@ void Robot::calibrateLineSensor(){
   int value;
 
   //rotate to right then left for 2s while scanning for min/max
-  if ((dt = (millis() - calibration_time)) < 2000){
+  if ((dt = (millis() - calibrationTime)) < 2000){
     //grab the center sensor to calibrate
     value = lineSensor.rawCenterSensor();
 
@@ -45,7 +44,7 @@ void Robot::calibrateLineSensor(){
   //set the line sensor parameters
   lineSensor.setMin(minValue);
   lineSensor.setMax(maxValue);
-  lineSensor.calculateLineThreshold();
+  lineSensor.calculateThreshold();
 
   //find the line again
   rotateRightUntilLine();
@@ -60,7 +59,7 @@ bool Robot::driveUntilLine(unsigned long timeout){
   unsigned long t0 = millis();
 
   while ((!infinite && (millis() - t0 < timeout)) || !lineSensor.atIntersection()){
-    follow_line();
+    followLine();
   }
 
   return (infinite || (millis() - t0 < timeout));
@@ -70,7 +69,7 @@ void Robot::driveUntilLine(){
   driveUntilLine(0);
 }
 
-void Robot::driveUntilReactorTube(unsigned long timeout){
+bool Robot::driveUntilReactorTube(unsigned long timeout){
   bool infinite = false;
   if (timeout == 0){
     infinite = true;
@@ -78,15 +77,15 @@ void Robot::driveUntilReactorTube(unsigned long timeout){
 
   unsigned long t0=millis();
   while ((!infinite && (millis() - t0 < timeout)) || !digitalRead(reactor_tube_limit_pin)){
-    follow_line();
+    followLine();
   }
 
   return (infinite || (millis() - t0 < timeout));
 }
 
 void Robot::followLine(){
-  int leftPower = (int)(lineSensor.avgLeftIntensity() * tavelSpeed);
-  int rightPower = lineSensor.avgRightIntensity() * tavelSpeed;
+  int leftPower = (int)(lineSensor.avgLeftIntensity() * travelSpeed);
+  int rightPower = lineSensor.avgRightIntensity() * travelSpeed;
   drive(leftPower,rightPower);
 }
 
@@ -131,23 +130,23 @@ void Robot::drive(int leftPower, int rightPower){
  int leftPowerScaled = map(leftPower,-1,1,0,180);
  int rightPowerScaled = map(rightPower,-1,1,0,180);
 
-  leftWeel.set(leftPower);
-  rightWheel.set(rightPower);
+  leftWheel.write(leftPower);
+  rightWheel.write(rightPower);
 }
 
 /* state machine functions */
-void Robot::is(State s){
+bool Robot::is(State s){
   return state == s;
 }
 
-void Robot::isNot(State s){
+bool Robot::isNot(State s){
   return state != s;
 }
 
-void Robot::isDone(State s){
+bool Robot::isDone(State s){
   return state.isAfter(s);
 }
 
-void Robot::isNotDone(State s){
+bool Robot::isNotDone(State s){
   return state.isBefore(s);
 }

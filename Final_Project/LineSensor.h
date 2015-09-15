@@ -49,7 +49,7 @@ class LineSensor {
     bool leftSideOnLine();
 
     /* read raw values from analog ports */
-    int[8] readRaw();
+    int* readRaw();
 
     /* avg 4 sensors, starting at offset from PIN0
      * value scaled from -100 to 100
@@ -63,10 +63,10 @@ class LineSensor {
     const static int LED_PIN = -1;
 
     /* raw min value, from 0 to 1024 */
-    int min;
+    int min_intensity;
 
     /* raw max value, from 0 to 1024 */
-    int max;
+    int max_intensity;
 
     /* this is the cut_off for what constitutes "on the line"
      * it is calculated after calibration is compete
@@ -76,5 +76,5 @@ class LineSensor {
     /* used by calculate threshold, based on min and max from calibrate */
     const static float THRESHOLD_PERCENT = 0.65;
 
-    int[8] rawValues;
-}
+    int rawValues[8];
+};

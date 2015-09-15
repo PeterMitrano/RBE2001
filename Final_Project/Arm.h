@@ -2,8 +2,8 @@
  * functions here control the 4 bar linkage
  */
 
-#include <Gripper.h>
 #include <Servo.h>
+#include "Gripper.h"
 
 class Arm {
   public:
@@ -28,13 +28,13 @@ class Arm {
 
   private:
 
+    enum Position {LOW_P, HIGH_P, TRAVEL_P};
+  
     /* convert position enum to servo value. return value is from 0 to 180 */
     int positionToServoValue(Position p);
-
-    enum Position {LOW, HIGH, TRAVEL};
-
+    
     int motorPin = -1;
 
     Gripper gripper;
     Servo motor;
-}
+};

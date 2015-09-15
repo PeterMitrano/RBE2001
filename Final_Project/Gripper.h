@@ -16,10 +16,10 @@ class Gripper{
     bool releaseRod();
 
     /* close the gripper */
-    void close();
+    void cls();
 
     /* open the gripper */
-    void open();
+    void opn();
 
     /* returns T if gripper wires don't touch, meaning the rod is present */
     bool hasRod();
@@ -29,4 +29,4 @@ class Gripper{
 
     const static int motorPin = -1;
     const static int rodSensorPin = -1;
-}
+};

@@ -1,20 +1,29 @@
-#include <State.h>
+#include "State.h"
 
-void State::before(State s){
-  beforeState = s;
+State::State() {
+  this->id = State::GLOBAL_ID++;
 }
 
-void State::after(State s){
-  afterState = s;
+void State::before(State s) {
+  beforeState = &s;
 }
 
-bool State::isAfter(State s){
-  return (afterState == s) || (afterState.isAfter(s));
+void State::after(State s) {
+  afterState = &s;
 }
 
-bool State::isBefore(State s){
-  return (beforeState == s) || (beforeState.isBefore(s));
+bool State::isAfter(State s) {
+  return (*afterState == s) || (afterState->isAfter(s));
 }
 
-/* the actual states are defined below */
-const static State SETUP, CALIBRATING;
+bool State::isBefore(State s) {
+  return (*beforeState == s) || (beforeState->isBefore(s));
+}
+
+bool State::operator==(const State& s2) {
+  this->id == s2.id;
+}
+
+bool State::operator!=(const State& s2) {
+  this->id != s2.id;
+}

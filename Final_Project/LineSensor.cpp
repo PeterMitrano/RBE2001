@@ -1,23 +1,24 @@
-#include <LineSensor.h>
+#include "LineSensor.h"
+#include <Arduino.h>
 
-LineSensor::setup(){
+void LineSensor::setup(){
 
-  for (int i=g_PIN0;i<8;i++){
+  for (int i=PIN0;i<8;i++){
     pinMode(i,INPUT);
   }
   digitalWrite(LED_PIN,HIGH);
 }
 
-void LineSensor::setMin(int min){
-  min_intensity = min;
+void LineSensor::setMin(int min_intensity){
+  this->min_intensity = min_intensity;
 }
 
-void LineSensor::setMax(int max){
-  max_intensity = max;
+void LineSensor::setMax(int max_intensity){
+  this->max_intensity = max_intensity;
 }
 
 void LineSensor::calculateThreshold(){
-  line_threshold = min + THRESHOLD_PERCENT * (max - min);
+  line_threshold = min_intensity + THRESHOLD_PERCENT * (max_intensity - min_intensity);
 }
 
 int LineSensor::rawCenterSensor(){
@@ -26,7 +27,7 @@ int LineSensor::rawCenterSensor(){
 
 int LineSensor::avgSet(int offset){
   int sum;
-  for (int i=g_PIN0 + offset;i<4;i++){
+  for (int i=PIN0 + offset;i<4;i++){
     sum += analogRead(i);
   }
   return sum/4;
@@ -52,11 +53,11 @@ bool LineSensor::rightSideOnLine(){
   return avgRightIntensity() < line_threshold;
 }
 
-bool LineSensor::rightSideOnLine(){
+bool LineSensor::leftSideOnLine(){
   return avgLeftIntensity() < line_threshold;
 }
 
-int[8] LineSensor::readRaw(){
+int* LineSensor::readRaw(){
   for (int i=PIN0; i<8; i++){
     rawValues[8] = analogRead(i);
   }
