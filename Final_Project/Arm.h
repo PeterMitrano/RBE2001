@@ -13,10 +13,10 @@ class Arm {
     /* initializes servos and other stuff. called by main arduino setup */
     void setup();
 
-    /* raise arm all the way to the top */
+    /* lower arm all the way to the top */
     void down();
 
-    /* lower arm all the way to the bottom */
+    /* raise arm all the way to the bottom */
     void up();
 
     /* maybe we want a travel position */

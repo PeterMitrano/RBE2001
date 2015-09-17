@@ -14,5 +14,6 @@ void setup() {
 }
 
 void loop() {
+  alan.closeGripper();
   alan.raiseArm();
 }

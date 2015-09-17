@@ -51,6 +51,10 @@ class Robot {
     void lowerArm();
     void raiseArm();
 
+    /* sends calls to gripper */
+    void closeGripper();
+    void openGripper();
+
   private:
 
     /* used by bumper switch as a panic button function */

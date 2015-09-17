@@ -168,6 +168,14 @@ void Robot::raiseArm(){
   arm.up();
 }
 
+void Robot::closeGripper(){
+  arm.closeGripper();
+}
+
+void Robot::openGripper(){
+  arm.openGripper();
+}
+
 /* state machine functions */
 bool Robot::is(State s) {
   return Robot::state == s;
