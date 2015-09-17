@@ -1,3 +1,4 @@
+#pragma once
 /* line sensor class
  * functions for reading the line sensor go here
  */
@@ -51,13 +52,13 @@ class LineSensor {
     /* read raw values from analog ports */
     int* readRaw();
 
-    /* avg 4 sensors, starting at offset from PIN0
+    /* avg 4 sensors, starting at offset from PIN_0
      * value scaled from -100 to 100
      */
     int avgSet(int offset);
 
     /* this assumes line sensor pins are in order. This is the first (leftmost pin) */
-    const static int PIN0 = -1;
+    const static int PIN_0 = -1;
 
     /* the board contains IR LEDs, this pin controls those LEDs */
     const static int LED_PIN = -1;

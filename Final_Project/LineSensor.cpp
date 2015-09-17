@@ -3,7 +3,7 @@
 
 void LineSensor::setup(){
 
-  for (int i=PIN0;i<8;i++){
+  for (int i=LineSensor::PIN_0;i<8;i++){
     pinMode(i,INPUT);
   }
   digitalWrite(LED_PIN,HIGH);
@@ -22,12 +22,12 @@ void LineSensor::calculateThreshold(){
 }
 
 int LineSensor::rawCenterSensor(){
-  return analogRead(PIN0+3);
+  return analogRead(LineSensor::PIN_0+3);
 }
 
 int LineSensor::avgSet(int offset){
   int sum;
-  for (int i=PIN0 + offset;i<4;i++){
+  for (int i=LineSensor::PIN_0 + offset;i<4;i++){
     sum += analogRead(i);
   }
   return sum/4;
@@ -58,7 +58,7 @@ bool LineSensor::leftSideOnLine(){
 }
 
 int* LineSensor::readRaw(){
-  for (int i=PIN0; i<8; i++){
+  for (int i=LineSensor::PIN_0; i<8; i++){
     rawValues[8] = analogRead(i);
   }
 }

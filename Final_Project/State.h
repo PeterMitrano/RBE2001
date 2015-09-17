@@ -1,10 +1,16 @@
+#pragma once
 /* controls state machine used in robot */
+
+#include <Arduino.h>
 
 class State {
   public:
 
-    State();
+    State(String title);
 
+    /* convert to text string */
+    String toString();
+    
     /* I am before s */
     void before(State s);
 
@@ -22,6 +28,7 @@ class State {
     static int GLOBAL_ID;
     State* beforeState;
     State* afterState;
+    String title;
     int id;
 
 };

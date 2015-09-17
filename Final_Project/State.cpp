@@ -1,7 +1,14 @@
 #include "State.h"
 
-State::State() {
+int State::GLOBAL_ID = 0;
+
+State::State(String title) {
+  this->title = title;
   this->id = State::GLOBAL_ID++;
+}
+
+String State::toString(){
+  return title;  
 }
 
 void State::before(State s) {

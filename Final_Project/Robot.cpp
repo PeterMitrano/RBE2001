@@ -1,13 +1,33 @@
 #include "Robot.h"
 
+State Robot::SETUP("setup"),
+      Robot::PAUSED("paused"),
+      Robot::CALIBRATING("calibrating");
+
+State Robot::state("null");
+
 void Robot::setup(){
   leftWheel.attach(leftWheelPin);
   rightWheel.attach(rightWheelPin);
 
+  pinMode(limitPin,INPUT_PULLUP);
+
   lineSensor.setup();
   arm.setup();
 
-  state = Robot::SETUP;
+  Robot::state = Robot::SETUP;
+
+  //setup kill switch
+  attachInterrupt(pausePin,pause,RISING);
+}
+
+void Robot::pause(){
+  Robot::state = Robot::PAUSED;
+}
+
+void Robot::printState(){
+  Serial.print("robot state: ");
+  Serial.println(Robot::state.toString());
 }
 
 void Robot::calibrateLineSensor(){
@@ -89,6 +109,10 @@ void Robot::followLine(){
   drive(leftPower,rightPower);
 }
 
+bool Robot::doneTravelling(){
+  return !digitalRead(limitPin);  
+}
+
 void Robot::rotateRightUntilLine(){
   while (!lineSensor.onLine()){
     rotateRight();
@@ -136,17 +160,17 @@ void Robot::drive(int leftPower, int rightPower){
 
 /* state machine functions */
 bool Robot::is(State s){
-  return state == s;
+  return Robot::state == s;
 }
 
 bool Robot::isNot(State s){
-  return state != s;
+  return Robot::state != s;
 }
 
 bool Robot::isDone(State s){
-  return state.isAfter(s);
+  return Robot::state.isAfter(s);
 }
 
 bool Robot::isNotDone(State s){
-  return state.isBefore(s);
+  return Robot::state.isBefore(s);
 }

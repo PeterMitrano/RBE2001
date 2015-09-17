@@ -1,3 +1,4 @@
+#pragma once
 /* gripper class
  * functions of gripper go here
  */

@@ -1,3 +1,4 @@
+#pragma once
 /* arm class
  * functions here control the 4 bar linkage
  */
@@ -33,7 +34,7 @@ class Arm {
     /* convert position enum to servo value. return value is from 0 to 180 */
     int positionToServoValue(Position p);
     
-    int motorPin = -1;
+    int motorPin = 10;
 
     Gripper gripper;
     Servo motor;

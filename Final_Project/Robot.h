@@ -1,3 +1,4 @@
+#pragma once
 /* robot class
  *  functions here control the robot as a whole, and should be called from main.ino
  */
@@ -12,6 +13,9 @@ class Robot {
 
     /* setup servos and stuff. called by main setup */
     void setup();
+
+    /* print the value of Robot::state; */
+    static void printState();
 
     /* scans back and forth to gather intensity line sensor data */
     void calibrateLineSensor();
@@ -40,7 +44,18 @@ class Robot {
      */
     bool driveUntilReactorTube(unsigned long timeout);
 
+    /* checks limit switch to tell if we've reached our destination */
+    bool doneTravelling();
+
+    /* low level function for setting motor power
+     * input is limited between -100 (full back) and 100 (full forward)
+     */
+    void drive(int leftPower, int rightPower);
+
   private:
+
+    /* used by bumper switch as a panic button function */
+    static void pause();
 
     /* state machine functions */
     bool is(State s);
@@ -49,7 +64,9 @@ class Robot {
     bool isNotDone(State s);
 
     /* actual states */
-    const static State SETUP, CALIBRATING;
+    static State SETUP,
+                CALIBRATING,
+                PAUSED;
 
     /* rotate right at fixed power until right line sensor detects line */
     void rotateRightUntilLine();
@@ -63,28 +80,25 @@ class Robot {
     /* fixed power rotate */
     void rotateRight();
 
-    /* low level function for setting motor power
-     * input is limited between -100 (full back) and 100 (full forward)
-     */
-    void drive(int leftPower, int rightPower);
-
     /* the overall procedure of the robot is a simple state machine
      * all states are listed here, and handled as a switch/case statement in the src
      */
 
-    State state;
+    static State state;
 
     Servo leftWheel;
     Servo rightWheel;
-    const static int leftWheelPin = -1;
-    const static int rightWheelPin = -1;
+    const int leftWheelPin = 9;
+    const int rightWheelPin = 11;
+    const int pausePin = 2;
+    const int limitPin = 22;
     
     LineSensor lineSensor;
     Arm arm;
     
-    const static int reactor_tube_limit_pin = -1;
-    const static int rotateSpeed = -1;
-    const static int travelSpeed = -1;
+    const int reactor_tube_limit_pin = -1;
+    const int rotateSpeed = -1;
+    const int travelSpeed = -1;
 
     /* used to track calibration */
     unsigned long calibrationTime = 0;
