@@ -5,6 +5,7 @@
 
 #include <Servo.h>
 #include "Gripper.h"
+#include <Arduino.h>
 
 class Arm {
   public:
@@ -13,10 +14,10 @@ class Arm {
     void setup();
 
     /* raise arm all the way to the top */
-    void lower();
+    void down();
 
     /* lower arm all the way to the bottom */
-    void raise();
+    void up();
 
     /* maybe we want a travel position */
     void setToTravelPosition();
@@ -30,10 +31,10 @@ class Arm {
   private:
 
     enum Position {LOW_P, HIGH_P, TRAVEL_P};
-  
+
     /* convert position enum to servo value. return value is from 0 to 180 */
     int positionToServoValue(Position p);
-    
+
     int motorPin = 10;
 
     Gripper gripper;

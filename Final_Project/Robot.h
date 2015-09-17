@@ -47,10 +47,9 @@ class Robot {
     /* checks limit switch to tell if we've reached our destination */
     bool doneTravelling();
 
-    /* low level function for setting motor power
-     * input is limited between -100 (full back) and 100 (full forward)
-     */
-    void drive(int leftPower, int rightPower);
+    /* send calls to arm */
+    void lowerArm();
+    void raiseArm();
 
   private:
 
@@ -65,8 +64,8 @@ class Robot {
 
     /* actual states */
     static State SETUP,
-                CALIBRATING,
-                PAUSED;
+           CALIBRATING,
+           PAUSED;
 
     /* rotate right at fixed power until right line sensor detects line */
     void rotateRightUntilLine();
@@ -80,6 +79,11 @@ class Robot {
     /* fixed power rotate */
     void rotateRight();
 
+    /* low level function for setting motor power
+     * input is limited between -100 (full back) and 100 (full forward)
+     */
+    void drive(int leftPower, int rightPower);
+
     /* the overall procedure of the robot is a simple state machine
      * all states are listed here, and handled as a switch/case statement in the src
      */
@@ -92,10 +96,10 @@ class Robot {
     const int rightWheelPin = 11;
     const int pausePin = 2;
     const int limitPin = 22;
-    
+
     LineSensor lineSensor;
     Arm arm;
-    
+
     const int reactor_tube_limit_pin = -1;
     const int rotateSpeed = -1;
     const int travelSpeed = -1;

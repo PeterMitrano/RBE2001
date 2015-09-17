@@ -14,8 +14,5 @@ void setup() {
 }
 
 void loop() {
-  alan.printState();
-  Serial.println(alan.doneTravelling());
-
-  alan.drive(0,0);
+  alan.raiseArm();
 }
