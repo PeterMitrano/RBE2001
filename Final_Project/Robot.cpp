@@ -1,6 +1,6 @@
 #include "Robot.h"
 
-int Robot::TEAM_NUMBER = 1;
+const int Robot::TEAM_NUMBER = 1;
 
 State Robot::SETUP("setup"),
       Robot::PAUSED("paused"),
@@ -74,8 +74,8 @@ void Robot::calibrateLineSensor() {
 
 bool Robot::driveUntilLine(unsigned long timeout) {
 
-  int t0 = state.initValue("t0",millis()); //safe to call repeatedly
-  bool infinite = state.initValue("infinite", timeout == 0 );
+  int t0 = state.persist(millis()); //safe to call repeatedly
+  bool infinite = state.persist(timeout == 0 );
 
   bool done = ((!infinite && (millis() - t0 < timeout)) || !lineSensor.atIntersection());
 
@@ -91,11 +91,11 @@ void Robot::driveUntilLine() {
 }
 
 bool Robot::driveUntilReactorTube(unsigned long timeout) {
-  //grab millis() and timeout once and persiste their values in t0 and infinite 
+  //grab millis() and timeout once and persiste their values in t0 and infinite
   int t0 = state.persist(millis());
   bool infinite = state.persist(timeout == 0);
 
-  bool done = ((!infinite && (millis() - t0 < timeout)) || !digitalRead(reactor_tube_limit_pin)) {
+  bool done = ((!infinite && (millis() - t0 < timeout)) || !digitalRead(reactorTubeLimitPin));
 
   if (done){
     followLine();
@@ -104,18 +104,22 @@ bool Robot::driveUntilReactorTube(unsigned long timeout) {
   return (infinite || (millis() - t0 < timeout));
 }
 
+void Robot::driveUntilReactorTube() {
+  driveUntilReactorTube(0);
+}
+
 void Robot::followLine() {
   int leftPower = (int)(lineSensor.avgLeftIntensity() * travelSpeed);
   int rightPower = lineSensor.avgRightIntensity() * travelSpeed;
   drive(leftPower, rightPower);
 }
 
-void turnAround(){
+void Robot::turnAround(){
   if (lineSensor.leftSideOnLine()){
     rotateRight();
   }
   else if (!lineSensor.leftSideOnLine()){
-    rotateRight()
+    rotateRight();
   }
 }
 
@@ -161,7 +165,7 @@ void Robot::drive(int leftPower, int rightPower) {
     rightPower = -100;
   }
 
-  
+
   int leftPowerScaled = map(leftPower, -100, 100, 180, 0);
   int rightPowerScaled = map(rightPower, -100, 100, 0, 180);
 
@@ -171,7 +175,7 @@ void Robot::drive(int leftPower, int rightPower) {
 
 
 void Robot::lowerArm(){
-  arm.down();  
+  arm.down();
 }
 
 void Robot::raiseArm(){
@@ -184,21 +188,4 @@ void Robot::closeGripper(){
 
 void Robot::openGripper(){
   arm.openGripper();
-}
-
-/* state machine functions */
-bool Robot::is(State s) {
-  return Robot::state == s;
-}
-
-bool Robot::isNot(State s) {
-  return Robot::state != s;
-}
-
-bool Robot::isDone(State s) {
-  return Robot::state.isAfter(s);
-}
-
-bool Robot::isNotDone(State s) {
-  return Robot::state.isBefore(s);
 }

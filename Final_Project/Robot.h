@@ -7,6 +7,7 @@
 #include "State.h"
 #include "LineSensor.h"
 #include <Arduino.h>
+#include "BTClient.h"
 
 class Robot {
   public:
@@ -60,6 +61,10 @@ class Robot {
     void closeGripper();
     void openGripper();
 
+    const static int TEAM_NUMBER;
+
+     BTClient btclient;
+
   private:
 
     /* used by bumper switch as a panic button function */
@@ -90,7 +95,6 @@ class Robot {
 
     LineSensor lineSensor;
     Arm arm;
-    BluetoothClient btclient;
 
     Servo leftWheel;
     Servo rightWheel;
@@ -100,7 +104,7 @@ class Robot {
     const int limitPin = 22;
 
 
-    const int reactor_tube_limit_pin = -1;
+    const int reactorTubeLimitPin = -1;
     const int rotateSpeed = -1;
     const int travelSpeed = -1;
 
@@ -108,8 +112,6 @@ class Robot {
 
     /* used to track calibration */
     unsigned long calibrationTime = 0;
-
-    const static int TEAM_NUMBER;
 
     /* actual states */
     static State SETUP,

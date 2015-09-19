@@ -1,6 +1,5 @@
 #include "State.h"
 
-int State::MAX_PV = 10;
 int State::GLOBAL_ID = 0;
 
 State::State(String title) {
@@ -10,54 +9,72 @@ State::State(String title) {
 }
 
 String State::toString(){
-  return title;  
+  return title;
 }
 
 bool State::persist(bool bval){
   if (pvIndex > MAX_PV){
-    return false;  
+    return false;
   }
   else {
     StatePV *pv = pvArray[pvIndex];
-    if (pv != null){ //pk is not empty
-      if (!pv.written){
-        pv.written = true;
-        pv.key = key;
-        pv.bval = bval;
+    if (pv != NULL){ //pk is not empty
+      if (!pv->written){
+        pv->written = true;
+        pv->bval = bval;
       }
     }
     else {
-      pv = malloc(sizeof(StatePV *));
-      pv.written = true;
-      pv.key = key;
-      pv.bval = bval;
+      pv = (StatePV *)malloc(sizeof(StatePV *));
+      pv->written = true;
+      pv->bval = bval;
       pvIndex++;
     }
-    return pv.bval;
+    return pv->bval;
+  }
+}
+
+unsigned long State::persist(unsigned long tval){
+  if (pvIndex > MAX_PV){
+    return false;
+  }
+  else {
+    StatePV *pv = pvArray[pvIndex];
+    if (pv != NULL){ //pk is not empty
+      if (!pv->written){
+        pv->written = true;
+        pv->tval = tval;
+      }
+    }
+    else {
+      pv = (StatePV *)malloc(sizeof(StatePV *));
+      pv->written = true;
+      pv->tval = tval;
+      pvIndex++;
+    }
+    return pv->tval;
   }
 }
 
 int State::persist(int ival){
   if (pvIndex > MAX_PV){
-    return false;  
+    return false;
   }
   else {
     StatePV *pv = pvArray[pvIndex];
-    if (pv != null){ //pv is not empty
-      if (!pv.written){
-        pv.written = true;
-        pv.key = key;
-        pv.ival = ival;
+    if (pv != NULL){ //pv is not empty
+      if (!pv->written){
+        pv->written = true;
+        pv->ival = ival;
       }
     }
     else {
-      pv = malloc(sizeof(StatePV *));
-      pv.written = true;
-      pv.key = key;
-      pv.ival = ival;
+      pv = (StatePV *)malloc(sizeof(StatePV *));
+      pv->written = true;
+      pv->ival = ival;
       pvIndex++;
     }
-    return pv.ival;
+    return pv->ival;
   }
 }
 

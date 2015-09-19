@@ -4,13 +4,14 @@
 #include <Arduino.h>
 
 /* convenience struct
- * when we want to do a funciton until a ocndition, 
+ * when we want to do a funciton until a ocndition,
  * ... instead of doing a while loop we call initValue
  * ... which stores that value ONCE and only ONCE in
  * ... an instance struct*/
 struct state_pv {
   int ival;
   bool bval;
+  unsigned long tval;
   /* initValue only writes once
    * this variable keeps track of that */
   bool written;
@@ -27,11 +28,12 @@ class State {
      * we have one for bools, and one for ints
      */
     int persist(int ival);
+    unsigned long persist(unsigned long tval); // for storing millis
     bool persist(bool bval);
-    
+
     /* convert to text string */
     String toString();
-    
+
     bool operator==(const State& s2);
     bool operator!=(const State& s2);
 
@@ -39,9 +41,9 @@ class State {
 
     String title;
     int id;
-    
-    const static int MAX_PV;
-    StatePV *pvArray[MAX_PV]; //allows for up to 10 nested states
+
+    const static int MAX_PV = 10;
+    StatePV *pvArray[MAX_PV]; //allows for up to 10 nested pvs
     int pvIndex = 0;
 
     static int GLOBAL_ID;

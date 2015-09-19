@@ -3,13 +3,12 @@
  * controls basic routine
  */
 
-#include "Servo.h"
 #include "Robot.h"
 
 Robot alan;
 
 void setup() {
-i  Serial.begin(9600);
+  Serial.begin(9600);
   alan.setup();
 }
 
@@ -22,7 +21,7 @@ void loop() {
   getSupplyRod();
 
   storeSupplyRod();
-  
+
 }
 
 void getReactorFuelRod(){
@@ -36,6 +35,7 @@ void storeFuelRod(){
   // turn around
   alan.turnAround();
   alan.driveUntilLine();
+
 }
 
 void getSupplyRod(){

@@ -1,10 +1,14 @@
-#include "Bluetooth.h"
+#include "BTClient.h"
 
-void BluetoothClient::setup(){
+BTClient::BTClient() :
+  pcol(byte(Robot::TEAM_NUMBER)) {
+}
+
+void BTClient::setup(){
   Serial3.begin(115200);
 }
 
-void BluetoothClient::readMessage(){
+void BTClient::readMessage(){
   byte pkt[10];
   if (btMaster.readPacket(pkt)){
     if (pcol.getData(pkt,rawData,messageType)){

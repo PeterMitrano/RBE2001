@@ -1,14 +1,17 @@
 #pragma once
 /* functions for parsing and sending bluetooth messages */
 
-#include <Robot.h>
-#include <Arduino.h>
-#include <BluetoothMaster.h>
+#include "Robot.h"
+#include <HardwareSerial.h>
+#include "BluetoothMaster.h"
 #include <ReactorProtocol.h>
 
 /* contains bluetooth message data */
-class BluetoothClient {
+class BTClient {
   public:
+
+    /* constructor initializes btmaster and pcol */
+    BTClient();
 
     /* start serial3 */
     void setup();
@@ -24,7 +27,7 @@ class BluetoothClient {
     BluetoothMaster btMaster;
 
     /* protocol decoder */
-    ReactorProtocol pcol(byte(Robot::TEAM_NUMBER));
+    ReactorProtocol pcol;
 
     /* raw bytes read by pcol */
     byte rawData[3];
@@ -58,4 +61,4 @@ class BluetoothClient {
 
      /* 0xff minus 8-bit sum from offset 1 up to but not including this byte */
      int checksum;
-}
+};
