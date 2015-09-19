@@ -1,5 +1,7 @@
 #include "Robot.h"
 
+int Robot::TEAM_NUMBER = 1;
+
 State Robot::SETUP("setup"),
       Robot::PAUSED("paused"),
       Robot::CALIBRATING("calibrating");
@@ -71,14 +73,13 @@ void Robot::calibrateLineSensor() {
 }
 
 bool Robot::driveUntilLine(unsigned long timeout) {
-  bool infinite = false;
-  if (timeout == 0) {
-    infinite = true;
-  }
 
-  unsigned long t0 = millis();
+  int t0 = state.initValue("t0",millis()); //safe to call repeatedly
+  bool infinite = state.initValue("infinite", timeout == 0 );
 
-  while ((!infinite && (millis() - t0 < timeout)) || !lineSensor.atIntersection()) {
+  bool done = ((!infinite && (millis() - t0 < timeout)) || !lineSensor.atIntersection());
+
+  if (done){
     followLine();
   }
 
@@ -90,13 +91,13 @@ void Robot::driveUntilLine() {
 }
 
 bool Robot::driveUntilReactorTube(unsigned long timeout) {
-  bool infinite = false;
-  if (timeout == 0) {
-    infinite = true;
-  }
+  //grab millis() and timeout once and persiste their values in t0 and infinite 
+  int t0 = state.persist(millis());
+  bool infinite = state.persist(timeout == 0);
 
-  unsigned long t0 = millis();
-  while ((!infinite && (millis() - t0 < timeout)) || !digitalRead(reactor_tube_limit_pin)) {
+  bool done = ((!infinite && (millis() - t0 < timeout)) || !digitalRead(reactor_tube_limit_pin)) {
+
+  if (done){
     followLine();
   }
 
@@ -109,18 +110,27 @@ void Robot::followLine() {
   drive(leftPower, rightPower);
 }
 
+void turnAround(){
+  if (lineSensor.leftSideOnLine()){
+    rotateRight();
+  }
+  else if (!lineSensor.leftSideOnLine()){
+    rotateRight()
+  }
+}
+
 bool Robot::doneTravelling() {
   return !digitalRead(limitPin);
 }
 
 void Robot::rotateRightUntilLine() {
-  while (!lineSensor.onLine()) {
+  if (!lineSensor.onLine()) {
     rotateRight();
   }
 }
 
 void Robot::rotateLeftUntilLine() {
-  while (!lineSensor.onLine()) {
+  if (!lineSensor.onLine()) {
     rotateLeft();
   }
 }

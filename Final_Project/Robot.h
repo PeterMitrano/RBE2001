@@ -28,10 +28,10 @@ class Robot {
      */
     void followLine();
 
-    /* drives until line inifitely */
+    /* drives until both line sensors see black inifitely */
     void driveUntilLine();
 
-    /* drive until line with timeout
+    /* drive until both line sensors see black with timeout
      * returns False if the drive timed out
      */
     bool driveUntilLine(unsigned long timeout);
@@ -43,6 +43,11 @@ class Robot {
      * returns false if the drive timed out
      */
     bool driveUntilReactorTube(unsigned long timeout);
+
+    /* turn clockwise off line until all sensors are off line
+     * continue turning until left sensor detects the line
+     */
+    void turnAround();
 
     /* checks limit switch to tell if we've reached our destination */
     bool doneTravelling();
@@ -66,11 +71,6 @@ class Robot {
     bool isDone(State s);
     bool isNotDone(State s);
 
-    /* actual states */
-    static State SETUP,
-           CALIBRATING,
-           PAUSED;
-
     /* rotate right at fixed power until right line sensor detects line */
     void rotateRightUntilLine();
 
@@ -88,11 +88,9 @@ class Robot {
      */
     void drive(int leftPower, int rightPower);
 
-    /* the overall procedure of the robot is a simple state machine
-     * all states are listed here, and handled as a switch/case statement in the src
-     */
-
-    static State state;
+    LineSensor lineSensor;
+    Arm arm;
+    BluetoothClient btclient;
 
     Servo leftWheel;
     Servo rightWheel;
@@ -101,13 +99,20 @@ class Robot {
     const int pausePin = 2;
     const int limitPin = 22;
 
-    LineSensor lineSensor;
-    Arm arm;
 
     const int reactor_tube_limit_pin = -1;
     const int rotateSpeed = -1;
     const int travelSpeed = -1;
 
+    static State state;
+
     /* used to track calibration */
     unsigned long calibrationTime = 0;
+
+    const static int TEAM_NUMBER;
+
+    /* actual states */
+    static State SETUP,
+           CALIBRATING,
+           PAUSED;
 };
