@@ -61,8 +61,6 @@ class Robot {
     void closeGripper();
     void openGripper();
 
-    const static int TEAM_NUMBER;
-
      BTClient btclient;
 
   private:

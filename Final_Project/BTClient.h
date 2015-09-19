@@ -1,9 +1,8 @@
 #pragma once
 /* functions for parsing and sending bluetooth messages */
 
-#include "Robot.h"
-#include <HardwareSerial.h>
-#include "BluetoothMaster.h"
+#include "Util.h"
+#include <BluetoothMaster.h>
 #include <ReactorProtocol.h>
 
 /* contains bluetooth message data */

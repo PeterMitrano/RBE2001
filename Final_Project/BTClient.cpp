@@ -1,7 +1,7 @@
 #include "BTClient.h"
 
 BTClient::BTClient() :
-  pcol(byte(Robot::TEAM_NUMBER)) {
+  pcol(byte(::TEAM_NUMBER)) {
 }
 
 void BTClient::setup(){
@@ -16,3 +16,4 @@ void BTClient::readMessage(){
     }
   }
 }
+

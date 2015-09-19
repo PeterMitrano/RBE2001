@@ -1,7 +1,5 @@
 #include "Robot.h"
 
-const int Robot::TEAM_NUMBER = 1;
-
 State Robot::SETUP("setup"),
       Robot::PAUSED("paused"),
       Robot::CALIBRATING("calibrating");
