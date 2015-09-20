@@ -12,14 +12,14 @@
 class Robot {
   public:
 
+    /* single accesor */
+    static Robot *getInstance();
+
     /* setup servos and stuff. called by main setup */
     void setup();
 
     /* print the value of Robot::state; */
     static void printState();
-
-    /* scans back and forth to gather intensity line sensor data */
-    void calibrateLineSensor();
 
     /* uses line sensor to follow line
      * following is done by a weighted power to each wheel
@@ -29,26 +29,8 @@ class Robot {
      */
     void followLine();
 
-    /* drives until both line sensors see black inifitely */
-    void driveUntilLine();
-
-    /* drive until both line sensors see black with timeout
-     * returns False if the drive timed out
-     */
-    bool driveUntilLine(unsigned long timeout);
-
-    /* drive until reacetor tube inifitely */
-    void driveUntilReactorTube();
-
-    /* drive until reacetor tube with timeout
-     * returns false if the drive timed out
-     */
-    bool driveUntilReactorTube(unsigned long timeout);
-
-    /* turn clockwise off line until all sensors are off line
-     * continue turning until left sensor detects the line
-     */
-    void turnAround();
+    /* stop driving */
+    void stopDriving();
 
     /* checks limit switch to tell if we've reached our destination */
     bool doneTravelling();
@@ -61,24 +43,17 @@ class Robot {
     void closeGripper();
     void openGripper();
 
+    /* sends calls to line sensor */
+    void atIntersection();
+
      BTClient btclient;
 
   private:
+    /* there's only one robot, so use private constructor */
+    Robot();
 
     /* used by bumper switch as a panic button function */
     static void pause();
-
-    /* state machine functions */
-    bool is(State s);
-    bool isNot(State s);
-    bool isDone(State s);
-    bool isNotDone(State s);
-
-    /* rotate right at fixed power until right line sensor detects line */
-    void rotateRightUntilLine();
-
-    /* same as rotate right */
-    void rotateLeftUntilLine();
 
     /* fixed power rotate */
     void rotateLeft();
@@ -91,8 +66,8 @@ class Robot {
      */
     void drive(int leftPower, int rightPower);
 
-    LineSensor lineSensor;
-    Arm arm;
+    LineSensor *lineSensor;
+    Arm *arm;
 
     Servo leftWheel;
     Servo rightWheel;

@@ -1,10 +1,9 @@
 #include "Robot.h"
 
-State Robot::SETUP("setup"),
-      Robot::PAUSED("paused"),
-      Robot::CALIBRATING("calibrating");
-
-State Robot::state("null");
+Robot *Robot::getInstance(){
+  static Robot robot;
+  return robot;
+}
 
 void Robot::setup() {
   leftWheel.attach(leftWheelPin);
@@ -15,19 +14,9 @@ void Robot::setup() {
   lineSensor.setup();
   arm.setup();
 
-  Robot::state = Robot::SETUP;
 
   //setup kill switch
   attachInterrupt(pausePin, pause, RISING);
-}
-
-void Robot::pause() {
-  Robot::state = Robot::PAUSED;
-}
-
-void Robot::printState() {
-  Serial.print("robot state: ");
-  Serial.println(Robot::state.toString());
 }
 
 void Robot::calibrateLineSensor() {
@@ -70,44 +59,8 @@ void Robot::calibrateLineSensor() {
   rotateRightUntilLine();
 }
 
-bool Robot::driveUntilLine(unsigned long timeout) {
-
-  int t0 = state.persist(millis()); //safe to call repeatedly
-  bool infinite = (timeout == 0);
-
-  bool done = ((!infinite && (millis() - t0 < timeout)) || !lineSensor.atIntersection());
-
-  if (!done){
-    followLine();
-  }
-
-  return (infinite || (millis() - t0 < timeout));
-}
-
-void Robot::driveUntilLine() {
-  driveUntilLine(0);
-}
-
-bool Robot::driveUntilReactorTube(unsigned long timeout) {
-  //grab millis() and timeout once and persiste their values in t0 and infinite
-//  int t0 = state.persist(millis());
-
-  int *t0;
-  state.persist(millis(),t0);
-
-  bool infinite = state.persist(timeout == 0);
-
-  bool done = ((!infinite && (millis() - t0 < timeout)) || !digitalRead(reactorTubeLimitPin));
-
-  if (!done){
-    followLine();
-  }
-
-  return (infinite || (millis() - t0 < timeout));
-}
-
-void Robot::driveUntilReactorTube() {
-  driveUntilReactorTube(0);
+void Robot::stopDriving(){
+  drive(0,0);
 }
 
 void Robot::followLine() {
@@ -116,42 +69,8 @@ void Robot::followLine() {
   drive(leftPower, rightPower);
 }
 
-void Robot::turnAround(){
-
-  bool lostTheLine = state.persist(false);
-  bool foundTheLine = state.persist(false);
-
-  bool currentlyOffTheLine = !lineSensor.leftSideOnLine();
-
-  if (!currentlyOffTheLine && !lostTheLine){
-    rotateRight();
-  }
-  else {
-    lostTheLine = state.overwrite(true);
-  }
-
-  if (currentlyOffTheLine && !foundTheLine){
-    rotateRight();
-  }
-  else {
-    foundTheLine = state.overwrite(true);
-  }
-}
-
 bool Robot::doneTravelling() {
   return !digitalRead(limitPin);
-}
-
-void Robot::rotateRightUntilLine() {
-  if (!lineSensor.onLine()) {
-    rotateRight();
-  }
-}
-
-void Robot::rotateLeftUntilLine() {
-  if (!lineSensor.onLine()) {
-    rotateLeft();
-  }
 }
 
 void Robot::rotateLeft() {
@@ -188,6 +107,13 @@ void Robot::drive(int leftPower, int rightPower) {
   rightWheel.write(rightPowerScaled);
 }
 
+bool Robot::atIntersection(){
+  return lineSensor->atIntersection();
+}
+
+bool Robot::atFuelRod(){
+  return digitalRead(reactorTubeLimitPin);
+}
 
 void Robot::lowerArm(){
   arm.down();
