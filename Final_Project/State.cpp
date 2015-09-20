@@ -12,35 +12,21 @@ String State::toString(){
   return title;
 }
 
-bool State::persist(bool bval){
-  if (pvIndex > MAX_PV){
-    return false;
-  }
-  else {
-    StatePV *pv = pvArray[pvIndex];
-    if (pv != NULL){ //pk is not empty
-      if (!pv->written){
-        pv->written = true;
-        pv->bval = bval;
-      }
-    }
-    else {
-      pv = (StatePV *)malloc(sizeof(StatePV *));
-      pv->written = true;
-      pv->bval = bval;
-      pvIndex++;
-    }
-    return pv->bval;
-  }
+bool State::persist(bool bval, String key){
+  persist((unsigned long)bval, key);
 }
 
-unsigned long State::persist(unsigned long tval){
+int State::persist(int ival, String key){
+  persist((unsigned long)ival, String key);
+}
+
+unsigned long State::persist(unsigned long tval, String key){
   if (pvIndex > MAX_PV){
     return false;
   }
   else {
     StatePV *pv = pvArray[pvIndex];
-    if (pv != NULL){ //pk is not empty
+    if (pv != NULL){
       if (!pv->written){
         pv->written = true;
         pv->tval = tval;
@@ -53,28 +39,6 @@ unsigned long State::persist(unsigned long tval){
       pvIndex++;
     }
     return pv->tval;
-  }
-}
-
-int State::persist(int ival){
-  if (pvIndex > MAX_PV){
-    return false;
-  }
-  else {
-    StatePV *pv = pvArray[pvIndex];
-    if (pv != NULL){ //pv is not empty
-      if (!pv->written){
-        pv->written = true;
-        pv->ival = ival;
-      }
-    }
-    else {
-      pv = (StatePV *)malloc(sizeof(StatePV *));
-      pv->written = true;
-      pv->ival = ival;
-      pvIndex++;
-    }
-    return pv->ival;
   }
 }
 
