@@ -3,7 +3,7 @@
 #include "Robot.h"
 #include "Command.h"
 
-class OpenGripper: public Command {
+class CloseGripper: public Command {
   public:
     void initialize();
     bool isFinished();

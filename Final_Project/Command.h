@@ -13,6 +13,7 @@ class Command {
     Command() = default;
 
     void setTimeout(unsigned long timeout);
+    unsigned long getTime();
     bool isTimedOut();
 
     /* run once in the first iteration of the command's life */

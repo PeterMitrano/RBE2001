@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Robot.h"
 #include "Command.h"
+#include "Robot.h"
 
-class DriveToReactor: public Command {
+class BlinkLED: public Command {
   public:
-    DriveToReactor();
     void initialize();
     void execute();
     bool isFinished();
-    void end();
+  private:
+    int state;
 };

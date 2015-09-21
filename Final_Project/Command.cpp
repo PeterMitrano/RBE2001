@@ -21,8 +21,12 @@ void Command::setTimeout(unsigned long timeout){
   this->timeout = timeout;
 }
 
+unsigned long Command::getTime(){
+  return millis() - startTime;
+}
+
 bool Command::isTimedOut(){
-  return (millis()-startTime) > timeout;
+  return getTime() > timeout;
 }
 
 void Command::initialize(){

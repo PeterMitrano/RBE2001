@@ -17,11 +17,11 @@ bool Gripper::releaseRod(){
 }
 
 void Gripper::cls(){
-  motor.write(0);
+  motor.write(20);
 }
 
 void Gripper::opn(){
-  motor.write(180);
+  motor.write(140);
 }
 
 bool Gripper::hasRod(){
