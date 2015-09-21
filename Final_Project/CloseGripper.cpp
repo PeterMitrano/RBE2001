@@ -1,10 +1,18 @@
 #include "CloseGripper.h"
 
+CloseGripper::CloseGripper() : Command("close gripper"){}
+
 void CloseGripper::initialize(){
+  setTimeout(3000);
+}
+
+void CloseGripper::execute(){
   Robot::getInstance()->closeGripper();
 }
 
 bool CloseGripper::isFinished(){
-  //since servo will get it to where it needs to go, only run once
-  return true;
+  return isTimedOut();
+}
+
+void CloseGripper::end(){  
 }

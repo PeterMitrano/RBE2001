@@ -2,44 +2,58 @@
 
 #include "Scheduler.h"
 
-bool Command::run(){
-  if (!initialized){
+Command::Command() : initialized(false) {}
+
+Command::Command(String name) : initialized(false), name(name), startTime(millis()) {}
+
+bool Command::cycle() {
+  bool finished = isFinished();
+
+  if (!initialized) {
     initialize();
+    _initialize();
     initialized = true;
   }
-  else if (isFinished()){
+  else if (finished) {
     end();
+    _end();
   }
   else {
     execute();
+    _execute();
   }
 
-  return isFinished();
+
+  return finished;
 }
 
-void Command::setTimeout(unsigned long timeout){
+void Command::setTimeout(unsigned long timeout) {
   this->timeout = timeout;
 }
 
-unsigned long Command::getTime(){
+unsigned long Command::getTime() {
   return millis() - startTime;
 }
 
-bool Command::isTimedOut(){
+bool Command::isTimedOut() {
   return getTime() > timeout;
 }
 
-void Command::initialize(){
+bool Command::isRunning() {
+  return running;
+}
+
+void Command::_initialize() {
+  running = true;
   startTime = millis();
 }
 
-void Command::execute(){
+void Command::_execute() {}
+
+void Command::_end() {
+  running = false;
 }
 
-bool Command::isFinished(){
-  return false; //unless specified, all commands are infinite
-}
-
-void Command::start(){
+void Command::start() {
   Scheduler::getInstance()->addCommand(this);
 }

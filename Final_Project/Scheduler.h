@@ -14,6 +14,7 @@ class Scheduler {
   public:
     static Scheduler *getInstance();
     void addCommand(Command *command);
+    void printCurrentCommands();
     void run();
 
   private:

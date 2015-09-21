@@ -1,6 +1,8 @@
 #include "CommandGroup.h"
 #include "CommandGroupEntry.h"
 
+CommandGroup::CommandGroup(const String name) : Command(name) {}
+
 void CommandGroup::addSequential(Command *command){
   commands.add(
       CommandGroupEntry(command, CommandGroupEntry::kSequence_InSequence));
@@ -11,11 +13,14 @@ void CommandGroup::addParallel(Command *command){
       CommandGroupEntry(command, CommandGroupEntry::kSequence_InParallel));
 }
 
+void CommandGroup::initialize(){}
 void CommandGroup::_initialize(){
   currentCommandIndex = -1;
 }
 
+void CommandGroup::execute(){}
 void CommandGroup::_execute(){
+  
   CommandGroupEntry entry;
   Command *executingCommand = NULL;
   bool done = false;
@@ -25,41 +30,36 @@ void CommandGroup::_execute(){
   }
 
   while (!done && (currentCommandIndex < commands.size() )){
+    
     if (executingCommand != NULL){
-      bool isFinished = executingCommand->run();
+      bool isFinished = executingCommand->cycle();
       if (!isFinished){
-        currentCommandIndex++;
-        executingCommand = NULL;
-        continue;
+        done = true;
       }
       else {
-        done = true;
+        commands.remove(currentCommandIndex);
       }
     }
 
     entry = commands.get(currentCommandIndex);
-    executingCommand = NULL;
 
     switch(entry._state){
       case CommandGroupEntry::kSequence_InSequence:
         executingCommand = entry._command;
         break;
-
       case CommandGroupEntry::kSequence_InParallel:
         currentCommandIndex++;
-        entry._command->run();
+        entry._command->cycle();
         break;
     }
-
-
   }
-
-
-
 }
 
-void CommandGroup::_isFinished(){
-}
-
+void CommandGroup::end(){}
 void CommandGroup::_end(){
+}
+
+
+bool CommandGroup::isFinished(){
+  return commands.size() == 0;
 }

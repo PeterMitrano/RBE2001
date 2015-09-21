@@ -5,7 +5,10 @@
 
 class CloseGripper: public Command {
   public:
+    CloseGripper();
     void initialize();
+    void execute();
+    void end();
     bool isFinished();
 };
 

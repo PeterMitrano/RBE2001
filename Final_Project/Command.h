@@ -10,32 +10,40 @@
 class Command {
 
   public:
-    Command() = default;
+    Command();
+    Command(const String name);
 
     void setTimeout(unsigned long timeout);
     unsigned long getTime();
     bool isTimedOut();
 
     /* run once in the first iteration of the command's life */
-    void initialize();
+    virtual void initialize() = 0;
+    virtual void _initialize();
 
     /* stuff to do over and over each iteration*/
-    void execute();
+    virtual void execute() = 0;
+    virtual void _execute();
 
     /* checked every iteration to see if we're done here */
-    bool isFinished();
+    virtual bool isFinished() = 0; 
 
     /* called once at the end, once isFinished() returned true */
-    void end();
+    virtual void end() = 0;
+    virtual void _end();
 
     /* adds this command to the scheduler */
     void start();
 
-    /* actually does the  exdcuting */
-    bool run();
+    /* actually does the  excuting */
+    bool cycle();
+
+    bool isRunning();
+
+    String name;
 
   private:
-    bool initialized;
+    bool initialized,running;
     unsigned long timeout;
     unsigned long startTime;
 };

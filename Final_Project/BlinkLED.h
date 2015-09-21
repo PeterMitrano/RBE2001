@@ -5,8 +5,10 @@
 
 class BlinkLED: public Command {
   public:
+    BlinkLED();
     void initialize();
     void execute();
+    void end();
     bool isFinished();
   private:
     int state;

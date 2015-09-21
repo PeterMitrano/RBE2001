@@ -1,18 +1,22 @@
 #include "BlinkLED.h"
 
+BlinkLED::BlinkLED() : Command("blink LED"){}
+
 void BlinkLED::initialize(){
-  state = LOW;
+  state = HIGH;
+  digitalWrite(5,state);
 }
 
 void BlinkLED::execute(){
   //getTime is in millis since start of command
-  if (getTime() % 1000 == 0){
+  if (((getTime()/1000) % 2) == 0){
     state = !state;
   }
-  
   digitalWrite(5,state);
 }
 
 bool BlinkLED::isFinished(){
-  return digitalRead(4);
+  return !digitalRead(4);
 }
+
+void BlinkLED::end(){}
