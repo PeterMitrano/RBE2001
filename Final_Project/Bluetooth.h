@@ -33,7 +33,7 @@ class BluetoothClient {
     int length;
 
     /* message type
-     * TYPES: 
+     * TYPES:
      * 1 storage
      * 2 supply
      * 3 radiation

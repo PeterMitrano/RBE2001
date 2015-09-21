@@ -1,19 +1,19 @@
+#include <Servo.h> //dummy include because arduino IDE is shit
+#include <BluetoothMaster.h>
+#include <ReactorProtocol.h>
 
-/* main robot class
- * controls basic routine
- */
-
-#include "Servo.h"
 #include "Robot.h"
-
-Robot alan;
+#include "Scheduler.h"
+#include "Util.h"
 
 void setup() {
   Serial.begin(9600);
-  alan.setup();
+  Robot::getInstance()->setup();
+
+  GetDemRods *gdr = new GetDemRods();
+  gdr->start();
 }
 
 void loop() {
-  alan.closeGripper();
-  alan.raiseArm();
+  Scheduler::getInstance()->run();
 }

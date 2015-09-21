@@ -41,7 +41,6 @@ class LineSensor {
      */
     int rawCenterSensor();
 
-  private:
 
     /* returns true if the right line sensor is ablove line threashold */
     bool rightSideOnLine();
@@ -49,6 +48,7 @@ class LineSensor {
     /* returns true if the left line sensor is ablove line threashold */
     bool leftSideOnLine();
 
+  private:
     /* read raw values from analog ports */
     int* readRaw();
 

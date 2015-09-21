@@ -20,7 +20,7 @@ void CommandGroup::_initialize(){
 
 void CommandGroup::execute(){}
 void CommandGroup::_execute(){
-  
+
   CommandGroupEntry entry;
   Command *executingCommand = NULL;
   bool done = false;
@@ -30,7 +30,7 @@ void CommandGroup::_execute(){
   }
 
   while (!done && (currentCommandIndex < commands.size() )){
-    
+
     if (executingCommand != NULL){
       bool isFinished = executingCommand->cycle();
       if (!isFinished){

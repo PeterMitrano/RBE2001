@@ -1,10 +1,11 @@
 #include "Robot.h"
 
-State Robot::SETUP("setup"),
-      Robot::PAUSED("paused"),
-      Robot::CALIBRATING("calibrating");
+Robot::Robot(){}
 
-State Robot::state("null");
+Robot *Robot::getInstance(){
+  static Robot robot;
+  return &robot;
+}
 
 void Robot::setup() {
   leftWheel.attach(leftWheelPin);
@@ -12,24 +13,15 @@ void Robot::setup() {
 
   pinMode(limitPin, INPUT_PULLUP);
 
-  lineSensor.setup();
-  arm.setup();
+  lineSensor->setup();
+  arm->setup();
 
-  Robot::state = Robot::SETUP;
 
   //setup kill switch
-  attachInterrupt(pausePin, pause, RISING);
+  //attachInterrupt(pausePin, pause, RISING);
 }
 
-void Robot::pause() {
-  Robot::state = Robot::PAUSED;
-}
-
-void Robot::printState() {
-  Serial.print("robot state: ");
-  Serial.println(Robot::state.toString());
-}
-
+/* need to move to command
 void Robot::calibrateLineSensor() {
   if (isNot(Robot::CALIBRATING)) {
     calibrationTime = millis();
@@ -42,7 +34,7 @@ void Robot::calibrateLineSensor() {
   //rotate to right then left for 2s while scanning for min/max
   if ((dt = (millis() - calibrationTime)) < 2000) {
     //grab the center sensor to calibrate
-    value = lineSensor.rawCenterSensor();
+    value = lineSensor->rawCenterSensor();
 
 
     if (dt < 1000) {
@@ -62,67 +54,27 @@ void Robot::calibrateLineSensor() {
   }
 
   //set the line sensor parameters
-  lineSensor.setMin(minValue);
-  lineSensor.setMax(maxValue);
-  lineSensor.calculateThreshold();
+  lineSensor->setMin(minValue);
+  lineSensor->setMax(maxValue);
+  lineSensor->calculateThreshold();
 
   //find the line again
   rotateRightUntilLine();
 }
+*/
 
-bool Robot::driveUntilLine(unsigned long timeout) {
-  bool infinite = false;
-  if (timeout == 0) {
-    infinite = true;
-  }
-
-  unsigned long t0 = millis();
-
-  while ((!infinite && (millis() - t0 < timeout)) || !lineSensor.atIntersection()) {
-    followLine();
-  }
-
-  return (infinite || (millis() - t0 < timeout));
-}
-
-void Robot::driveUntilLine() {
-  driveUntilLine(0);
-}
-
-bool Robot::driveUntilReactorTube(unsigned long timeout) {
-  bool infinite = false;
-  if (timeout == 0) {
-    infinite = true;
-  }
-
-  unsigned long t0 = millis();
-  while ((!infinite && (millis() - t0 < timeout)) || !digitalRead(reactor_tube_limit_pin)) {
-    followLine();
-  }
-
-  return (infinite || (millis() - t0 < timeout));
+void Robot::stopDriving(){
+  drive(0,0);
 }
 
 void Robot::followLine() {
-  int leftPower = (int)(lineSensor.avgLeftIntensity() * travelSpeed);
-  int rightPower = lineSensor.avgRightIntensity() * travelSpeed;
+  int leftPower = (int)(lineSensor->avgLeftIntensity() * travelSpeed);
+  int rightPower = lineSensor->avgRightIntensity() * travelSpeed;
   drive(leftPower, rightPower);
 }
 
 bool Robot::doneTravelling() {
   return !digitalRead(limitPin);
-}
-
-void Robot::rotateRightUntilLine() {
-  while (!lineSensor.onLine()) {
-    rotateRight();
-  }
-}
-
-void Robot::rotateLeftUntilLine() {
-  while (!lineSensor.onLine()) {
-    rotateLeft();
-  }
 }
 
 void Robot::rotateLeft() {
@@ -151,7 +103,7 @@ void Robot::drive(int leftPower, int rightPower) {
     rightPower = -100;
   }
 
-  
+
   int leftPowerScaled = map(leftPower, -100, 100, 180, 0);
   int rightPowerScaled = map(rightPower, -100, 100, 0, 180);
 
@@ -159,36 +111,6 @@ void Robot::drive(int leftPower, int rightPower) {
   rightWheel.write(rightPowerScaled);
 }
 
-
-void Robot::lowerArm(){
-  arm.down();  
-}
-
-void Robot::raiseArm(){
-  arm.up();
-}
-
-void Robot::closeGripper(){
-  arm.closeGripper();
-}
-
-void Robot::openGripper(){
-  arm.openGripper();
-}
-
-/* state machine functions */
-bool Robot::is(State s) {
-  return Robot::state == s;
-}
-
-bool Robot::isNot(State s) {
-  return Robot::state != s;
-}
-
-bool Robot::isDone(State s) {
-  return Robot::state.isAfter(s);
-}
-
-bool Robot::isNotDone(State s) {
-  return Robot::state.isBefore(s);
+bool Robot::atFuelRod(){
+  return digitalRead(reactorTubeLimitPin);
 }
