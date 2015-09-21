@@ -19,24 +19,29 @@ class Arm {
     /* raise arm all the way to the bottom */
     void up();
 
-    /* maybe we want a travel position */
-    void setToTravelPosition();
+    void stop();
 
-    /* tell the gripper to open */
-    void openGripper();
+    void setPosition(int setpoint);
 
-    /* tell the gripper to close */
-    void closeGripper();
+    /* return position in encoder counts */
+    int position();
+
+    Gripper *gripper;
 
   private:
 
-    enum Position {LOW_P, HIGH_P, TRAVEL_P};
-
-    /* convert position enum to servo value. return value is from 0 to 180 */
-    int positionToServoValue(Position p);
-
     int motorPin = 10;
 
-    Gripper gripper;
+    /* used by PI to computer integral */
+    int integral;
+
+    /* PI constants */
+    const float kP = -1;
+    const float kI = -1;
+
+    /* positions */
+    const int UP_POSITION = -1;
+    const int DOWN_POSITION = -1;
+
     Servo motor;
 };

@@ -1,8 +1,9 @@
 #pragma once
 
+#include "Robot.h"
 #include "CommandGroup.h"
 
-class GetDemRods: CommandGroup {
+class GetDemRods: public CommandGroup {
   public:
     GetDemRods();
 };

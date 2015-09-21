@@ -1,8 +1,9 @@
 #pragma once
 
+#include "Robot.h"
 #include "CommandGroup.h"
 
-class GetRodFromReactor: CommandGroup {
+class GetRodFromReactor: public CommandGroup {
   public:
     GetRodFromReactor();
-}
+};

@@ -2,17 +2,17 @@
 
 DriveToReactor::DriveToReactor(){}
 
-void DriveToReactor::Initialize(){}
+void DriveToReactor::initialize(){}
 
-void DriveToReactor::Execute(){
+void DriveToReactor::execute(){
   Robot::getInstance()->followLine();
 }
 
-bool DriveToReactor::IsFinished(){
-  return Robot::getInstance()->atIntersecion();
+bool DriveToReactor::isFinished(){
+  return Robot::getInstance()->lineSensor->atIntersection();
 }
 
-void DriveToReactor::End(){
+void DriveToReactor::end(){
   Robot::getInstance()->stopDriving();
 }
 

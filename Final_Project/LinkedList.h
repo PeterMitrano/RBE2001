@@ -10,8 +10,7 @@
 */
 
 
-#ifndef LinkedList_h
-#define LinkedList_h
+#pragma once
 
 template<class T>
 struct ListNode
@@ -86,6 +85,9 @@ public:
 		else, return false;
 	*/
 	virtual T get(int index);
+
+  /* iterate over list and check if element exists */
+  virtual bool contains(T);
 
 	/*
 		Clear the entire array
@@ -190,7 +192,7 @@ bool LinkedList<T>::add(T _t){
 	ListNode<T> *tmp = new ListNode<T>();
 	tmp->data = _t;
 	tmp->next = false;
-	
+
 	if(root){
 		// Already have elements inserted
 		last->next = tmp;
@@ -217,10 +219,10 @@ bool LinkedList<T>::unshift(T _t){
 	tmp->next = root;
 	tmp->data = _t;
 	root = tmp;
-	
+
 	_size++;
 	isCached = false;
-	
+
 	return true;
 }
 
@@ -238,7 +240,7 @@ template<typename T>
 T LinkedList<T>::pop(){
 	if(_size <= 0)
 		return T();
-	
+
 	isCached = false;
 
 	if(_size >= 2){
@@ -290,7 +292,7 @@ T LinkedList<T>::remove(int index){
 
 	if(index == 0)
 		return shift();
-	
+
 	if (index == _size-1)
 	{
 		return pop();
@@ -315,9 +317,19 @@ T LinkedList<T>::get(int index){
 }
 
 template<typename T>
+bool LinkedList<T>::contains(T _t){
+  ListNode<T> *tmp;
+  int i;
+
+  while (tmp->data != _t){
+    i++;
+  }
+
+  return i < size();
+}
+
+template<typename T>
 void LinkedList<T>::clear(){
 	while(size() > 0)
 		shift();
 }
-
-#endif

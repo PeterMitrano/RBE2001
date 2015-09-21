@@ -1,10 +1,13 @@
 #include "GetRodFromReactor.h"
+#include "DriveToReactor.h"
+#include "OpenGripper.h"
+#include "LowerArm.h"
 
 GetRodFromReactor::GetRodFromReactor() {
-  AddSequential(new DriveToReactor());
+  addSequential(new DriveToReactor());
 
-  AddParallel(new OpenGripper());
-  AddSequential(new LowerArm());
+  addParallel(new OpenGripper());
+  addSequential(new LowerArm());
 
   //AddSequential(new CloseGripper());
   //AddSequential(new RaiseArm());

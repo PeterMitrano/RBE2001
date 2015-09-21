@@ -3,11 +3,12 @@
 #include "Robot.h"
 #include "Command.h"
 
-class DriveToReactor: public Command {
+class LowerArm: public Command {
   public:
-    DriveToReactor();
-    void initialize();
     void execute();
     bool isFinished();
     void end();
+  private:
+    const int setpoint = -1;
+    const int tolerance = -1;
 };

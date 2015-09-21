@@ -1,8 +1,10 @@
 #include "GetDemRods.h"
 
+#include "GetRodFromReactor.h"
+
 //includes for other sub commands..
 
 GetDemRods::GetDemRods() {
-  AddSequential(new GetRodFromReactor());
-  //AddSequential(new StoreRod());
+  addSequential(new GetRodFromReactor());
+  //addSequential(new StoreRod());
 }

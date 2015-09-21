@@ -3,8 +3,8 @@
  *  functions here control the robot as a whole, and should be called from main.ino
  */
 
+#include "GetDemRods.h"
 #include "Arm.h"
-#include "State.h"
 #include "LineSensor.h"
 #include <Arduino.h>
 #include "BTClient.h"
@@ -17,9 +17,6 @@ class Robot {
 
     /* setup servos and stuff. called by main setup */
     void setup();
-
-    /* print the value of Robot::state; */
-    static void printState();
 
     /* uses line sensor to follow line
      * following is done by a weighted power to each wheel
@@ -35,18 +32,11 @@ class Robot {
     /* checks limit switch to tell if we've reached our destination */
     bool doneTravelling();
 
-    /* send calls to arm */
-    void lowerArm();
-    void raiseArm();
+    bool atFuelRod();
 
-    /* sends calls to gripper */
-    void closeGripper();
-    void openGripper();
-
-    /* sends calls to line sensor */
-    void atIntersection();
-
-     BTClient btclient;
+    BTClient btclient;
+    Arm *arm;
+    LineSensor *lineSensor;
 
   private:
     /* there's only one robot, so use private constructor */
@@ -66,9 +56,6 @@ class Robot {
      */
     void drive(int leftPower, int rightPower);
 
-    LineSensor *lineSensor;
-    Arm *arm;
-
     Servo leftWheel;
     Servo rightWheel;
     const int leftWheelPin = 9;
@@ -81,13 +68,7 @@ class Robot {
     const int rotateSpeed = -1;
     const int travelSpeed = -1;
 
-    static State state;
 
     /* used to track calibration */
     unsigned long calibrationTime = 0;
-
-    /* actual states */
-    static State SETUP,
-           CALIBRATING,
-           PAUSED;
 };

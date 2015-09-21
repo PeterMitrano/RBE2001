@@ -1,8 +1,10 @@
 #include "Robot.h"
 
+Robot::Robot(){}
+
 Robot *Robot::getInstance(){
   static Robot robot;
-  return robot;
+  return &robot;
 }
 
 void Robot::setup() {
@@ -11,14 +13,15 @@ void Robot::setup() {
 
   pinMode(limitPin, INPUT_PULLUP);
 
-  lineSensor.setup();
-  arm.setup();
+  lineSensor->setup();
+  arm->setup();
 
 
   //setup kill switch
-  attachInterrupt(pausePin, pause, RISING);
+  //attachInterrupt(pausePin, pause, RISING);
 }
 
+/* need to move to command
 void Robot::calibrateLineSensor() {
   if (isNot(Robot::CALIBRATING)) {
     calibrationTime = millis();
@@ -31,7 +34,7 @@ void Robot::calibrateLineSensor() {
   //rotate to right then left for 2s while scanning for min/max
   if ((dt = (millis() - calibrationTime)) < 2000) {
     //grab the center sensor to calibrate
-    value = lineSensor.rawCenterSensor();
+    value = lineSensor->rawCenterSensor();
 
 
     if (dt < 1000) {
@@ -51,21 +54,22 @@ void Robot::calibrateLineSensor() {
   }
 
   //set the line sensor parameters
-  lineSensor.setMin(minValue);
-  lineSensor.setMax(maxValue);
-  lineSensor.calculateThreshold();
+  lineSensor->setMin(minValue);
+  lineSensor->setMax(maxValue);
+  lineSensor->calculateThreshold();
 
   //find the line again
   rotateRightUntilLine();
 }
+*/
 
 void Robot::stopDriving(){
   drive(0,0);
 }
 
 void Robot::followLine() {
-  int leftPower = (int)(lineSensor.avgLeftIntensity() * travelSpeed);
-  int rightPower = lineSensor.avgRightIntensity() * travelSpeed;
+  int leftPower = (int)(lineSensor->avgLeftIntensity() * travelSpeed);
+  int rightPower = lineSensor->avgRightIntensity() * travelSpeed;
   drive(leftPower, rightPower);
 }
 
@@ -107,26 +111,6 @@ void Robot::drive(int leftPower, int rightPower) {
   rightWheel.write(rightPowerScaled);
 }
 
-bool Robot::atIntersection(){
-  return lineSensor->atIntersection();
-}
-
 bool Robot::atFuelRod(){
   return digitalRead(reactorTubeLimitPin);
-}
-
-void Robot::lowerArm(){
-  arm.down();
-}
-
-void Robot::raiseArm(){
-  arm.up();
-}
-
-void Robot::closeGripper(){
-  arm.closeGripper();
-}
-
-void Robot::openGripper(){
-  arm.openGripper();
 }

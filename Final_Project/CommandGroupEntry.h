@@ -1,16 +1,21 @@
 #pragma once
 
+#include "Arduino.h" //defines NULL
+
 class Command;
 
 class CommandGroupEntry {
-  public:
-    typedef num {
-      kSquence_InSequence;
-      kSequence_BranchPeer;
-      kSequence_BranchChild;
-    } Sequence;
+ public:
+  typedef enum {
+    kSequence_InSequence,
+    kSequence_InParallel
+  } Sequence;
 
-CommandGroupEntry(Command *command, Sequence state, double timeout = -1.0);
+  CommandGroupEntry() = default;
+  CommandGroupEntry(Command *command, Sequence state);
 
+  bool operator!=(const CommandGroupEntry& other);
 
-}
+  Command *_command = NULL;
+  Sequence _state = kSequence_InSequence;
+};

@@ -1,25 +1,31 @@
+#pragma once
+
+#include "Command.h"
+#include "CommandGroupEntry.h"
+#include "LinkedList.h"
+
 /* grouping commands is a useful abstraction
  * commands groups execute commands in parallel or series
  */
 
-class CommandGroup {
+class CommandGroup: public Command {
   public:
+    CommandGroup() = default;
 
-  void addSequential(Command *command);
-  void addParallel(Command *command);
+    void addSequential(Command *command);
+    void addParallel(Command *command);
 
-  void initialize();
+    void _initialize();
 
-  void execute();
+    void _execute();
 
-  void isFinished();
+    void _isFinished();
 
-  void end();
+    void _end();
 
   private:
 
-  LinkedList<CommandGroupEntry> commands;
+    int currentCommandIndex;
 
-  LinkedList<CommandGroupEntry> children;
-
+    LinkedList<CommandGroupEntry> commands;
 };

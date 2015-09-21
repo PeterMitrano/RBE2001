@@ -1,3 +1,7 @@
+#pragma once
+
+#include <Arduino.h>
+
 /* this class is the very core of the framework
  * commands are initialized once, then run until they're done
  * completed commands are removed the scheduler
@@ -6,29 +10,31 @@
 class Command {
 
   public:
-    void start();
-    void run();
-    void cancel();
+    Command() = default;
+
     void setTimeout(unsigned long timeout);
-    bool isCancelled();
-    bool isRunning();
     bool isTimedOut();
 
-    // stuff to start with
-    void inialize();
+    /* run once in the first iteration of the command's life */
+    void initialize();
 
-    // stuff to do contiuously
+    /* stuff to do over and over each iteration*/
     void execute();
 
-    void isFinished();
+    /* checked every iteration to see if we're done here */
+    bool isFinished();
 
+    /* called once at the end, once isFinished() returned true */
     void end();
 
+    /* adds this command to the scheduler */
+    void start();
+
+    /* actually does the  exdcuting */
+    bool run();
+
   private:
-
-    CommandGroup *parent;
-
+    bool initialized;
     unsigned long timeout;
     unsigned long startTime;
-    bool running,initialized,canceled;
 };
