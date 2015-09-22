@@ -1,5 +1,9 @@
 #include "LowerArm.h"
 
+LowerArm::LowerArm() : Command("lower arm") {}
+
+void LowerArm::initialize(){}
+
 void LowerArm::execute(){
   Robot::getInstance()->arm->down(); //uses a PI controller
 }

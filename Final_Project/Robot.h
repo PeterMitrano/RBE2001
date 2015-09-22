@@ -40,8 +40,9 @@ class Robot {
     LineSensor *lineSensor;
 
   private:
-    /* there's only one robot, so use private constructor */
+    /* there's only one robot, so use private constructor and instance*/
     Robot();
+    static Robot *instance;
 
     /* used by bumper switch as a panic button function */
     static void pause();
@@ -72,4 +73,5 @@ class Robot {
 
     /* used to track calibration */
     unsigned long calibrationTime = 0;
+
 };

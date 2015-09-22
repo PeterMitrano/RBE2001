@@ -19,6 +19,7 @@ class Scheduler {
 
   private:
     Scheduler();
+    static Scheduler *instance;
 
     LinkedList<Command *> commands;
 };
