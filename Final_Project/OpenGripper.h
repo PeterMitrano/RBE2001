@@ -5,7 +5,10 @@
 
 class OpenGripper: public Command {
   public:
+    OpenGripper();
     void initialize();
+    void execute();
     bool isFinished();
+    void end();
 };
 

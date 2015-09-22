@@ -4,7 +4,7 @@
 
 //includes for other sub commands..
 
-GetDemRods::GetDemRods() {
+GetDemRods::GetDemRods() : CommandGroup("get dem rods") {
   addSequential(new GetRodFromReactor());
   //addSequential(new StoreRod());
 }

@@ -3,7 +3,7 @@
 #include "OpenGripper.h"
 #include "LowerArm.h"
 
-GetRodFromReactor::GetRodFromReactor() {
+GetRodFromReactor::GetRodFromReactor() : CommandGroup("get rod from reactor") {
   addSequential(new DriveToReactor());
 
   addParallel(new OpenGripper());
