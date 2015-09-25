@@ -21,12 +21,14 @@ GetRodFromReactor(x)
 StoreRod
   RaiseArm
   NavigateToOpenStorage
-  InsertRod
+  OpenGripper
+  BackOffTube
 
 GetRodFromSupply
   RaiseArm
   NavigateToAvailableSupply
-  GrabRod
+  Close Gripper
+  BackOffTube
 
 StoreRodInReactor(x)
   RaiseArm
@@ -35,6 +37,9 @@ StoreRodInReactor(x)
   OpenGripper
   RaiseArm
   CloseGripper
+
+/********************** 
+UNECESSARY
 
 InsertRod
   RaiseArm
@@ -47,6 +52,7 @@ GrabRod
   DriveIntoTube
   CloseGripper
   BackOffTube
+************************/
 
 Raw commands
   NavigateToOpenStorage
@@ -58,4 +64,5 @@ Raw commands
   CloseGripper
   DriveOneUnit
   TurnToFace(x)
+  BackOffTube
 
