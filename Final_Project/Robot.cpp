@@ -51,24 +51,8 @@ void Robot::rotateRight() {
 
 
 void Robot::drive(int leftPower, int rightPower) {
-  if (leftPower > 100) {
-    leftPower = 100;
-  }
-
-  if (leftPower < -100) {
-    leftPower = -100;
-  }
-
-  if (rightPower > 100) {
-    rightPower = 100;
-  }
-
-  if (rightPower < -100) {
-    rightPower = -100;
-  }
-
-  int leftPowerScaled = 90 - leftPower * 0.9;
-  int rightPowerScaled = 90 + rightPower * 0.9;
+  int leftPowerScaled = map(leftPower,-100,100,160,30);;
+  int rightPowerScaled = map(rightPower,-100,100,22,160);
 
   if (!paused){
     leftWheel.write(leftPowerScaled);

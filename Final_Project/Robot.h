@@ -84,8 +84,8 @@ class Robot {
 
     const int pausePin = 27;
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 20;
-    const int travelSpeed = 20;
+    const int rotateSpeed = 25;
+    const int travelSpeed = 30;
 
 
     /* used to track calibration */
