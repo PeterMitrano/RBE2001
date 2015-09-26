@@ -30,14 +30,44 @@ class Robot {
     /* stop driving */
     void stopDriving();
 
-    /* checks limit switch to tell if we've reached our destination */
-    bool doneTravelling();
+    /* fixed power rotate */
+    void rotateLeft();
+
+    /* fixed power rotate */
+    void rotateRight();
 
     bool atFuelRod();
 
-    BTClient btclient;
+    /* used to store position
+     * updated by navigate commands
+     * should only be checked when the robot is done moving
+     * direction is as follow: N=0, E=1, S=2, W=3
+     */
+    int row,col,direction;
+
+    BTClient *btClient;
     Arm *arm;
     LineSensor *lineSensor;
+
+    /* set by bluetooth if resume/stop message is recieve
+     * all drive motor commands depend on it being true
+     */
+    bool paused;
+
+    /* flag for blinking LEDs based on radiaiton
+     * to turn off LEDs, set this to false
+     */
+    bool radiating = false;
+
+    /*can't figure out how to make these private and still have attach work */
+    Servo leftWheel;
+    Servo rightWheel;
+    static const int leftWheelPin = 5;
+    static const int rightWheelPin = 4;
+
+    /* moar pins */
+    static const int LED_PIN0 = 24,
+                 LED_PIN1 = 23;
 
   private:
     /* there's only one robot, so use private constructor and instance*/
@@ -47,28 +77,15 @@ class Robot {
     /* used by bumper switch as a panic button function */
     static void pause();
 
-    /* fixed power rotate */
-    void rotateLeft();
-
-    /* fixed power rotate */
-    void rotateRight();
-
     /* low level function for setting motor power
      * input is limited between -100 (full back) and 100 (full forward)
      */
     void drive(int leftPower, int rightPower);
 
-    Servo leftWheel;
-    Servo rightWheel;
-    const int leftWheelPin = 9;
-    const int rightWheelPin = 11;
-    const int pausePin = 2;
-    const int limitPin = 22;
-
-
-    const int reactorTubeLimitPin = -1;
-    const int rotateSpeed = -1;
-    const int travelSpeed = -1;
+    const int pausePin = 27;
+    const int reactorTubeLimitPin = 28;
+    const int rotateSpeed = 20;
+    const int travelSpeed = 20;
 
 
     /* used to track calibration */

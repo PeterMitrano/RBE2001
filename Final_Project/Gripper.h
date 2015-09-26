@@ -28,6 +28,6 @@ class Gripper{
   private:
     Servo motor;
 
-    const static int motorPin = -1;
-    const static int rodSensorPin = -1;
+    const static int motorPin = 6;
+    const static int rodSensorPin = 22;
 };

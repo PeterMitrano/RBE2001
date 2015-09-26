@@ -4,19 +4,30 @@ BlinkLED::BlinkLED() : Command("blink LED"){}
 
 void BlinkLED::initialize(){
   state = HIGH;
-  digitalWrite(5,state);
 }
 
 void BlinkLED::execute(){
   //getTime is in millis since start of command
-  if (((getTime()/1000) % 2) == 0){
-    state = !state;
+  if ((getTime() / 200) % 2 == 0){
+    state = HIGH;
   }
-  digitalWrite(5,state);
+  else {
+    state = LOW;
+  }
+
+  if (Robot::getInstance()->radiating){
+    digitalWrite(Robot::LED_PIN1,state);
+    digitalWrite(Robot::LED_PIN0,state);
+  }
+  else {
+    digitalWrite(Robot::LED_PIN0,LOW);
+    digitalWrite(Robot::LED_PIN1,LOW);
+  }
 }
 
 bool BlinkLED::isFinished(){
-  return !digitalRead(4);
+  return false;
 }
 
-void BlinkLED::end(){}
+void BlinkLED::end(){
+}

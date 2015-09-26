@@ -2,11 +2,11 @@
 
 #include <Arduino.h>
 
-/* this class is the very core of the framework
+/**
+ * \brief this class is the very core of the framework
  * commands are initialized once, then run until they're done
  * completed commands are removed the scheduler
  */
-
 class Command {
 
   public:
@@ -17,27 +17,41 @@ class Command {
     unsigned long getTime();
     bool isTimedOut();
 
-    /* run once in the first iteration of the command's life */
+    /** \brief run once in the first iteration of the command's life.
+     * this will be overrided by individual commands
+     * */
     virtual void initialize() = 0;
     virtual void _initialize();
 
-    /* stuff to do over and over each iteration*/
+    /** \brief stuff to do over and over each iteration.
+     * this will be overrided by individual commands
+     */
     virtual void execute() = 0;
     virtual void _execute();
 
-    /* checked every iteration to see if we're done here */
-    virtual bool isFinished() = 0; 
+    /** \brief checked every iteration to see if we're done here.
+     * this will be overrided by individual commands
+     * @return is the function finished
+     */
+    virtual bool isFinished() = 0;
 
-    /* called once at the end, once isFinished() returned true */
+    /** \brief called once at the end, once isFinished() returned true.
+     * this will be overrided by individual commands.
+     */
     virtual void end() = 0;
     virtual void _end();
 
-    /* adds this command to the scheduler */
+    /** \brief adds this command to the scheduler */
     void start();
 
-    /* actually does the  excuting */
+    /** \brief actually does the  excuting.
+     * @return if command is finished
+     */
     bool cycle();
 
+    /** \brief check if the command is running. not yet implemented.
+     *  @return if command is still running
+     */
     bool isRunning();
 
     String name;

@@ -2,91 +2,51 @@
 
 Robot *Robot::instance = NULL;
 
-Robot::Robot(){}
+Robot::Robot(){
+  direction = 2;
+  row = 1;
+  col = 1;
+}
 
 Robot *Robot::getInstance(){
   if (instance == NULL){
     instance = new Robot();
+    instance->btClient = new BTClient();
+    instance->arm = new Arm();
+    instance->lineSensor = new LineSensor();
   }
   return instance;
 }
 
 void Robot::setup() {
-  leftWheel.attach(leftWheelPin);
-  rightWheel.attach(rightWheelPin);
 
-  pinMode(limitPin, INPUT_PULLUP);
+  radiating = true;
+  paused = false;
+
+  pinMode(reactorTubeLimitPin, INPUT_PULLUP);
+  pinMode(LED_PIN0, OUTPUT);
+  pinMode(LED_PIN1, OUTPUT);
 
   lineSensor->setup();
   arm->setup();
-
-
-  //setup kill switch
-  //attachInterrupt(pausePin, pause, RISING);
 }
-
-/* need to move to command
-void Robot::calibrateLineSensor() {
-  if (isNot(Robot::CALIBRATING)) {
-    calibrationTime = millis();
-  }
-
-  int dt = 0;
-  int minValue = 10000, maxValue = 0;
-  int value;
-
-  //rotate to right then left for 2s while scanning for min/max
-  if ((dt = (millis() - calibrationTime)) < 2000) {
-    //grab the center sensor to calibrate
-    value = lineSensor->rawCenterSensor();
-
-
-    if (dt < 1000) {
-      rotateLeft(); //fixed power rotate
-    }
-    else {
-      rotateRight(); //fixed power rotate
-    }
-
-    if (value < minValue) {
-      minValue = value;
-    }
-
-    if (value > maxValue) {
-      maxValue = value;
-    }
-  }
-
-  //set the line sensor parameters
-  lineSensor->setMin(minValue);
-  lineSensor->setMax(maxValue);
-  lineSensor->calculateThreshold();
-
-  //find the line again
-  rotateRightUntilLine();
-}
-*/
 
 void Robot::stopDriving(){
   drive(0,0);
 }
 
 void Robot::followLine() {
-  int leftPower = (int)(lineSensor->avgLeftIntensity() * travelSpeed);
-  int rightPower = lineSensor->avgRightIntensity() * travelSpeed;
+  int leftPower = -(lineSensor->avgLeftIntensity() * travelSpeed) / 100;
+  int rightPower = -(lineSensor->avgRightIntensity() * travelSpeed) / 100;
   drive(leftPower, rightPower);
 }
 
-bool Robot::doneTravelling() {
-  return !digitalRead(limitPin);
-}
-
 void Robot::rotateLeft() {
-  drive(-rotateSpeed, rotateSpeed);
+  drive(rotateSpeed, -rotateSpeed);
 }
 
 void Robot::rotateRight() {
-  drive(rotateSpeed, -rotateSpeed);
+  drive(-rotateSpeed, rotateSpeed);
 }
 
 
@@ -107,12 +67,17 @@ void Robot::drive(int leftPower, int rightPower) {
     rightPower = -100;
   }
 
+  int leftPowerScaled = 90 - leftPower * 0.9;
+  int rightPowerScaled = 90 + rightPower * 0.9;
 
-  int leftPowerScaled = map(leftPower, -100, 100, 180, 0);
-  int rightPowerScaled = map(rightPower, -100, 100, 0, 180);
-
-  leftWheel.write(leftPowerScaled);
-  rightWheel.write(rightPowerScaled);
+  if (!paused){
+    leftWheel.write(leftPowerScaled);
+    rightWheel.write(rightPowerScaled);
+  }
+  else {
+    leftWheel.write(90);
+    rightWheel.write(90);
+  }
 }
 
 bool Robot::atFuelRod(){

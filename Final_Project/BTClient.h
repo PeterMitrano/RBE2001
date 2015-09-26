@@ -1,5 +1,9 @@
 #pragma once
-/* functions for parsing and sending bluetooth messages */
+/* functions for parsing and sending bluetooth messages
+ * Bluetooth is checked every loop and stored in member variables in this clas
+ * when a command wants to get the location of the tubes, it can do so instantaneously
+ * by looking at the last stored value
+ * */
 
 #include "Util.h"
 #include <BluetoothMaster.h>
@@ -15,6 +19,21 @@ class BTClient {
     /* start serial3 */
     void setup();
 
+    /* returns the supply tub locations */
+    byte availableSupplyTubes();
+
+    /* returns the storage tub locations */
+    byte openStorageTubes();
+
+    /* send 0xff to the field computer */
+    void sendRadiationAlert();
+
+    /* send 0x00 to field computer */
+    void sendHeartbeat();
+
+    /* send string to field computer for debugging */
+    void sendDebugString(String message);
+
     /* read from Serial3 and store into Message instance
      * returns Message if successful, null if unsuccessful
      */
@@ -22,42 +41,30 @@ class BTClient {
 
   private:
 
+     typedef enum {STORAGE_MSG = 0x01,
+           SUPPLY_MSG = 0x02,
+           RADIATION_MSG = 0x03,
+           STOP_MSG = 0x04,
+           RESUME_MSG = 0x05,
+           STATUS_MSG = 0x06,
+           HEARTBEAT_MSG = 0x07,
+           DEBUG_MSG = 0x10,
+           WARN_MSG = 0x11,
+           INFO_MSG = 0x12} MSG_TYPE;
+
+    /* send the given data to the field computer */
+    void sendData(byte data[3]);
+
     /* master object */
     BluetoothMaster btMaster;
 
     /* protocol decoder */
     ReactorProtocol pcol;
 
-    /* raw bytes read by pcol */
-    byte rawData[3];
+    /* set by commands to tell us when to send data */
+    bool sending;
 
-    /* length of data in bytes, seconds bit in rawData */
-    int length;
+    /* raw integer (or hex if you life) representation for storage and supply */
+    int storage, supply;
 
-    /* message type
-     * TYPES:
-     * 1 storage
-     * 2 supply
-     * 3 radiation
-     * 4 stop
-     * 5 resume
-     * 6 status
-     * 7 hearbeat
-     * 8-F reserved
-     * +10 user defined
-     */
-     byte messageType;
-
-     /* team number sent by
-      * 0 is field
-      */
-     int source;
-
-     /* team number sent to
-      * 0 is everyone
-      */
-     int dest;
-
-     /* 0xff minus 8-bit sum from offset 1 up to but not including this byte */
-     int checksum;
 };

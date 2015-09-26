@@ -9,36 +9,42 @@ void LineSensor::setup(){
   digitalWrite(LED_PIN,HIGH);
 }
 
-void LineSensor::setMin(int min_intensity){
-  this->min_intensity = min_intensity;
+void LineSensor::calculateThreshold(int minVal, int maxVal){
+  this->min_intensity = minVal;
+  this->max_intensity = maxVal;
+  line_threshold = min_intensity + (int)(THRESHOLD_PERCENT * (max_intensity - min_intensity));
 }
 
-void LineSensor::setMax(int max_intensity){
-  this->max_intensity = max_intensity;
-}
-
-void LineSensor::calculateThreshold(){
-  line_threshold = min_intensity + THRESHOLD_PERCENT * (max_intensity - min_intensity);
-}
-
-int LineSensor::rawCenterSensor(){
-  return analogRead(LineSensor::PIN_0+3);
+int LineSensor::calibratingValue(){
+  int val = analogRead(LineSensor::PIN_0);
+  val += analogRead(LineSensor::PIN_0+1);
+  val += analogRead(LineSensor::PIN_0+2);
+  return val/3;
 }
 
 int LineSensor::avgSet(int offset){
-  int sum;
-  for (int i=LineSensor::PIN_0 + offset;i<4;i++){
-    sum += analogRead(i);
+  int sum=0;
+  for (int j=0,i=LineSensor::PIN_0 + offset;j<3;i++,j++){
+    int raw = analogRead(i);
+    sum += raw;
   }
-  return sum/4;
+  int avg = sum/3;
+  // long because this value could be greater than 2^15-1
+  long fullDiff = 200 * (avg - min_intensity);
+  long scaledDiff = fullDiff / (max_intensity - min_intensity);
+  //should be safe to cast to int now
+  int normalizedAvg = (int)scaledDiff - 100;
+  return normalizedAvg;
 }
 
 int LineSensor::avgLeftIntensity(){
-  return avgSet(0); //avg of 0,1,2,3
+  int leftAvg = avgSet(5); //avg of 5,6,7
+  return leftAvg;
 }
 
 int LineSensor::avgRightIntensity(){
-  return avgSet(4); //avg of 4,5,6,7
+  int rightAvg = avgSet(0); //avg of 0,1,2
+  return rightAvg;
 }
 
 bool LineSensor::atIntersection(){

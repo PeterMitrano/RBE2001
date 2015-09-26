@@ -6,14 +6,31 @@
 #include "Scheduler.h"
 #include "Util.h"
 
+#include "GetDemRods.h"
+#include "GetRodFromReactor.h"
+#include "Calibrate.h"
+#include "CalibrateRoutine.h"
+#include "BlinkLED.h"
+
 void setup() {
   Serial.begin(9600);
+
   Robot::getInstance()->setup();
 
-  GetDemRods *gdr = new GetDemRods();
-  gdr->start();
+  //servos must be attached here
+  Robot::getInstance()->leftWheel.attach(Robot::leftWheelPin);
+  Robot::getInstance()->rightWheel.attach(Robot::rightWheelPin);
+
+  //add first command
+  GetDemRods *cmd = new GetDemRods();
+  cmd->start();
+  //add continuous (infinite) commands
+  BlinkLED *blink = new BlinkLED();
+  // blink->start();
 }
 
 void loop() {
   Scheduler::getInstance()->run();
+//  Robot::getInstance()->btClient->readMessage();
+
 }

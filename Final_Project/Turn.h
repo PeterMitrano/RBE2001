@@ -1,14 +1,15 @@
 #pragma once
 
+#include "Robot.h"
 #include "Command.h"
 
-class NavigateToReactor: public Command {
+class Turn : public Command {
   public:
-    NavigateToReactor(int reactorNumber);
+    Turn(int direction,int timeout);
     void initialize();
     void execute();
     bool isFinished();
     void end();
   private:
-    int reactorNumber, destDirection, destRow, destCol;
+    int timeout,direction;
 };

@@ -7,14 +7,17 @@ Command::Command() : initialized(false) {}
 Command::Command(String name) : initialized(false), name(name), startTime(millis()) {}
 
 bool Command::cycle() {
-  bool finished = isFinished();
+//  Serial.print("command: ");
+//  Serial.println(name);
+  bool finished = false;
 
   if (!initialized) {
     initialize();
     _initialize();
     initialized = true;
   }
-  else if (finished) {
+  else if (isFinished()) {
+    finished = true;
     end();
     _end();
   }

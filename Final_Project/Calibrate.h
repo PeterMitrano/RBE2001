@@ -1,14 +1,15 @@
 #pragma once
 
 #include "Command.h"
+#include "Robot.h"
 
-class NavigateToReactor: public Command {
+class Calibrate : public Command {
   public:
-    NavigateToReactor(int reactorNumber);
+    Calibrate();
     void initialize();
     void execute();
     bool isFinished();
     void end();
   private:
-    int reactorNumber, destDirection, destRow, destCol;
+    int minVal, maxVal;
 };

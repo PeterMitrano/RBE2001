@@ -1,6 +1,7 @@
 #include "GetRodFromReactor.h"
 #include "NavigateToReactor.h"
 #include "OpenGripper.h"
+#include "DriveUntilIntersection.h"
 #include "LowerArm.h"
 #include "RaiseArm.h"
 

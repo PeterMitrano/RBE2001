@@ -321,7 +321,7 @@ bool LinkedList<T>::contains(T _t){
   ListNode<T> *tmp;
   int i;
 
-  while (tmp && tmp->data != _t){
+  while ((i < 10) && tmp && (tmp->data != _t)){
     tmp = tmp->next;
     i++;
   }
