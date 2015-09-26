@@ -12,8 +12,8 @@ void DriveUntilIntersection::execute(){
 }
 
 bool DriveUntilIntersection::isFinished(){
-  return false;
-//  Robot::getInstance()->lineSensor->atIntersection();
+  bool done = Robot::getInstance()->lineSensor->atIntersection();
+  return done;
 }
 
 void DriveUntilIntersection::end(){

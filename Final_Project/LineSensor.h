@@ -31,7 +31,7 @@ class LineSensor {
      */
     void setMax(int max);
 
-    /** call THESHOLD_PERCENT of the raw sensor value range as "on the line"
+    /** call THESHOLD of the raw sensor value range as "on the line"
      * again, the resuling threshold is from 0 to 1024
      */
     void calculateThreshold(int minVal, int maxVal);
@@ -47,12 +47,6 @@ class LineSensor {
     /** returns true if the left line sensor is ablove line threashold */
     bool leftSideOnLine();
 
-    /** this is the cut_off for what constitutes "on the line"
-     * it is calculated after calibration is compete
-     * this will be from 0 to 1024
-     */
-    int line_threshold = -1;
-
   private:
     /** read raw values from analog ports */
     int* readRaw();
@@ -66,7 +60,7 @@ class LineSensor {
     const static int PIN_0 = 0;
 
     /** the board contains IR LEDs, this pin controls those LEDs */
-    const static int LED_PIN = -1;
+    const static int LEDPIN = 29;
 
     /** raw min value, from 0 to 1024 */
     int min_intensity;
@@ -76,7 +70,7 @@ class LineSensor {
 
 
     /** used by calculate threshold, based on min and max from calibrate */
-    const static float THRESHOLD_PERCENT = 0.65;
+    const static int THRESHOLD = -125;
 
     int rawValues[8];
 };

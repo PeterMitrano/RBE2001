@@ -6,13 +6,12 @@ void LineSensor::setup(){
   for (int i=LineSensor::PIN_0;i<8;i++){
     pinMode(i,INPUT);
   }
-  digitalWrite(LED_PIN,HIGH);
+  digitalWrite(LEDPIN,HIGH);
 }
 
 void LineSensor::calculateThreshold(int minVal, int maxVal){
   this->min_intensity = minVal;
   this->max_intensity = maxVal;
-  line_threshold = min_intensity + (int)(THRESHOLD_PERCENT * (max_intensity - min_intensity));
 }
 
 int LineSensor::calibratingValue(){
@@ -56,11 +55,11 @@ bool LineSensor::onLine(){
 }
 
 bool LineSensor::rightSideOnLine(){
-  return avgRightIntensity() < line_threshold;
+  return avgRightIntensity() < THRESHOLD;
 }
 
 bool LineSensor::leftSideOnLine(){
-  return avgLeftIntensity() < line_threshold;
+  return avgLeftIntensity() < THRESHOLD;
 }
 
 int* LineSensor::readRaw(){
