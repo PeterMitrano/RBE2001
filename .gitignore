@@ -1,5 +1,4 @@
 lib
 .build
 .build_ano
-html
-latex
+docs
