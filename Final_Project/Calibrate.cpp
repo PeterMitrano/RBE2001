@@ -21,6 +21,6 @@ bool Calibrate::isFinished(){
 }
 
 void Calibrate::end(){
-  Robot::getInstance()->lineSensor->calculateThreshold(minVal, maxVal);
+  Robot::getInstance()->lineSensor->setMinMax(minVal, maxVal);
   Robot::getInstance()->stopDriving();
 }

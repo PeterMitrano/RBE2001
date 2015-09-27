@@ -6,35 +6,25 @@
 class LineSensor {
   public:
 
-    /** setup servos and stuff. called by main setup */
+    /** \brief setup servos and stuff. called by main setup */
     void setup();
 
-    /** read intensity of 4 leftmost line sensors as one number from -100 to 100 */
+    /** \brief read intensity of 4 leftmost line sensors as one number from -100 to 100 */
     int avgLeftIntensity();
 
-    /** read intensity of 4 rightmost line sensors as one number from -100 to 100 */
+    /** \brief read intensity of 4 rightmost line sensors as one number from -100 to 100 */
     int avgRightIntensity();
 
-    /** returns true if both sensors are on the line */
+    /** \brief returns true if both sensors are on the line */
     bool atIntersection();
 
-    /** returns if either line sensor is one the line */
+    /** \brief returns if either line sensor is one the line */
     bool onLine();
 
-    /** set min
-     * min should be on a scale of 0 to 1024, since it's a raw sensor value
-     */
-    void setMin(int min);
-
-    /** set max
-     * max should be on a scale of 0 to 1024, since it's a raw sensor value
-     */
-    void setMax(int max);
-
-    /** call THESHOLD of the raw sensor value range as "on the line"
+    /** calculate THESHOLD of the raw sensor value range as "on the line"
      * again, the resuling threshold is from 0 to 1024
      */
-    void calculateThreshold(int minVal, int maxVal);
+    void setMinMax(int minVal, int maxVal);
 
     /** \brief values used during calibration
      */
@@ -48,9 +38,6 @@ class LineSensor {
     bool leftSideOnLine();
 
   private:
-    /** read raw values from analog ports */
-    int* readRaw();
-
     /** avg 4 sensors, starting at offset from PIN_0
      * value scaled from -100 to 100
      */
@@ -59,18 +46,17 @@ class LineSensor {
     /** this assumes line sensor pins are in order. This is the first (leftmost pin) */
     const static int PIN_0 = 0;
 
-    /** the board contains IR LEDs, this pin controls those LEDs */
+    /** \brief the board contains IR LEDs, this pin controls those LEDs */
     const static int LEDPIN = 29;
 
-    /** raw min value, from 0 to 1024 */
+    /** \brief raw min value, from 0 to 1024 */
     int min_intensity;
 
-    /** raw max value, from 0 to 1024 */
+    /** \brief raw max value, from 0 to 1024 */
     int max_intensity;
 
-
-    /** used by calculate threshold, based on min and max from calibrate */
-    const static int THRESHOLD = -125;
+    /** \brief determines what constitutes a black line (from -100 to 100)*/
+    const static int THRESHOLD = -85;
 
     int rawValues[8];
 };

@@ -2,14 +2,13 @@
 #include <Arduino.h>
 
 void LineSensor::setup(){
-
   for (int i=LineSensor::PIN_0;i<8;i++){
     pinMode(i,INPUT);
   }
   digitalWrite(LEDPIN,HIGH);
 }
 
-void LineSensor::calculateThreshold(int minVal, int maxVal){
+void LineSensor::setMinMax(int minVal, int maxVal){
   this->min_intensity = minVal;
   this->max_intensity = maxVal;
 }
@@ -28,7 +27,7 @@ int LineSensor::avgSet(int offset){
     sum += raw;
   }
   int avg = sum/3;
-  // long because this value could be greater than 2^15-1
+  // long because this value could be greater than the largest int (2^15-1)
   long fullDiff = 200 * (avg - min_intensity);
   long scaledDiff = fullDiff / (max_intensity - min_intensity);
   //should be safe to cast to int now
@@ -62,8 +61,3 @@ bool LineSensor::leftSideOnLine(){
   return avgLeftIntensity() < THRESHOLD;
 }
 
-int* LineSensor::readRaw(){
-  for (int i=LineSensor::PIN_0; i<8; i++){
-    rawValues[8] = analogRead(i);
-  }
-}
