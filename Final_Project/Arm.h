@@ -1,5 +1,5 @@
 #pragma once
-/* \brief arm class
+/** \brief arm class
  * functions here control the 4 bar linkage/slider crank
  */
 
@@ -10,20 +10,20 @@
 class Arm {
   public:
 
-    /* \brief initializes servos and other stuff. called by main arduino setup */
+    /** \brief initializes servos and other stuff. called by main arduino setup */
     void setup();
 
-    /* \brief lower arm all the way to the top */
+    /** \brief lower arm all the way to the top */
     void down();
 
-    /* \brief raise arm all the way to the bottom */
+    /** \brief raise arm all the way to the bottom */
     void up();
 
     void stop();
 
     void setPosition(int setpoint);
 
-    /* \brief return position in encoder counts */
+    /** \brief return position in encoder counts */
     int position();
 
     Gripper *gripper;
@@ -32,14 +32,14 @@ class Arm {
 
     int motorPin = 10;
 
-    /* \brief used by PI to computer integral */
+    /** \brief used by PI to computer integral */
     int integral;
 
-    /* PI constants */
+    /** PI constants */
     const float kP = -1;
     const float kI = -1;
 
-    /* positions */
+    /** positions */
     const int UP_POSITION = -1;
     const int DOWN_POSITION = -1;
 
