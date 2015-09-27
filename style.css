@@ -1,0 +1,34 @@
+body{
+  background-image: url('images/iron_man.jpg');
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-variant:small-caps;
+  font-size: 400%;
+}
+
+h2 {
+  font-variant:small-caps;
+  font-size: 200%;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  padding: 10px 15px;
+  margin: 1px 15px;
+  line-height: 32px;
+  border-radius: 2px;
+  font-size: 0.9em;
+  background-color: #19CFEC;
+  color: #646464;
+  text-decoration: none;
+}
+
+#title_page{
+  margin-top: 10%;
+  margin-left: 5%;
+  color: #f2f2f2;
+}
