@@ -1,0 +1,54 @@
+\hypertarget{classTurnUntilLine}{\section{Turn\-Until\-Line Class Reference}
+\label{classTurnUntilLine}\index{Turn\-Until\-Line@{Turn\-Until\-Line}}
+}
+Inheritance diagram for Turn\-Until\-Line\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTurnUntilLine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTurnUntilLine_a737bfe72e0d4dbcce9f91182e319d28d}{{\bfseries Turn\-Until\-Line} (int direction)}\label{classTurnUntilLine_a737bfe72e0d4dbcce9f91182e319d28d}
+
+\item 
+\hypertarget{classTurnUntilLine_a99e42f7512b95097df29633877e72cbd}{void \hyperlink{classTurnUntilLine_a99e42f7512b95097df29633877e72cbd}{initialize} ()}\label{classTurnUntilLine_a99e42f7512b95097df29633877e72cbd}
+
+\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\hypertarget{classTurnUntilLine_a90feb7840ebc51984e4d0a31383ec5a9}{void \hyperlink{classTurnUntilLine_a90feb7840ebc51984e4d0a31383ec5a9}{execute} ()}\label{classTurnUntilLine_a90feb7840ebc51984e4d0a31383ec5a9}
+
+\begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
+bool \hyperlink{classTurnUntilLine_ad9232508d735c78d6443958fe2f18002}{is\-Finished} ()
+\begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\hypertarget{classTurnUntilLine_a769864873e706e0ca6701eac7f947ede}{void \hyperlink{classTurnUntilLine_a769864873e706e0ca6701eac7f947ede}{end} ()}\label{classTurnUntilLine_a769864873e706e0ca6701eac7f947ede}
+
+\begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classTurnUntilLine_ad9232508d735c78d6443958fe2f18002}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTurnUntilLine_ad9232508d735c78d6443958fe2f18002}{\index{Turn\-Until\-Line@{Turn\-Until\-Line}!is\-Finished@{is\-Finished}}
+\index{is\-Finished@{is\-Finished}!TurnUntilLine@{Turn\-Until\-Line}}
+\subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Turn\-Until\-Line\-::is\-Finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnUntilLine_ad9232508d735c78d6443958fe2f18002}
+
+
+checked every iteration to see if we're done here. this will be overrided by individual commands 
+
+\begin{DoxyReturn}{Returns}
+is the function finished 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Final\-\_\-\-Project/Turn\-Until\-Line.\-h\item 
+Final\-\_\-\-Project/Turn\-Until\-Line.\-cpp\end{DoxyCompactItemize}
