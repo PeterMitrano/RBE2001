@@ -1,5 +1,7 @@
 #include "Robot.h"
 
+Robot *Robot::instance = NULL;
+
 Robot::Robot(){}
 
 Robot *Robot::getInstance(){
@@ -16,6 +18,9 @@ void Robot::setup() {
   delay(1000);
 }
 
+void Robot::openGripper(){
+  gripperMotor.write(10);
+}
 void Robot::closeGripper(){
-  gripperMotor.write(180);
+  gripperMotor.write(170);
 }

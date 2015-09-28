@@ -1,5 +1,7 @@
 #include "Scheduler.h"
 
+Scheduler *Scheduler::instance = NULL;
+
 Scheduler::Scheduler() {}
 
 Scheduler *Scheduler::getInstance() {

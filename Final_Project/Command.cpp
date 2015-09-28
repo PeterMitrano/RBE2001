@@ -5,20 +5,25 @@
 Command::Command() : initialized(false) {}
 
 Command::Command(String name) : initialized(false), name(name), startTime(millis()) {}
-
 bool Command::cycle() {
-  bool finished = isFinished();
+  bool finished = false;
+
+  Serial.print(name);
 
   if (!initialized) {
+    Serial.println(" INIT");
     initialize();
     _initialize();
     initialized = true;
   }
-  else if (finished) {
+  else if (isFinished()) {
+    Serial.println(" FINISHED");
+    finished = true;
     end();
     _end();
   }
   else {
+    Serial.println();
     execute();
     _execute();
   }

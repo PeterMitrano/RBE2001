@@ -22,4 +22,8 @@ bool BlinkLED::isFinished(){
   return !digitalRead(4);
 }
 
-void BlinkLED::end(){}
+void BlinkLED::end(){
+  digitalWrite(5,HIGH);
+  delay(1000);
+  digitalWrite(5,LOW);
+}

@@ -17,6 +17,7 @@ class Robot {
     void setup();
 
     void closeGripper();
+    void openGripper();
 
   private:
     /* there's only one robot, so use private constructor */

@@ -3,16 +3,16 @@
 CloseGripper::CloseGripper() : Command("close gripper"){}
 
 void CloseGripper::initialize(){
-  setTimeout(3000);
+  setTimeout(1000);
+  Robot::getInstance()->closeGripper();
 }
 
 void CloseGripper::execute(){
-  Robot::getInstance()->closeGripper();
 }
 
 bool CloseGripper::isFinished(){
   return isTimedOut();
 }
 
-void CloseGripper::end(){  
+void CloseGripper::end(){
 }

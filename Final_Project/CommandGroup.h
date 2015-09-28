@@ -30,4 +30,5 @@ class CommandGroup: public Command {
     int currentCommandIndex;
 
     LinkedList<CommandGroupEntry> commands;
+    LinkedList<CommandGroupEntry> children;
 };
