@@ -21,6 +21,7 @@ class Robot {
   private:
     /* there's only one robot, so use private constructor */
     Robot();
+    static Robot *instance;
 
     Servo gripperMotor;
 

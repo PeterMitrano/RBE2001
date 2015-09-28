@@ -3,8 +3,10 @@
 Robot::Robot(){}
 
 Robot *Robot::getInstance(){
-  static Robot robot;
-  return &robot;
+  if (instance == NULL){
+    instance = new Robot();
+  }
+  return instance;
 }
 
 void Robot::setup() {

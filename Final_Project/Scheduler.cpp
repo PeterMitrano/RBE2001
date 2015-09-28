@@ -3,8 +3,10 @@
 Scheduler::Scheduler() {}
 
 Scheduler *Scheduler::getInstance() {
-  static Scheduler instance;
-  return &instance;
+  if (instance == NULL){
+    instance = new Scheduler();
+  }
+  return instance;
 }
 
 void Scheduler::addCommand(Command *command) {

@@ -9,8 +9,11 @@ void BlinkLED::initialize(){
 
 void BlinkLED::execute(){
   //getTime is in millis since start of command
-  if (((getTime()/1000) % 2) == 0){
-    state = !state;
+  if (((getTime()/100) % 2) == 0){
+    state = true;
+  }
+  else {
+    state = false;
   }
   digitalWrite(5,state);
 }
