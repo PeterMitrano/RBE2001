@@ -4,12 +4,15 @@
 #include "CloseGripper.h"
 #include "LowerArm.h"
 #include "RaiseArm.h"
+#include "DriveUntilIntersection.h"
 
 GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("get rod from reactor") {
-  addSequential(new NavigateToReactor(reactorNumber));
+    addSequential(new DriveUntilIntersection());
 
-  addParallel(new OpenGripper());
-  addSequential(new LowerArm());
-  addSequential(new CloseGripper());
-  addSequential(new RaiseArm());
+//  addSequential(new NavigateToReactor(reactorNumber));
+
+//  addParallel(new OpenGripper());
+//  addSequential(new LowerArm());
+//  addSequential(new CloseGripper());
+//  addSequential(new RaiseArm());
 }

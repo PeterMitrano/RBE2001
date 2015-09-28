@@ -28,7 +28,7 @@ int LineSensor::avgSet(int offset){
   }
   int avg = sum/3;
   // long because this value could be greater than the largest int (2^15-1)
-  long fullDiff = 200 * (avg - min_intensity);
+  long fullDiff = (200l) * (avg - min_intensity);
   long scaledDiff = fullDiff / (max_intensity - min_intensity);
   //should be safe to cast to int now
   int normalizedAvg = (int)scaledDiff - 100;
@@ -42,6 +42,8 @@ int LineSensor::avgLeftIntensity(){
 
 int LineSensor::avgRightIntensity(){
   int rightAvg = avgSet(0); //avg of 0,1,2
+  Serial.print("right avg = ");
+  Serial.println(rightAvg);
   return rightAvg;
 }
 
