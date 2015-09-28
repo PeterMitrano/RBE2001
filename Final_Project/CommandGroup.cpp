@@ -25,32 +25,23 @@ void CommandGroup::_execute(){
   Command *executingCommand = NULL;
   bool done = false;
 
-  if (currentCommandIndex  == -1){
-    currentCommandIndex = 0;
-  }
+  currentCommandIndex = 0;
 
   while (!done && (currentCommandIndex < commands.size() )){
+    entry = commands.get(currentCommandIndex);
+    executingCommand = entry._command;
 
-    if (executingCommand != NULL){
-      bool isFinished = executingCommand->cycle();
-      if (!isFinished){
-        done = true;
-      }
-      else {
-        commands.remove(currentCommandIndex);
-      }
+    bool isFinished = executingCommand->cycle();
+    if (isFinished){
+      commands.remove(currentCommandIndex);
+      currentCommandIndex--;
     }
 
-    entry = commands.get(currentCommandIndex);
-
-    switch(entry._state){
-      case CommandGroupEntry::kSequence_InSequence:
-        executingCommand = entry._command;
-        break;
-      case CommandGroupEntry::kSequence_InParallel:
-        currentCommandIndex++;
-        entry._command->cycle();
-        break;
+    if (entry._state == CommandGroupEntry::kSequence_InSequence){
+      done = true;
+    }
+    else {
+      currentCommandIndex++;
     }
   }
 }
