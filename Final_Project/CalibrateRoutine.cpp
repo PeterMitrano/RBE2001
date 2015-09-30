@@ -1,10 +1,11 @@
 #include "CalibrateRoutine.h"
 
-#include "Turn.h"
+#include "TurnUntilLine.h"
 #include "Calibrate.h"
+#include "CalibrateArm.h"
 
 CalibrateRoutine::CalibrateRoutine(): CommandGroup("calibrate routine"){
-  addSequential(new Turn(1,1500));
+  addParallel(new CalibrateArm());
   addSequential(new Calibrate());
-  addSequential(new Turn(2,1500));
+  addSequential(new TurnUntilLine(2));
 }

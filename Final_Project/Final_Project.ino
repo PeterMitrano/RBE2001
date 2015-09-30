@@ -4,30 +4,27 @@
 
 #include "Robot.h"
 #include "Scheduler.h"
-#include "Util.h"
 
 #include "GetDemRods.h"
 #include "BlinkLED.h"
+#include "OpenGripper.h"
+#include "Drive.h"
 
 void setup() {
   Serial.begin(9600);
 
   Robot::getInstance()->setup();
 
-  //servos must be attached here
-  Robot::getInstance()->leftWheel.attach(Robot::leftWheelPin);
-  Robot::getInstance()->rightWheel.attach(Robot::rightWheelPin);
-
   //add first command
   GetDemRods *cmd = new GetDemRods();
   cmd->start();
   //add continuous (infinite) commands
-  BlinkLED *blink = new BlinkLED();
-  // blink->start();
+  //BlinkLED *blink = new BlinkLED();
+  //blink->start();
 }
 
 void loop() {
+  //required for any line stuff to work
+  Robot::getInstance()->lineSensor.cache();
   Scheduler::getInstance()->run();
-//  Robot::getInstance()->btClient->readMessage();
-
 }

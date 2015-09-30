@@ -6,12 +6,12 @@ Calibrate::Calibrate() : Command("calibrating"){
 }
 
 void Calibrate::initialize(){
-  setTimeout(2000);
-  Robot::getInstance()->rotateLeft();
+  setTimeout(Robot::CALIBRATE_TIME);
 }
 
 void Calibrate::execute(){
-  int val = Robot::getInstance()->lineSensor->calibratingValue();
+  Robot::getInstance()->rotateLeft();
+  int val = Robot::getInstance()->lineSensor.calibratingValue();
   if (val < minVal) minVal = val;
   if (val > maxVal) maxVal = val;
 }
@@ -21,6 +21,6 @@ bool Calibrate::isFinished(){
 }
 
 void Calibrate::end(){
-  Robot::getInstance()->lineSensor->setMinMax(minVal, maxVal);
+  Robot::getInstance()->lineSensor.setMinMax(minVal, maxVal);
   Robot::getInstance()->stopDriving();
 }

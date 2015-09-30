@@ -3,14 +3,15 @@
 OpenGripper::OpenGripper() : Command("open gripper") {}
 
 void OpenGripper::initialize(){
-  Robot::getInstance()->arm->gripper->opn();
+  setTimeout(1000);
 }
 
-void OpenGripper::execute(){}
+void OpenGripper::execute(){
+  Robot::getInstance()->arm.gripper.opn();
+}
 
 bool OpenGripper::isFinished(){
-  //since servo will get it to where it needs to go, only run once
-  return true;
+  return isTimedOut();
 }
 
 void OpenGripper::end(){}

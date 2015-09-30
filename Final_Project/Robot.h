@@ -30,13 +30,16 @@ class Robot {
     /* stop driving */
     void stopDriving();
 
+    /** \brief fwd drive no line track*/
+    void driveFwd();
+
     /* fixed power rotate */
     void rotateLeft();
 
     /* fixed power rotate */
     void rotateRight();
 
-    bool atFuelRod();
+    bool atReactorTube();
 
     /* used to store position
      * updated by navigate commands
@@ -45,9 +48,9 @@ class Robot {
      */
     int row,col,direction;
 
-    BTClient *btClient;
-    Arm *arm;
-    LineSensor *lineSensor;
+    BTClient btClient;
+    Arm arm;
+    LineSensor lineSensor;
 
     /* set by bluetooth if resume/stop message is recieve
      * all drive motor commands depend on it being true
@@ -59,17 +62,18 @@ class Robot {
      */
     bool radiating = false;
 
-    /*can't figure out how to make these private and still have attach work */
-    Servo leftWheel;
-    Servo rightWheel;
-    static const int leftWheelPin = 5;
-    static const int rightWheelPin = 4;
-
     /* moar pins */
     static const int LED_PIN0 = 24,
                  LED_PIN1 = 23;
+    static const int CALIBRATE_TIME = 2000;
 
   private:
+    Servo leftWheel,rightWheel;
+
+    /*can't figure out how to make these private and still have attach work */
+    static const int leftWheelPin = 5;
+    static const int rightWheelPin = 4;
+
     /* there's only one robot, so use private constructor and instance*/
     Robot();
     static Robot *instance;
@@ -84,11 +88,6 @@ class Robot {
 
     const int pausePin = 27;
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 25;
-    const int travelSpeed = 25;
-
-
-    /* used to track calibration */
-    unsigned long calibrationTime = 0;
-
+    const int rotateSpeed = 42;
+    const int travelSpeed = 50;
 };

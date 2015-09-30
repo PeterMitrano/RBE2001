@@ -5,5 +5,5 @@
 
 class TurnAround : public CommandGroup {
   public:
-    TurnAround();
+    TurnAround(int direction);
 };

@@ -24,10 +24,9 @@ class CommandGroup: public Command {
     virtual void execute();
     virtual void end();
     virtual bool isFinished();
+    LinkedList<CommandGroupEntry> commands;
 
   private:
 
     int currentCommandIndex;
-
-    LinkedList<CommandGroupEntry> commands;
 };

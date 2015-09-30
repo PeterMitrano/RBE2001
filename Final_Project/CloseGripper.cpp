@@ -1,8 +1,20 @@
 #include "CloseGripper.h"
 
-CloseGripper::CloseGripper(){}
+CloseGripper::CloseGripper() : Command("close gripper") {}
 
-void CloseGripper::initialize(){}
-void CloseGripper::execute(){}
-bool CloseGripper::isFinished(){}
+void CloseGripper::initialize(){
+  setTimeout(1000);
+}
+
+
+void CloseGripper::execute(){
+  Robot::getInstance()->arm.gripper.cls();
+}
+
+
+bool CloseGripper::isFinished(){
+  return isTimedOut();
+}
+
+
 void CloseGripper::end(){}

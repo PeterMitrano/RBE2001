@@ -27,7 +27,9 @@ void NavigateToReactor::initialize(){
   CommandGroup *path = new CommandGroup();
   //this function will add things to path
   PathPlanner::plan(currentRow, currentCol, destDirection, destRow, destCol,path);
-  path->start(); //tell scheduler to run this group of commands
+  for (int i=0;i<path->commands.size();i++){
+  }
+  //  path->start(); //tell scheduler to run this group of commands
 }
 
 void NavigateToReactor::execute(){

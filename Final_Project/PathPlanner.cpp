@@ -10,12 +10,12 @@ void PathPlanner::plan(int currentRow, int currentCol,int destDirection, int des
     //first navigate to center line
     if (currentRow != 1){
       //this must mean you're facing the supply/storage tubes
-      path->addSequential(new TurnAround());
+      path->addSequential(new TurnAround(1));
       path->addSequential(new DriveUntilIntersection());
     }
     else {
       //this must mean you're facing a reactor tube
-      path->addSequential(new TurnAround());
+      path->addSequential(new TurnAround(1));
     }
 
     //note that we're in row 1 on the line
