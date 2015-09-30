@@ -65,7 +65,7 @@ class Robot {
      */
     bool radiating = false;
 
-    static const int CALIBRATE_TIME = 2000;
+    static const int CALIBRATE_TIME = 3000;
 
   private:
     Servo leftWheel,rightWheel;
@@ -94,6 +94,6 @@ class Robot {
 
     const int pausePin = 27;
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 42;
-    const int travelSpeed = 50;
+    const int rotateSpeed = 38;
+    const int travelSpeed = 47;
 };

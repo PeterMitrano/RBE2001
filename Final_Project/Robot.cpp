@@ -29,24 +29,27 @@ void Robot::setup(){
 
   lineSensor.setup();
   arm.setup();
+  btClient.setup();
 }
 
 void Robot::blinkLEDs(){
-  //getTime is in millis since start of command
-  if ((millis() / 200) % 2 == 0){
-    ledState = HIGH;
-  }
-  else {
-    ledState = LOW;
-  }
+  if (radiating){
+    //getTime is in millis since start of command
+    if ((millis() / 200) % 2 == 0){
+      ledState = HIGH;
+    }
+    else {
+      ledState = LOW;
+    }
 
-  if (Robot::getInstance()->radiating){
-    digitalWrite(Robot::LED_PIN1,ledState);
-    digitalWrite(Robot::LED_PIN0,ledState);
-  }
-  else {
-    digitalWrite(Robot::LED_PIN0,LOW);
-    digitalWrite(Robot::LED_PIN1,LOW);
+    if (Robot::getInstance()->radiating){
+      digitalWrite(Robot::LED_PIN1,ledState);
+      digitalWrite(Robot::LED_PIN0,ledState);
+    }
+    else {
+      digitalWrite(Robot::LED_PIN0,LOW);
+      digitalWrite(Robot::LED_PIN1,LOW);
+    }
   }
 }
 

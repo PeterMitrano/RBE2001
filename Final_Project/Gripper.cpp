@@ -1,5 +1,6 @@
 #include "Gripper.h"
 
+#include "Robot.h"
 #include <Arduino.h>
 
 void Gripper::setup(){
@@ -8,8 +9,10 @@ void Gripper::setup(){
 
 void Gripper::cls(){
   motor.write(170);
+  Robot::getInstance()->btClient.gripperStatus = 1;
 }
 
 void Gripper::opn(){
+  Robot::getInstance()->btClient.gripperStatus = 2;
   motor.write(10);
 }
