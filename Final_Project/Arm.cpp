@@ -19,7 +19,15 @@ void Arm::control(){
       long error = setpoint - pos;
 
       integral += error;
-      int val = kP * error + kI * integral;
+      long derivative = lastError - error;
+
+      int val = kP * error + kI * integral + kD * derivative;
+
+      Serial.print(error);
+      Serial.print(" ");
+      Serial.print(derivative);
+      Serial.print(" ");
+      Serial.println(val);
 
       drive(val);
       lastError = error;

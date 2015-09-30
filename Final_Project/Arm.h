@@ -64,18 +64,19 @@ class Arm {
     /** \brief used by PI to computer integral */
     long integral = 0;
 
-    const long tolerance = 100;
+    const long tolerance = 20;
     long lastError = 0;
 
     /** PI constants */
-    const double kP = 0.05;
-    const double kI = 0.0008;
+    const double kP = 0.1;
+    const double kI = 0.0001;
+    const double kD = 0.01;
 
     long setpoint = 0;
 
     /** positions */
-    const long UP_POSITION = 5900l;
-    const long DOWN_POSITION = 100l;
+    const long UP_POSITION = 6000l;
+    const long DOWN_POSITION = 0l;
 
     Encoder encoder;
 };
