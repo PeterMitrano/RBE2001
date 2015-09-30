@@ -9,7 +9,7 @@ BTClient::BTClient() :
 void BTClient::setup(){
   pinMode(14,INPUT_PULLUP);
   pinMode(15,INPUT_PULLUP);
-  Serial.begin(115200);
+  Serial3.begin(115200);
 }
 
 byte BTClient::availableSupplyTubes(){
