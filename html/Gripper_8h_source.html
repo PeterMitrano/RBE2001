@@ -94,38 +94,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classGripper.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGripper.html">Gripper</a>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classGripper.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGripper.html">Gripper</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">/* initializes servos and other stuff. called by main arduino setup */</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> setup();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">/* closes gripper, but returns if no rod was truly grasped */</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> grabRod();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">/* open rod, but returns if rod was truly released */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> releaseRod();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/* close the gripper */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> cls();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/* open the gripper */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> opn();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/* returns T if gripper wires don&#39;t touch, meaning the rod is present */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> hasRod();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Servo motor;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> motorPin = 6;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> rodSensorPin = 22;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> setup();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#ada511826dbf5abcdd12532ae725efeaf">cls</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5">opn</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Servo motor;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> motorPin = 6;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="ttc" id="classGripper_html_ada511826dbf5abcdd12532ae725efeaf"><div class="ttname"><a href="classGripper.html#ada511826dbf5abcdd12532ae725efeaf">Gripper::cls</a></div><div class="ttdeci">void cls()</div><div class="ttdoc">close the gripper </div><div class="ttdef"><b>Definition:</b> Gripper.cpp:10</div></div>
 <div class="ttc" id="classGripper_html"><div class="ttname"><a href="classGripper.html">Gripper</a></div><div class="ttdef"><b>Definition:</b> Gripper.h:7</div></div>
+<div class="ttc" id="classGripper_html_ab4fa689ad3f08e97c7fcd10247965ff5"><div class="ttname"><a href="classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5">Gripper::opn</a></div><div class="ttdeci">void opn()</div><div class="ttdoc">open the gripper </div><div class="ttdef"><b>Definition:</b> Gripper.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 27 2015 17:58:55 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 30 2015 19:56:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

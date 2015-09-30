@@ -114,24 +114,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCommandGroup.html#a5e91d370cafde43548d79945ccb4d8fe">execute</a>();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">end</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c">isFinished</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> currentCommandIndex;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classLinkedList.html">LinkedList&lt;CommandGroupEntry&gt;</a> commands;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classLinkedList.html">LinkedList&lt;CommandGroupEntry&gt;</a> commands;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> currentCommandIndex;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
 <div class="ttc" id="classCommandGroup_html"><div class="ttname"><a href="classCommandGroup.html">CommandGroup</a></div><div class="ttdef"><b>Definition:</b> CommandGroup.h:11</div></div>
 <div class="ttc" id="classLinkedList_html"><div class="ttname"><a href="classLinkedList.html">LinkedList&lt; CommandGroupEntry &gt;</a></div></div>
 <div class="ttc" id="classCommandGroup_html_a5e91d370cafde43548d79945ccb4d8fe"><div class="ttname"><a href="classCommandGroup.html#a5e91d370cafde43548d79945ccb4d8fe">CommandGroup::execute</a></div><div class="ttdeci">virtual void execute()</div><div class="ttdoc">stuff to do over and over each iteration. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> CommandGroup.cpp:21</div></div>
-<div class="ttc" id="classCommandGroup_html_a96807a2763adf9e21ebf2cb9e3574e3c"><div class="ttname"><a href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c">CommandGroup::isFinished</a></div><div class="ttdeci">virtual bool isFinished()</div><div class="ttdoc">checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> CommandGroup.cpp:63</div></div>
+<div class="ttc" id="classCommandGroup_html_a96807a2763adf9e21ebf2cb9e3574e3c"><div class="ttname"><a href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c">CommandGroup::isFinished</a></div><div class="ttdeci">virtual bool isFinished()</div><div class="ttdoc">checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> CommandGroup.cpp:54</div></div>
 <div class="ttc" id="classCommandGroup_html_a99800c5dbd05ab750aa0bb27518d0467"><div class="ttname"><a href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">CommandGroup::initialize</a></div><div class="ttdeci">virtual void initialize()</div><div class="ttdoc">run once in the first iteration of the command&#39;s life. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> CommandGroup.cpp:16</div></div>
-<div class="ttc" id="classCommandGroup_html_a28ad3a1c2f6b4f9aea10efa1a824895e"><div class="ttname"><a href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">CommandGroup::end</a></div><div class="ttdeci">virtual void end()</div><div class="ttdoc">called once at the end, once isFinished() returned true. this will be overrided by individual command...</div><div class="ttdef"><b>Definition:</b> CommandGroup.cpp:58</div></div>
+<div class="ttc" id="classCommandGroup_html_a28ad3a1c2f6b4f9aea10efa1a824895e"><div class="ttname"><a href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">CommandGroup::end</a></div><div class="ttdeci">virtual void end()</div><div class="ttdoc">called once at the end, once isFinished() returned true. this will be overrided by individual command...</div><div class="ttdef"><b>Definition:</b> CommandGroup.cpp:49</div></div>
 <div class="ttc" id="classCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">this class is the very core of the framework commands are initialized once, then run until they&#39;re do...</div><div class="ttdef"><b>Definition:</b> Command.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 27 2015 17:58:55 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 30 2015 19:56:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

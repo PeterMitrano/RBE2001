@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['position',['position',['../classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8',1,'Arm']]]
+  ['online',['onLine',['../classLineSensor.html#ad9d3c5a694f1ff946d1137df1694b026',1,'LineSensor']]],
+  ['opn',['opn',['../classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5',1,'Gripper']]]
 ];

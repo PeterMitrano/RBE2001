@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setminmax',['setMinMax',['../classLineSensor.html#a1c76fb6ddfea2243b6bb3a61015f8b59',1,'LineSensor']]],
-  ['setup',['setup',['../classArm.html#a0e642e1a6fc24f40268f2c759dee62e1',1,'Arm::setup()'],['../classLineSensor.html#a555f6f7222ea1e76ed810edbde44c39c',1,'LineSensor::setup()']]],
-  ['start',['start',['../classCommand.html#aef139180669b92534dd05a89323fb82f',1,'Command']]]
+  ['rawdown',['rawDown',['../classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e',1,'Arm']]],
+  ['resetencoder',['resetEncoder',['../classArm.html#afb44126b438f8dc00b0bf0720c84a737',1,'Arm']]],
+  ['rightsideonline',['rightSideOnLine',['../classLineSensor.html#a92c8d91032dcba0860007e6d7248329f',1,'LineSensor']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['online',['onLine',['../classLineSensor.html#ad9d3c5a694f1ff946d1137df1694b026',1,'LineSensor']]]
+  ['leftsideonline',['leftSideOnLine',['../classLineSensor.html#a59fdc7f06ce311ccef3ed99f005830fa',1,'LineSensor']]]
 ];

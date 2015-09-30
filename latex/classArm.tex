@@ -16,6 +16,9 @@ arm class functions here control the 4 bar linkage/slider crank
 \hypertarget{classArm_a0e642e1a6fc24f40268f2c759dee62e1}{void \hyperlink{classArm_a0e642e1a6fc24f40268f2c759dee62e1}{setup} ()}\label{classArm_a0e642e1a6fc24f40268f2c759dee62e1}
 
 \begin{DoxyCompactList}\small\item\em initializes servos and other stuff. called by main arduino setup \end{DoxyCompactList}\item 
+\hypertarget{classArm_a009c19e5b213f692c24eab792cc40c47}{void \hyperlink{classArm_a009c19e5b213f692c24eab792cc40c47}{control} ()}\label{classArm_a009c19e5b213f692c24eab792cc40c47}
+
+\begin{DoxyCompactList}\small\item\em the main function for controlling the arm. All other functions should just call this \end{DoxyCompactList}\item 
 \hypertarget{classArm_a9075166ca53ef3cd547a7725ee5bca1d}{void \hyperlink{classArm_a9075166ca53ef3cd547a7725ee5bca1d}{down} ()}\label{classArm_a9075166ca53ef3cd547a7725ee5bca1d}
 
 \begin{DoxyCompactList}\small\item\em lower arm all the way to the top \end{DoxyCompactList}\item 
@@ -25,16 +28,31 @@ arm class functions here control the 4 bar linkage/slider crank
 \hypertarget{classArm_a4a8274680d981524efbeb2b51eb49c28}{void {\bfseries stop} ()}\label{classArm_a4a8274680d981524efbeb2b51eb49c28}
 
 \item 
-\hypertarget{classArm_a720cd8598fb21b6382f48acd9d3583eb}{void {\bfseries set\-Position} (int setpoint)}\label{classArm_a720cd8598fb21b6382f48acd9d3583eb}
+\hypertarget{classArm_ae3c0195535b15f56f9027aea0ae5ec76}{bool \hyperlink{classArm_ae3c0195535b15f56f9027aea0ae5ec76}{at\-Position} ()}\label{classArm_ae3c0195535b15f56f9027aea0ae5ec76}
+
+\begin{DoxyCompactList}\small\item\em return true if position is within tolerance of setpoint \end{DoxyCompactList}\item 
+\hypertarget{classArm_a11049528120ab063b71e5614d0c6b12c}{void {\bfseries set\-Position} (long setpoint)}\label{classArm_a11049528120ab063b71e5614d0c6b12c}
 
 \item 
 \hypertarget{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}{int \hyperlink{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}{position} ()}\label{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}
 
-\begin{DoxyCompactList}\small\item\em return position in encoder counts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em return position in encoder counts \end{DoxyCompactList}\item 
+\hypertarget{classArm_a234397ff44a8ac5fda920d92b9b33237}{bool \hyperlink{classArm_a234397ff44a8ac5fda920d92b9b33237}{at\-Lim} ()}\label{classArm_a234397ff44a8ac5fda920d92b9b33237}
+
+\begin{DoxyCompactList}\small\item\em returns true if limit switch is hit \end{DoxyCompactList}\item 
+\hypertarget{classArm_a90df7bcd3c225f6fc05ef2f77c773d2e}{void \hyperlink{classArm_a90df7bcd3c225f6fc05ef2f77c773d2e}{raw\-Down} ()}\label{classArm_a90df7bcd3c225f6fc05ef2f77c773d2e}
+
+\begin{DoxyCompactList}\small\item\em drives the arm down very slowly. used in calibrating \end{DoxyCompactList}\item 
+\hypertarget{classArm_afb44126b438f8dc00b0bf0720c84a737}{void \hyperlink{classArm_afb44126b438f8dc00b0bf0720c84a737}{reset\-Encoder} ()}\label{classArm_afb44126b438f8dc00b0bf0720c84a737}
+
+\begin{DoxyCompactList}\small\item\em sets encoder count to 0 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classArm_a5d8c0e5790de4c4cf4399314afbbf03a}{\hyperlink{classGripper}{Gripper} $\ast$ {\bfseries gripper}}\label{classArm_a5d8c0e5790de4c4cf4399314afbbf03a}
+\hypertarget{classArm_a1f237e56fc1e76c2b63f1f59d847945d}{\hyperlink{classGripper}{Gripper} {\bfseries gripper}}\label{classArm_a1f237e56fc1e76c2b63f1f59d847945d}
+
+\item 
+\hypertarget{classArm_a3f6c85e5a8feacd8870b653a8163d99f}{bool {\bfseries calibrated} = false}\label{classArm_a3f6c85e5a8feacd8870b653a8163d99f}
 
 \end{DoxyCompactItemize}
 
