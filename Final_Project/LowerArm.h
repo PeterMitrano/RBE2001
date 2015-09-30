@@ -11,6 +11,4 @@ class LowerArm: public Command {
     bool isFinished();
     void end();
   private:
-    const int setpoint = -1;
-    const int tolerance = -1;
 };

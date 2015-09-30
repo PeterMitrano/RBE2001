@@ -10,27 +10,43 @@ void Arm::setup() {
   gripper.setup();
 }
 
+void Arm::control(){
+  if (calibrated){
+    unsigned long t = millis();
+    unsigned long dt = t - oldTime;
+    if (dt > 50l){
+      long pos = position();
+      long error = setpoint - pos;
+
+      integral += error;
+      int val = kP * error + kI * integral;
+
+      drive(val);
+      lastError = error;
+      oldTime = t;
+    }
+  }
+}
+
 void Arm::stop(){
   drive(0);
 }
 
 void Arm::up(){
-  setPosition(UP_POSITION);
+  setpoint = UP_POSITION;
 }
 
 void Arm::down(){
-  setPosition(DOWN_POSITION);
+  setpoint = DOWN_POSITION;
 }
 
 void Arm::rawDown(){
   drive(-60);
 }
 
-void Arm::setPosition(int setpoint) {
-  int error = setpoint - position();
-  integral += error;
-  int val = kP * error + kI * integral;
-  drive(val);
+bool Arm::atPosition(){
+  int diff = abs(position() - setpoint);
+  return diff < tolerance;
 }
 
 int Arm::position(){
@@ -46,20 +62,28 @@ bool Arm::atLim(){
 }
 
 void Arm::drive(int power) {
-    if (power == 0) {
+  if (power > 100) power = 100;
+  if (power < -100) power = -100;
+
+
+  if (power == 0) {
+    analogWrite(motorFwdPin, 0);
+    analogWrite(motorRevPin, 0);
+  }
+  else if (power > 0) {
+    int fwdAdjusted = map(power, 0, 100, 0, 200);
+    analogWrite(motorRevPin, 0);
+    analogWrite(motorFwdPin, fwdAdjusted);
+  }
+  else if (power < 0) {
+    if (!atLim()){
+      int revAdjusted = map(power, -100, 0, 200, 0);
+      analogWrite(motorFwdPin, 0);
+      analogWrite(motorRevPin, revAdjusted);
+    }
+    else {
       analogWrite(motorFwdPin, 0);
       analogWrite(motorRevPin, 0);
     }
-    else if (!atLim()){
-      if (power > 0) {
-        int fwdAdjusted = map(power, 0, 100, 0, 255);
-        analogWrite(motorRevPin, 0);
-        analogWrite(motorFwdPin, fwdAdjusted);
-      }
-      else if (power < 0) {
-        int revAdjusted = map(power, -100, 0, 255, 0);
-        analogWrite(motorFwdPin, 0);
-        analogWrite(motorRevPin, revAdjusted);
-      }
-    }
+  }
 }

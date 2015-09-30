@@ -16,4 +16,5 @@ bool CalibrateArm::isFinished(){
 void CalibrateArm::end(){
   Robot::getInstance()->arm.stop();
   Robot::getInstance()->arm.resetEncoder();
+  Robot::getInstance()->arm.calibrated = true;
 }

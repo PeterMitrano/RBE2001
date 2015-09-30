@@ -6,6 +6,6 @@
 
 CalibrateRoutine::CalibrateRoutine(): CommandGroup("calibrate routine"){
   addParallel(new CalibrateArm());
-  addSequential(new Calibrate());
-  addSequential(new TurnUntilLine(2));
+//  addSequential(new Calibrate());
+//  addSequential(new TurnUntilLine(2));
 }

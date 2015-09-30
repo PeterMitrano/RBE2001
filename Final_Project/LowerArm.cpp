@@ -2,14 +2,15 @@
 
 LowerArm::LowerArm() : Command("lower arm") {}
 
-void LowerArm::initialize(){}
+void LowerArm::initialize(){
+  Robot::getInstance()->arm.down();
+}
 
 void LowerArm::execute(){
-  Robot::getInstance()->arm.down(); //uses a PI controller
 }
 
 bool LowerArm::isFinished(){
-  abs(Robot::getInstance()->arm.position() - setpoint) < tolerance;
+  return Robot::getInstance()->arm.atPosition();
 }
 
 void LowerArm::end(){

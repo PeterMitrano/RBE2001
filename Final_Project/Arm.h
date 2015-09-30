@@ -16,6 +16,9 @@ class Arm {
     /** \brief initializes servos and other stuff. called by main arduino setup */
     void setup();
 
+    /** \brief the main function for controlling the arm. All other functions should just call this */
+    void control();
+
     /** \brief lower arm all the way to the top */
     void down();
 
@@ -24,7 +27,10 @@ class Arm {
 
     void stop();
 
-    void setPosition(int setpoint);
+    /** \brief return true if position is within tolerance of setpoint */
+    bool atPosition();
+
+    void setPosition(long setpoint);
 
     /** \brief return position in encoder counts */
     int position();
@@ -39,6 +45,7 @@ class Arm {
     void resetEncoder();
 
     Gripper gripper;
+    bool calibrated = false;
 
   private:
 
@@ -52,16 +59,23 @@ class Arm {
 
     int limPin = 25;
 
+    unsigned long oldTime = 0;
+
     /** \brief used by PI to computer integral */
-    int integral;
+    long integral = 0;
+
+    const long tolerance = 100;
+    long lastError = 0;
 
     /** PI constants */
-    const float kP = 0;
-    const float kI = 0;
+    const double kP = 0.03;
+    const double kI = 0.0002;
+
+    long setpoint = 0;
 
     /** positions */
-    const int UP_POSITION = -1;
-    const int DOWN_POSITION = -1;
+    const long UP_POSITION = 5900l;
+    const long DOWN_POSITION = 100l;
 
     Encoder encoder;
 };

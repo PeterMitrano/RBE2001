@@ -25,4 +25,5 @@ void loop() {
   // while these could be done with commands, it's easier to just functions
   Robot::getInstance()->lineSensor.cache();
   Robot::getInstance()->blinkLEDs();
+  Robot::getInstance()->arm.control();
 }
