@@ -53,7 +53,7 @@ class BTClient {
            INFO_MSG = 0x12} MSG_TYPE;
 
     /* send the given data to the field computer */
-    void sendData(byte data[3]);
+    void sendData(MSG_TYPE type, byte data[3]);
 
     /* master object */
     BluetoothMaster btMaster;
