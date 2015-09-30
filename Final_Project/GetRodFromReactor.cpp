@@ -8,11 +8,10 @@
 #include "TurnAround.h"
 
 GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("get rod from reactor") {
-  addSequential(new TurnAround(1));
 //  addSequential(new NavigateToReactor(reactorNumber));
 
-//  addParallel(new OpenGripper());
-//  addSequential(new LowerArm());
+  addParallel(new OpenGripper());
+  addSequential(new LowerArm());
 //  addSequential(new CloseGripper());
 //  addSequential(new RaiseArm());
 }

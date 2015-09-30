@@ -6,23 +6,23 @@
 #include "Scheduler.h"
 
 #include "GetDemRods.h"
-#include "BlinkLED.h"
 
 void setup() {
   Serial.begin(9600);
 
   Robot::getInstance()->setup();
 
-  //add first command
+  // here we start the parent commands which should run throughout the life of the program
   GetDemRods *cmd = new GetDemRods();
   cmd->start();
-
-  BlinkLED *blink = new BlinkLED();
-  blink->start();
 }
 
 void loop() {
-  //required for any line stuff to work
-  Robot::getInstance()->lineSensor.cache();
+  // Scheduler is in charge of running all the commands, so it must always be called
   Scheduler::getInstance()->run();
+
+  // we also a few special functions, like cache and controlArm, which must run continuously, outside of all commands
+  // while these could be done with commands, it's easier to just functions
+  Robot::getInstance()->lineSensor.cache();
+  Robot::getInstance()->blinkLEDs();
 }

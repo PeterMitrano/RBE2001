@@ -19,6 +19,9 @@ class Robot {
     /* setup servos and stuff. called by main setup */
     void setup();
 
+    /** \brief inidicate radiation by blinking LEDs every 1/5th of a second */
+    void blinkLEDs();
+
     /* uses line sensor to follow line
      * following is done by a weighted power to each wheel
      * weight is a function of the intensity of line sensors on that side
@@ -62,17 +65,10 @@ class Robot {
      */
     bool radiating = false;
 
-    /* moar pins */
-    static const int LED_PIN0 = 22,
-                 LED_PIN1 = 23;
     static const int CALIBRATE_TIME = 2000;
 
   private:
     Servo leftWheel,rightWheel;
-
-    /*can't figure out how to make these private and still have attach work */
-    static const int leftWheelPin = 5;
-    static const int rightWheelPin = 4;
 
     /* there's only one robot, so use private constructor and instance*/
     Robot();
@@ -85,6 +81,16 @@ class Robot {
      * input is limited between -100 (full back) and 100 (full forward)
      */
     void drive(int leftPower, int rightPower);
+
+    bool ledState;
+
+    /* moar pins */
+    static const int LED_PIN0 = 22,
+                 LED_PIN1 = 23;
+
+    /*can't figure out how to make these private and still have attach work */
+    static const int leftWheelPin = 5;
+    static const int rightWheelPin = 4;
 
     const int pausePin = 27;
     const int reactorTubeLimitPin = 28;
