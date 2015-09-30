@@ -34,10 +34,16 @@ class BTClient {
     /* send string to field computer for debugging */
     void sendDebugString(String message);
 
+    /* send status */
+    void sendStatus();
+
     /* read from Serial3 and store into Message instance
      * returns Message if successful, null if unsuccessful
      */
     void readMessage();
+
+    /* status variables for sending messages */
+    int movementStatus,gripperStatus,operationStatus;
 
   private:
 
@@ -61,10 +67,9 @@ class BTClient {
     /* protocol decoder */
     ReactorProtocol pcol;
 
-    /* set by commands to tell us when to send data */
-    bool sending;
+    unsigned long lastSent;
 
-    /* raw integer (or hex if you life) representation for storage and supply */
+    /* raw integer (or hex if you want) representation for storage and supply */
     int storage, supply;
 
 };

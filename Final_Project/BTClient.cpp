@@ -28,12 +28,23 @@ void BTClient::sendHeartbeat(){
   sendData(HEARTBEAT_MSG, NULL);
 }
 
+void BTClient::sendStatus(){
+  byte status[3];
+//  = {movementStatus,
+//    gripperStatus,
+//    operationStatus};
+  sendData(STATUS_MSG, status);
+}
+
 void BTClient::sendDebugString(String message){
 
 }
 
 void BTClient::sendData(MSG_TYPE type, byte data[3]){
-  if (sending){
+  unsigned long t = millis();
+  unsigned long dt = t - lastSent;
+  if (dt > 1500){
+    lastSent = t;
     byte pkt[10];
     pcol.setDst(0x00);
     int sz = pcol.createPkt(type, data, pkt);
