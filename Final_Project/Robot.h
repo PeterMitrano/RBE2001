@@ -63,7 +63,7 @@ class Robot {
     bool radiating = false;
 
     /* moar pins */
-    static const int LED_PIN0 = 24,
+    static const int LED_PIN0 = 22,
                  LED_PIN1 = 23;
     static const int CALIBRATE_TIME = 2000;
 

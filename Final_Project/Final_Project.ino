@@ -7,8 +7,6 @@
 
 #include "GetDemRods.h"
 #include "BlinkLED.h"
-#include "OpenGripper.h"
-#include "Drive.h"
 
 void setup() {
   Serial.begin(9600);
@@ -18,9 +16,9 @@ void setup() {
   //add first command
   GetDemRods *cmd = new GetDemRods();
   cmd->start();
-  //add continuous (infinite) commands
-  //BlinkLED *blink = new BlinkLED();
-  //blink->start();
+
+  BlinkLED *blink = new BlinkLED();
+  blink->start();
 }
 
 void loop() {
