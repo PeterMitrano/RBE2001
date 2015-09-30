@@ -68,8 +68,8 @@ class Arm {
     long lastError = 0;
 
     /** PI constants */
-    const double kP = 0.03;
-    const double kI = 0.0002;
+    const double kP = 0.05;
+    const double kI = 0.0008;
 
     long setpoint = 0;
 
