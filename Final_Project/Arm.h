@@ -1,3 +1,4 @@
+
 #pragma once
 /** \brief arm class
  * functions here control the 4 bar linkage/slider crank

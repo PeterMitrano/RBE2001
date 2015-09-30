@@ -1,17 +1,21 @@
 #include "DriveOverIntersection.h"
 
-DriveOverIntersection::DriverOverIntersection(){}
+DriveOverIntersection::DriveOverIntersection() : Command("drive over intersection"){}
 
-void DriverOverIntersection::initialize(){}
+void DriveOverIntersection::initialize(){}
 
-void DriverOverIntersection::execute(){
+void DriveOverIntersection::execute(){
+//drive forward until the outer line snensors read white
+	 Robot::getInstance()->driveFwd();
+}
+
+bool DriveOverIntersection::isFinished(){
+bool done = !(Robot::getInstance()->lineSensor.atIntersection());
+  return done;
 
 }
 
-bool DriverOverIntersection::isFinished(){
-
+void DriveOverIntersection::end(){
+Robot::getInstance()->stopDriving();
 }
 
-void DriverOverIntersection::end(){
-
-}

@@ -8,4 +8,5 @@
 GetDemRods::GetDemRods() : CommandGroup("get dem rods") {
   addSequential(new CalibrateRoutine());
   addSequential(new GetRodFromReactor(1));
+  //addSequential(new )
 }

@@ -1,4 +1,5 @@
 #include <Servo.h> //dummy include because arduino IDE is shit
+#include <Encoder.h>
 #include <BluetoothMaster.h>
 #include <ReactorProtocol.h>
 
