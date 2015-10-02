@@ -5,6 +5,7 @@
 #include "TurnToFace.h"
 
 void PathPlanner::plan(int currentRow, int currentCol,int destDirection, int destRow, int destCol, CommandGroup *path){
+  int dist;
 
   if (currentCol != destCol || currentRow!=destRow){
     //first navigate to center line
@@ -26,12 +27,13 @@ void PathPlanner::plan(int currentRow, int currentCol,int destDirection, int des
     if (destCol > currentCol){
       path->addSequential(new TurnToFace(1));
     }
-    else if (destCol > currentCol){
+    else if (destCol < currentCol){
       path->addSequential(new TurnToFace(3));
     }
 
     //now drive through all the columns
-    for (int c=currentCol;c<destCol;c++){
+    dist = abs(destCol - currentCol);
+    for (int i=0;i<dist;i++){
       path->addSequential(new DriveUntilIntersection());
     }
 
@@ -44,7 +46,8 @@ void PathPlanner::plan(int currentRow, int currentCol,int destDirection, int des
     }
 
     //now drive through all the rows
-    for (int r=currentRow;r<destRow;r++){
+    dist = abs(destRow - currentRow);
+    for (int i=0;i<dist;i++){
       path->addSequential(new DriveUntilIntersection());
     }
   }

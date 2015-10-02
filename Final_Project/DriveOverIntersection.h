@@ -3,7 +3,7 @@
 #include "Robot.h"
 #include "Command.h"
 
-class DriveOverIntersection : Command {
+class DriveOverIntersection : public Command {
   public:
     DriveOverIntersection();
     void initialize();

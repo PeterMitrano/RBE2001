@@ -17,5 +17,6 @@ bool DriveUntilIntersection::isFinished(){
 }
 
 void DriveUntilIntersection::end(){
+  Serial.println("DONE");
   Robot::getInstance()->stopDriving();
 }

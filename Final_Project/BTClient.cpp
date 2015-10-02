@@ -63,11 +63,9 @@ void BTClient::readMessage(){
       if (pcol.getData(pkt,rawData,messageType)){
         switch(messageType){
           case STORAGE_MSG:
-             Serial.println(storage,HEX);
              storage = rawData[0];
             break;
           case SUPPLY_MSG:
-             Serial.println(supply,HEX);
              supply = rawData[0];
             break;
           case STOP_MSG:

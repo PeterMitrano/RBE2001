@@ -69,8 +69,8 @@ class LineSensor {
     /** \brief determines what constitutes a black line (from -100 to 100)
      * these numbers may be the same, but don't have to be
      */
-    const static int ON_THRESHOLD = 75;
-    const static int OFF_THRESHOLD = -85;
+    const static int ON_THRESHOLD = 90;
+    const static int OFF_THRESHOLD = -60;
 
     /** \brief used to pad min and max (on a scale of 1024), since scanning isn't perfect */
     const static int PADDING = 35;

@@ -69,14 +69,15 @@ class Arm {
     long lastError = 0;
 
     /** PI constants */
-    const double kP = 0.1;
-    const double kI = 0.0001;
-    const double kD = 0.01;
+    const double kP = 0.4;
+    const double kI = 0.007;
+    const double kD = 0.1;
+    const long MAX_INTEGRAL = 5000l;
 
     long setpoint = 0;
 
     /** positions */
-    const long UP_POSITION = 6000l;
+    const long UP_POSITION = 6250l;
     const long DOWN_POSITION = 0l;
 
     Encoder encoder;

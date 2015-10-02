@@ -4,9 +4,9 @@
 Robot *Robot::instance = NULL;
 
 Robot::Robot(){
-  direction = 2;
+  direction = 3;
   row = 1;
-  col = 1;
+  col = 5;
 }
 
 Robot *Robot::getInstance(){
