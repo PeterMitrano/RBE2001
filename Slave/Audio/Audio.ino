@@ -15,22 +15,25 @@ const uint8_t volume = 0; // MP3 Player volume 0=max, 255=lowest (off)
 const uint16_t monoMode = 1;  // Mono setting 0=off, 3=max
 
 bool started = false;
+bool repeat = false;
 int lastSong = -2;
 
 int signal = 5;
-volatile int currentCommand;
+volatile int currentCommand = -999;
 
 void setup(){
-  Wire.begin(1);
-  Serial.begin(9600);
+  Wire.begin(8);
   Wire.onReceive(dataEvent);
+  Serial.begin(9600);
   initSD();  // Initialize the SD card
   initMP3Player(); // Initialize the MP3 Shield
 }
 
 void loop(){
   // 1 through 7 are sounds, -1 is pause, and 0 is nothing
-  Serial.println(currentCommand);
+  if (currentCommand != -999){
+  //  Serial.println(currentCommand);
+  }
 
   if (currentCommand == -1){
     if (MP3player.isPlaying()) {
@@ -47,11 +50,10 @@ void loop(){
     }
     //play curent song
     int result = MP3player.playTrack(currentCommand);
-    if (result != 0) {
-      Serial.print("TRACK ERROR!!! ");
-      Serial.print(result);
-      Serial.print(currentCommand);
-    }
+  }
+  else if (repeat && started && !MP3player.isPlaying()){
+    //loooop!!!
+    started = false;
   }
 
   lastSong = currentCommand;
@@ -78,8 +80,11 @@ void initMP3Player() {
   MP3player.setMonoMode(monoMode);
 }
 
-void dataEvent(int howMany){
-  while (Wire.available() > 1){
-    currentCommand = Wire.read();
-  }
+void dataEvent(int howMany)
+{
+  // incoming data is 1 bit for repeating, 15 bits for song number
+  int data = Wire.read();
+  repeat = (data & (1 << 7)) >> 7;
+  Serial.println(repeat, HEX);
+  currentCommand = data & 0x7f;
 }
