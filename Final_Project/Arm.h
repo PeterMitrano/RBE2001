@@ -56,7 +56,7 @@ class Arm {
     int motorRevPin = 10;
 
     int encAPin = 19;
-    int encBPin = 20;
+    int encBPin = 10;
 
     int limPin = 25;
 
