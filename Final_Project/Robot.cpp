@@ -1,5 +1,6 @@
 #include "Robot.h"
 #include <stdlib.h>
+#include <Wire.h>
 
 Robot *Robot::instance = NULL;
 
@@ -19,6 +20,8 @@ Robot *Robot::getInstance(){
 void Robot::setup(){
   radiating = true;
   paused = false;
+
+  Wire.begin();
 
   leftWheel.attach(leftWheelPin,1000,2000);
   rightWheel.attach(rightWheelPin,1000,2000);
@@ -93,4 +96,22 @@ void Robot::drive(int leftPower, int rightPower) {
 
 bool Robot::atReactorTube(){
   return !digitalRead(reactorTubeLimitPin);
+}
+
+void Robot::playSong(int trackNumber, bool repeat){
+  Wire.beginTransmission(::SLAVE_ID);
+  int data = trackNumber;
+  if (repeat){
+    //highest order bit denotes repeat
+    data |= (1 << 7);
+  }
+  Wire.write(data);
+  Wire.endTransmission();
+  delay(500);
+}
+
+void Robot::pauseSong(){
+  Wire.beginTransmission(::SLAVE_ID);
+  Wire.write(-1);
+  Wire.endTransmission();
 }

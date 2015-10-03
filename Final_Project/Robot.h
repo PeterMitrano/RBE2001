@@ -22,6 +22,12 @@ class Robot {
     /** \brief inidicate radiation by blinking LEDs every 1/5th of a second */
     void blinkLEDs();
 
+    /** \brief sends correct int over i2c to slave to play song */
+    void playSong(int trackNumber, bool repeat);
+
+    /** \brief sends correct int over i2c to slave to plause song */
+    void pauseSong();
+
     /* uses line sensor to follow line
      * following is done by a weighted power to each wheel
      * weight is a function of the intensity of line sensors on that side
