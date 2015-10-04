@@ -1,6 +1,6 @@
 #include "PathPlanner.h"
 
-#include "DriveUntilIntersection.h"
+#include "DriveThroughIntersection.h"
 #include "TurnAround.h"
 #include "TurnToFace.h"
 
@@ -12,7 +12,7 @@ void PathPlanner::plan(int currentRow, int currentCol,int destDirection, int des
     if (currentRow != 1){
       //this must mean you're facing the supply/storage tubes
       path->addSequential(new TurnAround(1));
-      path->addSequential(new DriveUntilIntersection());
+      path->addSequential(new DriveThroughIntersection());
     }
     else {
       //this must mean you're facing a reactor tube
@@ -34,7 +34,7 @@ void PathPlanner::plan(int currentRow, int currentCol,int destDirection, int des
     //now drive through all the columns
     dist = abs(destCol - currentCol);
     for (int i=0;i<dist;i++){
-      path->addSequential(new DriveUntilIntersection());
+      path->addSequential(new DriveThroughIntersection());
     }
 
     //turn to face right direction for rows
@@ -48,7 +48,7 @@ void PathPlanner::plan(int currentRow, int currentCol,int destDirection, int des
     //now drive through all the rows
     dist = abs(destRow - currentRow);
     for (int i=0;i<dist;i++){
-      path->addSequential(new DriveUntilIntersection());
+      path->addSequential(new DriveThroughIntersection());
     }
   }
 }

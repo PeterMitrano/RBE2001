@@ -6,9 +6,9 @@ Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
 
 Robot::Robot(){
-  direction = 3;
+  direction = 1;
   row = 1;
-  col = 5;
+  col = 2;
 }
 
 Robot *Robot::getInstance(){
@@ -72,9 +72,6 @@ void Robot::followLine() {
   // when the linePosition is 2.5 or far right, it should be full reverse travel_speed on the left and full on right
   int leftPower = travelSpeed + lineSensor.linePosition * -adjustSpeed;
   int rightPower = travelSpeed + lineSensor.linePosition * adjustSpeed;
-  Serial.print(leftPower);
-  Serial.print(" ");
-  Serial.println(rightPower);
   drive(leftPower, rightPower);
 }
 

@@ -1,10 +1,9 @@
 #include "DriveThroughIntersection.h"
 
 #include "DriveOverIntersection.h"
-#include "DriveUnitlIntersection.h"
+#include "DriveUntilIntersection.h"
 
 DriveThroughIntersection::DriveThroughIntersection() : CommandGroup("get dem rods") {
-  addSequential(new DriveUnitlIntersection());
-  addSequential(new DriveOverIntersection());
   addSequential(new DriveUntilIntersection());
-} //drives over one intersecion 
+  addSequential(new DriveOverIntersection());
+} //drives over one intersecion

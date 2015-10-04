@@ -20,7 +20,8 @@ void LineSensor::cache(){
 }
 
 bool LineSensor::atIntersection(){
- return sum > 100000;
+  Serial.println(sum);
+  return sum > INTERSECTION_THRESHOLD;
 }
 
 bool LineSensor::onLine(){

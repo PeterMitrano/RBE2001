@@ -42,6 +42,9 @@ class LineSensor {
     /** \brief account for broken line sensors */
     const static float COMPENSATION = 1.0;
 
+    /** \brief test if we're at a line */
+    const static int INTERSECTION_THRESHOLD = 3000;
+
     /** \brief sum of raw line sensor values. used to detect intersections */
     int sum;
 };
