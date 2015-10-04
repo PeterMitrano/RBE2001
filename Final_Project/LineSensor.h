@@ -36,8 +36,8 @@ class LineSensor {
     /** \brief determines what constitutes a black line (from -100 to 100)
      * these numbers may be the same, but don't have to be
      */
-    const static int ON_THRESHOLD = -0.5;
-    const static int OFF_THRESHOLD = -1.5;
+    const static float ON_THRESHOLD = 2.2;
+    const static float OFF_THRESHOLD = -1.5;
 
     /** \brief account for broken line sensors */
     const static float COMPENSATION = 1.0;

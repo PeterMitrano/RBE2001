@@ -6,7 +6,7 @@ Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
 
 Robot::Robot(){
-  direction = 1;
+  direction = 3;
   row = 1;
   col = 2;
 }

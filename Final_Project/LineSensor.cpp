@@ -16,18 +16,20 @@ void LineSensor::cache(){
     }
   }
   linePosition = wsum /((float) sum) + COMPENSATION;
-  Serial.println(linePosition);
 }
 
 bool LineSensor::atIntersection(){
-  Serial.println(sum);
   return sum > INTERSECTION_THRESHOLD;
 }
 
 bool LineSensor::onLine(){
-  return abs(linePosition) < ON_THRESHOLD;
+  Serial.print("on? =");
+  Serial.println(linePosition);
+  return linePosition > ON_THRESHOLD;
 }
 
 bool LineSensor::offLine(){
-  return abs(linePosition) > OFF_THRESHOLD;
+  Serial.print("off? =");
+  Serial.println(linePosition);
+  return linePosition < OFF_THRESHOLD;
 }

@@ -8,10 +8,11 @@
 #include "DriveUntilReactorTube.h"
 #include "DriveOverIntersection.h"
 #include "TurnAround.h"
+#include "TurnOffLine.h"
+#include "TurnUntilLine.h"
 
 GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("get rod from reactor") {
-//   addSequential(new NavigateToReactor(reactorNumber));
-  addSequential(new DriveUntilIntersection());
+  addSequential(new NavigateToReactor(reactorNumber));
 
 //  addParallel(new OpenGripper());
 //  addSequential(new LowerArm());
