@@ -66,8 +66,15 @@ void Robot::driveFwd(){
 }
 
 void Robot::followLine() {
-  int leftPower = -(lineSensor.avgLeftIntensity() * travelSpeed) / 100;
-  int rightPower = -(lineSensor.avgRightIntensity() * travelSpeed) / 100;
+  // linePosition is from about -2.5 to 2.5, with 0 being considered "on the line"
+  // when linePosition is 0, left Power and Right power should be half travel_speed
+  // when linePosition is -2.5, or far left, it should be full reverse travel_speed on right and full on left
+  // when the linePosition is 2.5 or far right, it should be full reverse travel_speed on the left and full on right
+  int leftPower = travelSpeed + lineSensor.linePosition * -adjustSpeed;
+  int rightPower = travelSpeed + lineSensor.linePosition * adjustSpeed;
+  Serial.print(leftPower);
+  Serial.print(" ");
+  Serial.println(rightPower);
   drive(leftPower, rightPower);
 }
 

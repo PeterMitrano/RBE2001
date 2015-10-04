@@ -12,11 +12,9 @@ void DriveUntilIntersection::execute(){
 }
 
 bool DriveUntilIntersection::isFinished(){
-  bool done = Robot::getInstance()->lineSensor.atIntersection();
-  return done;
+  return Robot::getInstance()->lineSensor.atIntersection();
 }
 
 void DriveUntilIntersection::end(){
-  Serial.println("DONE");
   Robot::getInstance()->stopDriving();
 }

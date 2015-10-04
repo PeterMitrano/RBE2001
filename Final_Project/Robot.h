@@ -117,6 +117,7 @@ class Robot {
 
     const int pausePin = 27;
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 34;
-    const int travelSpeed = 36;
+    const int rotateSpeed = 32;
+    const int travelSpeed = 30;
+    const int adjustSpeed = 8;
 };

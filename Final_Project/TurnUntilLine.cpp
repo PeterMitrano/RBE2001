@@ -17,10 +17,10 @@ void TurnUntilLine::execute(){
 
 bool TurnUntilLine::isFinished(){
   if (direction == 1){
-    return Robot::getInstance()->lineSensor.rightSideOnLine();
+    return Robot::getInstance()->lineSensor.onLine();
   }
   else {
-    return Robot::getInstance()->lineSensor.leftSideOnLine();
+    return Robot::getInstance()->lineSensor.onLine();
   }
 }
 

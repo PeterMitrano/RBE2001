@@ -8,10 +8,12 @@
 
 #include "GetDemRods.h"
 
+Robot *steve = Robot::getInstance();
+
 void setup() {
   Serial.begin(9600);
 
-  Robot::getInstance()->setup();
+  steve->setup();
 
   // here we start the parent commands which should run throughout the life of the program
   GetDemRods *cmd = new GetDemRods();
@@ -24,10 +26,11 @@ void loop() {
 
   // we also a few special functions, like cache and controlArm, which must run continuously, outside of all commands
   // while these could be done with commands, it's easier to just functions
-  Robot::getInstance()->playSong();
-  Robot::getInstance()->btClient.readMessage();
-  Robot::getInstance()->btClient.sendHeartbeat();
-  Robot::getInstance()->lineSensor.cache();
-  Robot::getInstance()->blinkLEDs();
-  Robot::getInstance()->arm.control();
+  steve->playSong();
+  steve->btClient.readMessage();
+  steve->btClient.sendHeartbeat();
+  steve->lineSensor.cache();
+  steve->blinkLEDs();
+  steve->arm.control();
+  steve->resetTimerFlags();
 }

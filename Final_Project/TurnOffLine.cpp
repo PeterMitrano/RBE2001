@@ -17,10 +17,10 @@ void TurnOffLine::execute(){
 
 bool TurnOffLine::isFinished(){
   if (direction == 1){
-    return Robot::getInstance()->lineSensor.leftSideOffLine();
+    return Robot::getInstance()->lineSensor.offLine();
   }
   else {
-    return Robot::getInstance()->lineSensor.rightSideOffLine();
+    return Robot::getInstance()->lineSensor.offLine();
   }
 }
 

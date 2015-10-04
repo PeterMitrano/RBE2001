@@ -5,17 +5,15 @@ DriveOverIntersection::DriveOverIntersection() : Command("drive over intersectio
 void DriveOverIntersection::initialize(){}
 
 void DriveOverIntersection::execute(){
-//drive forward until the outer line snensors read white
+  //drive forward until the outer line snensors read white
 	 Robot::getInstance()->driveFwd();
 }
 
 bool DriveOverIntersection::isFinished(){
-bool done = !(Robot::getInstance()->lineSensor.atIntersection());
-  return done;
-
+  return !(Robot::getInstance()->lineSensor.atIntersection());
 }
 
 void DriveOverIntersection::end(){
-Robot::getInstance()->stopDriving();
+  Robot::getInstance()->stopDriving();
 }
 

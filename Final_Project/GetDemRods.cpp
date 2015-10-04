@@ -2,8 +2,7 @@
 
 #include "CalibrateRoutine.h"
 #include "GetRodFromReactor.h"
-
-//includes for other sub commands..
+#include "OpenGripper.h"
 
 GetDemRods::GetDemRods() : CommandGroup("get dem rods") {
   addSequential(new CalibrateRoutine());
