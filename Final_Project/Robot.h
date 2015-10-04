@@ -53,6 +53,9 @@ class Robot {
 
     bool atReactorTube();
 
+    /** \brief sets all timer flags to false */
+    void resetTimerFlags();
+
     /* used to store position
      * updated by navigate commands
      * should only be checked when the robot is done moving
@@ -106,7 +109,7 @@ class Robot {
     /** \breif led pins and stuff*/
     static const int LED_PIN0 = 22,
                  LED_PIN1 = 23,
-                 BLINK_AND_SEND_PERIOD = 100; // in ms
+                 BLINK_AND_SEND_PERIOD = 500; // in ms
 
     /*can't figure out how to make these private and still have attach work */
     static const int leftWheelPin = 5;

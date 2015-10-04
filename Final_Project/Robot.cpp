@@ -9,7 +9,6 @@ Robot::Robot(){
   direction = 3;
   row = 1;
   col = 5;
-  radiating = true;
 }
 
 Robot *Robot::getInstance(){
@@ -20,7 +19,6 @@ Robot *Robot::getInstance(){
 }
 
 void Robot::setup(){
-  radiating = true;
   paused = false;
 
   Wire.begin();
@@ -47,7 +45,6 @@ void Robot::blinkAndSendInterrupt(){
 void Robot::blinkLEDs(){
   if (timeToBlinkAndSend){
     ledState = !ledState;
-    timeToBlinkAndSend = false;
   }
 
   if (radiating){
@@ -65,28 +62,27 @@ void Robot::stopDriving(){
 }
 
 void Robot::driveFwd(){
-  rightWheel.write(120);
-  leftWheel.write(120);
+  drive(travelSpeed,travelSpeed);
 }
 
 void Robot::followLine() {
-  int leftPower = (lineSensor.avgLeftIntensity() * travelSpeed) / 100;
-  int rightPower = (lineSensor.avgRightIntensity() * travelSpeed) / 100;
+  int leftPower = -(lineSensor.avgLeftIntensity() * travelSpeed) / 100;
+  int rightPower = -(lineSensor.avgRightIntensity() * travelSpeed) / 100;
   drive(leftPower, rightPower);
 }
 
 void Robot::rotateLeft() {
-  drive(rotateSpeed, -rotateSpeed);
+  drive(-rotateSpeed, rotateSpeed);
 }
 
 void Robot::rotateRight() {
-  drive(-rotateSpeed, rotateSpeed);
+  drive(rotateSpeed, -rotateSpeed);
 }
 
 
 void Robot::drive(int leftPower, int rightPower) {
-  int leftPowerScaled = map(leftPower,-100,100,0,180);
-  int rightPowerScaled = map(rightPower,-100,100,180,0);
+  int leftPowerScaled = map(leftPower,-100,100,180,0);
+  int rightPowerScaled = map(rightPower,-100,100,0,180);
 
   if (!paused){
     leftWheel.write(leftPowerScaled);
@@ -125,4 +121,8 @@ void Robot::pauseSong(){
     Wire.write(-1);
     Wire.endTransmission();
   }
+}
+
+void Robot::resetTimerFlags(){
+  timeToBlinkAndSend = false;
 }
