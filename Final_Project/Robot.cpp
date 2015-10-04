@@ -3,11 +3,13 @@
 #include <Wire.h>
 
 Robot *Robot::instance = NULL;
+bool Robot::timeToBlinkAndSend = false;
 
 Robot::Robot(){
   direction = 3;
   row = 1;
   col = 5;
+  radiating = true;
 }
 
 Robot *Robot::getInstance(){
@@ -33,26 +35,28 @@ void Robot::setup(){
   lineSensor.setup();
   arm.setup();
   btClient.setup();
+
+  Timer1.initialize(1000l * BLINK_AND_SEND_PERIOD);
+  Timer1.attachInterrupt(&Robot::blinkAndSendInterrupt);
+}
+
+void Robot::blinkAndSendInterrupt(){
+  timeToBlinkAndSend = true;
 }
 
 void Robot::blinkLEDs(){
-  if (radiating){
-    //getTime is in millis since start of command
-    if ((millis() / 200) % 2 == 0){
-      ledState = HIGH;
-    }
-    else {
-      ledState = LOW;
-    }
+  if (timeToBlinkAndSend){
+    ledState = !ledState;
+    timeToBlinkAndSend = false;
+  }
 
-    if (Robot::getInstance()->radiating){
-      digitalWrite(Robot::LED_PIN1,ledState);
-      digitalWrite(Robot::LED_PIN0,ledState);
-    }
-    else {
-      digitalWrite(Robot::LED_PIN0,LOW);
-      digitalWrite(Robot::LED_PIN1,LOW);
-    }
+  if (radiating){
+    digitalWrite(Robot::LED_PIN1,ledState);
+    digitalWrite(Robot::LED_PIN0,ledState);
+  }
+  else {
+    digitalWrite(Robot::LED_PIN0,LOW);
+    digitalWrite(Robot::LED_PIN1,LOW);
   }
 }
 
@@ -98,20 +102,27 @@ bool Robot::atReactorTube(){
   return !digitalRead(reactorTubeLimitPin);
 }
 
-void Robot::playSong(int trackNumber, bool repeat){
-  Wire.beginTransmission(::SLAVE_ID);
-  int data = trackNumber;
+
+void Robot::setSong(int trackNumber, bool repeat){
+  songData = trackNumber;
   if (repeat){
     //highest order bit denotes repeat
-    data |= (1 << 7);
+    songData |= (1 << 7);
   }
-  Wire.write(data);
-  Wire.endTransmission();
-  delay(500);
+}
+
+void Robot::playSong(){
+  if (timeToBlinkAndSend) {
+    Wire.beginTransmission(::SLAVE_ID);
+    Wire.write(songData);
+    Wire.endTransmission();
+  }
 }
 
 void Robot::pauseSong(){
-  Wire.beginTransmission(::SLAVE_ID);
-  Wire.write(-1);
-  Wire.endTransmission();
+  if (timeToBlinkAndSend) {
+    Wire.beginTransmission(::SLAVE_ID);
+    Wire.write(-1);
+    Wire.endTransmission();
+  }
 }

@@ -53,7 +53,7 @@ class Arm {
     void drive(int power);
 
     int motorFwdPin = 11;
-    int motorRevPin = 10;
+    int motorRevPin = 9;
 
     int encAPin = 19;
     int encBPin = 10;

@@ -24,6 +24,7 @@ void loop() {
 
   // we also a few special functions, like cache and controlArm, which must run continuously, outside of all commands
   // while these could be done with commands, it's easier to just functions
+  Robot::getInstance()->playSong();
   Robot::getInstance()->btClient.readMessage();
   Robot::getInstance()->btClient.sendHeartbeat();
   Robot::getInstance()->lineSensor.cache();

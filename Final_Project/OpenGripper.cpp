@@ -14,4 +14,6 @@ bool OpenGripper::isFinished(){
   return isTimedOut();
 }
 
-void OpenGripper::end(){}
+void OpenGripper::end(){
+  Robot::getInstance()->setSong(8, false);
+}

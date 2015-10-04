@@ -24,6 +24,8 @@ void Arm::control(){
 
       int val = kP * error + kI * integral + kD * derivative;
 
+//      Serial.print(pos);
+//      Serial.print(" ");
 //      Serial.print(error);
 //      Serial.print(" ");
 //      Serial.print(derivative);
@@ -31,6 +33,7 @@ void Arm::control(){
 //      Serial.print(integral);
 //      Serial.print(" ");
 //      Serial.println(val);
+//      Serial.println();
 
       drive(val);
       lastError = error;

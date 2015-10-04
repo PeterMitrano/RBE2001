@@ -5,6 +5,7 @@
 
 #include <Arduino.h>
 #include <Servo.h>
+#include <TimerOne.h>
 #include "GetDemRods.h"
 #include "Arm.h"
 #include "LineSensor.h"
@@ -23,7 +24,9 @@ class Robot {
     void blinkLEDs();
 
     /** \brief sends correct int over i2c to slave to play song */
-    void playSong(int trackNumber, bool repeat);
+    void setSong(int trackNumber, bool repeat);
+
+    void playSong();
 
     /** \brief sends correct int over i2c to slave to plause song */
     void pauseSong();
@@ -71,14 +74,17 @@ class Robot {
      */
     bool radiating = false;
 
+    int songData;
+
     static const int CALIBRATE_TIME = 3000;
 
   private:
     Servo leftWheel,rightWheel;
 
-    /* there's only one robot, so use private constructor and instance*/
+    /** \brief there's only one robot, so use private constructor and instance*/
     Robot();
     static Robot *instance;
+
 
     /* used by bumper switch as a panic button function */
     static void pause();
@@ -88,11 +94,19 @@ class Robot {
      */
     void drive(int leftPower, int rightPower);
 
-    bool ledState;
+    /** \brief controls state of led when radiating */
+    int ledState;
 
-    /* moar pins */
+    /** \brief interrupt changes state of LED blink and send i2c */
+    static void blinkAndSendInterrupt();
+
+    /** \brief set by led timer interrupt */
+    static bool timeToBlinkAndSend;
+
+    /** \breif led pins and stuff*/
     static const int LED_PIN0 = 22,
-                 LED_PIN1 = 23;
+                 LED_PIN1 = 23,
+                 BLINK_AND_SEND_PERIOD = 100; // in ms
 
     /*can't figure out how to make these private and still have attach work */
     static const int leftWheelPin = 5;
