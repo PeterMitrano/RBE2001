@@ -2,5 +2,10 @@
 
 class PathPlanner {
   public:
-    static void plan(int currentRow, int currentCol, int destDirection, int destRow, int destCol, CommandGroup *path);
+    PathPlanner(int currentRow, int currentCol, int currentDirection, CommandGroup *path);
+    void plan(int destRow, int destCol, int destDirection);
+    void planToFace(int currentDirection);
+  private:
+    int col, row, direction;
+    CommandGroup *path;
 };

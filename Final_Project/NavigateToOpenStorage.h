@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Command.h"
+#include "Robot.h"
 
 class NavigateToOpenStorage: public Command {
   public:
