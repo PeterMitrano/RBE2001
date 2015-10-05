@@ -65,6 +65,10 @@ void Robot::driveFwd(){
   drive(travelSpeed,travelSpeed);
 }
 
+
+void Robot::driveBwd(){
+  drive(-travelSpeed,-travelSpeed);
+
 void Robot::followLine() {
   // linePosition is from about -2.5 to 2.5, with 0 being considered "on the line"
   // when linePosition is 0, left Power and Right power should be half travel_speed

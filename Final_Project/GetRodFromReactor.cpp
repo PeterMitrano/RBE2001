@@ -11,9 +11,11 @@
 
 GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("get rod from reactor") {
   addSequential(new NavigateToReactor(reactorNumber));
-
   addParallel(new OpenGripper());
   addSequential(new LowerArm());
   addSequential(new CloseGripper());
   addSequential(new RaiseArm());
+
+  // addSequential(new BackOffTube());
+  // addSequential(new TurnAround());
 }

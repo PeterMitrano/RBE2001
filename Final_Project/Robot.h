@@ -42,8 +42,11 @@ class Robot {
     /* stop driving */
     void stopDriving();
 
-    /** \brief fwd drive no line track*/
+    /** \brief forward drive no line track*/
     void driveFwd();
+
+    /** \brief backward drive*/
+    void driveBwd();
 
     /* fixed power rotate */
     void rotateLeft();

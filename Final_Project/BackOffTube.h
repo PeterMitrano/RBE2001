@@ -10,4 +10,8 @@ class BackOffTube : public Command {
     void execute();
     bool isFinished();
     void end();
+
+   private:
+   	const long waitTime = -1;
+    int startTime = -1;
 };
