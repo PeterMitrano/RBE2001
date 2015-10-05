@@ -1,6 +1,9 @@
 #include "BTClient.h"
-
 #include "Robot.h"
+
+const int BTClient::locationLookup[] = {
+    1,2,1,3,1,2,1,4,1,2,1,3,12,1
+  };
 
 BTClient::BTClient() :
   pcol(byte(::TEAM_NUMBER)) {
@@ -12,12 +15,14 @@ void BTClient::setup(){
   Serial3.begin(115200);
 }
 
-byte BTClient::availableSupplyTubes(){
-  return supply;
+byte BTClient::availableSupplyTube(){
+  // lookup the first 1 in this byte
+  return locationLookup[supply];
 }
 
-byte BTClient::openStorageTubes(){
-  return storage;
+byte BTClient::openStorageTube(){
+  // lookup the first 1 in this byte
+  return locationLookup[storage];
 }
 
 void BTClient::sendRadiationAlert(){

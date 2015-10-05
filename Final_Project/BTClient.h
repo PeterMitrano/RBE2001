@@ -20,10 +20,10 @@ class BTClient {
     void setup();
 
     /* returns the supply tub locations */
-    byte availableSupplyTubes();
+    byte availableSupplyTube();
 
     /* returns the storage tub locations */
-    byte openStorageTubes();
+    byte openStorageTube();
 
     /* send 0xff to the field computer */
     void sendRadiationAlert();
@@ -72,4 +72,6 @@ class BTClient {
     /* raw integer (or hex if you want) representation for storage and supply */
     int storage, supply;
 
+    /* lookup table for converting hex encoded supply/storage message to the lowest open tube */
+  static const int locationLookup[0xF];
 };

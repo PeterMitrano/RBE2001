@@ -14,10 +14,6 @@ NavigateToReactor::NavigateToReactor(int reactorNumber) : Command("nav to Reacto
 void NavigateToReactor::initialize(){
   //length 2 array, row column
 
-  int currentRow = Robot::getInstance()->row;
-  int currentCol = Robot::getInstance()->col;
-  int currentDirection = Robot::getInstance()->direction;
-
   if (reactorNumber == 2){
     destCol = 4;
     destDirection = 1;
@@ -25,17 +21,11 @@ void NavigateToReactor::initialize(){
 
   CommandGroup *path = new CommandGroup();
   //this function will add things to path
-  PathPlanner::plan(currentRow, currentCol, destDirection, destRow, destCol,path);
-
-  Serial.print("start at = ");
-  Serial.print(currentRow);
-  Serial.print(",");
-  Serial.println(currentCol);
-
-  Serial.print("end at = ");
-  Serial.print(destRow);
-  Serial.print(",");
-  Serial.println(destCol);
+  int r = Robot::getInstance()->row;
+  int c = Robot::getInstance()->col;
+  int d = Robot::getInstance()->direction;
+  PathPlanner *planner = new PathPlanner(r, c, d, path);
+  planner->plan(destRow, destCol, destDirection);
 
   for (int i=0;i<path->commands.size();i++){
     Serial.print("  ");
