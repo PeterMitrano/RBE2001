@@ -1,10 +1,6 @@
 #include "BTClient.h"
 #include "Robot.h"
 
-const int BTClient::locationLookup[] = {
-    1,2,1,3,1,2,1,4,1,2,1,3,2,1
-  };
-
 BTClient::BTClient() :
   pcol(byte(::TEAM_NUMBER)) {
 }
@@ -16,26 +12,23 @@ void BTClient::setup(){
 }
 
 byte BTClient::availableSupplyTube(){
-  if (supply >= 1 && supply <= 4){
-    // lookup the first 1 in this byte
-    return locationLookup[supply];
-  }
+  // lookup the first 1 in this byte
+  if ((supply & 0x1) == 0x1) {return 1;}
+  else if ((supply & 0x2) == 0x2) {return 2;}
+  else if ((supply & 0x4) == 0x4) {return 3;}
+  else if ((supply & 0x8) == 0x8) {return 4;}
   else {
-    return -1;
+    return 0;
   }
 }
 
 byte BTClient::openStorageTube(){
-  if ( storage >= 1 && storage <= 4){
-    // lookup the first 1 in this byte
-    Serial.print("storage config = ");
-    Serial.print(storage);
-    Serial.print(" ");
-    Serial.println(locationLookup[storage]);
-    return locationLookup[storage];
-  }
+  if ((storage & 0x1) == 0x1) {return 1;}
+  else if ((storage & 0x2) == 0x2) {return 2;}
+  else if ((storage & 0x4) == 0x4) {return 3;}
+  else if ((storage & 0x8) == 0x8) {return 4;}
   else {
-    return -1;
+    return 0;
   }
 }
 
@@ -76,8 +69,6 @@ void BTClient::readMessage(){
     //don't care about ones not for us
     if (pkt[4] == TEAM_NUMBER || pkt[4] == 0){
       if (pcol.getData(pkt,rawData,messageType)){
-        Serial.print("received message of type ");
-        Serial.println(messageType);
 				switch(messageType){
           case STORAGE_MSG:
             received_storage = true;

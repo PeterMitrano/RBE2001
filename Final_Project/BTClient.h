@@ -73,7 +73,4 @@ class BTClient {
 
     /* raw integer (or hex if you want) representation for storage and supply */
     int storage, supply;
-
-    /* lookup table for converting hex encoded supply/storage message to the lowest open tube */
-  static const int locationLookup[0xF];
 };
