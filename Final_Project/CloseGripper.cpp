@@ -4,6 +4,7 @@ CloseGripper::CloseGripper() : Command("close gripper") {}
 
 void CloseGripper::initialize(){
   setTimeout(1000);
+  Robot::getInstance()->setSong(17,false);
 }
 
 

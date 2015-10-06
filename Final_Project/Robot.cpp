@@ -75,6 +75,10 @@ void Robot::followLine() {
   drive(leftPower, rightPower);
 }
 
+void Robo::backUp(){
+  drive(-travelSpeed,-travelSpeed);
+}
+
 void Robot::rotateLeft() {
   drive(-rotateSpeed, rotateSpeed);
 }

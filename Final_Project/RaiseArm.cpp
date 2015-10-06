@@ -3,6 +3,7 @@
 RaiseArm::RaiseArm() : Command("raise arm") {}
 
 void RaiseArm::initialize(){
+  Robot::getInstance()->setSong(22,true);
   Robot::getInstance()->arm.up();
 }
 

@@ -4,7 +4,9 @@ TurnUntilLine::TurnUntilLine(int direction) : Command("turn unti line"){
   this->direction = direction;
 }
 
-void TurnUntilLine::initialize(){}
+void TurnUntilLine::initialize(){
+  Robot::getInstance()->setSong(24,true);
+}
 
 void TurnUntilLine::execute(){
   if (direction == 1){

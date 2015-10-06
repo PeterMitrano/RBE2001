@@ -39,6 +39,9 @@ class Robot {
      */
     void followLine();
 
+    /** \brief blindly back up */
+    void backup();
+
     /* stop driving */
     void stopDriving();
 

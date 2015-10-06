@@ -2,7 +2,9 @@
 
 DriveOverIntersection::DriveOverIntersection() : Command("drive over intersection"){}
 
-void DriveOverIntersection::initialize(){}
+void DriveOverIntersection::initialize(){
+  Robot::getInstance()->setSong(18,true);
+}
 
 void DriveOverIntersection::execute(){
   //drive forward until the outer line snensors read white
