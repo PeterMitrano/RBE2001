@@ -5,5 +5,6 @@
 
 class TurnToNextLine : public CommandGroup {
   public:
+    TurnToNextLine(int direction);
     TurnToNextLine();
 };

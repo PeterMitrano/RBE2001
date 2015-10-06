@@ -1,13 +1,18 @@
 #include "BackOffTube.h"
 
-BackOffTube::BackOffTube() : Command("back off tube") {}
+BackOffTube::BackOffTube() : BackOffTube(-38,-30) {}
+
+BackOffTube::BackOffTube(int lPower, int rPower) : Command("back off tube") {
+  this->rPower = rPower;
+  this->lPower = lPower;
+}
 
 void BackOffTube::initialize(){
   setTimeout(backOffTime);
 }
 
 void BackOffTube::execute(){
-  Robot::getInstance()->backUp();
+  Robot::getInstance()->backUp(rPower,lPower);
 }
 
 bool BackOffTube::isFinished(){

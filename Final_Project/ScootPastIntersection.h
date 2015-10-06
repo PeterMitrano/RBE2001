@@ -12,5 +12,5 @@ class ScootPastIntersection : public Command {
     void end();
   private:
     /** \brief time to line follow in ms */
-    const int scootTime = 200;
+    const int scootTime = 350;
 };

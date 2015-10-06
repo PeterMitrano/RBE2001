@@ -5,7 +5,7 @@ DriveUntilIntersection::DriveUntilIntersection() : Command("drive until intersec
 }
 
 void DriveUntilIntersection::initialize(){
-  Robot::getInstance()->setSong(19,true);
+  Robot::getInstance()->setSong(3,true);
 }
 
 void DriveUntilIntersection::execute(){

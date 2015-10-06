@@ -6,10 +6,12 @@
 class BackOffTube : public Command {
   public:
     BackOffTube();
+    BackOffTube(int leftSpeed, int rightSpeed);
     void initialize();
     void execute();
     bool isFinished();
     void end();
   private:
-    const int backOffTime =600;
+    int rPower,lPower;
+    const int backOffTime =550;
 };

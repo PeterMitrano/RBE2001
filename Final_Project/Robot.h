@@ -40,7 +40,7 @@ class Robot {
     void followLine();
 
     /** \brief blindly back up */
-    void backUp();
+    void backUp(int rPower, int lPower);
 
     /* stop driving */
     void stopDriving();
@@ -118,10 +118,8 @@ class Robot {
     static const int leftWheelPin = 5;
     static const int rightWheelPin = 4;
 
-    const int backupLeftSpeed = -38;
-    const int backupRightSpeed= -30;
     const int pausePin = 27;
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 30;
+    const int rotateSpeed = 32;
     const int travelSpeed = 26;
 };

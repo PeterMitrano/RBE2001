@@ -1,22 +1,22 @@
-#include "NavigateToOpenStorage.h"
+#include "NavigateToAvailableSupply.h"
 #include "PathPlanner.h"
 
-NavigateToOpenStorage::NavigateToOpenStorage() : Command("nav to storage"){}
+NavigateToAvailableSupply::NavigateToAvailableSupply() : Command("nav to storage"){}
 
-void NavigateToOpenStorage::initialize(){
+void NavigateToAvailableSupply::initialize(){
   //figure out which one we want to navigate to
   tubeNumber = Robot::getInstance()->btClient.openStorageTube();
   Serial.print("tube number =				 ");
   Serial.println(tubeNumber);
 }
 
-void NavigateToOpenStorage::execute(){
+void NavigateToAvailableSupply::execute(){
   if (tubeNumber >= 1 && tubeNumber <= 4){
     plannedSuccessfully = true;
     CommandGroup *path = new CommandGroup();
     //this function will add things to path
     PathPlanner *planner = new PathPlanner(path);
-    planner->plan(2, tubeNumber, 2);
+    planner->plan(0, tubeNumber, 0);
 
     for (int i=0;i<path->commands.size();i++){
       Serial.print("  ");
@@ -30,10 +30,10 @@ void NavigateToOpenStorage::execute(){
   }
 }
 
-bool NavigateToOpenStorage::isFinished(){
+bool NavigateToAvailableSupply::isFinished(){
   return plannedSuccessfully;
 }
 
-void NavigateToOpenStorage::end(){
+void NavigateToAvailableSupply::end(){
   Robot::getInstance()->setSong(10,false);
 }

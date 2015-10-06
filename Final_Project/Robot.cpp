@@ -8,7 +8,7 @@ bool Robot::timeToBlinkAndSend = false;
 Robot::Robot(){
   direction = 1;
   row = 1;
-  col = 4;
+  col = 0;
 }
 
 Robot *Robot::getInstance(){
@@ -71,8 +71,8 @@ void Robot::followLine() {
   drive(leftPower, rightPower);
 }
 
-void Robot::backUp(){
-  drive(backupLeftSpeed,backupRightSpeed);
+void Robot::backUp(int lPower, int rPower){
+  drive(lPower,rPower);
 }
 
 void Robot::rotateLeft() {
