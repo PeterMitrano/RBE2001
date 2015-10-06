@@ -10,26 +10,35 @@ void LineSensor::cache(){
   int wsum = 0;
   for (int i=PIN_0;i<PIN_0 + 8;i++){
     if (i != 3){
-      int raw = analogRead(i);
-      sum += raw;
-      wsum += raw*(i-4);
+     int raw = analogRead(i);
+     sum += raw;
+     wsum += raw*(i-4);
     }
   }
   linePosition = wsum /((float) sum) + COMPENSATION;
+  Serial.print(" lin pos  = ");
+  Serial.print(linePosition);
+  Serial.print(" sum = ");
+  Serial.println(sum);
 }
 
 bool LineSensor::atIntersection(){
   return sum > INTERSECTION_THRESHOLD;
 }
 
+int LineSensor::adjustmentPower(){
+  derivative = linePosition - lastLinePosition;
+  int val = kP * linePosition + kD * derivative;
+  lastLinePosition = linePosition;
+  return val;
+}
+
 bool LineSensor::onLine(){
-  Serial.print("on? =");
-  Serial.println(linePosition);
-  return linePosition > ON_THRESHOLD;
+  return abs(linePosition) < ON_POS_THRESHOLD &&
+    (sum > LOW_SUM_THRESHOLD && sum < HIGH_SUM_THRESHOLD);
 }
 
 bool LineSensor::offLine(){
-  Serial.print("off? =");
-  Serial.println(linePosition);
-  return linePosition < OFF_THRESHOLD;
+  return abs(linePosition) > OFF_POS_THRESHOLD &&
+    (sum > HIGH_SUM_THRESHOLD || sum < LOW_SUM_THRESHOLD);
 }

@@ -40,7 +40,7 @@ class Robot {
     void followLine();
 
     /** \brief blindly back up */
-    void backup();
+    void backUp();
 
     /* stop driving */
     void stopDriving();
@@ -112,15 +112,16 @@ class Robot {
     /** \breif led pins and stuff*/
     static const int LED_PIN0 = 22,
                  LED_PIN1 = 23,
-                 BLINK_AND_SEND_PERIOD = 500; // in ms
+                 BLINK_AND_SEND_PERIOD = 100; // in ms
 
     /*can't figure out how to make these private and still have attach work */
     static const int leftWheelPin = 5;
     static const int rightWheelPin = 4;
 
+    const int backupLeftSpeed = -38;
+    const int backupRightSpeed= -30;
     const int pausePin = 27;
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 28;
-    const int travelSpeed = 30;
-    const int adjustSpeed = 8;
+    const int rotateSpeed = 30;
+    const int travelSpeed = 26;
 };
