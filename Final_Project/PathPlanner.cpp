@@ -1,6 +1,7 @@
 #include "PathPlanner.h"
 
 #include "DriveThroughIntersection.h"
+#include "DriveUntilReactorTube.h"
 #include "TurnToNextLine.h"
 #include "TurnUntilLine.h"
 #include "TurnOffLine.h"
@@ -58,7 +59,7 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
     //now drive through all the rows
     dist = abs(destRow - row);
     for (int i=0;i<dist;i++){
-     path->addSequential(new DriveThroughIntersection());
+     path->addSequential(new DriveUntilReactorTube());
     }
   }
   else if (destDirection != direction){
@@ -87,5 +88,6 @@ void PathPlanner::planToFace(int destDirection){
      path->addSequential(new TurnOffLine(turnDirection));
      path->addSequential(new TurnUntilLine(turnDirection));
     }
+    direction = destDirection;
   }
 }
