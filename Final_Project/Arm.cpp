@@ -24,17 +24,6 @@ void Arm::control(){
 
       int val = kP * error + kI * integral + kD * derivative;
 
-//      Serial.print(pos);
-//      Serial.print(" ");
-//      Serial.print(error);
-//      Serial.print(" ");
-//      Serial.print(derivative);
-//      Serial.print(" ");
-//      Serial.print(integral);
-//      Serial.print(" ");
-//      Serial.println(val);
-//      Serial.println();
-
       drive(val);
       lastError = error;
       oldTime = t;
@@ -78,7 +67,6 @@ bool Arm::atLim(){
 void Arm::drive(int power) {
   if (power > 100) power = 100;
   if (power < -100) power = -100;
-
 
   if (power == 0) {
     analogWrite(motorFwdPin, 0);
