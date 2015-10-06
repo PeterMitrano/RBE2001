@@ -10,4 +10,6 @@ class BackOffTube : public Command {
     void execute();
     bool isFinished();
     void end();
+  private:
+    const int backOffTime =600;
 };

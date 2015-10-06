@@ -3,8 +3,7 @@
 BackOffTube::BackOffTube() : Command("back off tube") {}
 
 void BackOffTube::initialize(){
-  setTimeout(1000);
-  Robot::getInstance()->setSong(15,true);
+  setTimeout(backOffTime);
 }
 
 void BackOffTube::execute(){
@@ -15,4 +14,6 @@ bool BackOffTube::isFinished(){
   return isTimedOut();
 }
 
-void BackOffTube::end(){}
+void BackOffTube::end(){
+  Robot::getInstance()->stopDriving();
+}

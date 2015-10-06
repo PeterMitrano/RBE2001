@@ -4,18 +4,21 @@
 #include "CloseGripper.h"
 #include "LowerArm.h"
 #include "RaiseArm.h"
-#include "DriveUntilIntersection.h"
+#include "DriveThroughIntersection.h"
 #include "DriveUntilReactorTube.h"
-#include "DriveOverIntersection.h"
-#include "TurnAround.h"
+#include "TurnToNextLine.h"
 #include "TurnOffLine.h"
 #include "TurnUntilLine.h"
 
 GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("get rod from reactor") {
   addSequential(new NavigateToReactor(reactorNumber));
-
+  addSequential(new DriveUntilReactorTube());
 //  addParallel(new OpenGripper());
 //  addSequential(new LowerArm());
 //  addSequential(new CloseGripper());
 //  addSequential(new RaiseArm());
+}
+
+void GetRodFromReactor::end(){
+  Robot::getInstance()->radiating = true;
 }
