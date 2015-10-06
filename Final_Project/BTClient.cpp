@@ -2,7 +2,7 @@
 #include "Robot.h"
 
 const int BTClient::locationLookup[] = {
-    1,2,1,3,1,2,1,4,1,2,1,3,12,1
+    1,2,1,3,1,2,1,4,1,2,1,3,2,1
   };
 
 BTClient::BTClient() :
@@ -16,13 +16,27 @@ void BTClient::setup(){
 }
 
 byte BTClient::availableSupplyTube(){
-  // lookup the first 1 in this byte
-  return locationLookup[supply];
+  if (supply >= 1 && supply <= 4){
+    // lookup the first 1 in this byte
+    return locationLookup[supply];
+  }
+  else {
+    return -1;
+  }
 }
 
 byte BTClient::openStorageTube(){
-  // lookup the first 1 in this byte
-  return locationLookup[storage];
+  if ( storage >= 1 && storage <= 4){
+    // lookup the first 1 in this byte
+    Serial.print("storage config = ");
+    Serial.print(storage);
+    Serial.print(" ");
+    Serial.println(locationLookup[storage]);
+    return locationLookup[storage];
+  }
+  else {
+    return -1;
+  }
 }
 
 void BTClient::sendRadiationAlert(){
@@ -39,10 +53,6 @@ void BTClient::sendStatus(){
 //    gripperStatus,
 //    operationStatus};
   sendData(STATUS_MSG, status);
-}
-
-void BTClient::sendDebugString(String message){
-
 }
 
 void BTClient::sendData(MSG_TYPE type, byte data[3]){
@@ -66,12 +76,16 @@ void BTClient::readMessage(){
     //don't care about ones not for us
     if (pkt[4] == TEAM_NUMBER || pkt[4] == 0){
       if (pcol.getData(pkt,rawData,messageType)){
-        switch(messageType){
+        Serial.print("received message of type ");
+        Serial.println(messageType);
+				switch(messageType){
           case STORAGE_MSG:
-             storage = rawData[0];
+            received_storage = true;
+            storage = rawData[0];
             break;
           case SUPPLY_MSG:
-             supply = rawData[0];
+            received_supply = true;
+            supply = rawData[0];
             break;
           case STOP_MSG:
             Robot::getInstance()->paused = true;
@@ -81,8 +95,8 @@ void BTClient::readMessage(){
           default:
             //only these 4 should be sent by field
             break;
-        }
-      }
+				}
+     }
     }
   }
 }

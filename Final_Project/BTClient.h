@@ -48,15 +48,15 @@ class BTClient {
   private:
 
      typedef enum {STORAGE_MSG = 0x01,
-           SUPPLY_MSG = 0x02,
-           RADIATION_MSG = 0x03,
-           STOP_MSG = 0x04,
-           RESUME_MSG = 0x05,
-           STATUS_MSG = 0x06,
-           HEARTBEAT_MSG = 0x07,
-           DEBUG_MSG = 0x10,
-           WARN_MSG = 0x11,
-           INFO_MSG = 0x12} MSG_TYPE;
+     SUPPLY_MSG = 0x02,
+     RADIATION_MSG = 0x03,
+     STOP_MSG = 0x04,
+     RESUME_MSG = 0x05,
+     STATUS_MSG = 0x06,
+     HEARTBEAT_MSG = 0x07,
+     DEBUG_MSG = 0x10,
+     WARN_MSG = 0x11,
+     INFO_MSG = 0x12} MSG_TYPE;
 
     /* send the given data to the field computer */
     void sendData(MSG_TYPE type, byte data[3]);
@@ -68,6 +68,8 @@ class BTClient {
     ReactorProtocol pcol;
 
     unsigned long lastSent;
+    bool received_storage = false,
+         received_supply = false;
 
     /* raw integer (or hex if you want) representation for storage and supply */
     int storage, supply;
