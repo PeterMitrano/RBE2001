@@ -1,16 +1,16 @@
 #include "PathPlanner.h"
 
 #include "DriveThroughIntersection.h"
-#include "TurnAround.h"
+#include "TurnToNextLine.h"
 #include "TurnUntilLine.h"
 #include "TurnOffLine.h"
 #include "Robot.h"
 
-PathPlanner::PathPlanner(int row, int col, int currentDirection, CommandGroup *path){
+PathPlanner::PathPlanner(CommandGroup *path){
   this->path = path;
-  this->row = row;
-  this->col = col;
-  this->direction = currentDirection;
+  this->row = Robot::getInstance()->row;
+  this->col = Robot::getInstance()->col;
+  this->direction = Robot::getInstance()->direction;
 }
 
 void PathPlanner::plan(int destRow, int destCol, int destDirection){
@@ -19,13 +19,14 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
   if (col != destCol || row!=destRow){
     //first navigate to center line
     if (row != 1){
-      //this must mean you're at the supply/storage tubes
-      path->addSequential(new TurnAround());
-      path->addSequential(new DriveThroughIntersection());
+     //this must mean you're at the supply/storage tubes
+     path->addSequential(new TurnToNextLine());
+     path->addSequential(new DriveThroughIntersection());
     }
     else {
-      //this must mean you're facing a reactor tube
-      path->addSequential(new TurnAround());
+     //this must mean you're facing a reactor tube
+     //or waiting in front of reactor tube
+     planToFace(destDirection);
     }
 
     //note that we're in row 1 on the line
@@ -34,30 +35,30 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
     //now that we're on the line, navigate to our goal
     //first turn and face the right direction
     if (destCol > col){
-      planToFace(1);
+     planToFace(1);
     }
     else if (destCol < col){
-      planToFace(3);
+     planToFace(3);
     }
 
     //now drive through all the columns
     dist = abs(destCol - col);
     for (int i=0;i<dist;i++){
-      path->addSequential(new DriveThroughIntersection());
+     path->addSequential(new DriveThroughIntersection());
     }
 
     //turn to face right direction for rows
     if (destRow > row){
-      planToFace(2);
+     planToFace(2);
     }
     else if (destRow < row){
-      planToFace(0);
+     planToFace(0);
     }
 
     //now drive through all the rows
     dist = abs(destRow - row);
     for (int i=0;i<dist;i++){
-      path->addSequential(new DriveThroughIntersection());
+     path->addSequential(new DriveThroughIntersection());
     }
   }
   else if (destDirection != direction){
@@ -71,7 +72,7 @@ void PathPlanner::planToFace(int destDirection){
   if (row != 1){
     //at storage/supply, you can only by facing 0 or 2
     if (direction != destDirection){
-      path->addSequential(new TurnAround());
+     path->addSequential(new TurnToNextLine());
     }
   }
   else {
@@ -80,11 +81,11 @@ void PathPlanner::planToFace(int destDirection){
 
     //this is awful and hacky and I hate it
     if (abs(diff) == 3){
-      diff = diff / -3;
+     diff = diff / -3;
     }
     for (int i=0;i<abs(diff);i++){
-      path->addSequential(new TurnOffLine(turnDirection));
-      path->addSequential(new TurnUntilLine(turnDirection));
+     path->addSequential(new TurnOffLine(turnDirection));
+     path->addSequential(new TurnUntilLine(turnDirection));
     }
   }
 }

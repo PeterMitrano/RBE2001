@@ -2,7 +2,7 @@
 
 class PathPlanner {
   public:
-    PathPlanner(int currentRow, int currentCol, int currentDirection, CommandGroup *path);
+    PathPlanner(CommandGroup *path);
     void plan(int destRow, int destCol, int destDirection);
     void planToFace(int currentDirection);
   private:
