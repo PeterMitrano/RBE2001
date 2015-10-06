@@ -65,14 +65,14 @@ class Arm {
     /** \brief used by PI to computer integral */
     long integral = 0;
 
-    const long tolerance = 20;
+    const long tolerance = 100;
     long lastError = 0;
 
     /** PI constants */
-    const double kP = 0.4;
-    const double kI = 0.007;
-    const double kD = 0.4;
-    const long MAX_INTEGRAL = 5000l;
+    const double kP = 0.1;
+    const double kI = 0.002;
+    const double kD = 0.0;
+    const long MAX_INTEGRAL = 500l;
 
     long setpoint = 0;
 

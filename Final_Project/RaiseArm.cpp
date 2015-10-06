@@ -1,9 +1,9 @@
 #include "RaiseArm.h"
 
-RaiseArm::RaiseArm() : Command("raise arm") {}
+RaiseArm::RaiseArm() : Command("				raise arm") {}
 
 void RaiseArm::initialize(){
-  Robot::getInstance()->setSong(22,true);
+  Robot::getInstance()->setSong(4,true);
   Robot::getInstance()->arm.up();
 }
 

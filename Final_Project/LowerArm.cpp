@@ -1,9 +1,9 @@
 #include "LowerArm.h"
 
-LowerArm::LowerArm() : Command("lower arm") {}
+LowerArm::LowerArm() : Command("				lower arm") {}
 
 void LowerArm::initialize(){
-  Robot::getInstance()->setSong(20,true);
+  Robot::getInstance()->setSong(10,true);
   Robot::getInstance()->arm.down();
 }
 

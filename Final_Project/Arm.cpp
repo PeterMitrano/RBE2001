@@ -15,18 +15,19 @@ void Arm::control(){
     unsigned long t = millis();
     unsigned long dt = t - oldTime;
     if (dt > 50l){
-      long pos = position();
-      long error = setpoint - pos;
+     long pos = position();
+     long error = setpoint - pos;
 
-      integral += error;
-      integral = integral < MAX_INTEGRAL ? integral: MAX_INTEGRAL;
-      long derivative = error - lastError;
+     integral += error;
+     integral = integral < MAX_INTEGRAL ? integral: MAX_INTEGRAL;
+     integral = integral > -MAX_INTEGRAL ? integral: -MAX_INTEGRAL;
+     long derivative = error - lastError;
 
-      int val = kP * error + kI * integral + kD * derivative;
+     int val = kP * error + kI * integral + kD * derivative;
 
-      drive(val);
-      lastError = error;
-      oldTime = t;
+     drive(val);
+     lastError = error;
+     oldTime = t;
     }
   }
 }
@@ -78,14 +79,8 @@ void Arm::drive(int power) {
     analogWrite(motorFwdPin, fwdAdjusted);
   }
   else if (power < 0) {
-    if (!atLim()){
-      int revAdjusted = map(power, -100, 0, 200, 0);
-      analogWrite(motorFwdPin, 0);
-      analogWrite(motorRevPin, revAdjusted);
-    }
-    else {
-      analogWrite(motorFwdPin, 0);
-      analogWrite(motorRevPin, 0);
-    }
+    int revAdjusted = map(power, -100, 0, 200, 0);
+    analogWrite(motorFwdPin, 0);
+    analogWrite(motorRevPin, revAdjusted);
   }
 }
