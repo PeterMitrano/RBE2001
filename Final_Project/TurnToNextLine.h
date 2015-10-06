@@ -3,7 +3,7 @@
 #include "CommandGroup.h"
 #include "Robot.h"
 
-class TurnAround : public CommandGroup {
+class TurnToNextLine : public CommandGroup {
   public:
-    TurnAround();
+    TurnToNextLine();
 };

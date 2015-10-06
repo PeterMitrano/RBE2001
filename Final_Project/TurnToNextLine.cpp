@@ -1,9 +1,9 @@
-#include "TurnAround.h"
+#include "TurnToNextLine.h"
 
 #include "TurnOffLine.h"
 #include "TurnUntilLine.h"
 
-TurnAround::TurnAround() : CommandGroup("turn around"){
+TurnToNextLine::TurnToNextLine() : CommandGroup("turn around"){
   //0 represents clockwise
   //1 represent counter clockwise
   addSequential(new TurnOffLine(1));
