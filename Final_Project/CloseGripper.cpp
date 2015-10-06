@@ -17,4 +17,5 @@ bool CloseGripper::isFinished(){
 }
 
 
-void CloseGripper::end(){}
+void CloseGripper::end(){
+}

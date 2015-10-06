@@ -16,5 +16,5 @@ bool NavigateToOpenStorage::isFinished(){
 }
 
 void NavigateToOpenStorage::end(){
-
+  Robot::getInstance()->setSong(10,false);
 }
