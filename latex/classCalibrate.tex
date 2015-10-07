@@ -1,6 +1,10 @@
 \hypertarget{classCalibrate}{\section{Calibrate Class Reference}
 \label{classCalibrate}\index{Calibrate@{Calibrate}}
 }
+
+
+{\ttfamily \#include $<$Calibrate.\-h$>$}
+
 Inheritance diagram for Calibrate\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,89 @@ Inheritance diagram for Calibrate\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCalibrate_a67ac70871401c5b6e74fa92fa4b57f1e}{void \hyperlink{classCalibrate_a67ac70871401c5b6e74fa92fa4b57f1e}{initialize} ()}\label{classCalibrate_a67ac70871401c5b6e74fa92fa4b57f1e}
-
+\hyperlink{classCalibrate_af7fd8ee2339ee66f6f8e4d9953025796}{Calibrate} ()
+\item 
+void \hyperlink{classCalibrate_a67ac70871401c5b6e74fa92fa4b57f1e}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classCalibrate_ac4d34bf2f831065219b7a930b0389b6e}{void \hyperlink{classCalibrate_ac4d34bf2f831065219b7a930b0389b6e}{execute} ()}\label{classCalibrate_ac4d34bf2f831065219b7a930b0389b6e}
-
+void \hyperlink{classCalibrate_ac4d34bf2f831065219b7a930b0389b6e}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classCalibrate_afb77ae82fa06d139612f11dec7b6ed5f}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classCalibrate_a2ea8ff643d8450473d6245e407415f03}{void \hyperlink{classCalibrate_a2ea8ff643d8450473d6245e407415f03}{end} ()}\label{classCalibrate_a2ea8ff643d8450473d6245e407415f03}
-
+void \hyperlink{classCalibrate_a2ea8ff643d8450473d6245e407415f03}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classCalibrate_afb77ae82fa06d139612f11dec7b6ed5f}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCalibrate_a76f63e45bd236101217c023f5b4c00d0}{min\-Val}
+\item 
+int \hyperlink{classCalibrate_a48cdb0fd93fef77a7eab3fc629e9d2a6}{max\-Val}
+\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Calibrate.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCalibrate_af7fd8ee2339ee66f6f8e4d9953025796}{\index{Calibrate@{Calibrate}!Calibrate@{Calibrate}}
+\index{Calibrate@{Calibrate}!Calibrate@{Calibrate}}
+\subsubsection[{Calibrate}]{\setlength{\rightskip}{0pt plus 5cm}Calibrate\-::\-Calibrate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCalibrate_af7fd8ee2339ee66f6f8e4d9953025796}
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classCalibrate_a2ea8ff643d8450473d6245e407415f03}{\index{Calibrate@{Calibrate}!end@{end}}
+\index{end@{end}!Calibrate@{Calibrate}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCalibrate_a2ea8ff643d8450473d6245e407415f03}
+
+
+called once at the end, once \hyperlink{classCalibrate_afb77ae82fa06d139612f11dec7b6ed5f}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+\hypertarget{classCalibrate_ac4d34bf2f831065219b7a930b0389b6e}{\index{Calibrate@{Calibrate}!execute@{execute}}
+\index{execute@{execute}!Calibrate@{Calibrate}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCalibrate_ac4d34bf2f831065219b7a930b0389b6e}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+\hypertarget{classCalibrate_a67ac70871401c5b6e74fa92fa4b57f1e}{\index{Calibrate@{Calibrate}!initialize@{initialize}}
+\index{initialize@{initialize}!Calibrate@{Calibrate}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCalibrate_a67ac70871401c5b6e74fa92fa4b57f1e}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
 \hypertarget{classCalibrate_afb77ae82fa06d139612f11dec7b6ed5f}{\index{Calibrate@{Calibrate}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!Calibrate@{Calibrate}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Calibrate\-::is\-Finished (
@@ -45,6 +117,23 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+\subsection{Member Data Documentation}
+\hypertarget{classCalibrate_a48cdb0fd93fef77a7eab3fc629e9d2a6}{\index{Calibrate@{Calibrate}!max\-Val@{max\-Val}}
+\index{max\-Val@{max\-Val}!Calibrate@{Calibrate}}
+\subsubsection[{max\-Val}]{\setlength{\rightskip}{0pt plus 5cm}int Calibrate\-::max\-Val\hspace{0.3cm}{\ttfamily [private]}}}\label{classCalibrate_a48cdb0fd93fef77a7eab3fc629e9d2a6}
+
+
+Definition at line 14 of file Calibrate.\-h.
+
+\hypertarget{classCalibrate_a76f63e45bd236101217c023f5b4c00d0}{\index{Calibrate@{Calibrate}!min\-Val@{min\-Val}}
+\index{min\-Val@{min\-Val}!Calibrate@{Calibrate}}
+\subsubsection[{min\-Val}]{\setlength{\rightskip}{0pt plus 5cm}int Calibrate\-::min\-Val\hspace{0.3cm}{\ttfamily [private]}}}\label{classCalibrate_a76f63e45bd236101217c023f5b4c00d0}
+
+
+Definition at line 14 of file Calibrate.\-h.
+
+
+
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Calibrate.\-h\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{Calibrate_8h}{Calibrate.\-h}\end{DoxyCompactItemize}

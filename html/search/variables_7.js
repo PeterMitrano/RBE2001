@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['radiating',['radiating',['../classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce',1,'Robot']]],
-  ['row',['row',['../classRobot.html#a35ce5c416a079fcf6b943843ec151d63',1,'Robot']]]
+  ['high_5fsum_5fthreshold',['HIGH_SUM_THRESHOLD',['../classLineSensor.html#a3e7f65abc054f54cb74f8aa3eb552e89',1,'LineSensor']]]
 ];

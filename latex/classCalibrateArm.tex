@@ -1,6 +1,10 @@
 \hypertarget{classCalibrateArm}{\section{Calibrate\-Arm Class Reference}
 \label{classCalibrateArm}\index{Calibrate\-Arm@{Calibrate\-Arm}}
 }
+
+
+{\ttfamily \#include $<$Calibrate\-Arm.\-h$>$}
+
 Inheritance diagram for Calibrate\-Arm\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,98 @@ Inheritance diagram for Calibrate\-Arm\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCalibrateArm_acc9f34841c2ff2806338c3fe5a6d4cb6}{void \hyperlink{classCalibrateArm_acc9f34841c2ff2806338c3fe5a6d4cb6}{initialize} ()}\label{classCalibrateArm_acc9f34841c2ff2806338c3fe5a6d4cb6}
-
+\hyperlink{classCalibrateArm_a7acea63d8ab2c77a0e6cf52909ea52ff}{Calibrate\-Arm} ()
+\item 
+void \hyperlink{classCalibrateArm_acc9f34841c2ff2806338c3fe5a6d4cb6}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classCalibrateArm_a931974eeaf4951b57b83219a905d89a7}{void \hyperlink{classCalibrateArm_a931974eeaf4951b57b83219a905d89a7}{execute} ()}\label{classCalibrateArm_a931974eeaf4951b57b83219a905d89a7}
-
+void \hyperlink{classCalibrateArm_a931974eeaf4951b57b83219a905d89a7}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classCalibrateArm_a1f0193e75d78560e076166b42603bc76}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classCalibrateArm_a32c6c258858dde9a091e5fd0fa04c825}{void \hyperlink{classCalibrateArm_a32c6c258858dde9a091e5fd0fa04c825}{end} ()}\label{classCalibrateArm_a32c6c258858dde9a091e5fd0fa04c825}
-
+void \hyperlink{classCalibrateArm_a32c6c258858dde9a091e5fd0fa04c825}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classCalibrateArm_a1f0193e75d78560e076166b42603bc76}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Calibrate\-Arm.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCalibrateArm_a7acea63d8ab2c77a0e6cf52909ea52ff}{\index{Calibrate\-Arm@{Calibrate\-Arm}!Calibrate\-Arm@{Calibrate\-Arm}}
+\index{Calibrate\-Arm@{Calibrate\-Arm}!CalibrateArm@{Calibrate\-Arm}}
+\subsubsection[{Calibrate\-Arm}]{\setlength{\rightskip}{0pt plus 5cm}Calibrate\-Arm\-::\-Calibrate\-Arm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCalibrateArm_a7acea63d8ab2c77a0e6cf52909ea52ff}
+
+
+Definition at line 3 of file Calibrate\-Arm.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classCalibrateArm_a32c6c258858dde9a091e5fd0fa04c825}{\index{Calibrate\-Arm@{Calibrate\-Arm}!end@{end}}
+\index{end@{end}!CalibrateArm@{Calibrate\-Arm}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-Arm\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCalibrateArm_a32c6c258858dde9a091e5fd0fa04c825}
+
+
+called once at the end, once \hyperlink{classCalibrateArm_a1f0193e75d78560e076166b42603bc76}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 17 of file Calibrate\-Arm.\-cpp.
+
+\hypertarget{classCalibrateArm_a931974eeaf4951b57b83219a905d89a7}{\index{Calibrate\-Arm@{Calibrate\-Arm}!execute@{execute}}
+\index{execute@{execute}!CalibrateArm@{Calibrate\-Arm}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-Arm\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCalibrateArm_a931974eeaf4951b57b83219a905d89a7}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 9 of file Calibrate\-Arm.\-cpp.
+
+\hypertarget{classCalibrateArm_acc9f34841c2ff2806338c3fe5a6d4cb6}{\index{Calibrate\-Arm@{Calibrate\-Arm}!initialize@{initialize}}
+\index{initialize@{initialize}!CalibrateArm@{Calibrate\-Arm}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-Arm\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCalibrateArm_acc9f34841c2ff2806338c3fe5a6d4cb6}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 5 of file Calibrate\-Arm.\-cpp.
+
 \hypertarget{classCalibrateArm_a1f0193e75d78560e076166b42603bc76}{\index{Calibrate\-Arm@{Calibrate\-Arm}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!CalibrateArm@{Calibrate\-Arm}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Calibrate\-Arm\-::is\-Finished (
@@ -45,7 +126,11 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 13 of file Calibrate\-Arm.\-cpp.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Calibrate\-Arm.\-h\item 
-Final\-\_\-\-Project/Calibrate\-Arm.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{CalibrateArm_8h}{Calibrate\-Arm.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{CalibrateArm_8cpp}{Calibrate\-Arm.\-cpp}\end{DoxyCompactItemize}

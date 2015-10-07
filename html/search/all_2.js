@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['cache',['cache',['../classLineSensor.html#afc809d2aa49426d949f76f68b0154050',1,'LineSensor']]],
-  ['calibrate',['Calibrate',['../classCalibrate.html',1,'']]],
-  ['calibratearm',['CalibrateArm',['../classCalibrateArm.html',1,'']]],
-  ['calibrated',['calibrated',['../classArm.html#a3f6c85e5a8feacd8870b653a8163d99f',1,'Arm']]],
-  ['calibrateroutine',['CalibrateRoutine',['../classCalibrateRoutine.html',1,'']]],
-  ['closegripper',['CloseGripper',['../classCloseGripper.html',1,'']]],
-  ['cls',['cls',['../classGripper.html#ada511826dbf5abcdd12532ae725efeaf',1,'Gripper']]],
-  ['command',['Command',['../classCommand.html',1,'']]],
-  ['commandgroup',['CommandGroup',['../classCommandGroup.html',1,'']]],
-  ['commandgroupentry',['CommandGroupEntry',['../classCommandGroupEntry.html',1,'']]],
-  ['control',['control',['../classArm.html#a009c19e5b213f692c24eab792cc40c47',1,'Arm']]],
-  ['cycle',['cycle',['../classCommand.html#a93e75689d86c0a8675c1f769f721d646',1,'Command']]]
+  ['backofftime',['backOffTime',['../classBackOffTube.html#a46fdecac50000c6b1e9ecae3e42ea4b4',1,'BackOffTube']]],
+  ['backofftube',['BackOffTube',['../classBackOffTube.html',1,'BackOffTube'],['../classBackOffTube.html#ab8fb886043a6df04258ac22415b543dd',1,'BackOffTube::BackOffTube()'],['../classBackOffTube.html#a6fedeb5bfc92b531a300ce2d95a1a3bb',1,'BackOffTube::BackOffTube(int leftSpeed, int rightSpeed)']]],
+  ['backofftube_2ecpp',['BackOffTube.cpp',['../BackOffTube_8cpp.html',1,'']]],
+  ['backofftube_2eh',['BackOffTube.h',['../BackOffTube_8h.html',1,'']]],
+  ['backup',['backUp',['../classRobot.html#a450cf38f963596663003f3d94b2bcf3b',1,'Robot']]],
+  ['blink_5fand_5fsend_5fperiod',['BLINK_AND_SEND_PERIOD',['../classRobot.html#ad0f5c1ce14363f3c05232eceab37ceff',1,'Robot']]],
+  ['blinkandsendinterrupt',['blinkAndSendInterrupt',['../classRobot.html#afb5418d31b61a64e0930fd1fb495c8c9',1,'Robot']]],
+  ['blinkleds',['blinkLEDs',['../classRobot.html#a4215f7e880311c2118f387df75effaf2',1,'Robot']]],
+  ['btclient',['BTClient',['../classBTClient.html',1,'BTClient'],['../classBTClient.html#a60dc22e0906a1cea7a88813bb6d98f96',1,'BTClient::BTClient()'],['../classRobot.html#a9da91e6d551ed02038e935b3c755cc75',1,'Robot::btClient()']]],
+  ['btclient_2ecpp',['BTClient.cpp',['../BTClient_8cpp.html',1,'']]],
+  ['btclient_2eh',['BTClient.h',['../BTClient_8h.html',1,'']]],
+  ['btmaster',['btMaster',['../classBTClient.html#a5376be2a850c64faab1e9a02adcd342b',1,'BTClient']]]
 ];

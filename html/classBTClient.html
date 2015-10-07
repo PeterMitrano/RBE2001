@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,6 +86,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classBTClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BTClient Class Reference</div>  </div>
@@ -99,13 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a60dc22e0906a1cea7a88813bb6d98f96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60dc22e0906a1cea7a88813bb6d98f96"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a60dc22e0906a1cea7a88813bb6d98f96">BTClient</a> ()</td></tr>
-<tr class="memdesc:a60dc22e0906a1cea7a88813bb6d98f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor initializes btmaster and pcol <br/></td></tr>
+<tr class="memitem:a60dc22e0906a1cea7a88813bb6d98f96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a60dc22e0906a1cea7a88813bb6d98f96">BTClient</a> ()</td></tr>
+<tr class="memdesc:a60dc22e0906a1cea7a88813bb6d98f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor initializes btmaster and pcol  <a href="#a60dc22e0906a1cea7a88813bb6d98f96">More...</a><br/></td></tr>
 <tr class="separator:a60dc22e0906a1cea7a88813bb6d98f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefdc156fe1f22455d249ec0bb7fa3fd5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#aefdc156fe1f22455d249ec0bb7fa3fd5">setup</a> ()</td></tr>
-<tr class="memdesc:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">start serial3 <br/></td></tr>
+<tr class="memitem:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#aefdc156fe1f22455d249ec0bb7fa3fd5">setup</a> ()</td></tr>
+<tr class="memdesc:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">start serial3  <a href="#aefdc156fe1f22455d249ec0bb7fa3fd5">More...</a><br/></td></tr>
 <tr class="separator:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67250c48f81fee2b7c9f26d100c26799"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a67250c48f81fee2b7c9f26d100c26799">availableSupplyTube</a> ()</td></tr>
 <tr class="memdesc:a67250c48f81fee2b7c9f26d100c26799"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the supply tub locations  <a href="#a67250c48f81fee2b7c9f26d100c26799">More...</a><br/></td></tr>
@@ -113,43 +114,147 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a18e2223a0605a0ee67b5d004890b38c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a18e2223a0605a0ee67b5d004890b38c4">openStorageTube</a> ()</td></tr>
 <tr class="memdesc:a18e2223a0605a0ee67b5d004890b38c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the storage tub locations  <a href="#a18e2223a0605a0ee67b5d004890b38c4">More...</a><br/></td></tr>
 <tr class="separator:a18e2223a0605a0ee67b5d004890b38c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70cc30b8de8632bd6fb81972a9409a10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70cc30b8de8632bd6fb81972a9409a10"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10">sendRadiationAlert</a> ()</td></tr>
-<tr class="memdesc:a70cc30b8de8632bd6fb81972a9409a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">send 0xff to the field computer <br/></td></tr>
+<tr class="memitem:a70cc30b8de8632bd6fb81972a9409a10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10">sendRadiationAlert</a> ()</td></tr>
+<tr class="memdesc:a70cc30b8de8632bd6fb81972a9409a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">send 0xff to the field computer  <a href="#a70cc30b8de8632bd6fb81972a9409a10">More...</a><br/></td></tr>
 <tr class="separator:a70cc30b8de8632bd6fb81972a9409a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bf8f58f2c83834cab585e69c55c171f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bf8f58f2c83834cab585e69c55c171f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f">sendHeartbeat</a> ()</td></tr>
-<tr class="memdesc:a4bf8f58f2c83834cab585e69c55c171f"><td class="mdescLeft">&#160;</td><td class="mdescRight">send 0x00 to field computer <br/></td></tr>
+<tr class="memitem:a4bf8f58f2c83834cab585e69c55c171f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f">sendHeartbeat</a> ()</td></tr>
+<tr class="memdesc:a4bf8f58f2c83834cab585e69c55c171f"><td class="mdescLeft">&#160;</td><td class="mdescRight">send 0x00 to field computer  <a href="#a4bf8f58f2c83834cab585e69c55c171f">More...</a><br/></td></tr>
 <tr class="separator:a4bf8f58f2c83834cab585e69c55c171f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57a82b64a1233a66450c1d9ebe48774c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57a82b64a1233a66450c1d9ebe48774c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c">sendDebugString</a> (String message)</td></tr>
-<tr class="memdesc:a57a82b64a1233a66450c1d9ebe48774c"><td class="mdescLeft">&#160;</td><td class="mdescRight">send string to field computer for debugging <br/></td></tr>
+<tr class="memitem:a57a82b64a1233a66450c1d9ebe48774c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c">sendDebugString</a> (String message)</td></tr>
+<tr class="memdesc:a57a82b64a1233a66450c1d9ebe48774c"><td class="mdescLeft">&#160;</td><td class="mdescRight">send string to field computer for debugging  <a href="#a57a82b64a1233a66450c1d9ebe48774c">More...</a><br/></td></tr>
 <tr class="separator:a57a82b64a1233a66450c1d9ebe48774c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8820e63eebe5ab16fac9b7cb522fc55a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a">sendStatus</a> ()</td></tr>
-<tr class="memdesc:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">send status <br/></td></tr>
+<tr class="memitem:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a">sendStatus</a> ()</td></tr>
+<tr class="memdesc:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">send status  <a href="#a8820e63eebe5ab16fac9b7cb522fc55a">More...</a><br/></td></tr>
 <tr class="separator:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e827d16926d45a4b7c18dda0e59837b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e827d16926d45a4b7c18dda0e59837b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b">readMessage</a> ()</td></tr>
-<tr class="memdesc:a8e827d16926d45a4b7c18dda0e59837b"><td class="mdescLeft">&#160;</td><td class="mdescRight">read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful <br/></td></tr>
+<tr class="memitem:a8e827d16926d45a4b7c18dda0e59837b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b">readMessage</a> ()</td></tr>
+<tr class="memdesc:a8e827d16926d45a4b7c18dda0e59837b"><td class="mdescLeft">&#160;</td><td class="mdescRight">read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful  <a href="#a8e827d16926d45a4b7c18dda0e59837b">More...</a><br/></td></tr>
 <tr class="separator:a8e827d16926d45a4b7c18dda0e59837b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacff467239e0a6a85eab0ac77dbcfdf8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#aacff467239e0a6a85eab0ac77dbcfdf8">movementStatus</a></td></tr>
-<tr class="memdesc:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">status variables for sending messages <br/></td></tr>
+<tr class="memitem:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#aacff467239e0a6a85eab0ac77dbcfdf8">movementStatus</a></td></tr>
+<tr class="memdesc:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">status variables for sending messages  <a href="#aacff467239e0a6a85eab0ac77dbcfdf8">More...</a><br/></td></tr>
 <tr class="separator:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdb5a8d964742a7236d2d0acc2e45585"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdb5a8d964742a7236d2d0acc2e45585"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>gripperStatus</b></td></tr>
+<tr class="memitem:acdb5a8d964742a7236d2d0acc2e45585"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#acdb5a8d964742a7236d2d0acc2e45585">gripperStatus</a></td></tr>
 <tr class="separator:acdb5a8d964742a7236d2d0acc2e45585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a419405603d661e07e630a6649e9592a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a419405603d661e07e630a6649e9592a0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>operationStatus</b></td></tr>
+<tr class="memitem:a419405603d661e07e630a6649e9592a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a419405603d661e07e630a6649e9592a0">operationStatus</a></td></tr>
 <tr class="separator:a419405603d661e07e630a6649e9592a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:aa4e607f3ba1fea67548e2c2864915cb8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8">MSG_TYPE</a> { <br/>
+&#160;&#160;<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a79c8b79e1404a0aadda91748f3a5b376">STORAGE_MSG</a> = 0x01, 
+<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a2ec2a5bf9061a6e1fc643474d77dfdf5">SUPPLY_MSG</a> = 0x02, 
+<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f">RADIATION_MSG</a> = 0x03, 
+<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52">STOP_MSG</a> = 0x04, 
+<br/>
+&#160;&#160;<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66">RESUME_MSG</a> = 0x05, 
+<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a8b255c625c832b7f355c9797ca1a111c">STATUS_MSG</a> = 0x06, 
+<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a234efd919c0dd46b09806b30a13b3b76">HEARTBEAT_MSG</a> = 0x07, 
+<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a52e6479fc2514e89e0ab286f4de4e2e7">DEBUG_MSG</a> = 0x10, 
+<br/>
+&#160;&#160;<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a67a6a7aadd31c708cb5f53e19137f298">WARN_MSG</a> = 0x11, 
+<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8af5b0d8cbe53a1d56f6df29fb896047f1">INFO_MSG</a> = 0x12
+<br/>
+ }</td></tr>
+<tr class="separator:aa4e607f3ba1fea67548e2c2864915cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0561b17912b37892d4f4226d1769f7e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a0561b17912b37892d4f4226d1769f7e8">sendData</a> (<a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8">MSG_TYPE</a> type, byte data[3])</td></tr>
+<tr class="memdesc:a0561b17912b37892d4f4226d1769f7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">send the given data to the field computer  <a href="#a0561b17912b37892d4f4226d1769f7e8">More...</a><br/></td></tr>
+<tr class="separator:a0561b17912b37892d4f4226d1769f7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5376be2a850c64faab1e9a02adcd342b"><td class="memItemLeft" align="right" valign="top">BluetoothMaster&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a5376be2a850c64faab1e9a02adcd342b">btMaster</a></td></tr>
+<tr class="memdesc:a5376be2a850c64faab1e9a02adcd342b"><td class="mdescLeft">&#160;</td><td class="mdescRight">master object  <a href="#a5376be2a850c64faab1e9a02adcd342b">More...</a><br/></td></tr>
+<tr class="separator:a5376be2a850c64faab1e9a02adcd342b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bd4b5e464d0b6a57957428ef559142"><td class="memItemLeft" align="right" valign="top">ReactorProtocol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a64bd4b5e464d0b6a57957428ef559142">pcol</a></td></tr>
+<tr class="memdesc:a64bd4b5e464d0b6a57957428ef559142"><td class="mdescLeft">&#160;</td><td class="mdescRight">protocol decoder  <a href="#a64bd4b5e464d0b6a57957428ef559142">More...</a><br/></td></tr>
+<tr class="separator:a64bd4b5e464d0b6a57957428ef559142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946cc60b431ec813642b97b0c4b76cf3"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a946cc60b431ec813642b97b0c4b76cf3">lastSent</a></td></tr>
+<tr class="separator:a946cc60b431ec813642b97b0c4b76cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a7d3382ab8bbdf4b7d78b7b69ff85f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a41a7d3382ab8bbdf4b7d78b7b69ff85f">received_storage</a> = false</td></tr>
+<tr class="separator:a41a7d3382ab8bbdf4b7d78b7b69ff85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00b18b695ecc4bdeea133572eb0fd6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#af00b18b695ecc4bdeea133572eb0fd6d">received_supply</a> = false</td></tr>
+<tr class="separator:af00b18b695ecc4bdeea133572eb0fd6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba419e7e6be73f5ec26f6b6c8d4ccf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a5ba419e7e6be73f5ec26f6b6c8d4ccf1">storage</a></td></tr>
+<tr class="memdesc:a5ba419e7e6be73f5ec26f6b6c8d4ccf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">raw integer (or hex if you want) representation for storage and supply  <a href="#a5ba419e7e6be73f5ec26f6b6c8d4ccf1">More...</a><br/></td></tr>
+<tr class="separator:a5ba419e7e6be73f5ec26f6b6c8d4ccf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3974a28859432eeef27cfd7391ed7d60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a3974a28859432eeef27cfd7391ed7d60">supply</a></td></tr>
+<tr class="separator:a3974a28859432eeef27cfd7391ed7d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in member variables in this clas when a command wants to get the location of the tubes, it can do so instantaneously by looking at the last stored value </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00012">12</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8">BTClient::MSG_TYPE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8a79c8b79e1404a0aadda91748f3a5b376"></a>STORAGE_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8a2ec2a5bf9061a6e1fc643474d77dfdf5"></a>SUPPLY_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f"></a>RADIATION_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52"></a>STOP_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66"></a>RESUME_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8a8b255c625c832b7f355c9797ca1a111c"></a>STATUS_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8a234efd919c0dd46b09806b30a13b3b76"></a>HEARTBEAT_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8a52e6479fc2514e89e0ab286f4de4e2e7"></a>DEBUG_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8a67a6a7aadd31c708cb5f53e19137f298"></a>WARN_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa4e607f3ba1fea67548e2c2864915cb8af5b0d8cbe53a1d56f6df29fb896047f1"></a>INFO_MSG</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00051">51</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a60dc22e0906a1cea7a88813bb6d98f96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BTClient::BTClient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor initializes btmaster and pcol </p>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00004">4</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a67250c48f81fee2b7c9f26d100c26799"></a>
 <div class="memitem">
 <div class="memproto">
@@ -165,6 +270,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>operationStatus</b></t
 
 <p>returns the supply tub locations </p>
 <dl class="section return"><dt>Returns</dt><dd>the position of the available supply tube </dd></dl>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00014">14</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -184,16 +291,374 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>operationStatus</b></t
 <p>returns the storage tub locations </p>
 <dl class="section return"><dt>Returns</dt><dd>the position of the open storage tube </dd></dl>
 
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00025">25</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e827d16926d45a4b7c18dda0e59837b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTClient::readMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful </p>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00063">63</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0561b17912b37892d4f4226d1769f7e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTClient::sendData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8">MSG_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>data</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>send the given data to the field computer </p>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00051">51</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57a82b64a1233a66450c1d9ebe48774c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTClient::sendDebugString </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>send string to field computer for debugging </p>
+
+</div>
+</div>
+<a class="anchor" id="a4bf8f58f2c83834cab585e69c55c171f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTClient::sendHeartbeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>send 0x00 to field computer </p>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00039">39</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70cc30b8de8632bd6fb81972a9409a10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTClient::sendRadiationAlert </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>send 0xff to the field computer </p>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00035">35</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8820e63eebe5ab16fac9b7cb522fc55a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTClient::sendStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>send status </p>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00043">43</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aefdc156fe1f22455d249ec0bb7fa3fd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTClient::setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>start serial3 </p>
+
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00008">8</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5376be2a850c64faab1e9a02adcd342b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BluetoothMaster BTClient::btMaster</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>master object </p>
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00066">66</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acdb5a8d964742a7236d2d0acc2e45585"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BTClient::gripperStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00047">47</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a946cc60b431ec813642b97b0c4b76cf3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long BTClient::lastSent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00071">71</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aacff467239e0a6a85eab0ac77dbcfdf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BTClient::movementStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>status variables for sending messages </p>
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00047">47</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a419405603d661e07e630a6649e9592a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BTClient::operationStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00047">47</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64bd4b5e464d0b6a57957428ef559142"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReactorProtocol BTClient::pcol</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>protocol decoder </p>
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00069">69</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41a7d3382ab8bbdf4b7d78b7b69ff85f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BTClient::received_storage = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00072">72</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af00b18b695ecc4bdeea133572eb0fd6d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BTClient::received_supply = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00073">73</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ba419e7e6be73f5ec26f6b6c8d4ccf1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BTClient::storage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>raw integer (or hex if you want) representation for storage and supply </p>
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00076">76</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3974a28859432eeef27cfd7391ed7d60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BTClient::supply</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00076">76</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="BTClient_8h_source.html">BTClient.h</a></li>
-<li>Final_Project/BTClient.cpp</li>
+<li>Final_Project/<a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

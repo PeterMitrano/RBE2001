@@ -1,6 +1,10 @@
 \hypertarget{classNavigateToReactor}{\section{Navigate\-To\-Reactor Class Reference}
 \label{classNavigateToReactor}\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}}
 }
+
+
+{\ttfamily \#include $<$Navigate\-To\-Reactor.\-h$>$}
+
 Inheritance diagram for Navigate\-To\-Reactor\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,24 +14,109 @@ Inheritance diagram for Navigate\-To\-Reactor\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classNavigateToReactor_a66a709e79a4c6dc0e7583c9d9a47200d}{{\bfseries Navigate\-To\-Reactor} (int reactor\-Number)}\label{classNavigateToReactor_a66a709e79a4c6dc0e7583c9d9a47200d}
-
+\hyperlink{classNavigateToReactor_a66a709e79a4c6dc0e7583c9d9a47200d}{Navigate\-To\-Reactor} (int \hyperlink{classNavigateToReactor_ac0bd289bd96de0e58d94735bc16b3d44}{reactor\-Number})
 \item 
-\hypertarget{classNavigateToReactor_a8b319bd246a3d1c818e38e82ed6ab25f}{void \hyperlink{classNavigateToReactor_a8b319bd246a3d1c818e38e82ed6ab25f}{initialize} ()}\label{classNavigateToReactor_a8b319bd246a3d1c818e38e82ed6ab25f}
-
+void \hyperlink{classNavigateToReactor_a8b319bd246a3d1c818e38e82ed6ab25f}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classNavigateToReactor_a50a9743b979ee2a5b35866bbad6f1faa}{void \hyperlink{classNavigateToReactor_a50a9743b979ee2a5b35866bbad6f1faa}{execute} ()}\label{classNavigateToReactor_a50a9743b979ee2a5b35866bbad6f1faa}
-
+void \hyperlink{classNavigateToReactor_a50a9743b979ee2a5b35866bbad6f1faa}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classNavigateToReactor_ae1619462539af71d2ba9ea167db9dfaf}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classNavigateToReactor_a8d42713588dfb661c778ff6aad6c0085}{void \hyperlink{classNavigateToReactor_a8d42713588dfb661c778ff6aad6c0085}{end} ()}\label{classNavigateToReactor_a8d42713588dfb661c778ff6aad6c0085}
-
+void \hyperlink{classNavigateToReactor_a8d42713588dfb661c778ff6aad6c0085}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classNavigateToReactor_ae1619462539af71d2ba9ea167db9dfaf}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classNavigateToReactor_ac0bd289bd96de0e58d94735bc16b3d44}{reactor\-Number}
+\item 
+int \hyperlink{classNavigateToReactor_a5e50c32838a4f3f715fb578244637198}{dest\-Direction}
+\item 
+int \hyperlink{classNavigateToReactor_a655eb6b0e47b6bf4c6cf1aeb91b18694}{dest\-Row}
+\item 
+int \hyperlink{classNavigateToReactor_aeb3c4d3f99db073e52159adf49e8466f}{dest\-Col}
+\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 5 of file Navigate\-To\-Reactor.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNavigateToReactor_a66a709e79a4c6dc0e7583c9d9a47200d}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!Navigate\-To\-Reactor@{Navigate\-To\-Reactor}}
+\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{Navigate\-To\-Reactor}]{\setlength{\rightskip}{0pt plus 5cm}Navigate\-To\-Reactor\-::\-Navigate\-To\-Reactor (
+\begin{DoxyParamCaption}
+\item[{int}]{reactor\-Number}
+\end{DoxyParamCaption}
+)}}\label{classNavigateToReactor_a66a709e79a4c6dc0e7583c9d9a47200d}
+
+
+Definition at line 6 of file Navigate\-To\-Reactor.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classNavigateToReactor_a8d42713588dfb661c778ff6aad6c0085}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!end@{end}}
+\index{end@{end}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Reactor\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToReactor_a8d42713588dfb661c778ff6aad6c0085}
+
+
+called once at the end, once \hyperlink{classNavigateToReactor_ae1619462539af71d2ba9ea167db9dfaf}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 43 of file Navigate\-To\-Reactor.\-cpp.
+
+\hypertarget{classNavigateToReactor_a50a9743b979ee2a5b35866bbad6f1faa}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!execute@{execute}}
+\index{execute@{execute}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Reactor\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToReactor_a50a9743b979ee2a5b35866bbad6f1faa}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 35 of file Navigate\-To\-Reactor.\-cpp.
+
+\hypertarget{classNavigateToReactor_a8b319bd246a3d1c818e38e82ed6ab25f}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!initialize@{initialize}}
+\index{initialize@{initialize}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Reactor\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToReactor_a8b319bd246a3d1c818e38e82ed6ab25f}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 14 of file Navigate\-To\-Reactor.\-cpp.
+
 \hypertarget{classNavigateToReactor_ae1619462539af71d2ba9ea167db9dfaf}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!NavigateToReactor@{Navigate\-To\-Reactor}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigate\-To\-Reactor\-::is\-Finished (
@@ -48,7 +137,42 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 38 of file Navigate\-To\-Reactor.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classNavigateToReactor_aeb3c4d3f99db073e52159adf49e8466f}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!dest\-Col@{dest\-Col}}
+\index{dest\-Col@{dest\-Col}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{dest\-Col}]{\setlength{\rightskip}{0pt plus 5cm}int Navigate\-To\-Reactor\-::dest\-Col\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToReactor_aeb3c4d3f99db073e52159adf49e8466f}
+
+
+Definition at line 13 of file Navigate\-To\-Reactor.\-h.
+
+\hypertarget{classNavigateToReactor_a5e50c32838a4f3f715fb578244637198}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!dest\-Direction@{dest\-Direction}}
+\index{dest\-Direction@{dest\-Direction}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{dest\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int Navigate\-To\-Reactor\-::dest\-Direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToReactor_a5e50c32838a4f3f715fb578244637198}
+
+
+Definition at line 13 of file Navigate\-To\-Reactor.\-h.
+
+\hypertarget{classNavigateToReactor_a655eb6b0e47b6bf4c6cf1aeb91b18694}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!dest\-Row@{dest\-Row}}
+\index{dest\-Row@{dest\-Row}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{dest\-Row}]{\setlength{\rightskip}{0pt plus 5cm}int Navigate\-To\-Reactor\-::dest\-Row\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToReactor_a655eb6b0e47b6bf4c6cf1aeb91b18694}
+
+
+Definition at line 13 of file Navigate\-To\-Reactor.\-h.
+
+\hypertarget{classNavigateToReactor_ac0bd289bd96de0e58d94735bc16b3d44}{\index{Navigate\-To\-Reactor@{Navigate\-To\-Reactor}!reactor\-Number@{reactor\-Number}}
+\index{reactor\-Number@{reactor\-Number}!NavigateToReactor@{Navigate\-To\-Reactor}}
+\subsubsection[{reactor\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Navigate\-To\-Reactor\-::reactor\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToReactor_ac0bd289bd96de0e58d94735bc16b3d44}
+
+
+Definition at line 13 of file Navigate\-To\-Reactor.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Navigate\-To\-Reactor.\-h\item 
-Final\-\_\-\-Project/Navigate\-To\-Reactor.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{NavigateToReactor_8h}{Navigate\-To\-Reactor.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{NavigateToReactor_8cpp}{Navigate\-To\-Reactor.\-cpp}\end{DoxyCompactItemize}

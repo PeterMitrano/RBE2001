@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['paused',['paused',['../classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a',1,'Robot']]]
+  ['gripper',['gripper',['../classArm.html#a1f237e56fc1e76c2b63f1f59d847945d',1,'Arm']]],
+  ['gripperstatus',['gripperStatus',['../classBTClient.html#acdb5a8d964742a7236d2d0acc2e45585',1,'BTClient']]]
 ];

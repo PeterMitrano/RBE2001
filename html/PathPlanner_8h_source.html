@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,23 +89,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">PathPlanner.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;CommandGroup.h&quot;</span></div>
+<a href="PathPlanner_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="CommandGroup_8h.html">CommandGroup.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classPathPlanner.html">    3</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPathPlanner.html">PathPlanner</a> {</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="classPathPlanner.html">PathPlanner</a>(<a class="code" href="classCommandGroup.html">CommandGroup</a> *path);</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">void</span> plan(<span class="keywordtype">int</span> destRow, <span class="keywordtype">int</span> destCol, <span class="keywordtype">int</span> destDirection);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">void</span> planToFace(<span class="keywordtype">int</span> currentDirection);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="classPathPlanner.html#a09453b54df73c22775e488a20d6a3e82">PathPlanner</a>(<a class="code" href="classCommandGroup.html">CommandGroup</a> *<a class="code" href="classPathPlanner.html#a9b41e5ee68a78a45e46003102a6c3b91">path</a>);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPathPlanner.html#a82f75ef3111891f20ba2c59f8b305d55">plan</a>(<span class="keywordtype">int</span> destRow, <span class="keywordtype">int</span> destCol, <span class="keywordtype">int</span> destDirection);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPathPlanner.html#a435470288f6e2b5f99ce590db0bfc5db">planToFace</a>(<span class="keywordtype">int</span> currentDirection);</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">int</span> col, row, direction;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classCommandGroup.html">CommandGroup</a> *path;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classPathPlanner.html#a00b0fa8525a5fe9c8088ccaa005c4c54">    9</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classPathPlanner.html#a20d2bf800c63aacfd1af314ad400d119">col</a>, <a class="code" href="classPathPlanner.html#a00b0fa8525a5fe9c8088ccaa005c4c54">row</a>, <a class="code" href="classPathPlanner.html#a1f9985b79ca49ca0b2992176a10a6210">direction</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classPathPlanner.html#a9b41e5ee68a78a45e46003102a6c3b91">   10</a></span>&#160;    <a class="code" href="classCommandGroup.html">CommandGroup</a> *<a class="code" href="classPathPlanner.html#a9b41e5ee68a78a45e46003102a6c3b91">path</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
-<div class="ttc" id="classCommandGroup_html"><div class="ttname"><a href="classCommandGroup.html">CommandGroup</a></div><div class="ttdef"><b>Definition:</b> CommandGroup.h:11</div></div>
-<div class="ttc" id="classPathPlanner_html"><div class="ttname"><a href="classPathPlanner.html">PathPlanner</a></div><div class="ttdef"><b>Definition:</b> PathPlanner.h:3</div></div>
+<div class="ttc" id="classCommandGroup_html"><div class="ttname"><a href="classCommandGroup.html">CommandGroup</a></div><div class="ttdef"><b>Definition:</b> <a href="CommandGroup_8h_source.html#l00011">CommandGroup.h:11</a></div></div>
+<div class="ttc" id="classPathPlanner_html"><div class="ttname"><a href="classPathPlanner.html">PathPlanner</a></div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8h_source.html#l00003">PathPlanner.h:3</a></div></div>
+<div class="ttc" id="classPathPlanner_html_a20d2bf800c63aacfd1af314ad400d119"><div class="ttname"><a href="classPathPlanner.html#a20d2bf800c63aacfd1af314ad400d119">PathPlanner::col</a></div><div class="ttdeci">int col</div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8h_source.html#l00009">PathPlanner.h:9</a></div></div>
+<div class="ttc" id="classPathPlanner_html_a9b41e5ee68a78a45e46003102a6c3b91"><div class="ttname"><a href="classPathPlanner.html#a9b41e5ee68a78a45e46003102a6c3b91">PathPlanner::path</a></div><div class="ttdeci">CommandGroup * path</div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8h_source.html#l00010">PathPlanner.h:10</a></div></div>
+<div class="ttc" id="classPathPlanner_html_a00b0fa8525a5fe9c8088ccaa005c4c54"><div class="ttname"><a href="classPathPlanner.html#a00b0fa8525a5fe9c8088ccaa005c4c54">PathPlanner::row</a></div><div class="ttdeci">int row</div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8h_source.html#l00009">PathPlanner.h:9</a></div></div>
+<div class="ttc" id="classPathPlanner_html_a82f75ef3111891f20ba2c59f8b305d55"><div class="ttname"><a href="classPathPlanner.html#a82f75ef3111891f20ba2c59f8b305d55">PathPlanner::plan</a></div><div class="ttdeci">void plan(int destRow, int destCol, int destDirection)</div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8cpp_source.html#l00017">PathPlanner.cpp:17</a></div></div>
+<div class="ttc" id="classPathPlanner_html_a435470288f6e2b5f99ce590db0bfc5db"><div class="ttname"><a href="classPathPlanner.html#a435470288f6e2b5f99ce590db0bfc5db">PathPlanner::planToFace</a></div><div class="ttdeci">void planToFace(int currentDirection)</div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8cpp_source.html#l00070">PathPlanner.cpp:70</a></div></div>
+<div class="ttc" id="classPathPlanner_html_a09453b54df73c22775e488a20d6a3e82"><div class="ttname"><a href="classPathPlanner.html#a09453b54df73c22775e488a20d6a3e82">PathPlanner::PathPlanner</a></div><div class="ttdeci">PathPlanner(CommandGroup *path)</div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8cpp_source.html#l00010">PathPlanner.cpp:10</a></div></div>
+<div class="ttc" id="classPathPlanner_html_a1f9985b79ca49ca0b2992176a10a6210"><div class="ttname"><a href="classPathPlanner.html#a1f9985b79ca49ca0b2992176a10a6210">PathPlanner::direction</a></div><div class="ttdeci">int direction</div><div class="ttdef"><b>Definition:</b> <a href="PathPlanner_8h_source.html#l00009">PathPlanner.h:9</a></div></div>
+<div class="ttc" id="CommandGroup_8h_html"><div class="ttname"><a href="CommandGroup_8h.html">CommandGroup.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

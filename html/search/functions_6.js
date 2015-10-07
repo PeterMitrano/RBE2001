@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getinstance',['getInstance',['../classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0',1,'Robot']]]
+  ['followline',['followLine',['../classRobot.html#a6e3caf6e0346f6a54557eb57a79fc4f4',1,'Robot']]]
 ];

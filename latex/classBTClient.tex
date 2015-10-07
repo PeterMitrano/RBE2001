@@ -13,47 +13,134 @@ functions for parsing and sending bluetooth messages Bluetooth is checked every 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}{\hyperlink{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}{B\-T\-Client} ()}\label{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}
-
+\hyperlink{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}{B\-T\-Client} ()
 \begin{DoxyCompactList}\small\item\em constructor initializes btmaster and pcol \end{DoxyCompactList}\item 
-\hypertarget{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{void \hyperlink{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{setup} ()}\label{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}
-
+void \hyperlink{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{setup} ()
 \begin{DoxyCompactList}\small\item\em start serial3 \end{DoxyCompactList}\item 
 int \hyperlink{classBTClient_a67250c48f81fee2b7c9f26d100c26799}{available\-Supply\-Tube} ()
 \begin{DoxyCompactList}\small\item\em returns the supply tub locations \end{DoxyCompactList}\item 
 int \hyperlink{classBTClient_a18e2223a0605a0ee67b5d004890b38c4}{open\-Storage\-Tube} ()
 \begin{DoxyCompactList}\small\item\em returns the storage tub locations \end{DoxyCompactList}\item 
-\hypertarget{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{void \hyperlink{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{send\-Radiation\-Alert} ()}\label{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}
-
+void \hyperlink{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{send\-Radiation\-Alert} ()
 \begin{DoxyCompactList}\small\item\em send 0xff to the field computer \end{DoxyCompactList}\item 
-\hypertarget{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{void \hyperlink{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{send\-Heartbeat} ()}\label{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}
-
+void \hyperlink{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{send\-Heartbeat} ()
 \begin{DoxyCompactList}\small\item\em send 0x00 to field computer \end{DoxyCompactList}\item 
-\hypertarget{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{void \hyperlink{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{send\-Debug\-String} (String message)}\label{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}
-
+void \hyperlink{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{send\-Debug\-String} (String message)
 \begin{DoxyCompactList}\small\item\em send string to field computer for debugging \end{DoxyCompactList}\item 
-\hypertarget{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{void \hyperlink{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{send\-Status} ()}\label{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}
-
+void \hyperlink{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{send\-Status} ()
 \begin{DoxyCompactList}\small\item\em send status \end{DoxyCompactList}\item 
-\hypertarget{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{void \hyperlink{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{read\-Message} ()}\label{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}
-
+void \hyperlink{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{read\-Message} ()
 \begin{DoxyCompactList}\small\item\em read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{int \hyperlink{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{movement\-Status}}\label{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}
-
+int \hyperlink{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{movement\-Status}
 \begin{DoxyCompactList}\small\item\em status variables for sending messages \end{DoxyCompactList}\item 
-\hypertarget{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}{int {\bfseries gripper\-Status}}\label{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}
-
+int \hyperlink{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}{gripper\-Status}
 \item 
-\hypertarget{classBTClient_a419405603d661e07e630a6649e9592a0}{int {\bfseries operation\-Status}}\label{classBTClient_a419405603d661e07e630a6649e9592a0}
-
+int \hyperlink{classBTClient_a419405603d661e07e630a6649e9592a0}{operation\-Status}
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8}{M\-S\-G\-\_\-\-T\-Y\-P\-E} \{ \\*
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a79c8b79e1404a0aadda91748f3a5b376}{S\-T\-O\-R\-A\-G\-E\-\_\-\-M\-S\-G} = 0x01, 
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a2ec2a5bf9061a6e1fc643474d77dfdf5}{S\-U\-P\-P\-L\-Y\-\_\-\-M\-S\-G} = 0x02, 
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f}{R\-A\-D\-I\-A\-T\-I\-O\-N\-\_\-\-M\-S\-G} = 0x03, 
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52}{S\-T\-O\-P\-\_\-\-M\-S\-G} = 0x04, 
+\\*
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66}{R\-E\-S\-U\-M\-E\-\_\-\-M\-S\-G} = 0x05, 
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a8b255c625c832b7f355c9797ca1a111c}{S\-T\-A\-T\-U\-S\-\_\-\-M\-S\-G} = 0x06, 
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a234efd919c0dd46b09806b30a13b3b76}{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-M\-S\-G} = 0x07, 
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a52e6479fc2514e89e0ab286f4de4e2e7}{D\-E\-B\-U\-G\-\_\-\-M\-S\-G} = 0x10, 
+\\*
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a67a6a7aadd31c708cb5f53e19137f298}{W\-A\-R\-N\-\_\-\-M\-S\-G} = 0x11, 
+\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8af5b0d8cbe53a1d56f6df29fb896047f1}{I\-N\-F\-O\-\_\-\-M\-S\-G} = 0x12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBTClient_a0561b17912b37892d4f4226d1769f7e8}{send\-Data} (\hyperlink{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8}{M\-S\-G\-\_\-\-T\-Y\-P\-E} type, byte data\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em send the given data to the field computer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Bluetooth\-Master \hyperlink{classBTClient_a5376be2a850c64faab1e9a02adcd342b}{bt\-Master}
+\begin{DoxyCompactList}\small\item\em master object \end{DoxyCompactList}\item 
+Reactor\-Protocol \hyperlink{classBTClient_a64bd4b5e464d0b6a57957428ef559142}{pcol}
+\begin{DoxyCompactList}\small\item\em protocol decoder \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classBTClient_a946cc60b431ec813642b97b0c4b76cf3}{last\-Sent}
+\item 
+bool \hyperlink{classBTClient_a41a7d3382ab8bbdf4b7d78b7b69ff85f}{received\-\_\-storage} = false
+\item 
+bool \hyperlink{classBTClient_af00b18b695ecc4bdeea133572eb0fd6d}{received\-\_\-supply} = false
+\item 
+int \hyperlink{classBTClient_a5ba419e7e6be73f5ec26f6b6c8d4ccf1}{storage}
+\begin{DoxyCompactList}\small\item\em raw integer (or hex if you want) representation for storage and supply \end{DoxyCompactList}\item 
+int \hyperlink{classBTClient_a3974a28859432eeef27cfd7391ed7d60}{supply}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in member variables in this clas when a command wants to get the location of the tubes, it can do so instantaneously by looking at the last stored value 
+
+Definition at line 12 of file B\-T\-Client.\-h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8}{\index{B\-T\-Client@{B\-T\-Client}!M\-S\-G\-\_\-\-T\-Y\-P\-E@{M\-S\-G\-\_\-\-T\-Y\-P\-E}}
+\index{M\-S\-G\-\_\-\-T\-Y\-P\-E@{M\-S\-G\-\_\-\-T\-Y\-P\-E}!BTClient@{B\-T\-Client}}
+\subsubsection[{M\-S\-G\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf B\-T\-Client\-::\-M\-S\-G\-\_\-\-T\-Y\-P\-E}\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\-T\-O\-R\-A\-G\-E\-\_\-\-M\-S\-G@{S\-T\-O\-R\-A\-G\-E\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!S\-T\-O\-R\-A\-G\-E\-\_\-\-M\-S\-G@{S\-T\-O\-R\-A\-G\-E\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a79c8b79e1404a0aadda91748f3a5b376}{S\-T\-O\-R\-A\-G\-E\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a79c8b79e1404a0aadda91748f3a5b376}
+}]\index{S\-U\-P\-P\-L\-Y\-\_\-\-M\-S\-G@{S\-U\-P\-P\-L\-Y\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!S\-U\-P\-P\-L\-Y\-\_\-\-M\-S\-G@{S\-U\-P\-P\-L\-Y\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a2ec2a5bf9061a6e1fc643474d77dfdf5}{S\-U\-P\-P\-L\-Y\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a2ec2a5bf9061a6e1fc643474d77dfdf5}
+}]\index{R\-A\-D\-I\-A\-T\-I\-O\-N\-\_\-\-M\-S\-G@{R\-A\-D\-I\-A\-T\-I\-O\-N\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!R\-A\-D\-I\-A\-T\-I\-O\-N\-\_\-\-M\-S\-G@{R\-A\-D\-I\-A\-T\-I\-O\-N\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f}{R\-A\-D\-I\-A\-T\-I\-O\-N\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f}
+}]\index{S\-T\-O\-P\-\_\-\-M\-S\-G@{S\-T\-O\-P\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!S\-T\-O\-P\-\_\-\-M\-S\-G@{S\-T\-O\-P\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52}{S\-T\-O\-P\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52}
+}]\index{R\-E\-S\-U\-M\-E\-\_\-\-M\-S\-G@{R\-E\-S\-U\-M\-E\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!R\-E\-S\-U\-M\-E\-\_\-\-M\-S\-G@{R\-E\-S\-U\-M\-E\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66}{R\-E\-S\-U\-M\-E\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66}
+}]\index{S\-T\-A\-T\-U\-S\-\_\-\-M\-S\-G@{S\-T\-A\-T\-U\-S\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!S\-T\-A\-T\-U\-S\-\_\-\-M\-S\-G@{S\-T\-A\-T\-U\-S\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a8b255c625c832b7f355c9797ca1a111c}{S\-T\-A\-T\-U\-S\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a8b255c625c832b7f355c9797ca1a111c}
+}]\index{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-M\-S\-G@{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-M\-S\-G@{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a234efd919c0dd46b09806b30a13b3b76}{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a234efd919c0dd46b09806b30a13b3b76}
+}]\index{D\-E\-B\-U\-G\-\_\-\-M\-S\-G@{D\-E\-B\-U\-G\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!D\-E\-B\-U\-G\-\_\-\-M\-S\-G@{D\-E\-B\-U\-G\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a52e6479fc2514e89e0ab286f4de4e2e7}{D\-E\-B\-U\-G\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a52e6479fc2514e89e0ab286f4de4e2e7}
+}]\index{W\-A\-R\-N\-\_\-\-M\-S\-G@{W\-A\-R\-N\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!W\-A\-R\-N\-\_\-\-M\-S\-G@{W\-A\-R\-N\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a67a6a7aadd31c708cb5f53e19137f298}{W\-A\-R\-N\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8a67a6a7aadd31c708cb5f53e19137f298}
+}]\index{I\-N\-F\-O\-\_\-\-M\-S\-G@{I\-N\-F\-O\-\_\-\-M\-S\-G}!B\-T\-Client@{B\-T\-Client}}\index{B\-T\-Client@{B\-T\-Client}!I\-N\-F\-O\-\_\-\-M\-S\-G@{I\-N\-F\-O\-\_\-\-M\-S\-G}}\item[{\em 
+\hypertarget{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8af5b0d8cbe53a1d56f6df29fb896047f1}{I\-N\-F\-O\-\_\-\-M\-S\-G}\label{classBTClient_aa4e607f3ba1fea67548e2c2864915cb8af5b0d8cbe53a1d56f6df29fb896047f1}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 51 of file B\-T\-Client.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}{\index{B\-T\-Client@{B\-T\-Client}!B\-T\-Client@{B\-T\-Client}}
+\index{B\-T\-Client@{B\-T\-Client}!BTClient@{B\-T\-Client}}
+\subsubsection[{B\-T\-Client}]{\setlength{\rightskip}{0pt plus 5cm}B\-T\-Client\-::\-B\-T\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}
+
+
+constructor initializes btmaster and pcol 
+
+
+
+Definition at line 4 of file B\-T\-Client.\-cpp.
+
+
 
 \subsection{Member Function Documentation}
 \hypertarget{classBTClient_a67250c48f81fee2b7c9f26d100c26799}{\index{B\-T\-Client@{B\-T\-Client}!available\-Supply\-Tube@{available\-Supply\-Tube}}
@@ -70,6 +157,10 @@ returns the supply tub locations
 \begin{DoxyReturn}{Returns}
 the position of the available supply tube 
 \end{DoxyReturn}
+
+
+Definition at line 14 of file B\-T\-Client.\-cpp.
+
 \hypertarget{classBTClient_a18e2223a0605a0ee67b5d004890b38c4}{\index{B\-T\-Client@{B\-T\-Client}!open\-Storage\-Tube@{open\-Storage\-Tube}}
 \index{open\-Storage\-Tube@{open\-Storage\-Tube}!BTClient@{B\-T\-Client}}
 \subsubsection[{open\-Storage\-Tube}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::open\-Storage\-Tube (
@@ -86,7 +177,202 @@ the position of the open storage tube
 \end{DoxyReturn}
 
 
+Definition at line 25 of file B\-T\-Client.\-cpp.
+
+\hypertarget{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{\index{B\-T\-Client@{B\-T\-Client}!read\-Message@{read\-Message}}
+\index{read\-Message@{read\-Message}!BTClient@{B\-T\-Client}}
+\subsubsection[{read\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void B\-T\-Client\-::read\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}
+
+
+read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful 
+
+
+
+Definition at line 63 of file B\-T\-Client.\-cpp.
+
+\hypertarget{classBTClient_a0561b17912b37892d4f4226d1769f7e8}{\index{B\-T\-Client@{B\-T\-Client}!send\-Data@{send\-Data}}
+\index{send\-Data@{send\-Data}!BTClient@{B\-T\-Client}}
+\subsubsection[{send\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void B\-T\-Client\-::send\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-S\-G\-\_\-\-T\-Y\-P\-E}}]{type, }
+\item[{byte}]{data\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a0561b17912b37892d4f4226d1769f7e8}
+
+
+send the given data to the field computer 
+
+
+
+Definition at line 51 of file B\-T\-Client.\-cpp.
+
+\hypertarget{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{\index{B\-T\-Client@{B\-T\-Client}!send\-Debug\-String@{send\-Debug\-String}}
+\index{send\-Debug\-String@{send\-Debug\-String}!BTClient@{B\-T\-Client}}
+\subsubsection[{send\-Debug\-String}]{\setlength{\rightskip}{0pt plus 5cm}void B\-T\-Client\-::send\-Debug\-String (
+\begin{DoxyParamCaption}
+\item[{String}]{message}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}
+
+
+send string to field computer for debugging 
+
+\hypertarget{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{\index{B\-T\-Client@{B\-T\-Client}!send\-Heartbeat@{send\-Heartbeat}}
+\index{send\-Heartbeat@{send\-Heartbeat}!BTClient@{B\-T\-Client}}
+\subsubsection[{send\-Heartbeat}]{\setlength{\rightskip}{0pt plus 5cm}void B\-T\-Client\-::send\-Heartbeat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}
+
+
+send 0x00 to field computer 
+
+
+
+Definition at line 39 of file B\-T\-Client.\-cpp.
+
+\hypertarget{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{\index{B\-T\-Client@{B\-T\-Client}!send\-Radiation\-Alert@{send\-Radiation\-Alert}}
+\index{send\-Radiation\-Alert@{send\-Radiation\-Alert}!BTClient@{B\-T\-Client}}
+\subsubsection[{send\-Radiation\-Alert}]{\setlength{\rightskip}{0pt plus 5cm}void B\-T\-Client\-::send\-Radiation\-Alert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}
+
+
+send 0xff to the field computer 
+
+
+
+Definition at line 35 of file B\-T\-Client.\-cpp.
+
+\hypertarget{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{\index{B\-T\-Client@{B\-T\-Client}!send\-Status@{send\-Status}}
+\index{send\-Status@{send\-Status}!BTClient@{B\-T\-Client}}
+\subsubsection[{send\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void B\-T\-Client\-::send\-Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}
+
+
+send status 
+
+
+
+Definition at line 43 of file B\-T\-Client.\-cpp.
+
+\hypertarget{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{\index{B\-T\-Client@{B\-T\-Client}!setup@{setup}}
+\index{setup@{setup}!BTClient@{B\-T\-Client}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}void B\-T\-Client\-::setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}
+
+
+start serial3 
+
+
+
+Definition at line 8 of file B\-T\-Client.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBTClient_a5376be2a850c64faab1e9a02adcd342b}{\index{B\-T\-Client@{B\-T\-Client}!bt\-Master@{bt\-Master}}
+\index{bt\-Master@{bt\-Master}!BTClient@{B\-T\-Client}}
+\subsubsection[{bt\-Master}]{\setlength{\rightskip}{0pt plus 5cm}Bluetooth\-Master B\-T\-Client\-::bt\-Master\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a5376be2a850c64faab1e9a02adcd342b}
+
+
+master object 
+
+
+
+Definition at line 66 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}{\index{B\-T\-Client@{B\-T\-Client}!gripper\-Status@{gripper\-Status}}
+\index{gripper\-Status@{gripper\-Status}!BTClient@{B\-T\-Client}}
+\subsubsection[{gripper\-Status}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::gripper\-Status}}\label{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}
+
+
+Definition at line 47 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_a946cc60b431ec813642b97b0c4b76cf3}{\index{B\-T\-Client@{B\-T\-Client}!last\-Sent@{last\-Sent}}
+\index{last\-Sent@{last\-Sent}!BTClient@{B\-T\-Client}}
+\subsubsection[{last\-Sent}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long B\-T\-Client\-::last\-Sent\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a946cc60b431ec813642b97b0c4b76cf3}
+
+
+Definition at line 71 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{\index{B\-T\-Client@{B\-T\-Client}!movement\-Status@{movement\-Status}}
+\index{movement\-Status@{movement\-Status}!BTClient@{B\-T\-Client}}
+\subsubsection[{movement\-Status}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::movement\-Status}}\label{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}
+
+
+status variables for sending messages 
+
+
+
+Definition at line 47 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_a419405603d661e07e630a6649e9592a0}{\index{B\-T\-Client@{B\-T\-Client}!operation\-Status@{operation\-Status}}
+\index{operation\-Status@{operation\-Status}!BTClient@{B\-T\-Client}}
+\subsubsection[{operation\-Status}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::operation\-Status}}\label{classBTClient_a419405603d661e07e630a6649e9592a0}
+
+
+Definition at line 47 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_a64bd4b5e464d0b6a57957428ef559142}{\index{B\-T\-Client@{B\-T\-Client}!pcol@{pcol}}
+\index{pcol@{pcol}!BTClient@{B\-T\-Client}}
+\subsubsection[{pcol}]{\setlength{\rightskip}{0pt plus 5cm}Reactor\-Protocol B\-T\-Client\-::pcol\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a64bd4b5e464d0b6a57957428ef559142}
+
+
+protocol decoder 
+
+
+
+Definition at line 69 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_a41a7d3382ab8bbdf4b7d78b7b69ff85f}{\index{B\-T\-Client@{B\-T\-Client}!received\-\_\-storage@{received\-\_\-storage}}
+\index{received\-\_\-storage@{received\-\_\-storage}!BTClient@{B\-T\-Client}}
+\subsubsection[{received\-\_\-storage}]{\setlength{\rightskip}{0pt plus 5cm}bool B\-T\-Client\-::received\-\_\-storage = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a41a7d3382ab8bbdf4b7d78b7b69ff85f}
+
+
+Definition at line 72 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_af00b18b695ecc4bdeea133572eb0fd6d}{\index{B\-T\-Client@{B\-T\-Client}!received\-\_\-supply@{received\-\_\-supply}}
+\index{received\-\_\-supply@{received\-\_\-supply}!BTClient@{B\-T\-Client}}
+\subsubsection[{received\-\_\-supply}]{\setlength{\rightskip}{0pt plus 5cm}bool B\-T\-Client\-::received\-\_\-supply = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_af00b18b695ecc4bdeea133572eb0fd6d}
+
+
+Definition at line 73 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_a5ba419e7e6be73f5ec26f6b6c8d4ccf1}{\index{B\-T\-Client@{B\-T\-Client}!storage@{storage}}
+\index{storage@{storage}!BTClient@{B\-T\-Client}}
+\subsubsection[{storage}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::storage\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a5ba419e7e6be73f5ec26f6b6c8d4ccf1}
+
+
+raw integer (or hex if you want) representation for storage and supply 
+
+
+
+Definition at line 76 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_a3974a28859432eeef27cfd7391ed7d60}{\index{B\-T\-Client@{B\-T\-Client}!supply@{supply}}
+\index{supply@{supply}!BTClient@{B\-T\-Client}}
+\subsubsection[{supply}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::supply\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a3974a28859432eeef27cfd7391ed7d60}
+
+
+Definition at line 76 of file B\-T\-Client.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/B\-T\-Client.\-h\item 
-Final\-\_\-\-Project/B\-T\-Client.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{BTClient_8h}{B\-T\-Client.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{BTClient_8cpp}{B\-T\-Client.\-cpp}\end{DoxyCompactItemize}

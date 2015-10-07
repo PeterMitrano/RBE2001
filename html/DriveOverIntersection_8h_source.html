@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,29 +89,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DriveOverIntersection.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="DriveOverIntersection_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Robot.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Command.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Robot_8h.html">Robot.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Command_8h.html">Command.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classDriveOverIntersection.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDriveOverIntersection.html">DriveOverIntersection</a> : <span class="keyword">public</span> <a class="code" href="classCommand.html">Command</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classDriveOverIntersection.html">DriveOverIntersection</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classDriveOverIntersection.html#a4fd6378b9ef223d86eebdf4af0547752">DriveOverIntersection</a>();</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDriveOverIntersection.html#a1c8abfebdde3f16e3110bca280365640">initialize</a>();</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDriveOverIntersection.html#a0bb9f5c91c23583810510f60cdd49523">execute</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDriveOverIntersection.html#a5dc540c24099462e2bc14923648f42b0">isFinished</a>();</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDriveOverIntersection.html#a90d8b3592d6c67e9ef1ae1a6396aa1c2">end</a>();</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
-<div class="ttc" id="classDriveOverIntersection_html_a1c8abfebdde3f16e3110bca280365640"><div class="ttname"><a href="classDriveOverIntersection.html#a1c8abfebdde3f16e3110bca280365640">DriveOverIntersection::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">run once in the first iteration of the command&#39;s life. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> DriveOverIntersection.cpp:5</div></div>
-<div class="ttc" id="classDriveOverIntersection_html_a5dc540c24099462e2bc14923648f42b0"><div class="ttname"><a href="classDriveOverIntersection.html#a5dc540c24099462e2bc14923648f42b0">DriveOverIntersection::isFinished</a></div><div class="ttdeci">bool isFinished()</div><div class="ttdoc">checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> DriveOverIntersection.cpp:14</div></div>
-<div class="ttc" id="classCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">this class is the very core of the framework commands are initialized once, then run until they&#39;re do...</div><div class="ttdef"><b>Definition:</b> Command.h:10</div></div>
-<div class="ttc" id="classDriveOverIntersection_html_a0bb9f5c91c23583810510f60cdd49523"><div class="ttname"><a href="classDriveOverIntersection.html#a0bb9f5c91c23583810510f60cdd49523">DriveOverIntersection::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">stuff to do over and over each iteration. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> DriveOverIntersection.cpp:9</div></div>
-<div class="ttc" id="classDriveOverIntersection_html_a90d8b3592d6c67e9ef1ae1a6396aa1c2"><div class="ttname"><a href="classDriveOverIntersection.html#a90d8b3592d6c67e9ef1ae1a6396aa1c2">DriveOverIntersection::end</a></div><div class="ttdeci">void end()</div><div class="ttdoc">called once at the end, once isFinished() returned true. this will be overrided by individual command...</div><div class="ttdef"><b>Definition:</b> DriveOverIntersection.cpp:18</div></div>
-<div class="ttc" id="classDriveOverIntersection_html"><div class="ttname"><a href="classDriveOverIntersection.html">DriveOverIntersection</a></div><div class="ttdef"><b>Definition:</b> DriveOverIntersection.h:6</div></div>
+<div class="ttc" id="classDriveOverIntersection_html_a1c8abfebdde3f16e3110bca280365640"><div class="ttname"><a href="classDriveOverIntersection.html#a1c8abfebdde3f16e3110bca280365640">DriveOverIntersection::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">run once in the first iteration of the command&#39;s life. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> <a href="DriveOverIntersection_8cpp_source.html#l00005">DriveOverIntersection.cpp:5</a></div></div>
+<div class="ttc" id="Robot_8h_html"><div class="ttname"><a href="Robot_8h.html">Robot.h</a></div></div>
+<div class="ttc" id="classDriveOverIntersection_html_a5dc540c24099462e2bc14923648f42b0"><div class="ttname"><a href="classDriveOverIntersection.html#a5dc540c24099462e2bc14923648f42b0">DriveOverIntersection::isFinished</a></div><div class="ttdeci">bool isFinished()</div><div class="ttdoc">checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> <a href="DriveOverIntersection_8cpp_source.html#l00014">DriveOverIntersection.cpp:14</a></div></div>
+<div class="ttc" id="classCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">this class is the very core of the framework commands are initialized once, then run until they&#39;re do...</div><div class="ttdef"><b>Definition:</b> <a href="Command_8h_source.html#l00010">Command.h:10</a></div></div>
+<div class="ttc" id="classDriveOverIntersection_html_a0bb9f5c91c23583810510f60cdd49523"><div class="ttname"><a href="classDriveOverIntersection.html#a0bb9f5c91c23583810510f60cdd49523">DriveOverIntersection::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">stuff to do over and over each iteration. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> <a href="DriveOverIntersection_8cpp_source.html#l00009">DriveOverIntersection.cpp:9</a></div></div>
+<div class="ttc" id="classDriveOverIntersection_html_a4fd6378b9ef223d86eebdf4af0547752"><div class="ttname"><a href="classDriveOverIntersection.html#a4fd6378b9ef223d86eebdf4af0547752">DriveOverIntersection::DriveOverIntersection</a></div><div class="ttdeci">DriveOverIntersection()</div><div class="ttdef"><b>Definition:</b> <a href="DriveOverIntersection_8cpp_source.html#l00003">DriveOverIntersection.cpp:3</a></div></div>
+<div class="ttc" id="classDriveOverIntersection_html_a90d8b3592d6c67e9ef1ae1a6396aa1c2"><div class="ttname"><a href="classDriveOverIntersection.html#a90d8b3592d6c67e9ef1ae1a6396aa1c2">DriveOverIntersection::end</a></div><div class="ttdeci">void end()</div><div class="ttdoc">called once at the end, once isFinished() returned true. this will be overrided by individual command...</div><div class="ttdef"><b>Definition:</b> <a href="DriveOverIntersection_8cpp_source.html#l00018">DriveOverIntersection.cpp:18</a></div></div>
+<div class="ttc" id="Command_8h_html"><div class="ttname"><a href="Command_8h.html">Command.h</a></div></div>
+<div class="ttc" id="classDriveOverIntersection_html"><div class="ttname"><a href="classDriveOverIntersection.html">DriveOverIntersection</a></div><div class="ttdef"><b>Definition:</b> <a href="DriveOverIntersection_8h_source.html#l00006">DriveOverIntersection.h:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

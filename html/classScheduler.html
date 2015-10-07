@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,38 +86,204 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classScheduler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Scheduler Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a73f2e49a61315d8138cfce5b180fd891"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73f2e49a61315d8138cfce5b180fd891"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addCommand</b> (<a class="el" href="classCommand.html">Command</a> *command)</td></tr>
+<tr class="memitem:a73f2e49a61315d8138cfce5b180fd891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a73f2e49a61315d8138cfce5b180fd891">addCommand</a> (<a class="el" href="classCommand.html">Command</a> *command)</td></tr>
 <tr class="separator:a73f2e49a61315d8138cfce5b180fd891"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8637bc50162682e59b6b26a3b85e28d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8637bc50162682e59b6b26a3b85e28d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printCurrentCommands</b> ()</td></tr>
+<tr class="memitem:ae8637bc50162682e59b6b26a3b85e28d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ae8637bc50162682e59b6b26a3b85e28d">printCurrentCommands</a> ()</td></tr>
 <tr class="separator:ae8637bc50162682e59b6b26a3b85e28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58fba108ce2748870a6288cd6f5fd1e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58fba108ce2748870a6288cd6f5fd1e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
+<tr class="memitem:a58fba108ce2748870a6288cd6f5fd1e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a58fba108ce2748870a6288cd6f5fd1e3">run</a> ()</td></tr>
 <tr class="separator:a58fba108ce2748870a6288cd6f5fd1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3fc3905ac5589d51e464100f3b8c0138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fc3905ac5589d51e464100f3b8c0138"></a>
-static <a class="el" href="classScheduler.html">Scheduler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="memitem:a3fc3905ac5589d51e464100f3b8c0138"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classScheduler.html">Scheduler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a3fc3905ac5589d51e464100f3b8c0138">getInstance</a> ()</td></tr>
 <tr class="separator:a3fc3905ac5589d51e464100f3b8c0138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3b61aac11466cd45ae42ab8c2b0013f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a3b61aac11466cd45ae42ab8c2b0013f6">Scheduler</a> ()</td></tr>
+<tr class="separator:a3b61aac11466cd45ae42ab8c2b0013f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad320e81fdf3a591b1f1d638f8fa5065d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommand.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ad320e81fdf3a591b1f1d638f8fa5065d">commands</a></td></tr>
+<tr class="separator:ad320e81fdf3a591b1f1d638f8fa5065d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ae683641d0a2c37275631cebb77387e2f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classScheduler.html">Scheduler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ae683641d0a2c37275631cebb77387e2f">instance</a> = NULL</td></tr>
+<tr class="separator:ae683641d0a2c37275631cebb77387e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00013">13</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3b61aac11466cd45ae42ab8c2b0013f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scheduler::Scheduler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00005">5</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a73f2e49a61315d8138cfce5b180fd891"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scheduler::addCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCommand.html">Command</a> *&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00014">14</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3fc3905ac5589d51e464100f3b8c0138"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classScheduler.html">Scheduler</a> * Scheduler::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00007">7</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8637bc50162682e59b6b26a3b85e28d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scheduler::printCurrentCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58fba108ce2748870a6288cd6f5fd1e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scheduler::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00020">20</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ad320e81fdf3a591b1f1d638f8fa5065d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLinkedList.html">LinkedList</a>&lt;<a class="el" href="classCommand.html">Command</a> *&gt; Scheduler::commands</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00024">24</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae683641d0a2c37275631cebb77387e2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classScheduler.html">Scheduler</a> * Scheduler::instance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00022">22</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="Scheduler_8h_source.html">Scheduler.h</a></li>
-<li>Final_Project/Scheduler.cpp</li>
+<li>Final_Project/<a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

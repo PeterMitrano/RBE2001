@@ -1,6 +1,10 @@
 \hypertarget{classDrive}{\section{Drive Class Reference}
 \label{classDrive}\index{Drive@{Drive}}
 }
+
+
+{\ttfamily \#include $<$Drive.\-h$>$}
+
 Inheritance diagram for Drive\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,98 @@ Inheritance diagram for Drive\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classDrive_af986858a5eebcca5a80569d7d4174c7f}{void \hyperlink{classDrive_af986858a5eebcca5a80569d7d4174c7f}{initialize} ()}\label{classDrive_af986858a5eebcca5a80569d7d4174c7f}
-
+\hyperlink{classDrive_af18ec3b1c1c6603185fd4f2c9d5d6ac6}{Drive} ()
+\item 
+void \hyperlink{classDrive_af986858a5eebcca5a80569d7d4174c7f}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classDrive_acda08e791c3016be8336a888d4baab3d}{void \hyperlink{classDrive_acda08e791c3016be8336a888d4baab3d}{execute} ()}\label{classDrive_acda08e791c3016be8336a888d4baab3d}
-
+void \hyperlink{classDrive_acda08e791c3016be8336a888d4baab3d}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classDrive_a8f75240bfe7e8ca61f48bf6c322a3e6c}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classDrive_aa52dc86430f29f4ddc7c6b7c35bd2232}{void \hyperlink{classDrive_aa52dc86430f29f4ddc7c6b7c35bd2232}{end} ()}\label{classDrive_aa52dc86430f29f4ddc7c6b7c35bd2232}
-
+void \hyperlink{classDrive_aa52dc86430f29f4ddc7c6b7c35bd2232}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classDrive_a8f75240bfe7e8ca61f48bf6c322a3e6c}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Drive.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDrive_af18ec3b1c1c6603185fd4f2c9d5d6ac6}{\index{Drive@{Drive}!Drive@{Drive}}
+\index{Drive@{Drive}!Drive@{Drive}}
+\subsubsection[{Drive}]{\setlength{\rightskip}{0pt plus 5cm}Drive\-::\-Drive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDrive_af18ec3b1c1c6603185fd4f2c9d5d6ac6}
+
+
+Definition at line 3 of file Drive.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classDrive_aa52dc86430f29f4ddc7c6b7c35bd2232}{\index{Drive@{Drive}!end@{end}}
+\index{end@{end}!Drive@{Drive}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDrive_aa52dc86430f29f4ddc7c6b7c35bd2232}
+
+
+called once at the end, once \hyperlink{classDrive_a8f75240bfe7e8ca61f48bf6c322a3e6c}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 15 of file Drive.\-cpp.
+
+\hypertarget{classDrive_acda08e791c3016be8336a888d4baab3d}{\index{Drive@{Drive}!execute@{execute}}
+\index{execute@{execute}!Drive@{Drive}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDrive_acda08e791c3016be8336a888d4baab3d}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 7 of file Drive.\-cpp.
+
+\hypertarget{classDrive_af986858a5eebcca5a80569d7d4174c7f}{\index{Drive@{Drive}!initialize@{initialize}}
+\index{initialize@{initialize}!Drive@{Drive}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDrive_af986858a5eebcca5a80569d7d4174c7f}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 5 of file Drive.\-cpp.
+
 \hypertarget{classDrive_a8f75240bfe7e8ca61f48bf6c322a3e6c}{\index{Drive@{Drive}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!Drive@{Drive}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Drive\-::is\-Finished (
@@ -45,7 +126,11 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 11 of file Drive.\-cpp.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Drive.\-h\item 
-Final\-\_\-\-Project/Drive.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{Drive_8h}{Drive.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{Drive_8cpp}{Drive.\-cpp}\end{DoxyCompactItemize}

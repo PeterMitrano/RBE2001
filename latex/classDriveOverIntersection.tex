@@ -1,6 +1,10 @@
 \hypertarget{classDriveOverIntersection}{\section{Drive\-Over\-Intersection Class Reference}
 \label{classDriveOverIntersection}\index{Drive\-Over\-Intersection@{Drive\-Over\-Intersection}}
 }
+
+
+{\ttfamily \#include $<$Drive\-Over\-Intersection.\-h$>$}
+
 Inheritance diagram for Drive\-Over\-Intersection\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,98 @@ Inheritance diagram for Drive\-Over\-Intersection\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classDriveOverIntersection_a1c8abfebdde3f16e3110bca280365640}{void \hyperlink{classDriveOverIntersection_a1c8abfebdde3f16e3110bca280365640}{initialize} ()}\label{classDriveOverIntersection_a1c8abfebdde3f16e3110bca280365640}
-
+\hyperlink{classDriveOverIntersection_a4fd6378b9ef223d86eebdf4af0547752}{Drive\-Over\-Intersection} ()
+\item 
+void \hyperlink{classDriveOverIntersection_a1c8abfebdde3f16e3110bca280365640}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classDriveOverIntersection_a0bb9f5c91c23583810510f60cdd49523}{void \hyperlink{classDriveOverIntersection_a0bb9f5c91c23583810510f60cdd49523}{execute} ()}\label{classDriveOverIntersection_a0bb9f5c91c23583810510f60cdd49523}
-
+void \hyperlink{classDriveOverIntersection_a0bb9f5c91c23583810510f60cdd49523}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classDriveOverIntersection_a5dc540c24099462e2bc14923648f42b0}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classDriveOverIntersection_a90d8b3592d6c67e9ef1ae1a6396aa1c2}{void \hyperlink{classDriveOverIntersection_a90d8b3592d6c67e9ef1ae1a6396aa1c2}{end} ()}\label{classDriveOverIntersection_a90d8b3592d6c67e9ef1ae1a6396aa1c2}
-
+void \hyperlink{classDriveOverIntersection_a90d8b3592d6c67e9ef1ae1a6396aa1c2}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classDriveOverIntersection_a5dc540c24099462e2bc14923648f42b0}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Drive\-Over\-Intersection.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDriveOverIntersection_a4fd6378b9ef223d86eebdf4af0547752}{\index{Drive\-Over\-Intersection@{Drive\-Over\-Intersection}!Drive\-Over\-Intersection@{Drive\-Over\-Intersection}}
+\index{Drive\-Over\-Intersection@{Drive\-Over\-Intersection}!DriveOverIntersection@{Drive\-Over\-Intersection}}
+\subsubsection[{Drive\-Over\-Intersection}]{\setlength{\rightskip}{0pt plus 5cm}Drive\-Over\-Intersection\-::\-Drive\-Over\-Intersection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriveOverIntersection_a4fd6378b9ef223d86eebdf4af0547752}
+
+
+Definition at line 3 of file Drive\-Over\-Intersection.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classDriveOverIntersection_a90d8b3592d6c67e9ef1ae1a6396aa1c2}{\index{Drive\-Over\-Intersection@{Drive\-Over\-Intersection}!end@{end}}
+\index{end@{end}!DriveOverIntersection@{Drive\-Over\-Intersection}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-Over\-Intersection\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDriveOverIntersection_a90d8b3592d6c67e9ef1ae1a6396aa1c2}
+
+
+called once at the end, once \hyperlink{classDriveOverIntersection_a5dc540c24099462e2bc14923648f42b0}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 18 of file Drive\-Over\-Intersection.\-cpp.
+
+\hypertarget{classDriveOverIntersection_a0bb9f5c91c23583810510f60cdd49523}{\index{Drive\-Over\-Intersection@{Drive\-Over\-Intersection}!execute@{execute}}
+\index{execute@{execute}!DriveOverIntersection@{Drive\-Over\-Intersection}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-Over\-Intersection\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDriveOverIntersection_a0bb9f5c91c23583810510f60cdd49523}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 9 of file Drive\-Over\-Intersection.\-cpp.
+
+\hypertarget{classDriveOverIntersection_a1c8abfebdde3f16e3110bca280365640}{\index{Drive\-Over\-Intersection@{Drive\-Over\-Intersection}!initialize@{initialize}}
+\index{initialize@{initialize}!DriveOverIntersection@{Drive\-Over\-Intersection}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-Over\-Intersection\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDriveOverIntersection_a1c8abfebdde3f16e3110bca280365640}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 5 of file Drive\-Over\-Intersection.\-cpp.
+
 \hypertarget{classDriveOverIntersection_a5dc540c24099462e2bc14923648f42b0}{\index{Drive\-Over\-Intersection@{Drive\-Over\-Intersection}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!DriveOverIntersection@{Drive\-Over\-Intersection}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Drive\-Over\-Intersection\-::is\-Finished (
@@ -45,7 +126,11 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 14 of file Drive\-Over\-Intersection.\-cpp.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Drive\-Over\-Intersection.\-h\item 
-Final\-\_\-\-Project/Drive\-Over\-Intersection.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{DriveOverIntersection_8h}{Drive\-Over\-Intersection.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{DriveOverIntersection_8cpp}{Drive\-Over\-Intersection.\-cpp}\end{DoxyCompactItemize}

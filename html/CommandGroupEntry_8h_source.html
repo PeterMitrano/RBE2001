@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CommandGroupEntry.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="CommandGroupEntry_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Arduino.h&quot;</span> <span class="comment">//defines NULL</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
@@ -96,25 +97,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classCommandGroupEntry.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCommandGroupEntry.html">CommandGroupEntry</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    kSequence_InSequence,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    kSequence_InParallel</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  } Sequence;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">    9</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730">   10</a></span>&#160;    <a class="code" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730">kSequence_InSequence</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a1576e3e1f5d8e12f32ebacb248fee63e">   11</a></span>&#160;    <a class="code" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a1576e3e1f5d8e12f32ebacb248fee63e">kSequence_InParallel</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  } <a class="code" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">Sequence</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classCommandGroupEntry.html">CommandGroupEntry</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classCommandGroupEntry.html">CommandGroupEntry</a>(<a class="code" href="classCommand.html">Command</a> *command, Sequence state);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classCommandGroupEntry.html#a64e939b3d002d394ed63079f74fbf144">CommandGroupEntry</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classCommandGroupEntry.html#a64e939b3d002d394ed63079f74fbf144">CommandGroupEntry</a>(<a class="code" href="classCommand.html">Command</a> *command, <a class="code" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">Sequence</a> state);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classCommandGroupEntry.html">CommandGroupEntry</a>&amp; other);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classCommandGroupEntry.html#ad12a901f2d52aa1da54020c118f222a5">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classCommandGroupEntry.html">CommandGroupEntry</a>&amp; other);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classCommand.html">Command</a> *_command = NULL;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  Sequence _state = kSequence_InSequence;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classCommandGroupEntry.html#a466202de6dd9aed12db553da04c726b2">   19</a></span>&#160;  <a class="code" href="classCommand.html">Command</a> *<a class="code" href="classCommandGroupEntry.html#a466202de6dd9aed12db553da04c726b2">_command</a> = NULL;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classCommandGroupEntry.html#a3a011ee2d2c871fce8a37dd3cb3d1ddf">   20</a></span>&#160;  <a class="code" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">Sequence</a> <a class="code" href="classCommandGroupEntry.html#a3a011ee2d2c871fce8a37dd3cb3d1ddf">_state</a> = <a class="code" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730">kSequence_InSequence</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="ttc" id="classCommandGroupEntry_html"><div class="ttname"><a href="classCommandGroupEntry.html">CommandGroupEntry</a></div><div class="ttdef"><b>Definition:</b> CommandGroupEntry.h:7</div></div>
-<div class="ttc" id="classCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">this class is the very core of the framework commands are initialized once, then run until they&#39;re do...</div><div class="ttdef"><b>Definition:</b> Command.h:10</div></div>
+<div class="ttc" id="classCommandGroupEntry_html_a466202de6dd9aed12db553da04c726b2"><div class="ttname"><a href="classCommandGroupEntry.html#a466202de6dd9aed12db553da04c726b2">CommandGroupEntry::_command</a></div><div class="ttdeci">Command * _command</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroupEntry_8h_source.html#l00019">CommandGroupEntry.h:19</a></div></div>
+<div class="ttc" id="classCommandGroupEntry_html_ad12a901f2d52aa1da54020c118f222a5"><div class="ttname"><a href="classCommandGroupEntry.html#ad12a901f2d52aa1da54020c118f222a5">CommandGroupEntry::operator!=</a></div><div class="ttdeci">bool operator!=(const CommandGroupEntry &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroupEntry_8cpp_source.html#l00009">CommandGroupEntry.cpp:9</a></div></div>
+<div class="ttc" id="classCommandGroupEntry_html_a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730"><div class="ttname"><a href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730">CommandGroupEntry::kSequence_InSequence</a></div><div class="ttdef"><b>Definition:</b> <a href="CommandGroupEntry_8h_source.html#l00010">CommandGroupEntry.h:10</a></div></div>
+<div class="ttc" id="classCommandGroupEntry_html_a0c435eb6049bef341e92b3550e8f20b1"><div class="ttname"><a href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">CommandGroupEntry::Sequence</a></div><div class="ttdeci">Sequence</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroupEntry_8h_source.html#l00009">CommandGroupEntry.h:9</a></div></div>
+<div class="ttc" id="classCommandGroupEntry_html_a0c435eb6049bef341e92b3550e8f20b1a1576e3e1f5d8e12f32ebacb248fee63e"><div class="ttname"><a href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a1576e3e1f5d8e12f32ebacb248fee63e">CommandGroupEntry::kSequence_InParallel</a></div><div class="ttdef"><b>Definition:</b> <a href="CommandGroupEntry_8h_source.html#l00011">CommandGroupEntry.h:11</a></div></div>
+<div class="ttc" id="classCommandGroupEntry_html"><div class="ttname"><a href="classCommandGroupEntry.html">CommandGroupEntry</a></div><div class="ttdef"><b>Definition:</b> <a href="CommandGroupEntry_8h_source.html#l00007">CommandGroupEntry.h:7</a></div></div>
+<div class="ttc" id="classCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">this class is the very core of the framework commands are initialized once, then run until they&#39;re do...</div><div class="ttdef"><b>Definition:</b> <a href="Command_8h_source.html#l00010">Command.h:10</a></div></div>
+<div class="ttc" id="classCommandGroupEntry_html_a3a011ee2d2c871fce8a37dd3cb3d1ddf"><div class="ttname"><a href="classCommandGroupEntry.html#a3a011ee2d2c871fce8a37dd3cb3d1ddf">CommandGroupEntry::_state</a></div><div class="ttdeci">Sequence _state</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroupEntry_8h_source.html#l00020">CommandGroupEntry.h:20</a></div></div>
+<div class="ttc" id="classCommandGroupEntry_html_a64e939b3d002d394ed63079f74fbf144"><div class="ttname"><a href="classCommandGroupEntry.html#a64e939b3d002d394ed63079f74fbf144">CommandGroupEntry::CommandGroupEntry</a></div><div class="ttdeci">CommandGroupEntry()=default</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

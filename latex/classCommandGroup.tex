@@ -1,6 +1,10 @@
 \hypertarget{classCommandGroup}{\section{Command\-Group Class Reference}
 \label{classCommandGroup}\index{Command\-Group@{Command\-Group}}
 }
+
+
+{\ttfamily \#include $<$Command\-Group.\-h$>$}
+
 Inheritance diagram for Command\-Group\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,44 +14,197 @@ Inheritance diagram for Command\-Group\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCommandGroup_a0167d59d8a96fbc0c1999f19610c7358}{{\bfseries Command\-Group} (const String name)}\label{classCommandGroup_a0167d59d8a96fbc0c1999f19610c7358}
-
+\hyperlink{classCommandGroup_a0167d59d8a96fbc0c1999f19610c7358}{Command\-Group} (const String \hyperlink{classCommand_a19f7ad73ca8599ad47f9b7bcccc52610}{name})
 \item 
-\hypertarget{classCommandGroup_a6b75192504dc74794651e0d82bb83488}{void {\bfseries add\-Sequential} (\hyperlink{classCommand}{Command} $\ast$command)}\label{classCommandGroup_a6b75192504dc74794651e0d82bb83488}
-
+\hyperlink{classCommandGroup_a7b85f5b297c50c9466276c59804ed196}{Command\-Group} ()=default
 \item 
-\hypertarget{classCommandGroup_a8709a47f6f44a6993cd9f705b360054b}{void {\bfseries add\-Parallel} (\hyperlink{classCommand}{Command} $\ast$command)}\label{classCommandGroup_a8709a47f6f44a6993cd9f705b360054b}
-
+void \hyperlink{classCommandGroup_a6b75192504dc74794651e0d82bb83488}{add\-Sequential} (\hyperlink{classCommand}{Command} $\ast$command)
 \item 
-\hypertarget{classCommandGroup_aad0c9576993f9f8d2431cd44f0bf0072}{virtual void {\bfseries \-\_\-initialize} ()}\label{classCommandGroup_aad0c9576993f9f8d2431cd44f0bf0072}
-
+void \hyperlink{classCommandGroup_a8709a47f6f44a6993cd9f705b360054b}{add\-Parallel} (\hyperlink{classCommand}{Command} $\ast$command)
 \item 
-\hypertarget{classCommandGroup_a09355b6bb1018bdadaa0f5a1c0dec007}{virtual void {\bfseries \-\_\-execute} ()}\label{classCommandGroup_a09355b6bb1018bdadaa0f5a1c0dec007}
-
+virtual void \hyperlink{classCommandGroup_aad0c9576993f9f8d2431cd44f0bf0072}{\-\_\-initialize} ()
 \item 
-\hypertarget{classCommandGroup_a11f0ae6eb2ba052138d5a8930f23bb4f}{virtual void {\bfseries \-\_\-end} ()}\label{classCommandGroup_a11f0ae6eb2ba052138d5a8930f23bb4f}
-
+virtual void \hyperlink{classCommandGroup_a09355b6bb1018bdadaa0f5a1c0dec007}{\-\_\-execute} ()
 \item 
-\hypertarget{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{virtual void \hyperlink{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{initialize} ()}\label{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}
-
+virtual void \hyperlink{classCommandGroup_a11f0ae6eb2ba052138d5a8930f23bb4f}{\-\_\-end} ()
+\item 
+virtual void \hyperlink{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classCommandGroup_a5e91d370cafde43548d79945ccb4d8fe}{virtual void \hyperlink{classCommandGroup_a5e91d370cafde43548d79945ccb4d8fe}{execute} ()}\label{classCommandGroup_a5e91d370cafde43548d79945ccb4d8fe}
-
+virtual void \hyperlink{classCommandGroup_a5e91d370cafde43548d79945ccb4d8fe}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{virtual void \hyperlink{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{end} ()}\label{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}
-
+virtual void \hyperlink{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}{\hyperlink{classLinkedList}{Linked\-List}$<$ \hyperlink{classCommandGroupEntry}{Command\-Group\-Entry} $>$ {\bfseries commands}}\label{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}
-
+\hyperlink{classLinkedList}{Linked\-List}$<$ \hyperlink{classCommandGroupEntry}{Command\-Group\-Entry} $>$ \hyperlink{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}{commands}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCommandGroup_aeb8729b909aafeb23eafcfd0eec22c71}{current\-Command\-Index}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Command\-Group.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCommandGroup_a0167d59d8a96fbc0c1999f19610c7358}{\index{Command\-Group@{Command\-Group}!Command\-Group@{Command\-Group}}
+\index{Command\-Group@{Command\-Group}!CommandGroup@{Command\-Group}}
+\subsubsection[{Command\-Group}]{\setlength{\rightskip}{0pt plus 5cm}Command\-Group\-::\-Command\-Group (
+\begin{DoxyParamCaption}
+\item[{const String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classCommandGroup_a0167d59d8a96fbc0c1999f19610c7358}
+
+
+Definition at line 4 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_a7b85f5b297c50c9466276c59804ed196}{\index{Command\-Group@{Command\-Group}!Command\-Group@{Command\-Group}}
+\index{Command\-Group@{Command\-Group}!CommandGroup@{Command\-Group}}
+\subsubsection[{Command\-Group}]{\setlength{\rightskip}{0pt plus 5cm}Command\-Group\-::\-Command\-Group (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}}\label{classCommandGroup_a7b85f5b297c50c9466276c59804ed196}
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classCommandGroup_a11f0ae6eb2ba052138d5a8930f23bb4f}{\index{Command\-Group@{Command\-Group}!\-\_\-end@{\-\_\-end}}
+\index{\-\_\-end@{\-\_\-end}!CommandGroup@{Command\-Group}}
+\subsubsection[{\-\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::\-\_\-end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCommandGroup_a11f0ae6eb2ba052138d5a8930f23bb4f}
+
+
+Reimplemented from \hyperlink{classCommand_a9173c74652cb69c8807170bf16151ae2}{Command}.
+
+
+
+Definition at line 50 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_a09355b6bb1018bdadaa0f5a1c0dec007}{\index{Command\-Group@{Command\-Group}!\-\_\-execute@{\-\_\-execute}}
+\index{\-\_\-execute@{\-\_\-execute}!CommandGroup@{Command\-Group}}
+\subsubsection[{\-\_\-execute}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::\-\_\-execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCommandGroup_a09355b6bb1018bdadaa0f5a1c0dec007}
+
+
+Reimplemented from \hyperlink{classCommand_a49e6861e0c14411d6860f0b3211db9c9}{Command}.
+
+
+
+Definition at line 22 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_aad0c9576993f9f8d2431cd44f0bf0072}{\index{Command\-Group@{Command\-Group}!\-\_\-initialize@{\-\_\-initialize}}
+\index{\-\_\-initialize@{\-\_\-initialize}!CommandGroup@{Command\-Group}}
+\subsubsection[{\-\_\-initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::\-\_\-initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCommandGroup_aad0c9576993f9f8d2431cd44f0bf0072}
+
+
+Reimplemented from \hyperlink{classCommand_ae7c58ad4895c51ff18f1d432dbd4f4ec}{Command}.
+
+
+
+Definition at line 17 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_a8709a47f6f44a6993cd9f705b360054b}{\index{Command\-Group@{Command\-Group}!add\-Parallel@{add\-Parallel}}
+\index{add\-Parallel@{add\-Parallel}!CommandGroup@{Command\-Group}}
+\subsubsection[{add\-Parallel}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::add\-Parallel (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}\label{classCommandGroup_a8709a47f6f44a6993cd9f705b360054b}
+
+
+Definition at line 11 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_a6b75192504dc74794651e0d82bb83488}{\index{Command\-Group@{Command\-Group}!add\-Sequential@{add\-Sequential}}
+\index{add\-Sequential@{add\-Sequential}!CommandGroup@{Command\-Group}}
+\subsubsection[{add\-Sequential}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::add\-Sequential (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}\label{classCommandGroup_a6b75192504dc74794651e0d82bb83488}
+
+
+Definition at line 6 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{\index{Command\-Group@{Command\-Group}!end@{end}}
+\index{end@{end}!CommandGroup@{Command\-Group}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}
+
+
+called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Reimplemented in \hyperlink{classGetRodFromReactor_a8d375cbbf822ea0f22058a264347bd37}{Get\-Rod\-From\-Reactor}, and \hyperlink{classStoreRod_a2fe691b28cb7c6942242caa35e43eecb}{Store\-Rod}.
+
+
+
+Definition at line 49 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_a5e91d370cafde43548d79945ccb4d8fe}{\index{Command\-Group@{Command\-Group}!execute@{execute}}
+\index{execute@{execute}!CommandGroup@{Command\-Group}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCommandGroup_a5e91d370cafde43548d79945ccb4d8fe}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 21 of file Command\-Group.\-cpp.
+
+\hypertarget{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{\index{Command\-Group@{Command\-Group}!initialize@{initialize}}
+\index{initialize@{initialize}!CommandGroup@{Command\-Group}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Command\-Group\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 16 of file Command\-Group.\-cpp.
+
 \hypertarget{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{\index{Command\-Group@{Command\-Group}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!CommandGroup@{Command\-Group}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\-Group\-::is\-Finished (
@@ -68,7 +225,28 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 54 of file Command\-Group.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}{\index{Command\-Group@{Command\-Group}!commands@{commands}}
+\index{commands@{commands}!CommandGroup@{Command\-Group}}
+\subsubsection[{commands}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linked\-List}$<${\bf Command\-Group\-Entry}$>$ Command\-Group\-::commands}}\label{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}
+
+
+Definition at line 27 of file Command\-Group.\-h.
+
+\hypertarget{classCommandGroup_aeb8729b909aafeb23eafcfd0eec22c71}{\index{Command\-Group@{Command\-Group}!current\-Command\-Index@{current\-Command\-Index}}
+\index{current\-Command\-Index@{current\-Command\-Index}!CommandGroup@{Command\-Group}}
+\subsubsection[{current\-Command\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Command\-Group\-::current\-Command\-Index\hspace{0.3cm}{\ttfamily [private]}}}\label{classCommandGroup_aeb8729b909aafeb23eafcfd0eec22c71}
+
+
+Definition at line 31 of file Command\-Group.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Command\-Group.\-h\item 
-Final\-\_\-\-Project/Command\-Group.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{CommandGroup_8h}{Command\-Group.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{CommandGroup_8cpp}{Command\-Group.\-cpp}\end{DoxyCompactItemize}

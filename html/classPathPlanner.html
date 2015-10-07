@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,32 +85,207 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classPathPlanner-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PathPlanner Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a09453b54df73c22775e488a20d6a3e82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09453b54df73c22775e488a20d6a3e82"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PathPlanner</b> (<a class="el" href="classCommandGroup.html">CommandGroup</a> *path)</td></tr>
+<tr class="memitem:a09453b54df73c22775e488a20d6a3e82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a09453b54df73c22775e488a20d6a3e82">PathPlanner</a> (<a class="el" href="classCommandGroup.html">CommandGroup</a> *<a class="el" href="classPathPlanner.html#a9b41e5ee68a78a45e46003102a6c3b91">path</a>)</td></tr>
 <tr class="separator:a09453b54df73c22775e488a20d6a3e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f75ef3111891f20ba2c59f8b305d55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82f75ef3111891f20ba2c59f8b305d55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>plan</b> (int destRow, int destCol, int destDirection)</td></tr>
+<tr class="memitem:a82f75ef3111891f20ba2c59f8b305d55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a82f75ef3111891f20ba2c59f8b305d55">plan</a> (int destRow, int destCol, int destDirection)</td></tr>
 <tr class="separator:a82f75ef3111891f20ba2c59f8b305d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a435470288f6e2b5f99ce590db0bfc5db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a435470288f6e2b5f99ce590db0bfc5db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>planToFace</b> (int currentDirection)</td></tr>
+<tr class="memitem:a435470288f6e2b5f99ce590db0bfc5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a435470288f6e2b5f99ce590db0bfc5db">planToFace</a> (int currentDirection)</td></tr>
 <tr class="separator:a435470288f6e2b5f99ce590db0bfc5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a20d2bf800c63aacfd1af314ad400d119"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a20d2bf800c63aacfd1af314ad400d119">col</a></td></tr>
+<tr class="separator:a20d2bf800c63aacfd1af314ad400d119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b0fa8525a5fe9c8088ccaa005c4c54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a00b0fa8525a5fe9c8088ccaa005c4c54">row</a></td></tr>
+<tr class="separator:a00b0fa8525a5fe9c8088ccaa005c4c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f9985b79ca49ca0b2992176a10a6210"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a1f9985b79ca49ca0b2992176a10a6210">direction</a></td></tr>
+<tr class="separator:a1f9985b79ca49ca0b2992176a10a6210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b41e5ee68a78a45e46003102a6c3b91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCommandGroup.html">CommandGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a9b41e5ee68a78a45e46003102a6c3b91">path</a></td></tr>
+<tr class="separator:a9b41e5ee68a78a45e46003102a6c3b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00003">3</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a09453b54df73c22775e488a20d6a3e82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PathPlanner::PathPlanner </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCommandGroup.html">CommandGroup</a> *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PathPlanner_8cpp_source.html#l00010">10</a> of file <a class="el" href="PathPlanner_8cpp_source.html">PathPlanner.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a82f75ef3111891f20ba2c59f8b305d55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PathPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destRow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destCol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destDirection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PathPlanner_8cpp_source.html#l00017">17</a> of file <a class="el" href="PathPlanner_8cpp_source.html">PathPlanner.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a435470288f6e2b5f99ce590db0bfc5db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PathPlanner::planToFace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentDirection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PathPlanner_8cpp_source.html#l00070">70</a> of file <a class="el" href="PathPlanner_8cpp_source.html">PathPlanner.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a20d2bf800c63aacfd1af314ad400d119"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PathPlanner::col</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00009">9</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f9985b79ca49ca0b2992176a10a6210"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PathPlanner::direction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00009">9</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b41e5ee68a78a45e46003102a6c3b91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCommandGroup.html">CommandGroup</a>* PathPlanner::path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00010">10</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00b0fa8525a5fe9c8088ccaa005c4c54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PathPlanner::row</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00009">9</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a></li>
-<li>Final_Project/PathPlanner.cpp</li>
+<li>Final_Project/<a class="el" href="PathPlanner_8cpp_source.html">PathPlanner.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,40 +92,164 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CommandGroupEntry Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="CommandGroupEntry_8h_source.html">CommandGroupEntry.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0c435eb6049bef341e92b3550e8f20b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Sequence</b> { <b>kSequence_InSequence</b>, 
-<b>kSequence_InParallel</b>
+<tr class="memitem:a0c435eb6049bef341e92b3550e8f20b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">Sequence</a> { <a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730">kSequence_InSequence</a>, 
+<a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a1576e3e1f5d8e12f32ebacb248fee63e">kSequence_InParallel</a>
  }</td></tr>
 <tr class="separator:a0c435eb6049bef341e92b3550e8f20b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a638a9b82f73e4aa5b268eaad4a1c95de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a638a9b82f73e4aa5b268eaad4a1c95de"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CommandGroupEntry</b> (<a class="el" href="classCommand.html">Command</a> *command, Sequence state)</td></tr>
+<tr class="memitem:a64e939b3d002d394ed63079f74fbf144"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroupEntry.html#a64e939b3d002d394ed63079f74fbf144">CommandGroupEntry</a> ()=default</td></tr>
+<tr class="separator:a64e939b3d002d394ed63079f74fbf144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638a9b82f73e4aa5b268eaad4a1c95de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroupEntry.html#a638a9b82f73e4aa5b268eaad4a1c95de">CommandGroupEntry</a> (<a class="el" href="classCommand.html">Command</a> *command, <a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">Sequence</a> state)</td></tr>
 <tr class="separator:a638a9b82f73e4aa5b268eaad4a1c95de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad12a901f2d52aa1da54020c118f222a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad12a901f2d52aa1da54020c118f222a5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classCommandGroupEntry.html">CommandGroupEntry</a> &amp;other)</td></tr>
+<tr class="memitem:ad12a901f2d52aa1da54020c118f222a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroupEntry.html#ad12a901f2d52aa1da54020c118f222a5">operator!=</a> (const <a class="el" href="classCommandGroupEntry.html">CommandGroupEntry</a> &amp;other)</td></tr>
 <tr class="separator:ad12a901f2d52aa1da54020c118f222a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a466202de6dd9aed12db553da04c726b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a466202de6dd9aed12db553da04c726b2"></a>
-<a class="el" href="classCommand.html">Command</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_command</b> = NULL</td></tr>
+<tr class="memitem:a466202de6dd9aed12db553da04c726b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCommand.html">Command</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroupEntry.html#a466202de6dd9aed12db553da04c726b2">_command</a> = NULL</td></tr>
 <tr class="separator:a466202de6dd9aed12db553da04c726b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a011ee2d2c871fce8a37dd3cb3d1ddf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a011ee2d2c871fce8a37dd3cb3d1ddf"></a>
-Sequence&#160;</td><td class="memItemRight" valign="bottom"><b>_state</b> = kSequence_InSequence</td></tr>
+<tr class="memitem:a3a011ee2d2c871fce8a37dd3cb3d1ddf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">Sequence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroupEntry.html#a3a011ee2d2c871fce8a37dd3cb3d1ddf">_state</a> = <a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730">kSequence_InSequence</a></td></tr>
 <tr class="separator:a3a011ee2d2c871fce8a37dd3cb3d1ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="CommandGroupEntry_8h_source.html#l00007">7</a> of file <a class="el" href="CommandGroupEntry_8h_source.html">CommandGroupEntry.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a0c435eb6049bef341e92b3550e8f20b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">CommandGroupEntry::Sequence</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730"></a>kSequence_InSequence</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a0c435eb6049bef341e92b3550e8f20b1a1576e3e1f5d8e12f32ebacb248fee63e"></a>kSequence_InParallel</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="CommandGroupEntry_8h_source.html#l00009">9</a> of file <a class="el" href="CommandGroupEntry_8h_source.html">CommandGroupEntry.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a64e939b3d002d394ed63079f74fbf144"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandGroupEntry::CommandGroupEntry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a638a9b82f73e4aa5b268eaad4a1c95de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommandGroupEntry::CommandGroupEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCommand.html">Command</a> *&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">CommandGroupEntry::Sequence</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CommandGroupEntry_8cpp_source.html#l00004">4</a> of file <a class="el" href="CommandGroupEntry_8cpp_source.html">CommandGroupEntry.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad12a901f2d52aa1da54020c118f222a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CommandGroupEntry::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCommandGroupEntry.html">CommandGroupEntry</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CommandGroupEntry_8cpp_source.html#l00009">9</a> of file <a class="el" href="CommandGroupEntry_8cpp_source.html">CommandGroupEntry.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a466202de6dd9aed12db553da04c726b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCommand.html">Command</a>* CommandGroupEntry::_command = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CommandGroupEntry_8h_source.html#l00019">19</a> of file <a class="el" href="CommandGroupEntry_8h_source.html">CommandGroupEntry.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a011ee2d2c871fce8a37dd3cb3d1ddf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1">Sequence</a> CommandGroupEntry::_state = <a class="el" href="classCommandGroupEntry.html#a0c435eb6049bef341e92b3550e8f20b1a88aa8647af6ba782f9faf0eb8986a730">kSequence_InSequence</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CommandGroupEntry_8h_source.html#l00020">20</a> of file <a class="el" href="CommandGroupEntry_8h_source.html">CommandGroupEntry.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="CommandGroupEntry_8h_source.html">CommandGroupEntry.h</a></li>
-<li>Final_Project/CommandGroupEntry.cpp</li>
+<li>Final_Project/<a class="el" href="CommandGroupEntry_8cpp_source.html">CommandGroupEntry.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

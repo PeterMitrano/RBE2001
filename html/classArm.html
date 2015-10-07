@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,6 +86,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classArm-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Arm Class Reference</div>  </div>
@@ -99,68 +101,793 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0e642e1a6fc24f40268f2c759dee62e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e642e1a6fc24f40268f2c759dee62e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a0e642e1a6fc24f40268f2c759dee62e1">setup</a> ()</td></tr>
-<tr class="memdesc:a0e642e1a6fc24f40268f2c759dee62e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes servos and other stuff. called by main arduino setup <br/></td></tr>
+<tr class="memitem:a920d0f828c6e76188827cf0c073963de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a920d0f828c6e76188827cf0c073963de">Arm</a> ()</td></tr>
+<tr class="separator:a920d0f828c6e76188827cf0c073963de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e642e1a6fc24f40268f2c759dee62e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a0e642e1a6fc24f40268f2c759dee62e1">setup</a> ()</td></tr>
+<tr class="memdesc:a0e642e1a6fc24f40268f2c759dee62e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes servos and other stuff. called by main arduino setup  <a href="#a0e642e1a6fc24f40268f2c759dee62e1">More...</a><br/></td></tr>
 <tr class="separator:a0e642e1a6fc24f40268f2c759dee62e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a009c19e5b213f692c24eab792cc40c47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a009c19e5b213f692c24eab792cc40c47"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a009c19e5b213f692c24eab792cc40c47">control</a> ()</td></tr>
-<tr class="memdesc:a009c19e5b213f692c24eab792cc40c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">the main function for controlling the arm. All other functions should just call this <br/></td></tr>
+<tr class="memitem:a009c19e5b213f692c24eab792cc40c47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a009c19e5b213f692c24eab792cc40c47">control</a> ()</td></tr>
+<tr class="memdesc:a009c19e5b213f692c24eab792cc40c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">the main function for controlling the arm. All other functions should just call this  <a href="#a009c19e5b213f692c24eab792cc40c47">More...</a><br/></td></tr>
 <tr class="separator:a009c19e5b213f692c24eab792cc40c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9075166ca53ef3cd547a7725ee5bca1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9075166ca53ef3cd547a7725ee5bca1d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a9075166ca53ef3cd547a7725ee5bca1d">down</a> ()</td></tr>
-<tr class="memdesc:a9075166ca53ef3cd547a7725ee5bca1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">lower arm all the way to the top. This only needs to be called once, and the arm will continue to maintain that position <br/></td></tr>
+<tr class="memitem:a9075166ca53ef3cd547a7725ee5bca1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a9075166ca53ef3cd547a7725ee5bca1d">down</a> ()</td></tr>
+<tr class="memdesc:a9075166ca53ef3cd547a7725ee5bca1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">lower arm all the way to the top. This only needs to be called once, and the arm will continue to maintain that position  <a href="#a9075166ca53ef3cd547a7725ee5bca1d">More...</a><br/></td></tr>
 <tr class="separator:a9075166ca53ef3cd547a7725ee5bca1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ffd463407a6782a55dbd5b84f1e15e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65ffd463407a6782a55dbd5b84f1e15e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a65ffd463407a6782a55dbd5b84f1e15e">up</a> ()</td></tr>
-<tr class="memdesc:a65ffd463407a6782a55dbd5b84f1e15e"><td class="mdescLeft">&#160;</td><td class="mdescRight">raise arm all the way to the bottom. This only needs to be called once, and the arm will continue to maintain that position <br/></td></tr>
+<tr class="memitem:a65ffd463407a6782a55dbd5b84f1e15e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a65ffd463407a6782a55dbd5b84f1e15e">up</a> ()</td></tr>
+<tr class="memdesc:a65ffd463407a6782a55dbd5b84f1e15e"><td class="mdescLeft">&#160;</td><td class="mdescRight">raise arm all the way to the bottom. This only needs to be called once, and the arm will continue to maintain that position  <a href="#a65ffd463407a6782a55dbd5b84f1e15e">More...</a><br/></td></tr>
 <tr class="separator:a65ffd463407a6782a55dbd5b84f1e15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8274680d981524efbeb2b51eb49c28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a8274680d981524efbeb2b51eb49c28"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a4a8274680d981524efbeb2b51eb49c28">stop</a> ()</td></tr>
-<tr class="memdesc:a4a8274680d981524efbeb2b51eb49c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">cold stop the arm. This is used to calibrate the arm <br/></td></tr>
+<tr class="memitem:a4a8274680d981524efbeb2b51eb49c28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a4a8274680d981524efbeb2b51eb49c28">stop</a> ()</td></tr>
+<tr class="memdesc:a4a8274680d981524efbeb2b51eb49c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">cold stop the arm. This is used to calibrate the arm  <a href="#a4a8274680d981524efbeb2b51eb49c28">More...</a><br/></td></tr>
 <tr class="separator:a4a8274680d981524efbeb2b51eb49c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3c0195535b15f56f9027aea0ae5ec76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3c0195535b15f56f9027aea0ae5ec76"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ae3c0195535b15f56f9027aea0ae5ec76">atPosition</a> ()</td></tr>
-<tr class="memdesc:ae3c0195535b15f56f9027aea0ae5ec76"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if position is within tolerance of setpoint <br/></td></tr>
+<tr class="memitem:ae3c0195535b15f56f9027aea0ae5ec76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ae3c0195535b15f56f9027aea0ae5ec76">atPosition</a> ()</td></tr>
+<tr class="memdesc:ae3c0195535b15f56f9027aea0ae5ec76"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if position is within tolerance of setpoint  <a href="#ae3c0195535b15f56f9027aea0ae5ec76">More...</a><br/></td></tr>
 <tr class="separator:ae3c0195535b15f56f9027aea0ae5ec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49756ee4bfdc5f573a78f29678bf1d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab49756ee4bfdc5f573a78f29678bf1d8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8">position</a> ()</td></tr>
-<tr class="memdesc:ab49756ee4bfdc5f573a78f29678bf1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">return position in encoder counts <br/></td></tr>
+<tr class="memitem:ab49756ee4bfdc5f573a78f29678bf1d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8">position</a> ()</td></tr>
+<tr class="memdesc:ab49756ee4bfdc5f573a78f29678bf1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">return position in encoder counts  <a href="#ab49756ee4bfdc5f573a78f29678bf1d8">More...</a><br/></td></tr>
 <tr class="separator:ab49756ee4bfdc5f573a78f29678bf1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a234397ff44a8ac5fda920d92b9b33237"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a234397ff44a8ac5fda920d92b9b33237"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a234397ff44a8ac5fda920d92b9b33237">atLim</a> ()</td></tr>
-<tr class="memdesc:a234397ff44a8ac5fda920d92b9b33237"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if limit switch is hit <br/></td></tr>
+<tr class="memitem:a234397ff44a8ac5fda920d92b9b33237"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a234397ff44a8ac5fda920d92b9b33237">atLim</a> ()</td></tr>
+<tr class="memdesc:a234397ff44a8ac5fda920d92b9b33237"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if limit switch is hit  <a href="#a234397ff44a8ac5fda920d92b9b33237">More...</a><br/></td></tr>
 <tr class="separator:a234397ff44a8ac5fda920d92b9b33237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90df7bcd3c225f6fc05ef2f77c773d2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90df7bcd3c225f6fc05ef2f77c773d2e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e">rawDown</a> ()</td></tr>
-<tr class="memdesc:a90df7bcd3c225f6fc05ef2f77c773d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">drives the arm down very slowly. used in calibrating <br/></td></tr>
+<tr class="memitem:a90df7bcd3c225f6fc05ef2f77c773d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e">rawDown</a> ()</td></tr>
+<tr class="memdesc:a90df7bcd3c225f6fc05ef2f77c773d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">drives the arm down very slowly. used in calibrating  <a href="#a90df7bcd3c225f6fc05ef2f77c773d2e">More...</a><br/></td></tr>
 <tr class="separator:a90df7bcd3c225f6fc05ef2f77c773d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb44126b438f8dc00b0bf0720c84a737"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb44126b438f8dc00b0bf0720c84a737"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#afb44126b438f8dc00b0bf0720c84a737">resetEncoder</a> ()</td></tr>
-<tr class="memdesc:afb44126b438f8dc00b0bf0720c84a737"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets encoder count to 0 <br/></td></tr>
+<tr class="memitem:afb44126b438f8dc00b0bf0720c84a737"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#afb44126b438f8dc00b0bf0720c84a737">resetEncoder</a> ()</td></tr>
+<tr class="memdesc:afb44126b438f8dc00b0bf0720c84a737"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets encoder count to 0  <a href="#afb44126b438f8dc00b0bf0720c84a737">More...</a><br/></td></tr>
 <tr class="separator:afb44126b438f8dc00b0bf0720c84a737"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1f237e56fc1e76c2b63f1f59d847945d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f237e56fc1e76c2b63f1f59d847945d"></a>
-<a class="el" href="classGripper.html">Gripper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a1f237e56fc1e76c2b63f1f59d847945d">gripper</a></td></tr>
-<tr class="memdesc:a1f237e56fc1e76c2b63f1f59d847945d"><td class="mdescLeft">&#160;</td><td class="mdescRight">gripper object is part of the arm <br/></td></tr>
+<tr class="memitem:a1f237e56fc1e76c2b63f1f59d847945d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGripper.html">Gripper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a1f237e56fc1e76c2b63f1f59d847945d">gripper</a></td></tr>
+<tr class="memdesc:a1f237e56fc1e76c2b63f1f59d847945d"><td class="mdescLeft">&#160;</td><td class="mdescRight">gripper object is part of the arm  <a href="#a1f237e56fc1e76c2b63f1f59d847945d">More...</a><br/></td></tr>
 <tr class="separator:a1f237e56fc1e76c2b63f1f59d847945d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f6c85e5a8feacd8870b653a8163d99f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f6c85e5a8feacd8870b653a8163d99f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a3f6c85e5a8feacd8870b653a8163d99f">calibrated</a> = false</td></tr>
-<tr class="memdesc:a3f6c85e5a8feacd8870b653a8163d99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag to keep the control function from running without calibration <br/></td></tr>
+<tr class="memitem:a3f6c85e5a8feacd8870b653a8163d99f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a3f6c85e5a8feacd8870b653a8163d99f">calibrated</a> = false</td></tr>
+<tr class="memdesc:a3f6c85e5a8feacd8870b653a8163d99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag to keep the control function from running without calibration  <a href="#a3f6c85e5a8feacd8870b653a8163d99f">More...</a><br/></td></tr>
 <tr class="separator:a3f6c85e5a8feacd8870b653a8163d99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aef69c0a871a4443e3e1109c5a742e4b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#aef69c0a871a4443e3e1109c5a742e4b8">drive</a> (int power)</td></tr>
+<tr class="memdesc:aef69c0a871a4443e3e1109c5a742e4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">raw function for controlling  <a href="#aef69c0a871a4443e3e1109c5a742e4b8">More...</a><br/></td></tr>
+<tr class="separator:aef69c0a871a4443e3e1109c5a742e4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afe912e5b20439c082abb66920658805c"><td class="memItemLeft" align="right" valign="top">Encoder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#afe912e5b20439c082abb66920658805c">encoder</a></td></tr>
+<tr class="separator:afe912e5b20439c082abb66920658805c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a5718ff10ff30ece49108effc28dd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ad4a5718ff10ff30ece49108effc28dd2">motorFwdPin</a> = 10</td></tr>
+<tr class="separator:ad4a5718ff10ff30ece49108effc28dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5927881e33ce4e039a71e83d7caf6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a0d5927881e33ce4e039a71e83d7caf6a">motorRevPin</a> = 9</td></tr>
+<tr class="separator:a0d5927881e33ce4e039a71e83d7caf6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad36ceeef302fda4b8e162feae7961c41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ad36ceeef302fda4b8e162feae7961c41">encAPin</a> = 19</td></tr>
+<tr class="separator:ad36ceeef302fda4b8e162feae7961c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1111e111610b38214e703cd88887f24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ab1111e111610b38214e703cd88887f24">encBPin</a> = 18</td></tr>
+<tr class="separator:ab1111e111610b38214e703cd88887f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade413d7d638bff08bcc0c9ac50818e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#aade413d7d638bff08bcc0c9ac50818e1">limPin</a> = 25</td></tr>
+<tr class="separator:aade413d7d638bff08bcc0c9ac50818e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d553dd144c5fd2bf8b4c68a66fea1b"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a99d553dd144c5fd2bf8b4c68a66fea1b">lastControlTime</a> = 0</td></tr>
+<tr class="memdesc:a99d553dd144c5fd2bf8b4c68a66fea1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">last time in millis that the PID was run. used to only update PID every CONTROL_TIME  <a href="#a99d553dd144c5fd2bf8b4c68a66fea1b">More...</a><br/></td></tr>
+<tr class="separator:a99d553dd144c5fd2bf8b4c68a66fea1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae85014b5f9a8698790faa73bae76217c"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ae85014b5f9a8698790faa73bae76217c">CONTROL_TIME</a> = 50l</td></tr>
+<tr class="memdesc:ae85014b5f9a8698790faa73bae76217c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constant in millis for how often to calculate PID  <a href="#ae85014b5f9a8698790faa73bae76217c">More...</a><br/></td></tr>
+<tr class="separator:ae85014b5f9a8698790faa73bae76217c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef466ce8350e1d73ed9a7b529512e90c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#aef466ce8350e1d73ed9a7b529512e90c">integral</a> = 0</td></tr>
+<tr class="memdesc:aef466ce8350e1d73ed9a7b529512e90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">used by PI to computer integral  <a href="#aef466ce8350e1d73ed9a7b529512e90c">More...</a><br/></td></tr>
+<tr class="separator:aef466ce8350e1d73ed9a7b529512e90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5061b95381cc72d417f5a5275b871e47"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a5061b95381cc72d417f5a5275b871e47">lastError</a> = 0</td></tr>
+<tr class="memdesc:a5061b95381cc72d417f5a5275b871e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">last error in encoder ticks  <a href="#a5061b95381cc72d417f5a5275b871e47">More...</a><br/></td></tr>
+<tr class="separator:a5061b95381cc72d417f5a5275b871e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4e56fd59b92d0b4c157c0ea7fe9db8"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#afb4e56fd59b92d0b4c157c0ea7fe9db8">tolerance</a> = 100</td></tr>
+<tr class="memdesc:afb4e56fd59b92d0b4c157c0ea7fe9db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">how many encoder ticks until we're considered at our setpoint  <a href="#afb4e56fd59b92d0b4c157c0ea7fe9db8">More...</a><br/></td></tr>
+<tr class="separator:afb4e56fd59b92d0b4c157c0ea7fe9db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d95b0c5f8a7700b3d25a9fcead2291"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ac6d95b0c5f8a7700b3d25a9fcead2291">kP</a> = 0.1</td></tr>
+<tr class="memdesc:ac6d95b0c5f8a7700b3d25a9fcead2291"><td class="mdescLeft">&#160;</td><td class="mdescRight">PI constants.  <a href="#ac6d95b0c5f8a7700b3d25a9fcead2291">More...</a><br/></td></tr>
+<tr class="separator:ac6d95b0c5f8a7700b3d25a9fcead2291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dca8014bd3994a0d9b62efc0bcb983"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a15dca8014bd3994a0d9b62efc0bcb983">kI</a> = 0.002</td></tr>
+<tr class="separator:a15dca8014bd3994a0d9b62efc0bcb983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba816c407060b76429a785f6b15a6980"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#aba816c407060b76429a785f6b15a6980">kD</a> = 0.0</td></tr>
+<tr class="separator:aba816c407060b76429a785f6b15a6980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05988f2c31e40dd3894c1343bf73a7b8"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a05988f2c31e40dd3894c1343bf73a7b8">MAX_INTEGRAL</a> = 500l</td></tr>
+<tr class="memdesc:a05988f2c31e40dd3894c1343bf73a7b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value cap of integral. this protects us from <a href="https://en.wikipedia.org/wiki/Integral_windup">integral windup</a>  <a href="#a05988f2c31e40dd3894c1343bf73a7b8">More...</a><br/></td></tr>
+<tr class="separator:a05988f2c31e40dd3894c1343bf73a7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa168ca685ff8170699ca535590c2af14"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#aa168ca685ff8170699ca535590c2af14">setpoint</a> = 0</td></tr>
+<tr class="separator:aa168ca685ff8170699ca535590c2af14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fed3661f22f9acd7f3cd8635a4fc6a"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a44fed3661f22f9acd7f3cd8635a4fc6a">UP_POSITION</a> = 6200l</td></tr>
+<tr class="separator:a44fed3661f22f9acd7f3cd8635a4fc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a95b43d43f1e4858829ff474555f81f"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a3a95b43d43f1e4858829ff474555f81f">DOWN_POSITION</a> = 0l</td></tr>
+<tr class="separator:a3a95b43d43f1e4858829ff474555f81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>functions here control the 4 bar linkage/slider crank </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00011">11</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a920d0f828c6e76188827cf0c073963de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Arm::Arm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00003">3</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a234397ff44a8ac5fda920d92b9b33237"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Arm::atLim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns true if limit switch is hit </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00056">56</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3c0195535b15f56f9027aea0ae5ec76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Arm::atPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>return true if position is within tolerance of setpoint </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00047">47</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a009c19e5b213f692c24eab792cc40c47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::control </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the main function for controlling the arm. All other functions should just call this </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00013">13</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9075166ca53ef3cd547a7725ee5bca1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::down </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lower arm all the way to the top. This only needs to be called once, and the arm will continue to maintain that position </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00035">35</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef69c0a871a4443e3e1109c5a742e4b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::drive </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>power</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>raw function for controlling </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00068">68</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab49756ee4bfdc5f573a78f29678bf1d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Arm::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>return position in encoder counts </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00052">52</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a90df7bcd3c225f6fc05ef2f77c773d2e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::rawDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>drives the arm down very slowly. used in calibrating </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00060">60</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb44126b438f8dc00b0bf0720c84a737"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::resetEncoder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets encoder count to 0 </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00064">64</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e642e1a6fc24f40268f2c759dee62e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initializes servos and other stuff. called by main arduino setup </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00005">5</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a8274680d981524efbeb2b51eb49c28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cold stop the arm. This is used to calibrate the arm </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00043">43</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65ffd463407a6782a55dbd5b84f1e15e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arm::up </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>raise arm all the way to the bottom. This only needs to be called once, and the arm will continue to maintain that position </p>
+
+<p>Definition at line <a class="el" href="Arm_8cpp_source.html#l00039">39</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a3f6c85e5a8feacd8870b653a8163d99f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Arm::calibrated = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>flag to keep the control function from running without calibration </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00056">56</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae85014b5f9a8698790faa73bae76217c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long Arm::CONTROL_TIME = 50l</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constant in millis for how often to calculate PID </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00076">76</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a95b43d43f1e4858829ff474555f81f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long Arm::DOWN_POSITION = 0l</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00100">100</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad36ceeef302fda4b8e162feae7961c41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Arm::encAPin = 19</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00067">67</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1111e111610b38214e703cd88887f24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Arm::encBPin = 18</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00068">68</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe912e5b20439c082abb66920658805c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Encoder Arm::encoder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00063">63</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f237e56fc1e76c2b63f1f59d847945d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGripper.html">Gripper</a> Arm::gripper</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>gripper object is part of the arm </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00053">53</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef466ce8350e1d73ed9a7b529512e90c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Arm::integral = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>used by PI to computer integral </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00079">79</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba816c407060b76429a785f6b15a6980"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double Arm::kD = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00090">90</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15dca8014bd3994a0d9b62efc0bcb983"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double Arm::kI = 0.002</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00089">89</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6d95b0c5f8a7700b3d25a9fcead2291"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double Arm::kP = 0.1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>PI constants. </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00088">88</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a99d553dd144c5fd2bf8b4c68a66fea1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long Arm::lastControlTime = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>last time in millis that the PID was run. used to only update PID every CONTROL_TIME </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00073">73</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5061b95381cc72d417f5a5275b871e47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Arm::lastError = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>last error in encoder ticks </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00082">82</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aade413d7d638bff08bcc0c9ac50818e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Arm::limPin = 25</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00069">69</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a05988f2c31e40dd3894c1343bf73a7b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long Arm::MAX_INTEGRAL = 500l</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>absolute value cap of integral. this protects us from <a href="https://en.wikipedia.org/wiki/Integral_windup">integral windup</a> </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00094">94</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4a5718ff10ff30ece49108effc28dd2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Arm::motorFwdPin = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00065">65</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d5927881e33ce4e039a71e83d7caf6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Arm::motorRevPin = 9</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00066">66</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa168ca685ff8170699ca535590c2af14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Arm::setpoint = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00096">96</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb4e56fd59b92d0b4c157c0ea7fe9db8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long Arm::tolerance = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>how many encoder ticks until we're considered at our setpoint </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00085">85</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44fed3661f22f9acd7f3cd8635a4fc6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long Arm::UP_POSITION = 6200l</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>positions </p>
+
+<p>Definition at line <a class="el" href="Arm_8h_source.html#l00099">99</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="Arm_8h_source.html">Arm.h</a></li>
-<li>Final_Project/Arm.cpp</li>
+<li>Final_Project/<a class="el" href="Arm_8cpp_source.html">Arm.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

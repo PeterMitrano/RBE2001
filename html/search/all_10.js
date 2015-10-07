@@ -1,4 +1,31 @@
 var searchData=
 [
-  ['up',['up',['../classArm.html#a65ffd463407a6782a55dbd5b84f1e15e',1,'Arm']]]
+  ['radiating',['radiating',['../classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce',1,'Robot']]],
+  ['radiation_5fmsg',['RADIATION_MSG',['../classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f',1,'BTClient']]],
+  ['raisearm',['RaiseArm',['../classRaiseArm.html',1,'RaiseArm'],['../classRaiseArm.html#a91b62d0ce0bae3391a2fdb617b603f8b',1,'RaiseArm::RaiseArm()']]],
+  ['raisearm_2ecpp',['RaiseArm.cpp',['../RaiseArm_8cpp.html',1,'']]],
+  ['raisearm_2eh',['RaiseArm.h',['../RaiseArm_8h.html',1,'']]],
+  ['rawdown',['rawDown',['../classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e',1,'Arm']]],
+  ['reactornumber',['reactorNumber',['../classNavigateToReactor.html#ac0bd289bd96de0e58d94735bc16b3d44',1,'NavigateToReactor']]],
+  ['reactortubelimitpin',['reactorTubeLimitPin',['../classRobot.html#a351d754436c8f569432ef7a06641f98a',1,'Robot']]],
+  ['readmessage',['readMessage',['../classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b',1,'BTClient']]],
+  ['received_5fstorage',['received_storage',['../classBTClient.html#a41a7d3382ab8bbdf4b7d78b7b69ff85f',1,'BTClient']]],
+  ['received_5fsupply',['received_supply',['../classBTClient.html#af00b18b695ecc4bdeea133572eb0fd6d',1,'BTClient']]],
+  ['remove',['remove',['../classLinkedList.html#af331637727b3ada2f806c29b9f4cc6fe',1,'LinkedList']]],
+  ['resetencoder',['resetEncoder',['../classArm.html#afb44126b438f8dc00b0bf0720c84a737',1,'Arm']]],
+  ['resettimerflags',['resetTimerFlags',['../classRobot.html#ab7c87529c987ede12b934bdfc768507e',1,'Robot']]],
+  ['resume_5fmsg',['RESUME_MSG',['../classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66',1,'BTClient']]],
+  ['rightwheel',['rightWheel',['../classRobot.html#a3b2dd5b89e44fd3a7ba239554fb5b8a7',1,'Robot']]],
+  ['rightwheelpin',['rightWheelPin',['../classRobot.html#a572525b971da4e0f272f5f1259f6c84f',1,'Robot']]],
+  ['robot',['Robot',['../classRobot.html',1,'Robot'],['../classRobot.html#a4fc7c70ae20623f05e06f2ecb388b6c4',1,'Robot::Robot()']]],
+  ['robot_2ecpp',['Robot.cpp',['../Robot_8cpp.html',1,'']]],
+  ['robot_2eh',['Robot.h',['../Robot_8h.html',1,'']]],
+  ['root',['root',['../classLinkedList.html#ae5e0a92c9b9b936a49a4e40a121a2b31',1,'LinkedList']]],
+  ['rotateleft',['rotateLeft',['../classRobot.html#a82a61a1f5fb4a17fd2277329bc6e8fe4',1,'Robot']]],
+  ['rotateright',['rotateRight',['../classRobot.html#a33e931c5ce2e2ce940c96203f1b6d057',1,'Robot']]],
+  ['rotatespeed',['rotateSpeed',['../classRobot.html#a4063d601b5b4d5aad332f617abb36c7b',1,'Robot']]],
+  ['row',['row',['../classPathPlanner.html#a00b0fa8525a5fe9c8088ccaa005c4c54',1,'PathPlanner::row()'],['../classRobot.html#a35ce5c416a079fcf6b943843ec151d63',1,'Robot::row()']]],
+  ['rpower',['rPower',['../classBackOffTube.html#aa03d7c0535e3d7dd4c45a0453ea9f3aa',1,'BackOffTube']]],
+  ['run',['run',['../classScheduler.html#a58fba108ce2748870a6288cd6f5fd1e3',1,'Scheduler']]],
+  ['running',['running',['../classCommand.html#a8e31897f049af332a2421c9721fda18b',1,'Command']]]
 ];

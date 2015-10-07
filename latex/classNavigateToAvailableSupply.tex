@@ -1,6 +1,10 @@
 \hypertarget{classNavigateToAvailableSupply}{\section{Navigate\-To\-Available\-Supply Class Reference}
 \label{classNavigateToAvailableSupply}\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}}
 }
+
+
+{\ttfamily \#include $<$Navigate\-To\-Available\-Supply.\-h$>$}
+
 Inheritance diagram for Navigate\-To\-Available\-Supply\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,105 @@ Inheritance diagram for Navigate\-To\-Available\-Supply\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classNavigateToAvailableSupply_a77445727df0f590be945ee6fefe418a0}{void \hyperlink{classNavigateToAvailableSupply_a77445727df0f590be945ee6fefe418a0}{initialize} ()}\label{classNavigateToAvailableSupply_a77445727df0f590be945ee6fefe418a0}
-
+\hyperlink{classNavigateToAvailableSupply_ad2892c89ab5ad4def2a54e97e0a80140}{Navigate\-To\-Available\-Supply} ()
+\item 
+void \hyperlink{classNavigateToAvailableSupply_a77445727df0f590be945ee6fefe418a0}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classNavigateToAvailableSupply_a2c1c22325cc0fa1399530b23ddca7e96}{void \hyperlink{classNavigateToAvailableSupply_a2c1c22325cc0fa1399530b23ddca7e96}{execute} ()}\label{classNavigateToAvailableSupply_a2c1c22325cc0fa1399530b23ddca7e96}
-
+void \hyperlink{classNavigateToAvailableSupply_a2c1c22325cc0fa1399530b23ddca7e96}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classNavigateToAvailableSupply_a7c07bb4eb88b04c835c0b0d27453c43a}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classNavigateToAvailableSupply_a92842db484c7f60fe217403783cb8bed}{void \hyperlink{classNavigateToAvailableSupply_a92842db484c7f60fe217403783cb8bed}{end} ()}\label{classNavigateToAvailableSupply_a92842db484c7f60fe217403783cb8bed}
-
+void \hyperlink{classNavigateToAvailableSupply_a92842db484c7f60fe217403783cb8bed}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classNavigateToAvailableSupply_a7c07bb4eb88b04c835c0b0d27453c43a}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classNavigateToAvailableSupply_abe09e477255b0cc20b4138a31ee16de0}{tube\-Number}
+\item 
+bool \hyperlink{classNavigateToAvailableSupply_a1a0c7849a339effc2ae36c80637ca336}{planned\-Successfully}
+\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Navigate\-To\-Available\-Supply.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNavigateToAvailableSupply_ad2892c89ab5ad4def2a54e97e0a80140}{\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}}
+\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!NavigateToAvailableSupply@{Navigate\-To\-Available\-Supply}}
+\subsubsection[{Navigate\-To\-Available\-Supply}]{\setlength{\rightskip}{0pt plus 5cm}Navigate\-To\-Available\-Supply\-::\-Navigate\-To\-Available\-Supply (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNavigateToAvailableSupply_ad2892c89ab5ad4def2a54e97e0a80140}
+
+
+Definition at line 4 of file Navigate\-To\-Available\-Supply.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classNavigateToAvailableSupply_a92842db484c7f60fe217403783cb8bed}{\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!end@{end}}
+\index{end@{end}!NavigateToAvailableSupply@{Navigate\-To\-Available\-Supply}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Available\-Supply\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToAvailableSupply_a92842db484c7f60fe217403783cb8bed}
+
+
+called once at the end, once \hyperlink{classNavigateToAvailableSupply_a7c07bb4eb88b04c835c0b0d27453c43a}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 37 of file Navigate\-To\-Available\-Supply.\-cpp.
+
+\hypertarget{classNavigateToAvailableSupply_a2c1c22325cc0fa1399530b23ddca7e96}{\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!execute@{execute}}
+\index{execute@{execute}!NavigateToAvailableSupply@{Navigate\-To\-Available\-Supply}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Available\-Supply\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToAvailableSupply_a2c1c22325cc0fa1399530b23ddca7e96}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 13 of file Navigate\-To\-Available\-Supply.\-cpp.
+
+\hypertarget{classNavigateToAvailableSupply_a77445727df0f590be945ee6fefe418a0}{\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!initialize@{initialize}}
+\index{initialize@{initialize}!NavigateToAvailableSupply@{Navigate\-To\-Available\-Supply}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Available\-Supply\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToAvailableSupply_a77445727df0f590be945ee6fefe418a0}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 6 of file Navigate\-To\-Available\-Supply.\-cpp.
+
 \hypertarget{classNavigateToAvailableSupply_a7c07bb4eb88b04c835c0b0d27453c43a}{\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!NavigateToAvailableSupply@{Navigate\-To\-Available\-Supply}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigate\-To\-Available\-Supply\-::is\-Finished (
@@ -45,7 +133,28 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 33 of file Navigate\-To\-Available\-Supply.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classNavigateToAvailableSupply_a1a0c7849a339effc2ae36c80637ca336}{\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!planned\-Successfully@{planned\-Successfully}}
+\index{planned\-Successfully@{planned\-Successfully}!NavigateToAvailableSupply@{Navigate\-To\-Available\-Supply}}
+\subsubsection[{planned\-Successfully}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigate\-To\-Available\-Supply\-::planned\-Successfully\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToAvailableSupply_a1a0c7849a339effc2ae36c80637ca336}
+
+
+Definition at line 15 of file Navigate\-To\-Available\-Supply.\-h.
+
+\hypertarget{classNavigateToAvailableSupply_abe09e477255b0cc20b4138a31ee16de0}{\index{Navigate\-To\-Available\-Supply@{Navigate\-To\-Available\-Supply}!tube\-Number@{tube\-Number}}
+\index{tube\-Number@{tube\-Number}!NavigateToAvailableSupply@{Navigate\-To\-Available\-Supply}}
+\subsubsection[{tube\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Navigate\-To\-Available\-Supply\-::tube\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToAvailableSupply_abe09e477255b0cc20b4138a31ee16de0}
+
+
+Definition at line 14 of file Navigate\-To\-Available\-Supply.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Navigate\-To\-Available\-Supply.\-h\item 
-Final\-\_\-\-Project/Navigate\-To\-Available\-Supply.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{NavigateToAvailableSupply_8h}{Navigate\-To\-Available\-Supply.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{NavigateToAvailableSupply_8cpp}{Navigate\-To\-Available\-Supply.\-cpp}\end{DoxyCompactItemize}

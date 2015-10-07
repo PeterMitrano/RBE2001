@@ -1,6 +1,10 @@
 \hypertarget{classNavigateToOpenStorage}{\section{Navigate\-To\-Open\-Storage Class Reference}
 \label{classNavigateToOpenStorage}\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}}
 }
+
+
+{\ttfamily \#include $<$Navigate\-To\-Open\-Storage.\-h$>$}
+
 Inheritance diagram for Navigate\-To\-Open\-Storage\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,105 @@ Inheritance diagram for Navigate\-To\-Open\-Storage\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classNavigateToOpenStorage_a206ea745d04ffce485b59a7732c932e3}{void \hyperlink{classNavigateToOpenStorage_a206ea745d04ffce485b59a7732c932e3}{initialize} ()}\label{classNavigateToOpenStorage_a206ea745d04ffce485b59a7732c932e3}
-
+\hyperlink{classNavigateToOpenStorage_a4f9a2dcb328f82d629f4d9223ee8dc1b}{Navigate\-To\-Open\-Storage} ()
+\item 
+void \hyperlink{classNavigateToOpenStorage_a206ea745d04ffce485b59a7732c932e3}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classNavigateToOpenStorage_a12d20167227f6359b0fe95a5d4bd3257}{void \hyperlink{classNavigateToOpenStorage_a12d20167227f6359b0fe95a5d4bd3257}{execute} ()}\label{classNavigateToOpenStorage_a12d20167227f6359b0fe95a5d4bd3257}
-
+void \hyperlink{classNavigateToOpenStorage_a12d20167227f6359b0fe95a5d4bd3257}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classNavigateToOpenStorage_ad0b18ef9e40b69bccc01986426e3605c}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classNavigateToOpenStorage_af25a3397f1d4aaa94982615fe81f30a2}{void \hyperlink{classNavigateToOpenStorage_af25a3397f1d4aaa94982615fe81f30a2}{end} ()}\label{classNavigateToOpenStorage_af25a3397f1d4aaa94982615fe81f30a2}
-
+void \hyperlink{classNavigateToOpenStorage_af25a3397f1d4aaa94982615fe81f30a2}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classNavigateToOpenStorage_ad0b18ef9e40b69bccc01986426e3605c}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classNavigateToOpenStorage_a5764847b0cd26e7689b7664f1a83a940}{tube\-Number}
+\item 
+bool \hyperlink{classNavigateToOpenStorage_adcfea0b7edb288b5703100d75828d323}{planned\-Successfully}
+\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Navigate\-To\-Open\-Storage.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNavigateToOpenStorage_a4f9a2dcb328f82d629f4d9223ee8dc1b}{\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}}
+\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!NavigateToOpenStorage@{Navigate\-To\-Open\-Storage}}
+\subsubsection[{Navigate\-To\-Open\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}Navigate\-To\-Open\-Storage\-::\-Navigate\-To\-Open\-Storage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNavigateToOpenStorage_a4f9a2dcb328f82d629f4d9223ee8dc1b}
+
+
+Definition at line 6 of file Navigate\-To\-Open\-Storage.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classNavigateToOpenStorage_af25a3397f1d4aaa94982615fe81f30a2}{\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!end@{end}}
+\index{end@{end}!NavigateToOpenStorage@{Navigate\-To\-Open\-Storage}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Open\-Storage\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToOpenStorage_af25a3397f1d4aaa94982615fe81f30a2}
+
+
+called once at the end, once \hyperlink{classNavigateToOpenStorage_ad0b18ef9e40b69bccc01986426e3605c}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 40 of file Navigate\-To\-Open\-Storage.\-cpp.
+
+\hypertarget{classNavigateToOpenStorage_a12d20167227f6359b0fe95a5d4bd3257}{\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!execute@{execute}}
+\index{execute@{execute}!NavigateToOpenStorage@{Navigate\-To\-Open\-Storage}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Open\-Storage\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToOpenStorage_a12d20167227f6359b0fe95a5d4bd3257}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 14 of file Navigate\-To\-Open\-Storage.\-cpp.
+
+\hypertarget{classNavigateToOpenStorage_a206ea745d04ffce485b59a7732c932e3}{\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!initialize@{initialize}}
+\index{initialize@{initialize}!NavigateToOpenStorage@{Navigate\-To\-Open\-Storage}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Navigate\-To\-Open\-Storage\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNavigateToOpenStorage_a206ea745d04ffce485b59a7732c932e3}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 8 of file Navigate\-To\-Open\-Storage.\-cpp.
+
 \hypertarget{classNavigateToOpenStorage_ad0b18ef9e40b69bccc01986426e3605c}{\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!NavigateToOpenStorage@{Navigate\-To\-Open\-Storage}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigate\-To\-Open\-Storage\-::is\-Finished (
@@ -45,7 +133,28 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 36 of file Navigate\-To\-Open\-Storage.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classNavigateToOpenStorage_adcfea0b7edb288b5703100d75828d323}{\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!planned\-Successfully@{planned\-Successfully}}
+\index{planned\-Successfully@{planned\-Successfully}!NavigateToOpenStorage@{Navigate\-To\-Open\-Storage}}
+\subsubsection[{planned\-Successfully}]{\setlength{\rightskip}{0pt plus 5cm}bool Navigate\-To\-Open\-Storage\-::planned\-Successfully\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToOpenStorage_adcfea0b7edb288b5703100d75828d323}
+
+
+Definition at line 15 of file Navigate\-To\-Open\-Storage.\-h.
+
+\hypertarget{classNavigateToOpenStorage_a5764847b0cd26e7689b7664f1a83a940}{\index{Navigate\-To\-Open\-Storage@{Navigate\-To\-Open\-Storage}!tube\-Number@{tube\-Number}}
+\index{tube\-Number@{tube\-Number}!NavigateToOpenStorage@{Navigate\-To\-Open\-Storage}}
+\subsubsection[{tube\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Navigate\-To\-Open\-Storage\-::tube\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{classNavigateToOpenStorage_a5764847b0cd26e7689b7664f1a83a940}
+
+
+Definition at line 14 of file Navigate\-To\-Open\-Storage.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Navigate\-To\-Open\-Storage.\-h\item 
-Final\-\_\-\-Project/Navigate\-To\-Open\-Storage.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{NavigateToOpenStorage_8h}{Navigate\-To\-Open\-Storage.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{NavigateToOpenStorage_8cpp}{Navigate\-To\-Open\-Storage.\-cpp}\end{DoxyCompactItemize}

@@ -1,6 +1,10 @@
 \hypertarget{classDriveUntilReactorTube}{\section{Drive\-Until\-Reactor\-Tube Class Reference}
 \label{classDriveUntilReactorTube}\index{Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}}
 }
+
+
+{\ttfamily \#include $<$Drive\-Until\-Reactor\-Tube.\-h$>$}
+
 Inheritance diagram for Drive\-Until\-Reactor\-Tube\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,98 @@ Inheritance diagram for Drive\-Until\-Reactor\-Tube\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classDriveUntilReactorTube_af0c43c271f20406266ed1423bf6d980d}{void \hyperlink{classDriveUntilReactorTube_af0c43c271f20406266ed1423bf6d980d}{initialize} ()}\label{classDriveUntilReactorTube_af0c43c271f20406266ed1423bf6d980d}
-
+\hyperlink{classDriveUntilReactorTube_acc0fbd9b892ddd9b0745fe5d14f050dd}{Drive\-Until\-Reactor\-Tube} ()
+\item 
+void \hyperlink{classDriveUntilReactorTube_af0c43c271f20406266ed1423bf6d980d}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classDriveUntilReactorTube_a8d2c383dcf8e2424113cd6e546b58870}{void \hyperlink{classDriveUntilReactorTube_a8d2c383dcf8e2424113cd6e546b58870}{execute} ()}\label{classDriveUntilReactorTube_a8d2c383dcf8e2424113cd6e546b58870}
-
+void \hyperlink{classDriveUntilReactorTube_a8d2c383dcf8e2424113cd6e546b58870}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classDriveUntilReactorTube_ab22da4688ca46cc3e33b1a7aca879a74}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classDriveUntilReactorTube_a34011a5721faf7cd169ac4e56f9c901b}{void \hyperlink{classDriveUntilReactorTube_a34011a5721faf7cd169ac4e56f9c901b}{end} ()}\label{classDriveUntilReactorTube_a34011a5721faf7cd169ac4e56f9c901b}
-
+void \hyperlink{classDriveUntilReactorTube_a34011a5721faf7cd169ac4e56f9c901b}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classDriveUntilReactorTube_ab22da4688ca46cc3e33b1a7aca879a74}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Drive\-Until\-Reactor\-Tube.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDriveUntilReactorTube_acc0fbd9b892ddd9b0745fe5d14f050dd}{\index{Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}!Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}}
+\index{Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}!DriveUntilReactorTube@{Drive\-Until\-Reactor\-Tube}}
+\subsubsection[{Drive\-Until\-Reactor\-Tube}]{\setlength{\rightskip}{0pt plus 5cm}Drive\-Until\-Reactor\-Tube\-::\-Drive\-Until\-Reactor\-Tube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriveUntilReactorTube_acc0fbd9b892ddd9b0745fe5d14f050dd}
+
+
+Definition at line 3 of file Drive\-Until\-Reactor\-Tube.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classDriveUntilReactorTube_a34011a5721faf7cd169ac4e56f9c901b}{\index{Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}!end@{end}}
+\index{end@{end}!DriveUntilReactorTube@{Drive\-Until\-Reactor\-Tube}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-Until\-Reactor\-Tube\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDriveUntilReactorTube_a34011a5721faf7cd169ac4e56f9c901b}
+
+
+called once at the end, once \hyperlink{classDriveUntilReactorTube_ab22da4688ca46cc3e33b1a7aca879a74}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 17 of file Drive\-Until\-Reactor\-Tube.\-cpp.
+
+\hypertarget{classDriveUntilReactorTube_a8d2c383dcf8e2424113cd6e546b58870}{\index{Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}!execute@{execute}}
+\index{execute@{execute}!DriveUntilReactorTube@{Drive\-Until\-Reactor\-Tube}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-Until\-Reactor\-Tube\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDriveUntilReactorTube_a8d2c383dcf8e2424113cd6e546b58870}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 9 of file Drive\-Until\-Reactor\-Tube.\-cpp.
+
+\hypertarget{classDriveUntilReactorTube_af0c43c271f20406266ed1423bf6d980d}{\index{Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}!initialize@{initialize}}
+\index{initialize@{initialize}!DriveUntilReactorTube@{Drive\-Until\-Reactor\-Tube}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-Until\-Reactor\-Tube\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDriveUntilReactorTube_af0c43c271f20406266ed1423bf6d980d}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 5 of file Drive\-Until\-Reactor\-Tube.\-cpp.
+
 \hypertarget{classDriveUntilReactorTube_ab22da4688ca46cc3e33b1a7aca879a74}{\index{Drive\-Until\-Reactor\-Tube@{Drive\-Until\-Reactor\-Tube}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!DriveUntilReactorTube@{Drive\-Until\-Reactor\-Tube}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Drive\-Until\-Reactor\-Tube\-::is\-Finished (
@@ -45,7 +126,11 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 13 of file Drive\-Until\-Reactor\-Tube.\-cpp.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Drive\-Until\-Reactor\-Tube.\-h\item 
-Final\-\_\-\-Project/Drive\-Until\-Reactor\-Tube.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{DriveUntilReactorTube_8h}{Drive\-Until\-Reactor\-Tube.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{DriveUntilReactorTube_8cpp}{Drive\-Until\-Reactor\-Tube.\-cpp}\end{DoxyCompactItemize}

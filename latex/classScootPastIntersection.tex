@@ -1,6 +1,10 @@
 \hypertarget{classScootPastIntersection}{\section{Scoot\-Past\-Intersection Class Reference}
 \label{classScootPastIntersection}\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}}
 }
+
+
+{\ttfamily \#include $<$Scoot\-Past\-Intersection.\-h$>$}
+
 Inheritance diagram for Scoot\-Past\-Intersection\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +14,103 @@ Inheritance diagram for Scoot\-Past\-Intersection\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classScootPastIntersection_a8f741b21641a42bb5bcf4e0b67c6f0b5}{void \hyperlink{classScootPastIntersection_a8f741b21641a42bb5bcf4e0b67c6f0b5}{initialize} ()}\label{classScootPastIntersection_a8f741b21641a42bb5bcf4e0b67c6f0b5}
-
+\hyperlink{classScootPastIntersection_ac496bf3a58f4754025b32757c3fb1094}{Scoot\-Past\-Intersection} ()
+\item 
+void \hyperlink{classScootPastIntersection_a8f741b21641a42bb5bcf4e0b67c6f0b5}{initialize} ()
 \begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classScootPastIntersection_adce5027b638c8d23dbcff7cbb837885f}{void \hyperlink{classScootPastIntersection_adce5027b638c8d23dbcff7cbb837885f}{execute} ()}\label{classScootPastIntersection_adce5027b638c8d23dbcff7cbb837885f}
-
+void \hyperlink{classScootPastIntersection_adce5027b638c8d23dbcff7cbb837885f}{execute} ()
 \begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
 bool \hyperlink{classScootPastIntersection_a190d072051601ebc40b193d91bc323df}{is\-Finished} ()
 \begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
-\hypertarget{classScootPastIntersection_a7696d93dc3789a4f3923aba22028b093}{void \hyperlink{classScootPastIntersection_a7696d93dc3789a4f3923aba22028b093}{end} ()}\label{classScootPastIntersection_a7696d93dc3789a4f3923aba22028b093}
-
+void \hyperlink{classScootPastIntersection_a7696d93dc3789a4f3923aba22028b093}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classScootPastIntersection_a190d072051601ebc40b193d91bc323df}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{classScootPastIntersection_acfb41e5180724c0ffb71c841e0bb9ec3}{scoot\-Time} = 350
+\begin{DoxyCompactList}\small\item\em time to line follow in ms \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Scoot\-Past\-Intersection.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classScootPastIntersection_ac496bf3a58f4754025b32757c3fb1094}{\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}!Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}}
+\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}!ScootPastIntersection@{Scoot\-Past\-Intersection}}
+\subsubsection[{Scoot\-Past\-Intersection}]{\setlength{\rightskip}{0pt plus 5cm}Scoot\-Past\-Intersection\-::\-Scoot\-Past\-Intersection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classScootPastIntersection_ac496bf3a58f4754025b32757c3fb1094}
+
+
+Definition at line 3 of file Scoot\-Past\-Intersection.\-cpp.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classScootPastIntersection_a7696d93dc3789a4f3923aba22028b093}{\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}!end@{end}}
+\index{end@{end}!ScootPastIntersection@{Scoot\-Past\-Intersection}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Scoot\-Past\-Intersection\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classScootPastIntersection_a7696d93dc3789a4f3923aba22028b093}
+
+
+called once at the end, once \hyperlink{classScootPastIntersection_a190d072051601ebc40b193d91bc323df}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+
+
+
+Definition at line 17 of file Scoot\-Past\-Intersection.\-cpp.
+
+\hypertarget{classScootPastIntersection_adce5027b638c8d23dbcff7cbb837885f}{\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}!execute@{execute}}
+\index{execute@{execute}!ScootPastIntersection@{Scoot\-Past\-Intersection}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Scoot\-Past\-Intersection\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classScootPastIntersection_adce5027b638c8d23dbcff7cbb837885f}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+
+Definition at line 9 of file Scoot\-Past\-Intersection.\-cpp.
+
+\hypertarget{classScootPastIntersection_a8f741b21641a42bb5bcf4e0b67c6f0b5}{\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}!initialize@{initialize}}
+\index{initialize@{initialize}!ScootPastIntersection@{Scoot\-Past\-Intersection}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Scoot\-Past\-Intersection\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classScootPastIntersection_a8f741b21641a42bb5bcf4e0b67c6f0b5}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+
+
+
+Definition at line 5 of file Scoot\-Past\-Intersection.\-cpp.
+
 \hypertarget{classScootPastIntersection_a190d072051601ebc40b193d91bc323df}{\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!ScootPastIntersection@{Scoot\-Past\-Intersection}}
 \subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Scoot\-Past\-Intersection\-::is\-Finished (
@@ -45,7 +131,25 @@ Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
 
 
 
+Definition at line 13 of file Scoot\-Past\-Intersection.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classScootPastIntersection_acfb41e5180724c0ffb71c841e0bb9ec3}{\index{Scoot\-Past\-Intersection@{Scoot\-Past\-Intersection}!scoot\-Time@{scoot\-Time}}
+\index{scoot\-Time@{scoot\-Time}!ScootPastIntersection@{Scoot\-Past\-Intersection}}
+\subsubsection[{scoot\-Time}]{\setlength{\rightskip}{0pt plus 5cm}const int Scoot\-Past\-Intersection\-::scoot\-Time = 350\hspace{0.3cm}{\ttfamily [private]}}}\label{classScootPastIntersection_acfb41e5180724c0ffb71c841e0bb9ec3}
+
+
+time to line follow in ms 
+
+
+
+Definition at line 15 of file Scoot\-Past\-Intersection.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Final\-\_\-\-Project/Scoot\-Past\-Intersection.\-h\item 
-Final\-\_\-\-Project/Scoot\-Past\-Intersection.\-cpp\end{DoxyCompactItemize}
+Final\-\_\-\-Project/\hyperlink{ScootPastIntersection_8h}{Scoot\-Past\-Intersection.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{ScootPastIntersection_8cpp}{Scoot\-Past\-Intersection.\-cpp}\end{DoxyCompactItemize}
