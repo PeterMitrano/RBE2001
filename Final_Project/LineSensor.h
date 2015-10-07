@@ -1,6 +1,6 @@
 #pragma once
-/** line sensor class
- * functions for reading the line sensor go here
+/** \brief
+ * functions for reading the position with respect to the line
  */
 
 class LineSensor {
@@ -31,7 +31,7 @@ class LineSensor {
     float linePosition;
     float lastLinePosition;
 
-    /** this assumes line sensor pins are in order. This is the first (leftmost pin) */
+    /** \brief this assumes line sensor pins are in order. This is the first (leftmost pin) */
     const static int PIN_0 = 0;
 
     /** \brief the board contains IR LEDs, this pin controls those LEDs */

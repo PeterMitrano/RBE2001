@@ -4,10 +4,9 @@
 #include "CommandGroupEntry.h"
 #include "LinkedList.h"
 
-/* grouping commands is a useful abstraction
- * commands groups execute commands in parallel or series
+/** \brief grouping commands is a useful abstraction.
+ * Commands groups execute commands in parallel or series
  */
-
 class CommandGroup: public Command {
   public:
     CommandGroup(const String name);

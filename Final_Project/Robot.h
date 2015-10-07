@@ -1,7 +1,8 @@
 #pragma once
-/**robot class
- *  functions here control the robot as a whole, and should be called from main.ino
- */
+/** \brief
+ *  functions here control the robot as a whole.
+ *  leds, bluetooth, arm, and line sensor, and music are immediate components.
+ *  */
 
 #include <Arduino.h>
 #include <Servo.h>

@@ -2,9 +2,9 @@
  * \mainpage Woah, doxygen is super cool!
  *
  * Here are the dank kids who made this:
- * \Author Peter Mitrano
- * \Author Chris O'Shea
- * \Author Traivis Norris
+ * \Author <a href = "https://petermitrano.github.io">Peter Mitrano</a>,
+ * \Author Chris O'Shea,
+ * \Author Travis Norris
  *
  * Friggen verison number:
  * \Version 3.14159

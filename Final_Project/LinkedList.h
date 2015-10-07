@@ -1,13 +1,3 @@
-/*
-	LinkedList.h - V1.1 - Generic LinkedList implementation
-	Works better with FIFO, because LIFO will need to
-	search the entire List to find the last one;
-
-	For instructions, go to https://github.com/ivanseidel/LinkedList
-
-	Created by Ivan Seidel Gomes, March, 2013.
-	Released into the public domain.
-*/
 
 
 #pragma once
@@ -19,6 +9,16 @@ struct ListNode
 	ListNode<T> *next;
 };
 
+/** \brief
+	LinkedList.h - V1.1 - Generic LinkedList implementation
+	Works better with FIFO, because LIFO will need to
+	search the entire List to find the last one;
+
+	For instructions, go to https://github.com/ivanseidel/LinkedList
+
+	Created by Ivan Seidel Gomes, March, 2013.
+	Released into the public domain.
+*/
 template <typename T>
 class LinkedList{
 
@@ -40,56 +40,56 @@ public:
 	LinkedList();
 	~LinkedList();
 
-	/*
+	/** \brief
 		Returns current size of LinkedList
 	*/
 	virtual int size();
-	/*
+	/** \brief
 		Adds a T object in the specified index;
 		Unlink and link the LinkedList correcly;
 		Increment _size
 	*/
 	virtual bool add(int index, T);
-	/*
+	/** \brief
 		Adds a T object in the end of the LinkedList;
 		Increment _size;
 	*/
 	virtual bool add(T);
-	/*
+	/** \brief
 		Adds a T object in the start of the LinkedList;
 		Increment _size;
 	*/
 	virtual bool unshift(T);
-	/*
+	/** \brief
 		Set the object at index, with T;
 		Increment _size;
 	*/
 	virtual bool set(int index, T);
-	/*
+	/** \brief
 		Remove object at index;
 		If index is not reachable, returns false;
 		else, decrement _size
 	*/
 	virtual T remove(int index);
-	/*
+	/** \brief
 		Remove last object;
 	*/
 	virtual T pop();
-	/*
+	/** \brief
 		Remove first object;
 	*/
 	virtual T shift();
-	/*
+	/** \brief
 		Get the index'th element on the list;
 		Return Element if accessible,
 		else, return false;
 	*/
 	virtual T get(int index);
 
-  /* iterate over list and check if element exists */
+  /** \brief* \brief iterate over list and check if element exists */
   virtual bool contains(T);
 
-	/*
+	/** \brief
 		Clear the entire array
 	*/
 	virtual void clear();
@@ -125,7 +125,7 @@ LinkedList<T>::~LinkedList()
 	isCached = false;
 }
 
-/*
+/** \brief
 	Actualy "logic" coding
 */
 
