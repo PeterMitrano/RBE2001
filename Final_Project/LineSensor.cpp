@@ -16,10 +16,6 @@ void LineSensor::cache(){
     }
   }
   linePosition = wsum /((float) sum) + COMPENSATION;
-  Serial.print(" lin pos  = ");
-  Serial.print(linePosition);
-  Serial.print(" sum = ");
-  Serial.println(sum);
 }
 
 bool LineSensor::atIntersection(){
