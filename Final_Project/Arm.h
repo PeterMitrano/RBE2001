@@ -87,7 +87,7 @@ class Arm {
     /** \brief PI constants */
     const double kP = 0.1;
     const double kI = 0.002;
-    const double kD = 0.0;
+    const double kD = 0.01;
 
     /** \brief absolute value cap of integral.
      * this protects us from <a href = "https://en.wikipedia.org/wiki/Integral_windup">integral windup</a> */
