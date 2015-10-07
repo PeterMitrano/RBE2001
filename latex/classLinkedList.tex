@@ -3,6 +3,11 @@
 }
 
 
+\hyperlink{LinkedList_8h}{Linked\-List.\-h} -\/ V1.\-1 -\/ Generic \hyperlink{classLinkedList}{Linked\-List} implementation Works better with F\-I\-F\-O, because L\-I\-F\-O will need to search the entire List to find the last one;.  
+
+
+
+
 {\ttfamily \#include $<$Linked\-List.\-h$>$}
 
 \subsection*{Public Member Functions}
@@ -13,32 +18,35 @@
 \hyperlink{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}{$\sim$\-Linked\-List} ()
 \item 
 virtual int \hyperlink{classLinkedList_ab8388ea027c2de8125f5d1e5901c2b2e}{size} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns current size of \hyperlink{classLinkedList}{Linked\-List}. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classLinkedList_a3307f9b9ecf90a18c270b3b6bc7a7e04}{add} (int index, T)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds a T object in the specified index; Unlink and link the \hyperlink{classLinkedList}{Linked\-List} correcly; Increment \-\_\-size. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classLinkedList_a9c3c4f3f527bde2e1572a43f3fb26ea3}{add} (T)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds a T object in the end of the \hyperlink{classLinkedList}{Linked\-List}; Increment \-\_\-size;. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classLinkedList_a55ba7f61737011f2b684d59154543e6e}{unshift} (T)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds a T object in the start of the \hyperlink{classLinkedList}{Linked\-List}; Increment \-\_\-size;. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classLinkedList_a08ce5b6527cefbd221324569fdb10969}{set} (int index, T)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the object at index, with T; Increment \-\_\-size;. \end{DoxyCompactList}\item 
 virtual T \hyperlink{classLinkedList_af331637727b3ada2f806c29b9f4cc6fe}{remove} (int index)
-\item 
+\begin{DoxyCompactList}\small\item\em Remove object at index; If index is not reachable, returns false; else, decrement \-\_\-size. \end{DoxyCompactList}\item 
 virtual T \hyperlink{classLinkedList_a00a70f924d76dcbfa3b05503caad40e6}{pop} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove last object;. \end{DoxyCompactList}\item 
 virtual T \hyperlink{classLinkedList_aaf7239844a9d745b6dd11249ff4990c8}{shift} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove first object;. \end{DoxyCompactList}\item 
 virtual T \hyperlink{classLinkedList_a25079ed9b408efad63a1522c818d8705}{get} (int index)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the index'th element on the list; Return Element if accessible, else, return false;. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classLinkedList_af1de9b03ff401cae0a842680b77d32c2}{contains} (T)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
 \item 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
 virtual void \hyperlink{classLinkedList_a50c26292740c964ac7bef0e072868be1}{clear} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clear the entire array. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{structListNode}{List\-Node}$<$ T $>$ $\ast$ \hyperlink{classLinkedList_a8ac5df15e0aba36cb279bf2ce0d6b72e}{get\-Node} (int index)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Actualy \char`\"{}logic\char`\"{} coding. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,7 +67,11 @@ bool \hyperlink{classLinkedList_a9fe65998403cf0c3e48cfce9636e7594}{is\-Cached}
 \subsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$class Linked\-List$<$ T $>$}
 
+\hyperlink{LinkedList_8h}{Linked\-List.\-h} -\/ V1.\-1 -\/ Generic \hyperlink{classLinkedList}{Linked\-List} implementation Works better with F\-I\-F\-O, because L\-I\-F\-O will need to search the entire List to find the last one;. 
 
+For instructions, go to \href{https://github.com/ivanseidel/LinkedList}{\tt https\-://github.\-com/ivanseidel/\-Linked\-List}
+
+Created by Ivan Seidel Gomes, March, 2013. Released into the public domain. 
 
 Definition at line 23 of file Linked\-List.\-h.
 
@@ -101,6 +113,10 @@ Definition at line 114 of file Linked\-List.\-h.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_a3307f9b9ecf90a18c270b3b6bc7a7e04}
 
 
+Adds a T object in the specified index; Unlink and link the \hyperlink{classLinkedList}{Linked\-List} correcly; Increment \-\_\-size. 
+
+
+
 Definition at line 169 of file Linked\-List.\-h.
 
 \hypertarget{classLinkedList_a9c3c4f3f527bde2e1572a43f3fb26ea3}{\index{Linked\-List@{Linked\-List}!add@{add}}
@@ -110,6 +126,10 @@ Definition at line 169 of file Linked\-List.\-h.
 \item[{T}]{\-\_\-t}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_a9c3c4f3f527bde2e1572a43f3fb26ea3}
+
+
+Adds a T object in the end of the \hyperlink{classLinkedList}{Linked\-List}; Increment \-\_\-size;. 
+
 
 
 Definition at line 190 of file Linked\-List.\-h.
@@ -123,6 +143,10 @@ Definition at line 190 of file Linked\-List.\-h.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_a50c26292740c964ac7bef0e072868be1}
 
 
+Clear the entire array. 
+
+
+
 Definition at line 333 of file Linked\-List.\-h.
 
 \hypertarget{classLinkedList_af1de9b03ff401cae0a842680b77d32c2}{\index{Linked\-List@{Linked\-List}!contains@{contains}}
@@ -134,6 +158,13 @@ Definition at line 333 of file Linked\-List.\-h.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_af1de9b03ff401cae0a842680b77d32c2}
 
 
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+iterate over list and check if element exists 
+
 Definition at line 320 of file Linked\-List.\-h.
 
 \hypertarget{classLinkedList_a25079ed9b408efad63a1522c818d8705}{\index{Linked\-List@{Linked\-List}!get@{get}}
@@ -143,6 +174,10 @@ Definition at line 320 of file Linked\-List.\-h.
 \item[{int}]{index}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_a25079ed9b408efad63a1522c818d8705}
+
+
+Get the index'th element on the list; Return Element if accessible, else, return false;. 
+
 
 
 Definition at line 313 of file Linked\-List.\-h.
@@ -156,6 +191,10 @@ Definition at line 313 of file Linked\-List.\-h.
 )\hspace{0.3cm}{\ttfamily [protected]}}}\label{classLinkedList_a8ac5df15e0aba36cb279bf2ce0d6b72e}
 
 
+Actualy \char`\"{}logic\char`\"{} coding. 
+
+
+
 Definition at line 133 of file Linked\-List.\-h.
 
 \hypertarget{classLinkedList_a00a70f924d76dcbfa3b05503caad40e6}{\index{Linked\-List@{Linked\-List}!pop@{pop}}
@@ -167,6 +206,10 @@ Definition at line 133 of file Linked\-List.\-h.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_a00a70f924d76dcbfa3b05503caad40e6}
 
 
+Remove last object;. 
+
+
+
 Definition at line 240 of file Linked\-List.\-h.
 
 \hypertarget{classLinkedList_af331637727b3ada2f806c29b9f4cc6fe}{\index{Linked\-List@{Linked\-List}!remove@{remove}}
@@ -176,6 +219,10 @@ Definition at line 240 of file Linked\-List.\-h.
 \item[{int}]{index}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_af331637727b3ada2f806c29b9f4cc6fe}
+
+
+Remove object at index; If index is not reachable, returns false; else, decrement \-\_\-size. 
+
 
 
 Definition at line 287 of file Linked\-List.\-h.
@@ -190,6 +237,10 @@ Definition at line 287 of file Linked\-List.\-h.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_a08ce5b6527cefbd221324569fdb10969}
 
 
+Set the object at index, with T; Increment \-\_\-size;. 
+
+
+
 Definition at line 230 of file Linked\-List.\-h.
 
 \hypertarget{classLinkedList_aaf7239844a9d745b6dd11249ff4990c8}{\index{Linked\-List@{Linked\-List}!shift@{shift}}
@@ -199,6 +250,10 @@ Definition at line 230 of file Linked\-List.\-h.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_aaf7239844a9d745b6dd11249ff4990c8}
+
+
+Remove first object;. 
+
 
 
 Definition at line 266 of file Linked\-List.\-h.
@@ -212,6 +267,10 @@ Definition at line 266 of file Linked\-List.\-h.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_ab8388ea027c2de8125f5d1e5901c2b2e}
 
 
+Returns current size of \hyperlink{classLinkedList}{Linked\-List}. 
+
+
+
 Definition at line 164 of file Linked\-List.\-h.
 
 \hypertarget{classLinkedList_a55ba7f61737011f2b684d59154543e6e}{\index{Linked\-List@{Linked\-List}!unshift@{unshift}}
@@ -221,6 +280,10 @@ Definition at line 164 of file Linked\-List.\-h.
 \item[{T}]{\-\_\-t}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLinkedList_a55ba7f61737011f2b684d59154543e6e}
+
+
+Adds a T object in the start of the \hyperlink{classLinkedList}{Linked\-List}; Increment \-\_\-size;. 
+
 
 
 Definition at line 213 of file Linked\-List.\-h.

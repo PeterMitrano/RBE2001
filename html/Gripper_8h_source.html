@@ -21,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="headshot_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RBE 2001 Group #1
    &#160;<span id="projectnumber">0.1.0</span>
@@ -90,33 +91,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="Gripper_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="comment">/* gripper class</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * functions of gripper go here</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classGripper.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGripper.html">Gripper</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#a7eff7781d1109b4e988fa66c8141a6d7">setup</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#ada511826dbf5abcdd12532ae725efeaf">cls</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5">opn</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classGripper.html#ad72d0ae4ccd2be00ec3f303e7a0c1cc9">   18</a></span>&#160;    Servo <a class="code" href="classGripper.html#ad72d0ae4ccd2be00ec3f303e7a0c1cc9">motor</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classGripper.html#ae12467d04d155401f1c6ba694b295f40">   19</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classGripper.html#ae12467d04d155401f1c6ba694b295f40">motorPin</a> = 6;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="ttc" id="classGripper_html_a7eff7781d1109b4e988fa66c8141a6d7"><div class="ttname"><a href="classGripper.html#a7eff7781d1109b4e988fa66c8141a6d7">Gripper::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8cpp_source.html#l00006">Gripper.cpp:6</a></div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#a7eff7781d1109b4e988fa66c8141a6d7">setup</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#ada511826dbf5abcdd12532ae725efeaf">cls</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5">opn</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classGripper.html#ad72d0ae4ccd2be00ec3f303e7a0c1cc9">   22</a></span>&#160;    Servo <a class="code" href="classGripper.html#ad72d0ae4ccd2be00ec3f303e7a0c1cc9">motor</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classGripper.html#ae12467d04d155401f1c6ba694b295f40">   25</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classGripper.html#ae12467d04d155401f1c6ba694b295f40">motorPin</a> = 6;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="ttc" id="classGripper_html_a7eff7781d1109b4e988fa66c8141a6d7"><div class="ttname"><a href="classGripper.html#a7eff7781d1109b4e988fa66c8141a6d7">Gripper::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">setup servo </div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8cpp_source.html#l00006">Gripper.cpp:6</a></div></div>
 <div class="ttc" id="classGripper_html_ada511826dbf5abcdd12532ae725efeaf"><div class="ttname"><a href="classGripper.html#ada511826dbf5abcdd12532ae725efeaf">Gripper::cls</a></div><div class="ttdeci">void cls()</div><div class="ttdoc">close the gripper </div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8cpp_source.html#l00010">Gripper.cpp:10</a></div></div>
-<div class="ttc" id="classGripper_html"><div class="ttname"><a href="classGripper.html">Gripper</a></div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8h_source.html#l00007">Gripper.h:7</a></div></div>
-<div class="ttc" id="classGripper_html_ae12467d04d155401f1c6ba694b295f40"><div class="ttname"><a href="classGripper.html#ae12467d04d155401f1c6ba694b295f40">Gripper::motorPin</a></div><div class="ttdeci">static const int motorPin</div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8h_source.html#l00019">Gripper.h:19</a></div></div>
+<div class="ttc" id="classGripper_html"><div class="ttname"><a href="classGripper.html">Gripper</a></div><div class="ttdoc">literally just opens and closes the gripper </div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8h_source.html#l00007">Gripper.h:7</a></div></div>
+<div class="ttc" id="classGripper_html_ae12467d04d155401f1c6ba694b295f40"><div class="ttname"><a href="classGripper.html#ae12467d04d155401f1c6ba694b295f40">Gripper::motorPin</a></div><div class="ttdeci">static const int motorPin</div><div class="ttdoc">motor digital pin number </div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8h_source.html#l00025">Gripper.h:25</a></div></div>
 <div class="ttc" id="classGripper_html_ab4fa689ad3f08e97c7fcd10247965ff5"><div class="ttname"><a href="classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5">Gripper::opn</a></div><div class="ttdeci">void opn()</div><div class="ttdoc">open the gripper </div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8cpp_source.html#l00015">Gripper.cpp:15</a></div></div>
-<div class="ttc" id="classGripper_html_ad72d0ae4ccd2be00ec3f303e7a0c1cc9"><div class="ttname"><a href="classGripper.html#ad72d0ae4ccd2be00ec3f303e7a0c1cc9">Gripper::motor</a></div><div class="ttdeci">Servo motor</div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8h_source.html#l00018">Gripper.h:18</a></div></div>
+<div class="ttc" id="classGripper_html_ad72d0ae4ccd2be00ec3f303e7a0c1cc9"><div class="ttname"><a href="classGripper.html#ad72d0ae4ccd2be00ec3f303e7a0c1cc9">Gripper::motor</a></div><div class="ttdeci">Servo motor</div><div class="ttdoc">servo object for gripper </div><div class="ttdef"><b>Definition:</b> <a href="Gripper_8h_source.html#l00022">Gripper.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

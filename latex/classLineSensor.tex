@@ -3,6 +3,11 @@
 }
 
 
+functions for reading the position with respect to the line  
+
+
+
+
 {\ttfamily \#include $<$Line\-Sensor.\-h$>$}
 
 \subsection*{Public Member Functions}
@@ -39,7 +44,7 @@ int \hyperlink{classLineSensor_af574319adc88f5949f03239b2bcbc222}{sum}
 \begin{DoxyCompactItemize}
 \item 
 static const int \hyperlink{classLineSensor_a873c5b45cdfa14ff468db018e1e0055a}{P\-I\-N\-\_\-0} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em this assumes line sensor pins are in order. This is the first (leftmost pin) \end{DoxyCompactList}\item 
 static const int \hyperlink{classLineSensor_a09da44442cb9e026af2053b5d0b4f2ce}{L\-E\-D\-P\-I\-N} = 29
 \begin{DoxyCompactList}\small\item\em the board contains I\-R L\-E\-Ds, this pin controls those L\-E\-Ds \end{DoxyCompactList}\item 
 static const float \hyperlink{classLineSensor_a8db50f7d2c026003180d0c5c7e184d9f}{O\-F\-F\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = 1.\-3
@@ -57,7 +62,7 @@ static const int \hyperlink{classLineSensor_a3e7f65abc054f54cb74f8aa3eb552e89}{H
 
 
 \subsection{Detailed Description}
-line sensor class functions for reading the line sensor go here 
+functions for reading the position with respect to the line 
 
 Definition at line 6 of file Line\-Sensor.\-h.
 
@@ -264,7 +269,11 @@ Definition at line 44 of file Line\-Sensor.\-h.
 \hypertarget{classLineSensor_a873c5b45cdfa14ff468db018e1e0055a}{\index{Line\-Sensor@{Line\-Sensor}!P\-I\-N\-\_\-0@{P\-I\-N\-\_\-0}}
 \index{P\-I\-N\-\_\-0@{P\-I\-N\-\_\-0}!LineSensor@{Line\-Sensor}}
 \subsubsection[{P\-I\-N\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-P\-I\-N\-\_\-0 = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a873c5b45cdfa14ff468db018e1e0055a}
+
+
 this assumes line sensor pins are in order. This is the first (leftmost pin) 
+
+
 
 Definition at line 35 of file Line\-Sensor.\-h.
 

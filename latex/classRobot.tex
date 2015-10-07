@@ -3,6 +3,11 @@
 }
 
 
+functions here control the robot as a whole. leds, bluetooth, arm, and line sensor, and music are immediate components.  
+
+
+
+
 {\ttfamily \#include $<$Robot.\-h$>$}
 
 \subsection*{Public Member Functions}
@@ -116,9 +121,9 @@ static const int \hyperlink{classRobot_a572525b971da4e0f272f5f1259f6c84f}{right\
 
 
 \subsection{Detailed Description}
-robot class functions here control the robot as a whole, and should be called from main.\-ino 
+functions here control the robot as a whole. leds, bluetooth, arm, and line sensor, and music are immediate components. 
 
-Definition at line 14 of file Robot.\-h.
+Definition at line 15 of file Robot.\-h.
 
 
 
@@ -425,14 +430,14 @@ the object for controling the arm
 
 
 
-Definition at line 82 of file Robot.\-h.
+Definition at line 83 of file Robot.\-h.
 
 \hypertarget{classRobot_ad0f5c1ce14363f3c05232eceab37ceff}{\index{Robot@{Robot}!B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D@{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D}}
 \index{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D@{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D}!Robot@{Robot}}
 \subsubsection[{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D = 100\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_ad0f5c1ce14363f3c05232eceab37ceff}
 
 
-Definition at line 133 of file Robot.\-h.
+Definition at line 134 of file Robot.\-h.
 
 \hypertarget{classRobot_a9da91e6d551ed02038e935b3c755cc75}{\index{Robot@{Robot}!bt\-Client@{bt\-Client}}
 \index{bt\-Client@{bt\-Client}!Robot@{Robot}}
@@ -443,49 +448,49 @@ the object for reading and sending bluetooth message
 
 
 
-Definition at line 79 of file Robot.\-h.
+Definition at line 80 of file Robot.\-h.
 
 \hypertarget{classRobot_ac40abfa06749a68604af90c00e2a3fee}{\index{Robot@{Robot}!C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E@{C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E}}
 \index{C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E@{C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E}!Robot@{Robot}}
 \subsubsection[{C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E = 3000\hspace{0.3cm}{\ttfamily [static]}}}\label{classRobot_ac40abfa06749a68604af90c00e2a3fee}
 
 
-Definition at line 98 of file Robot.\-h.
+Definition at line 99 of file Robot.\-h.
 
 \hypertarget{classRobot_a2e08d53491bb82defe2e28ee9ce1d096}{\index{Robot@{Robot}!col@{col}}
 \index{col@{col}!Robot@{Robot}}
 \subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}int Robot\-::col}}\label{classRobot_a2e08d53491bb82defe2e28ee9ce1d096}
 
 
-Definition at line 76 of file Robot.\-h.
+Definition at line 77 of file Robot.\-h.
 
 \hypertarget{classRobot_ac25b4dfc2e9e5aa86ec5684d075d32b8}{\index{Robot@{Robot}!direction@{direction}}
 \index{direction@{direction}!Robot@{Robot}}
 \subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}int Robot\-::direction}}\label{classRobot_ac25b4dfc2e9e5aa86ec5684d075d32b8}
 
 
-Definition at line 76 of file Robot.\-h.
+Definition at line 77 of file Robot.\-h.
 
 \hypertarget{classRobot_aad5c5d6db601aac62393d47ec9385fa3}{\index{Robot@{Robot}!instance@{instance}}
 \index{instance@{instance}!Robot@{Robot}}
 \subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robot} $\ast$ Robot\-::instance = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_aad5c5d6db601aac62393d47ec9385fa3}
 
 
-Definition at line 104 of file Robot.\-h.
+Definition at line 105 of file Robot.\-h.
 
 \hypertarget{classRobot_a431ea8916b52ddfddbe6d80a09fe71e0}{\index{Robot@{Robot}!L\-E\-D\-\_\-\-P\-I\-N0@{L\-E\-D\-\_\-\-P\-I\-N0}}
 \index{L\-E\-D\-\_\-\-P\-I\-N0@{L\-E\-D\-\_\-\-P\-I\-N0}!Robot@{Robot}}
 \subsubsection[{L\-E\-D\-\_\-\-P\-I\-N0}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-L\-E\-D\-\_\-\-P\-I\-N0 = 22\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a431ea8916b52ddfddbe6d80a09fe71e0}
 led pins and stuff 
 
-Definition at line 131 of file Robot.\-h.
+Definition at line 132 of file Robot.\-h.
 
 \hypertarget{classRobot_a4c6f4e38b77bf470d757ebea1b8c3cf0}{\index{Robot@{Robot}!L\-E\-D\-\_\-\-P\-I\-N1@{L\-E\-D\-\_\-\-P\-I\-N1}}
 \index{L\-E\-D\-\_\-\-P\-I\-N1@{L\-E\-D\-\_\-\-P\-I\-N1}!Robot@{Robot}}
 \subsubsection[{L\-E\-D\-\_\-\-P\-I\-N1}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-L\-E\-D\-\_\-\-P\-I\-N1 = 23\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a4c6f4e38b77bf470d757ebea1b8c3cf0}
 
 
-Definition at line 132 of file Robot.\-h.
+Definition at line 133 of file Robot.\-h.
 
 \hypertarget{classRobot_a3c7308c71db125a8840f9c82b5fec9ca}{\index{Robot@{Robot}!led\-State@{led\-State}}
 \index{led\-State@{led\-State}!Robot@{Robot}}
@@ -496,7 +501,7 @@ controls state of led when radiating
 
 
 
-Definition at line 122 of file Robot.\-h.
+Definition at line 123 of file Robot.\-h.
 
 \hypertarget{classRobot_af357e059c6c07190c92c6c9a00e2b8af}{\index{Robot@{Robot}!left\-Wheel@{left\-Wheel}}
 \index{left\-Wheel@{left\-Wheel}!Robot@{Robot}}
@@ -507,14 +512,14 @@ drive wheels
 
 
 
-Definition at line 116 of file Robot.\-h.
+Definition at line 117 of file Robot.\-h.
 
 \hypertarget{classRobot_a46298d7fb4c8c3932221c6a5ac14af9d}{\index{Robot@{Robot}!left\-Wheel\-Pin@{left\-Wheel\-Pin}}
 \index{left\-Wheel\-Pin@{left\-Wheel\-Pin}!Robot@{Robot}}
 \subsubsection[{left\-Wheel\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::left\-Wheel\-Pin = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a46298d7fb4c8c3932221c6a5ac14af9d}
 
 
-Definition at line 136 of file Robot.\-h.
+Definition at line 137 of file Robot.\-h.
 
 \hypertarget{classRobot_abdc300045bea9a31013b25682629752d}{\index{Robot@{Robot}!line\-Sensor@{line\-Sensor}}
 \index{line\-Sensor@{line\-Sensor}!Robot@{Robot}}
@@ -525,7 +530,7 @@ the object for tracking position over the lines
 
 
 
-Definition at line 85 of file Robot.\-h.
+Definition at line 86 of file Robot.\-h.
 
 \hypertarget{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}{\index{Robot@{Robot}!paused@{paused}}
 \index{paused@{paused}!Robot@{Robot}}
@@ -536,7 +541,7 @@ set by bluetooth if resume/stop message is recieve all drive motor commands depe
 
 
 
-Definition at line 90 of file Robot.\-h.
+Definition at line 91 of file Robot.\-h.
 
 \hypertarget{classRobot_a77f62d85ab1cf34e79c2a3acd470a4ce}{\index{Robot@{Robot}!radiating@{radiating}}
 \index{radiating@{radiating}!Robot@{Robot}}
@@ -547,35 +552,35 @@ flag for blinking L\-E\-Ds based on radiaiton to turn off L\-E\-Ds, set this to 
 
 
 
-Definition at line 95 of file Robot.\-h.
+Definition at line 96 of file Robot.\-h.
 
 \hypertarget{classRobot_a351d754436c8f569432ef7a06641f98a}{\index{Robot@{Robot}!reactor\-Tube\-Limit\-Pin@{reactor\-Tube\-Limit\-Pin}}
 \index{reactor\-Tube\-Limit\-Pin@{reactor\-Tube\-Limit\-Pin}!Robot@{Robot}}
 \subsubsection[{reactor\-Tube\-Limit\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::reactor\-Tube\-Limit\-Pin = 28\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a351d754436c8f569432ef7a06641f98a}
 
 
-Definition at line 139 of file Robot.\-h.
+Definition at line 140 of file Robot.\-h.
 
 \hypertarget{classRobot_a3b2dd5b89e44fd3a7ba239554fb5b8a7}{\index{Robot@{Robot}!right\-Wheel@{right\-Wheel}}
 \index{right\-Wheel@{right\-Wheel}!Robot@{Robot}}
 \subsubsection[{right\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}Servo Robot\-::right\-Wheel\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a3b2dd5b89e44fd3a7ba239554fb5b8a7}
 
 
-Definition at line 116 of file Robot.\-h.
+Definition at line 117 of file Robot.\-h.
 
 \hypertarget{classRobot_a572525b971da4e0f272f5f1259f6c84f}{\index{Robot@{Robot}!right\-Wheel\-Pin@{right\-Wheel\-Pin}}
 \index{right\-Wheel\-Pin@{right\-Wheel\-Pin}!Robot@{Robot}}
 \subsubsection[{right\-Wheel\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::right\-Wheel\-Pin = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a572525b971da4e0f272f5f1259f6c84f}
 
 
-Definition at line 137 of file Robot.\-h.
+Definition at line 138 of file Robot.\-h.
 
 \hypertarget{classRobot_a4063d601b5b4d5aad332f617abb36c7b}{\index{Robot@{Robot}!rotate\-Speed@{rotate\-Speed}}
 \index{rotate\-Speed@{rotate\-Speed}!Robot@{Robot}}
 \subsubsection[{rotate\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::rotate\-Speed = 28\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a4063d601b5b4d5aad332f617abb36c7b}
 
 
-Definition at line 140 of file Robot.\-h.
+Definition at line 141 of file Robot.\-h.
 
 \hypertarget{classRobot_a35ce5c416a079fcf6b943843ec151d63}{\index{Robot@{Robot}!row@{row}}
 \index{row@{row}!Robot@{Robot}}
@@ -586,7 +591,7 @@ used to store position updated by navigate commands should only be checked when 
 
 
 
-Definition at line 76 of file Robot.\-h.
+Definition at line 77 of file Robot.\-h.
 
 \hypertarget{classRobot_a7818916adfa736ab4cb21011fe302cdb}{\index{Robot@{Robot}!song\-Data@{song\-Data}}
 \index{song\-Data@{song\-Data}!Robot@{Robot}}
@@ -597,7 +602,7 @@ the encoded data to send over i2\-C
 
 
 
-Definition at line 128 of file Robot.\-h.
+Definition at line 129 of file Robot.\-h.
 
 \hypertarget{classRobot_aa074884ad594acf20282805c811adaff}{\index{Robot@{Robot}!time\-To\-Blink\-And\-Send@{time\-To\-Blink\-And\-Send}}
 \index{time\-To\-Blink\-And\-Send@{time\-To\-Blink\-And\-Send}!Robot@{Robot}}
@@ -608,14 +613,14 @@ set by led timer interrupt
 
 
 
-Definition at line 125 of file Robot.\-h.
+Definition at line 126 of file Robot.\-h.
 
 \hypertarget{classRobot_a87ec942d7d53b1a4b1c46422f6a134eb}{\index{Robot@{Robot}!travel\-Speed@{travel\-Speed}}
 \index{travel\-Speed@{travel\-Speed}!Robot@{Robot}}
 \subsubsection[{travel\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::travel\-Speed = 26\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a87ec942d7d53b1a4b1c46422f6a134eb}
 
 
-Definition at line 141 of file Robot.\-h.
+Definition at line 142 of file Robot.\-h.
 
 
 

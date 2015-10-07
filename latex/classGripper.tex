@@ -3,31 +3,36 @@
 }
 
 
+literally just opens and closes the gripper  
+
+
+
+
 {\ttfamily \#include $<$Gripper.\-h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classGripper_a7eff7781d1109b4e988fa66c8141a6d7}{setup} ()
-\item 
+\begin{DoxyCompactList}\small\item\em setup servo \end{DoxyCompactList}\item 
 void \hyperlink{classGripper_ada511826dbf5abcdd12532ae725efeaf}{cls} ()
 \begin{DoxyCompactList}\small\item\em close the gripper \end{DoxyCompactList}\item 
 void \hyperlink{classGripper_ab4fa689ad3f08e97c7fcd10247965ff5}{opn} ()
 \begin{DoxyCompactList}\small\item\em open the gripper \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
+\subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Servo \hyperlink{classGripper_ad72d0ae4ccd2be00ec3f303e7a0c1cc9}{motor}
-\end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
+\begin{DoxyCompactList}\small\item\em servo object for gripper \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static const int \hyperlink{classGripper_ae12467d04d155401f1c6ba694b295f40}{motor\-Pin} = 6
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em motor digital pin number \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-
+literally just opens and closes the gripper 
 
 Definition at line 7 of file Gripper.\-h.
 
@@ -73,6 +78,10 @@ Definition at line 15 of file Gripper.\-cpp.
 )}}\label{classGripper_a7eff7781d1109b4e988fa66c8141a6d7}
 
 
+setup servo 
+
+
+
 Definition at line 6 of file Gripper.\-cpp.
 
 
@@ -80,17 +89,25 @@ Definition at line 6 of file Gripper.\-cpp.
 \subsection{Member Data Documentation}
 \hypertarget{classGripper_ad72d0ae4ccd2be00ec3f303e7a0c1cc9}{\index{Gripper@{Gripper}!motor@{motor}}
 \index{motor@{motor}!Gripper@{Gripper}}
-\subsubsection[{motor}]{\setlength{\rightskip}{0pt plus 5cm}Servo Gripper\-::motor}}\label{classGripper_ad72d0ae4ccd2be00ec3f303e7a0c1cc9}
+\subsubsection[{motor}]{\setlength{\rightskip}{0pt plus 5cm}Servo Gripper\-::motor\hspace{0.3cm}{\ttfamily [private]}}}\label{classGripper_ad72d0ae4ccd2be00ec3f303e7a0c1cc9}
 
 
-Definition at line 18 of file Gripper.\-h.
+servo object for gripper 
+
+
+
+Definition at line 22 of file Gripper.\-h.
 
 \hypertarget{classGripper_ae12467d04d155401f1c6ba694b295f40}{\index{Gripper@{Gripper}!motor\-Pin@{motor\-Pin}}
 \index{motor\-Pin@{motor\-Pin}!Gripper@{Gripper}}
-\subsubsection[{motor\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Gripper\-::motor\-Pin = 6\hspace{0.3cm}{\ttfamily [static]}}}\label{classGripper_ae12467d04d155401f1c6ba694b295f40}
+\subsubsection[{motor\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Gripper\-::motor\-Pin = 6\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classGripper_ae12467d04d155401f1c6ba694b295f40}
 
 
-Definition at line 19 of file Gripper.\-h.
+motor digital pin number 
+
+
+
+Definition at line 25 of file Gripper.\-h.
 
 
 

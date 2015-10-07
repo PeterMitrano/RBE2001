@@ -21,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="headshot_logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RBE 2001 Group #1
    &#160;<span id="projectnumber">0.1.0</span>
@@ -139,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classLineSensor_html_a0dea8f6d7e7e27d050feecb3e549a149"><div class="ttname"><a href="classLineSensor.html#a0dea8f6d7e7e27d050feecb3e549a149">LineSensor::offLine</a></div><div class="ttdeci">bool offLine()</div><div class="ttdoc">returns if line sensor is off the line </div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8cpp_source.html#l00037">LineSensor.cpp:37</a></div></div>
 <div class="ttc" id="classLineSensor_html_affb177c49a3381f380b6ff7dd298297f"><div class="ttname"><a href="classLineSensor.html#affb177c49a3381f380b6ff7dd298297f">LineSensor::COMPENSATION</a></div><div class="ttdeci">static const float COMPENSATION</div><div class="ttdoc">account for broken line sensors </div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00052">LineSensor.h:52</a></div></div>
 <div class="ttc" id="classLineSensor_html_a74c3c2d7a454aeacae90501670d01bdc"><div class="ttname"><a href="classLineSensor.html#a74c3c2d7a454aeacae90501670d01bdc">LineSensor::adjustmentPower</a></div><div class="ttdeci">int adjustmentPower()</div><div class="ttdoc">get how much motor power you should adjust by. from -100 to 100 </div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8cpp_source.html#l00025">LineSensor.cpp:25</a></div></div>
-<div class="ttc" id="classLineSensor_html"><div class="ttname"><a href="classLineSensor.html">LineSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00006">LineSensor.h:6</a></div></div>
+<div class="ttc" id="classLineSensor_html"><div class="ttname"><a href="classLineSensor.html">LineSensor</a></div><div class="ttdoc">functions for reading the position with respect to the line </div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00006">LineSensor.h:6</a></div></div>
 <div class="ttc" id="classLineSensor_html_a929091ad1746a0a337c2259ba79c959a"><div class="ttname"><a href="classLineSensor.html#a929091ad1746a0a337c2259ba79c959a">LineSensor::LOW_SUM_THRESHOLD</a></div><div class="ttdeci">static const int LOW_SUM_THRESHOLD</div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00056">LineSensor.h:56</a></div></div>
 <div class="ttc" id="classLineSensor_html_aa5bd7119b2332eab8b6c850f8fa3d558"><div class="ttname"><a href="classLineSensor.html#aa5bd7119b2332eab8b6c850f8fa3d558">LineSensor::derivative</a></div><div class="ttdeci">int derivative</div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00049">LineSensor.h:49</a></div></div>
 <div class="ttc" id="classLineSensor_html_a347e843234a242ded12e83badf4718ed"><div class="ttname"><a href="classLineSensor.html#a347e843234a242ded12e83badf4718ed">LineSensor::lastLinePosition</a></div><div class="ttdeci">float lastLinePosition</div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00032">LineSensor.h:32</a></div></div>
@@ -149,12 +150,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classLineSensor_html_a3e3c5f134159562e56fcd06e55cc7024"><div class="ttname"><a href="classLineSensor.html#a3e3c5f134159562e56fcd06e55cc7024">LineSensor::ON_POS_THRESHOLD</a></div><div class="ttdeci">static const float ON_POS_THRESHOLD</div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00044">LineSensor.h:44</a></div></div>
 <div class="ttc" id="classLineSensor_html_a3e7f65abc054f54cb74f8aa3eb552e89"><div class="ttname"><a href="classLineSensor.html#a3e7f65abc054f54cb74f8aa3eb552e89">LineSensor::HIGH_SUM_THRESHOLD</a></div><div class="ttdeci">static const int HIGH_SUM_THRESHOLD</div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00057">LineSensor.h:57</a></div></div>
 <div class="ttc" id="classLineSensor_html_a09da44442cb9e026af2053b5d0b4f2ce"><div class="ttname"><a href="classLineSensor.html#a09da44442cb9e026af2053b5d0b4f2ce">LineSensor::LEDPIN</a></div><div class="ttdeci">static const int LEDPIN</div><div class="ttdoc">the board contains IR LEDs, this pin controls those LEDs </div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00038">LineSensor.h:38</a></div></div>
-<div class="ttc" id="classLineSensor_html_a873c5b45cdfa14ff468db018e1e0055a"><div class="ttname"><a href="classLineSensor.html#a873c5b45cdfa14ff468db018e1e0055a">LineSensor::PIN_0</a></div><div class="ttdeci">static const int PIN_0</div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00035">LineSensor.h:35</a></div></div>
+<div class="ttc" id="classLineSensor_html_a873c5b45cdfa14ff468db018e1e0055a"><div class="ttname"><a href="classLineSensor.html#a873c5b45cdfa14ff468db018e1e0055a">LineSensor::PIN_0</a></div><div class="ttdeci">static const int PIN_0</div><div class="ttdoc">this assumes line sensor pins are in order. This is the first (leftmost pin) </div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00035">LineSensor.h:35</a></div></div>
 <div class="ttc" id="classLineSensor_html_af574319adc88f5949f03239b2bcbc222"><div class="ttname"><a href="classLineSensor.html#af574319adc88f5949f03239b2bcbc222">LineSensor::sum</a></div><div class="ttdeci">int sum</div><div class="ttdoc">sum of raw line sensor values. used to detect intersections </div><div class="ttdef"><b>Definition:</b> <a href="LineSensor_8h_source.html#l00060">LineSensor.h:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:26:26 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
