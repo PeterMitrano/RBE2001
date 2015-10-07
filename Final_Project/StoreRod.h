@@ -6,4 +6,5 @@
 class StoreRod: public CommandGroup {
   public:
     StoreRod();
+    void end();
 };

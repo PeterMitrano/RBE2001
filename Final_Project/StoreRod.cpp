@@ -13,12 +13,8 @@
 StoreRod::StoreRod() : CommandGroup("store rod") {
   addSequential(new BackOffTube());
   addSequential(new NavigateToOpenStorage());
-//  addSequential(new TurnToNextLine());
-//  addSequential(new TurnToNextLine());
-//  addSequential(new DriveThroughIntersection());
-//  addSequential(new DriveThroughIntersection());
-//  addSequential(new TurnToNextLine());
-//  addSequential(new DriveUntilReactorTube());
-//  addSequential(new OpenGripper());
-//  addSequential(new BackOffTube());
+}
+
+void StoreRod::end(){
+  Robot::getInstance()->radiating = false;
 }

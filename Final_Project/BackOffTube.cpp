@@ -1,6 +1,6 @@
 #include "BackOffTube.h"
 
-BackOffTube::BackOffTube() : BackOffTube(-38,-30) {}
+BackOffTube::BackOffTube() : BackOffTube(-30,-50) {}
 
 BackOffTube::BackOffTube(int lPower, int rPower) : Command("back off tube") {
   this->rPower = rPower;

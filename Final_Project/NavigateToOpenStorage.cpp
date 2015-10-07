@@ -1,13 +1,14 @@
 #include "NavigateToOpenStorage.h"
 #include "PathPlanner.h"
+#include "OpenGripper.h"
+#include "BackOffTube.h"
 
 NavigateToOpenStorage::NavigateToOpenStorage() : Command("nav to storage"){}
 
 void NavigateToOpenStorage::initialize(){
   //figure out which one we want to navigate to
   tubeNumber = Robot::getInstance()->btClient.openStorageTube();
-  Serial.print("tube number =				 ");
-  Serial.println(tubeNumber);
+  plannedSuccessfully = false;
 }
 
 void NavigateToOpenStorage::execute(){
@@ -23,6 +24,8 @@ void NavigateToOpenStorage::execute(){
       Serial.println(path->commands.get(i)._command->name);
     }
     Serial.println("...]");
+    path->addSequential(new OpenGripper());
+    path->addSequential(new BackOffTube());
     path->start();
   }
   else {
