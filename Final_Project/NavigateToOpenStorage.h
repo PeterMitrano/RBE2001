@@ -11,5 +11,6 @@ class NavigateToOpenStorage: public Command {
     bool isFinished();
     void end();
   private:
-    int reactorNumber, destDirection, destRow, destCol;
+    int tubeNumber;
+    bool plannedSuccessfully;
 };

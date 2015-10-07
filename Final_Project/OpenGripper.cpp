@@ -3,11 +3,12 @@
 OpenGripper::OpenGripper() : Command("open gripper") {}
 
 void OpenGripper::initialize(){
-  setTimeout(1000);
+  Robot::getInstance()->setSong(8, false);
+  setTimeout(400);
+  Robot::getInstance()->arm.gripper.opn();
 }
 
 void OpenGripper::execute(){
-  Robot::getInstance()->arm.gripper.opn();
 }
 
 bool OpenGripper::isFinished(){
@@ -15,5 +16,4 @@ bool OpenGripper::isFinished(){
 }
 
 void OpenGripper::end(){
-  Robot::getInstance()->setSong(8, false);
 }

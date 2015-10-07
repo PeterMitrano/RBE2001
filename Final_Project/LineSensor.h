@@ -22,10 +22,14 @@ class LineSensor {
      */
     void cache();
 
-    /** \brief holds the line position as calculated by cache. On scale of tens */
-    float linePosition;
+    /** \brief get how much motor power you should adjust by. from -100 to 100 */
+    int adjustmentPower();
 
   private:
+
+    /** \brief holds the line position as calculated by cache. On scale of tens */
+    float linePosition;
+    float lastLinePosition;
 
     /** this assumes line sensor pins are in order. This is the first (leftmost pin) */
     const static int PIN_0 = 0;
@@ -36,11 +40,21 @@ class LineSensor {
     /** \brief determines what constitutes a black line (from -100 to 100)
      * these numbers may be the same, but don't have to be
      */
-    const static int ON_THRESHOLD = -0.5;
-    const static int OFF_THRESHOLD = -1.5;
+    const static float OFF_POS_THRESHOLD = 1.3;
+    const static float ON_POS_THRESHOLD = 0.6;
+
+    /** PID constants for line following */
+    const float kP = 8.0;
+    const float kD = 1.5;
+    int derivative;
 
     /** \brief account for broken line sensors */
-    const static float COMPENSATION = 1.0;
+    const static float COMPENSATION = 1;
+
+    /** \brief test if we're at a line */
+    const static int INTERSECTION_THRESHOLD = 2800;
+    const static int LOW_SUM_THRESHOLD = 1000;
+    const static int HIGH_SUM_THRESHOLD = 1600;
 
     /** \brief sum of raw line sensor values. used to detect intersections */
     int sum;

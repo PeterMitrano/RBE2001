@@ -5,12 +5,12 @@ CommandGroup::CommandGroup(const String name) : Command(name) {}
 
 void CommandGroup::addSequential(Command *command){
   commands.add(
-      CommandGroupEntry(command, CommandGroupEntry::kSequence_InSequence));
+     CommandGroupEntry(command, CommandGroupEntry::kSequence_InSequence));
 }
 
 void CommandGroup::addParallel(Command *command){
   commands.add(
-      CommandGroupEntry(command, CommandGroupEntry::kSequence_InParallel));
+     CommandGroupEntry(command, CommandGroupEntry::kSequence_InParallel));
 }
 
 void CommandGroup::initialize(){}
@@ -33,15 +33,15 @@ void CommandGroup::_execute(){
 
     bool isFinished = executingCommand->cycle();
     if (isFinished){
-      commands.remove(currentCommandIndex);
-      currentCommandIndex--;
+     commands.remove(currentCommandIndex);
+     currentCommandIndex--;
     }
 
     if (entry._state == CommandGroupEntry::kSequence_InSequence){
-      done = true;
+     done = true;
     }
     else {
-      currentCommandIndex++;
+     currentCommandIndex++;
     }
   }
 }

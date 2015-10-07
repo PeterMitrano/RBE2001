@@ -4,7 +4,10 @@ TurnOffLine::TurnOffLine(int direction) : Command("turn off line"){
   this->direction = direction;
 }
 
-void TurnOffLine::initialize(){}
+void TurnOffLine::initialize(){
+  Robot::getInstance()->setSong(1,false);
+  Serial.println("turn off line");
+}
 
 void TurnOffLine::execute(){
   if (direction == 1){

@@ -5,7 +5,7 @@
 #include "OpenGripper.h"
 
 CalibrateRoutine::CalibrateRoutine(): CommandGroup("calibrate routine"){
-//  addParallel(new CalibrateArm());
+  addParallel(new CalibrateArm());
   addParallel(new OpenGripper());
-//  addSequential(new RaiseArm());
+  addSequential(new RaiseArm());
 }

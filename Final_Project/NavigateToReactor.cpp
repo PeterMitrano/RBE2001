@@ -21,10 +21,7 @@ void NavigateToReactor::initialize(){
 
   CommandGroup *path = new CommandGroup();
   //this function will add things to path
-  int r = Robot::getInstance()->row;
-  int c = Robot::getInstance()->col;
-  int d = Robot::getInstance()->direction;
-  PathPlanner *planner = new PathPlanner(r, c, d, path);
+  PathPlanner *planner = new PathPlanner(path);
   planner->plan(destRow, destCol, destDirection);
 
   for (int i=0;i<path->commands.size();i++){

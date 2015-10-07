@@ -8,7 +8,7 @@ bool Robot::timeToBlinkAndSend = false;
 Robot::Robot(){
   direction = 3;
   row = 1;
-  col = 5;
+  col = 0;
 }
 
 Robot *Robot::getInstance(){
@@ -70,16 +70,13 @@ void Robot::driveBwd(){
   drive(-travelSpeed,-travelSpeed);
 
 void Robot::followLine() {
-  // linePosition is from about -2.5 to 2.5, with 0 being considered "on the line"
-  // when linePosition is 0, left Power and Right power should be half travel_speed
-  // when linePosition is -2.5, or far left, it should be full reverse travel_speed on right and full on left
-  // when the linePosition is 2.5 or far right, it should be full reverse travel_speed on the left and full on right
-  int leftPower = travelSpeed + lineSensor.linePosition * -adjustSpeed;
-  int rightPower = travelSpeed + lineSensor.linePosition * adjustSpeed;
-  Serial.print(leftPower);
-  Serial.print(" ");
-  Serial.println(rightPower);
+  int leftPower = travelSpeed - lineSensor.adjustmentPower();
+  int rightPower = travelSpeed + lineSensor.adjustmentPower();
   drive(leftPower, rightPower);
+}
+
+void Robot::backUp(int lPower, int rPower){
+  drive(lPower,rPower);
 }
 
 void Robot::rotateLeft() {
@@ -127,11 +124,7 @@ void Robot::playSong(){
 }
 
 void Robot::pauseSong(){
-  if (timeToBlinkAndSend) {
-    Wire.beginTransmission(::SLAVE_ID);
-    Wire.write(-1);
-    Wire.endTransmission();
-  }
+  songData = 0x00;
 }
 
 void Robot::resetTimerFlags(){

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Command.h"
+#include "Robot.h"
 
 class NavigateToAvailableSupply: public Command {
   public:
@@ -10,5 +11,6 @@ class NavigateToAvailableSupply: public Command {
     bool isFinished();
     void end();
   private:
-    int reactorNumber, destDirection, destRow, destCol;
+    int tubeNumber;
+    bool plannedSuccessfully;
 };

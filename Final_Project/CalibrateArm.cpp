@@ -3,6 +3,7 @@
 CalibrateArm::CalibrateArm() : Command("calibrate arm"){}
 
 void CalibrateArm::initialize(){
+  Robot::getInstance()->setSong(16,true);
 }
 
 void CalibrateArm::execute(){

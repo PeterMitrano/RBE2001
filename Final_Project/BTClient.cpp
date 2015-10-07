@@ -17,12 +17,23 @@ void BTClient::setup(){
 
 byte BTClient::availableSupplyTube(){
   // lookup the first 1 in this byte
-  return locationLookup[supply];
+  if ((supply & 0x1) == 0x1) {return 1;}
+  else if ((supply & 0x2) == 0x2) {return 2;}
+  else if ((supply & 0x4) == 0x4) {return 3;}
+  else if ((supply & 0x8) == 0x8) {return 4;}
+  else {
+    return 0;
+  }
 }
 
 byte BTClient::openStorageTube(){
-  // lookup the first 1 in this byte
-  return locationLookup[storage];
+  if ((storage & 0x1) == 0x1) {return 1;}
+  else if ((storage & 0x2) == 0x2) {return 2;}
+  else if ((storage & 0x4) == 0x4) {return 3;}
+  else if ((storage & 0x8) == 0x8) {return 4;}
+  else {
+    return 0;
+  }
 }
 
 void BTClient::sendRadiationAlert(){
@@ -39,10 +50,6 @@ void BTClient::sendStatus(){
 //    gripperStatus,
 //    operationStatus};
   sendData(STATUS_MSG, status);
-}
-
-void BTClient::sendDebugString(String message){
-
 }
 
 void BTClient::sendData(MSG_TYPE type, byte data[3]){
@@ -66,12 +73,14 @@ void BTClient::readMessage(){
     //don't care about ones not for us
     if (pkt[4] == TEAM_NUMBER || pkt[4] == 0){
       if (pcol.getData(pkt,rawData,messageType)){
-        switch(messageType){
+				switch(messageType){
           case STORAGE_MSG:
-             storage = rawData[0];
+            received_storage = true;
+            storage = rawData[0];
             break;
           case SUPPLY_MSG:
-             supply = rawData[0];
+            received_supply = true;
+            supply = rawData[0];
             break;
           case STOP_MSG:
             Robot::getInstance()->paused = true;
@@ -81,8 +90,8 @@ void BTClient::readMessage(){
           default:
             //only these 4 should be sent by field
             break;
-        }
-      }
+				}
+     }
     }
   }
 }

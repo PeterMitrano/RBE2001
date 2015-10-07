@@ -1,16 +1,17 @@
 #include "PathPlanner.h"
 
-#include "DriveUntilIntersection.h"
-#include "TurnAround.h"
+#include "DriveThroughIntersection.h"
+#include "DriveUntilReactorTube.h"
+#include "TurnToNextLine.h"
 #include "TurnUntilLine.h"
 #include "TurnOffLine.h"
 #include "Robot.h"
 
-PathPlanner::PathPlanner(int row, int col, int currentDirection, CommandGroup *path){
+PathPlanner::PathPlanner(CommandGroup *path){
   this->path = path;
-  this->row = row;
-  this->col = col;
-  this->direction = currentDirection;
+  this->row = Robot::getInstance()->row;
+  this->col = Robot::getInstance()->col;
+  this->direction = Robot::getInstance()->direction;
 }
 
 void PathPlanner::plan(int destRow, int destCol, int destDirection){
@@ -20,12 +21,13 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
     //first navigate to center line
     if (row != 1){
       //this must mean you're at the supply/storage tubes
-      path->addSequential(new TurnAround());
+      path->addSequential(new TurnToNextLine());
       path->addSequential(new DriveThroughIntersection());
     }
     else {
       //this must mean you're facing a reactor tube
-      path->addSequential(new TurnAround());
+      //or waiting in front of reactor tube
+      planToFace(destDirection);
     }
 
     //note that we're in row 1 on the line
@@ -43,7 +45,7 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
     //now drive through all the columns
     dist = abs(destCol - col);
     for (int i=0;i<dist;i++){
-      path->addSequential(new DriveUntilIntersection());
+      path->addSequential(new DriveThroughIntersection());
     }
 
     //turn to face right direction for rows
@@ -57,7 +59,7 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
     //now drive through all the rows
     dist = abs(destRow - row);
     for (int i=0;i<dist;i++){
-      path->addSequential(new DriveUntilIntersection());
+      path->addSequential(new DriveUntilReactorTube());
     }
   }
   else if (destDirection != direction){
@@ -86,5 +88,6 @@ void PathPlanner::planToFace(int destDirection){
       path->addSequential(new TurnOffLine(turnDirection));
       path->addSequential(new TurnUntilLine(turnDirection));
     }
+    direction = destDirection;
   }
 }

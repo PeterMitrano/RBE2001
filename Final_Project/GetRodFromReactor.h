@@ -6,4 +6,5 @@
 class GetRodFromReactor: public CommandGroup {
   public:
     GetRodFromReactor(const int reactorNumber);
+    void end();
 };

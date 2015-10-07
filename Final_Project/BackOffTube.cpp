@@ -1,24 +1,24 @@
 #include "BackOffTube.h"
-#include "Robot.h"
 
-BackOffTube::BackOffTube() : Command ("Back off tube"){
+BackOffTube::BackOffTube() : BackOffTube(-30,-50) {}
 
+BackOffTube::BackOffTube(int lPower, int rPower) : Command("back off tube") {
+  this->rPower = rPower;
+  this->lPower = lPower;
 }
 
 void BackOffTube::initialize(){
-	Robot.getInstance()->Robot.driveBwd();
-	startTime=millis();
+  setTimeout(backOffTime);
 }
 
 void BackOffTube::execute(){
-
+  Robot::getInstance()->backUp(rPower,lPower);
 }
 
 bool BackOffTube::isFinished(){
-	return (millis() > startTime + waitTime);
+  return isTimedOut();
 }
 
-void BackOffTube::end()
-{
-	Robot.getInstance()->Robot.stopDriving();
+void BackOffTube::end(){
+  Robot::getInstance()->stopDriving();
 }
