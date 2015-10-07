@@ -14,5 +14,4 @@ bool RaiseArm::isFinished(){
 }
 
 void RaiseArm::end(){
-  Robot::getInstance()->arm.stop();
 }

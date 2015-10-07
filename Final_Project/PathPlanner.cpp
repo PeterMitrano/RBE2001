@@ -73,7 +73,7 @@ void PathPlanner::planToFace(int destDirection){
   if (row != 1){
     //at storage/supply, you can only by facing 0 or 2
     if (direction != destDirection){
-      path->addSequential(new TurnAround());
+      path->addSequential(new TurnToNextLine());
     }
   }
   else {

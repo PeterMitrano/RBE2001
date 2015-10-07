@@ -1,10 +1,6 @@
 #include "BTClient.h"
 #include "Robot.h"
 
-const int BTClient::locationLookup[] = {
-    1,2,1,3,1,2,1,4,1,2,1,3,12,1
-  };
-
 BTClient::BTClient() :
   pcol(byte(::TEAM_NUMBER)) {
 }
@@ -15,7 +11,7 @@ void BTClient::setup(){
   Serial3.begin(115200);
 }
 
-byte BTClient::availableSupplyTube(){
+int BTClient::availableSupplyTube(){
   // lookup the first 1 in this byte
   if ((supply & 0x1) == 0x1) {return 1;}
   else if ((supply & 0x2) == 0x2) {return 2;}
@@ -26,7 +22,7 @@ byte BTClient::availableSupplyTube(){
   }
 }
 
-byte BTClient::openStorageTube(){
+int BTClient::openStorageTube(){
   if ((storage & 0x1) == 0x1) {return 1;}
   else if ((storage & 0x2) == 0x2) {return 2;}
   else if ((storage & 0x4) == 0x4) {return 3;}

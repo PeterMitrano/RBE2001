@@ -13,8 +13,8 @@ void Arm::setup() {
 void Arm::control(){
   if (calibrated){
     unsigned long t = millis();
-    unsigned long dt = t - oldTime;
-    if (dt > 50l){
+    unsigned long dt = t - lastControlTime;
+    if (dt > CONTROL_TIME){
      long pos = position();
      long error = setpoint - pos;
 
@@ -27,25 +27,21 @@ void Arm::control(){
 
      drive(val);
      lastError = error;
-     oldTime = t;
+     lastControlTime = t;
     }
   }
-}
-
-void Arm::stop(){
-  drive(0);
-}
-
-void Arm::up(){
-  setpoint = UP_POSITION;
 }
 
 void Arm::down(){
   setpoint = DOWN_POSITION;
 }
 
-void Arm::rawDown(){
-  drive(-60);
+void Arm::up(){
+  setpoint = UP_POSITION;
+}
+
+void Arm::stop(){
+  drive(0);
 }
 
 bool Arm::atPosition(){
@@ -57,12 +53,16 @@ int Arm::position(){
   return encoder.read();
 }
 
-void Arm::resetEncoder(){
-  encoder.write(0);
-}
-
 bool Arm::atLim(){
   return !digitalRead(limPin);
+}
+
+void Arm::rawDown(){
+  drive(-60);
+}
+
+void Arm::resetEncoder(){
+  encoder.write(0);
 }
 
 void Arm::drive(int power) {

@@ -5,8 +5,9 @@
 
 #include "Robot.h"
 #include "Scheduler.h"
-
 #include "GetDemRods.h"
+
+#include "Docs.h"
 
 Robot *steve = Robot::getInstance();
 

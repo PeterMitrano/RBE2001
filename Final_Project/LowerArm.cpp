@@ -15,5 +15,4 @@ bool LowerArm::isFinished(){
 }
 
 void LowerArm::end(){
-  Robot::getInstance()->arm.stop();
 }

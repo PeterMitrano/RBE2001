@@ -1,5 +1,5 @@
 #pragma once
-/* robot class
+/**robot class
  *  functions here control the robot as a whole, and should be called from main.ino
  */
 
@@ -14,24 +14,28 @@
 class Robot {
   public:
 
-    /* single accesor */
+    /** \brief lsingle accesor */
     static Robot *getInstance();
 
-    /* setup servos and stuff. called by main setup */
+    /** \brief lsetup servos and stuff. called by main setup */
     void setup();
 
     /** \brief inidicate radiation by blinking LEDs every 1/5th of a second */
     void blinkLEDs();
 
-    /** \brief sends correct int over i2c to slave to play song */
+    /** \brief sends correct int over i2c to slave to play song.
+     * Simple protocol is used to encode song data.
+     * If the first bit is 1, the song will repeat.
+     * All other bits are for the song number*/
     void setSong(int trackNumber, bool repeat);
 
+    /** \brief sends the encoded data over i2c to the slave */
     void playSong();
 
     /** \brief sends correct int over i2c to slave to plause song */
     void pauseSong();
 
-    /* uses line sensor to follow line
+    /** \brief uses line sensor to follow line
      * following is done by a weighted power to each wheel
      * weight is a function of the intensity of line sensors on that side
      * low intensity -> white -> full motor power
@@ -42,7 +46,7 @@ class Robot {
     /** \brief blindly back up */
     void backUp(int rPower, int lPower);
 
-    /* stop driving */
+    /** \brief stop driving */
     void stopDriving();
 
     /** \brief forward drive no line track*/
@@ -51,66 +55,77 @@ class Robot {
     /** \brief backward drive*/
     void driveBwd();
 
-    /* fixed power rotate */
+    /** \brief fixed power rotate */
     void rotateLeft();
 
-    /* fixed power rotate */
+    /** \brief fixed power rotate */
     void rotateRight();
 
+    /** \brief check is we've hit a reactor tube
+     * \return true when limit switch is hit */
     bool atReactorTube();
 
     /** \brief sets all timer flags to false */
     void resetTimerFlags();
 
-    /* used to store position
+    /** \brief used to store position
      * updated by navigate commands
      * should only be checked when the robot is done moving
      * direction is as follow: N=0, E=1, S=2, W=3
      */
     int row,col,direction;
 
+    /** \brief the object for reading and sending bluetooth message */
     BTClient btClient;
+
+    /** \brief the object for controling the arm */
     Arm arm;
+
+    /** \brief the object for tracking position over the lines */
     LineSensor lineSensor;
 
-    /* set by bluetooth if resume/stop message is recieve
+    /** \brief set by bluetooth if resume/stop message is recieve
      * all drive motor commands depend on it being true
      */
     bool paused;
 
-    /* flag for blinking LEDs based on radiaiton
+    /** \brief flag for blinking LEDs based on radiaiton
      * to turn off LEDs, set this to false
      */
     bool radiating = false;
 
-    int songData;
 
     static const int CALIBRATE_TIME = 3000;
 
   private:
-    Servo leftWheel,rightWheel;
 
     /** \brief there's only one robot, so use private constructor and instance*/
     Robot();
     static Robot *instance;
 
 
-    /* used by bumper switch as a panic button function */
+    /** \brief lused by bumper switch as a panic button function */
     static void pause();
 
-    /* low level function for setting motor power
+    /** \brief low level function for setting motor power
      * input is limited between -100 (full back) and 100 (full forward)
      */
     void drive(int leftPower, int rightPower);
 
-    /** \brief controls state of led when radiating */
-    int ledState;
+    /** \brief drive wheels */
+    Servo leftWheel,rightWheel;
 
     /** \brief interrupt changes state of LED blink and send i2c */
     static void blinkAndSendInterrupt();
 
+    /** \brief controls state of led when radiating */
+    int ledState;
+
     /** \brief set by led timer interrupt */
     static bool timeToBlinkAndSend;
+
+    /** \brief the encoded data to send over i2C */
+    int songData;
 
     /** \breif led pins and stuff*/
     static const int LED_PIN0 = 22,
@@ -122,6 +137,6 @@ class Robot {
     static const int rightWheelPin = 4;
 
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 28
+    const int rotateSpeed = 28;
     const int travelSpeed = 26;
 };

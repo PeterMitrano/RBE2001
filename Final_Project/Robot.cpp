@@ -68,6 +68,7 @@ void Robot::driveFwd(){
 
 void Robot::driveBwd(){
   drive(-travelSpeed,-travelSpeed);
+}
 
 void Robot::followLine() {
   int leftPower = travelSpeed - lineSensor.adjustmentPower();

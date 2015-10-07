@@ -1,5 +1,5 @@
 #pragma once
-/* functions for parsing and sending bluetooth messages
+/** \brief functions for parsing and sending bluetooth messages
  * Bluetooth is checked every loop and stored in member variables in this clas
  * when a command wants to get the location of the tubes, it can do so instantaneously
  * by looking at the last stored value
@@ -9,40 +9,41 @@
 #include <BluetoothMaster.h>
 #include <ReactorProtocol.h>
 
-/* contains bluetooth message data */
 class BTClient {
   public:
 
-    /* constructor initializes btmaster and pcol */
+    /** \brief constructor initializes btmaster and pcol */
     BTClient();
 
-    /* start serial3 */
+    /** \brief start serial3 */
     void setup();
 
-    /* returns the supply tub locations */
-    byte availableSupplyTube();
+    /** \brief returns the supply tub locations
+     * \return the position of the available supply tube */
+    int availableSupplyTube();
 
-    /* returns the storage tub locations */
-    byte openStorageTube();
+    /** \brief returns the storage tub locations
+     * \return the position of the open storage tube */
+    int openStorageTube();
 
-    /* send 0xff to the field computer */
+    /** \brief send 0xff to the field computer */
     void sendRadiationAlert();
 
-    /* send 0x00 to field computer */
+    /** \brief send 0x00 to field computer */
     void sendHeartbeat();
 
-    /* send string to field computer for debugging */
+    /** \brief send string to field computer for debugging */
     void sendDebugString(String message);
 
-    /* send status */
+    /** \brief send status */
     void sendStatus();
 
-    /* read from Serial3 and store into Message instance
+    /** \brief read from Serial3 and store into Message instance
      * returns Message if successful, null if unsuccessful
      */
     void readMessage();
 
-    /* status variables for sending messages */
+    /** \brief status variables for sending messages */
     int movementStatus,gripperStatus,operationStatus;
 
   private:
@@ -58,19 +59,19 @@ class BTClient {
      WARN_MSG = 0x11,
      INFO_MSG = 0x12} MSG_TYPE;
 
-    /* send the given data to the field computer */
+    /** \brief send the given data to the field computer */
     void sendData(MSG_TYPE type, byte data[3]);
 
-    /* master object */
+    /** \brief master object */
     BluetoothMaster btMaster;
 
-    /* protocol decoder */
+    /** \brief protocol decoder */
     ReactorProtocol pcol;
 
     unsigned long lastSent;
     bool received_storage = false,
          received_supply = false;
 
-    /* raw integer (or hex if you want) representation for storage and supply */
+    /** \brief raw integer (or hex if you want) representation for storage and supply */
     int storage, supply;
 };
