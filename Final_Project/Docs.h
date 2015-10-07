@@ -22,5 +22,5 @@
  *  - \link LineSensor::cache \endlink
  *  - \link Arm::control \endlink
  *
- * These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, blinkLEDs is controlled by the radiating variable, which is set at the end of commands like GetRodFromReactor.
+ * These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, \link Robot::blinkLEDs \endlink is controlled by the \link Robot::radiating \endlink variable, which is set at the end of commands like GetRodFromReactor.
  */
