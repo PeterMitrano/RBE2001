@@ -183,15 +183,15 @@ boxfont setfont
 (DriveOverIntersection) cw
 (DriveUntilIntersection) cw
 (DriveUntilReactorTube) cw
+(End) cw
 (LowerArm) cw
 (NavigateToAvailableSupply) cw
 (NavigateToOpenStorage) cw
 (NavigateToReactor) cw
 (OpenGripper) cw
 (RaiseArm) cw
-(Turn) cw
+(ScootPastIntersection) cw
 (TurnOffLine) cw
-(TurnToFace) cw
 (TurnUntilLine) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -215,15 +215,15 @@ boundx scalefactor div boundy scalefactor div scale
  (DriveOverIntersection) 1.000000 12.000000 box
  (DriveUntilIntersection) 1.000000 11.000000 box
  (DriveUntilReactorTube) 1.000000 10.000000 box
- (LowerArm) 1.000000 9.000000 box
- (NavigateToAvailableSupply) 1.000000 8.000000 box
- (NavigateToOpenStorage) 1.000000 7.000000 box
- (NavigateToReactor) 1.000000 6.000000 box
- (OpenGripper) 1.000000 5.000000 box
- (RaiseArm) 1.000000 4.000000 box
- (Turn) 1.000000 3.000000 box
- (TurnOffLine) 1.000000 2.000000 box
- (TurnToFace) 1.000000 1.000000 box
+ (End) 1.000000 9.000000 box
+ (LowerArm) 1.000000 8.000000 box
+ (NavigateToAvailableSupply) 1.000000 7.000000 box
+ (NavigateToOpenStorage) 1.000000 6.000000 box
+ (NavigateToReactor) 1.000000 5.000000 box
+ (OpenGripper) 1.000000 4.000000 box
+ (RaiseArm) 1.000000 3.000000 box
+ (ScootPastIntersection) 1.000000 2.000000 box
+ (TurnOffLine) 1.000000 1.000000 box
  (TurnUntilLine) 1.000000 0.000000 box
 
 % ----- relations -----
@@ -242,7 +242,7 @@ solid
 0 0.000000 14.500000 hedge
 solid
 0 0.000000 13.500000 hedge
-dotted
+solid
 0 0.000000 12.500000 hedge
 solid
 0 0.000000 11.500000 hedge

@@ -10,15 +10,30 @@
 \hypertarget{classRobot_a4215f7e880311c2118f387df75effaf2}{void \hyperlink{classRobot_a4215f7e880311c2118f387df75effaf2}{blink\-L\-E\-Ds} ()}\label{classRobot_a4215f7e880311c2118f387df75effaf2}
 
 \begin{DoxyCompactList}\small\item\em inidicate radiation by blinking L\-E\-Ds every 1/5th of a second \end{DoxyCompactList}\item 
+\hypertarget{classRobot_a87e94e8db5092976d1125c674cf2b519}{void \hyperlink{classRobot_a87e94e8db5092976d1125c674cf2b519}{set\-Song} (int track\-Number, bool repeat)}\label{classRobot_a87e94e8db5092976d1125c674cf2b519}
+
+\begin{DoxyCompactList}\small\item\em sends correct int over i2c to slave to play song \end{DoxyCompactList}\item 
+\hypertarget{classRobot_ad86dbbb2ad0d065f3e4c30fd4b742e1c}{void {\bfseries play\-Song} ()}\label{classRobot_ad86dbbb2ad0d065f3e4c30fd4b742e1c}
+
+\item 
+\hypertarget{classRobot_a7c4cf197187f9f7dcb883ebc58f52b93}{void \hyperlink{classRobot_a7c4cf197187f9f7dcb883ebc58f52b93}{pause\-Song} ()}\label{classRobot_a7c4cf197187f9f7dcb883ebc58f52b93}
+
+\begin{DoxyCompactList}\small\item\em sends correct int over i2c to slave to plause song \end{DoxyCompactList}\item 
 \hypertarget{classRobot_a6e3caf6e0346f6a54557eb57a79fc4f4}{void {\bfseries follow\-Line} ()}\label{classRobot_a6e3caf6e0346f6a54557eb57a79fc4f4}
 
 \item 
+\hypertarget{classRobot_a450cf38f963596663003f3d94b2bcf3b}{void \hyperlink{classRobot_a450cf38f963596663003f3d94b2bcf3b}{back\-Up} (int r\-Power, int l\-Power)}\label{classRobot_a450cf38f963596663003f3d94b2bcf3b}
+
+\begin{DoxyCompactList}\small\item\em blindly back up \end{DoxyCompactList}\item 
 \hypertarget{classRobot_a959f64b4829ade78bb332f205b50ee70}{void {\bfseries stop\-Driving} ()}\label{classRobot_a959f64b4829ade78bb332f205b50ee70}
 
 \item 
 \hypertarget{classRobot_a35897f5e7b5c8b29cc6d386c6089abea}{void \hyperlink{classRobot_a35897f5e7b5c8b29cc6d386c6089abea}{drive\-Fwd} ()}\label{classRobot_a35897f5e7b5c8b29cc6d386c6089abea}
 
-\begin{DoxyCompactList}\small\item\em fwd drive no line track \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em forward drive no line track \end{DoxyCompactList}\item 
+\hypertarget{classRobot_ac8d0a3e0308350bc1fc3a2a78be2aaca}{void \hyperlink{classRobot_ac8d0a3e0308350bc1fc3a2a78be2aaca}{drive\-Bwd} ()}\label{classRobot_ac8d0a3e0308350bc1fc3a2a78be2aaca}
+
+\begin{DoxyCompactList}\small\item\em backward drive \end{DoxyCompactList}\item 
 \hypertarget{classRobot_a82a61a1f5fb4a17fd2277329bc6e8fe4}{void {\bfseries rotate\-Left} ()}\label{classRobot_a82a61a1f5fb4a17fd2277329bc6e8fe4}
 
 \item 
@@ -27,7 +42,10 @@
 \item 
 \hypertarget{classRobot_a9183b1dd60c7d39bf6c8ecea5690b22c}{bool {\bfseries at\-Reactor\-Tube} ()}\label{classRobot_a9183b1dd60c7d39bf6c8ecea5690b22c}
 
-\end{DoxyCompactItemize}
+\item 
+\hypertarget{classRobot_ab7c87529c987ede12b934bdfc768507e}{void \hyperlink{classRobot_ab7c87529c987ede12b934bdfc768507e}{reset\-Timer\-Flags} ()}\label{classRobot_ab7c87529c987ede12b934bdfc768507e}
+
+\begin{DoxyCompactList}\small\item\em sets all timer flags to false \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,6 +77,9 @@
 
 \item 
 \hypertarget{classRobot_a77f62d85ab1cf34e79c2a3acd470a4ce}{bool {\bfseries radiating} = false}\label{classRobot_a77f62d85ab1cf34e79c2a3acd470a4ce}
+
+\item 
+\hypertarget{classRobot_a7818916adfa736ab4cb21011fe302cdb}{int {\bfseries song\-Data}}\label{classRobot_a7818916adfa736ab4cb21011fe302cdb}
 
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}

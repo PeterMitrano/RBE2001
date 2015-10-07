@@ -4,7 +4,6 @@ var searchData=
   ['calibrate',['Calibrate',['../classCalibrate.html',1,'']]],
   ['calibratearm',['CalibrateArm',['../classCalibrateArm.html',1,'']]],
   ['calibrateroutine',['CalibrateRoutine',['../classCalibrateRoutine.html',1,'']]],
-  ['calibratingvalue',['calibratingValue',['../classLineSensor.html#a51eeba9a7b0f56a69a0157f6f576495f',1,'LineSensor']]],
   ['closegripper',['CloseGripper',['../classCloseGripper.html',1,'']]],
   ['cls',['cls',['../classGripper.html#ada511826dbf5abcdd12532ae725efeaf',1,'Gripper']]],
   ['command',['Command',['../classCommand.html',1,'']]],

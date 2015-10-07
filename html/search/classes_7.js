@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['opengripper',['OpenGripper',['../classOpenGripper.html',1,'']]]
+  ['navigatetoavailablesupply',['NavigateToAvailableSupply',['../classNavigateToAvailableSupply.html',1,'']]],
+  ['navigatetoopenstorage',['NavigateToOpenStorage',['../classNavigateToOpenStorage.html',1,'']]],
+  ['navigatetoreactor',['NavigateToReactor',['../classNavigateToReactor.html',1,'']]]
 ];
