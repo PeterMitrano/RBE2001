@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,38 +91,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">BTClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in member variables in this clas when a command wants to get the location of the tubes, it can do so instantaneously by looking at the last stored value  
+ <a href="classBTClient.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="BTClient_8h_source.html">BTClient.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a60dc22e0906a1cea7a88813bb6d98f96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60dc22e0906a1cea7a88813bb6d98f96"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a60dc22e0906a1cea7a88813bb6d98f96">BTClient</a> ()</td></tr>
+<tr class="memdesc:a60dc22e0906a1cea7a88813bb6d98f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor initializes btmaster and pcol <br/></td></tr>
+<tr class="separator:a60dc22e0906a1cea7a88813bb6d98f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefdc156fe1f22455d249ec0bb7fa3fd5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#aefdc156fe1f22455d249ec0bb7fa3fd5">setup</a> ()</td></tr>
+<tr class="memdesc:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">start serial3 <br/></td></tr>
 <tr class="separator:aefdc156fe1f22455d249ec0bb7fa3fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a2e8a132c281d57f821f4dc564b8302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a2e8a132c281d57f821f4dc564b8302"></a>
-byte&#160;</td><td class="memItemRight" valign="bottom"><b>availableSupplyTube</b> ()</td></tr>
-<tr class="separator:a2a2e8a132c281d57f821f4dc564b8302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a915995939be1e6ee8c32ab34121fc728"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a915995939be1e6ee8c32ab34121fc728"></a>
-byte&#160;</td><td class="memItemRight" valign="bottom"><b>openStorageTube</b> ()</td></tr>
-<tr class="separator:a915995939be1e6ee8c32ab34121fc728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67250c48f81fee2b7c9f26d100c26799"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a67250c48f81fee2b7c9f26d100c26799">availableSupplyTube</a> ()</td></tr>
+<tr class="memdesc:a67250c48f81fee2b7c9f26d100c26799"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the supply tub locations  <a href="#a67250c48f81fee2b7c9f26d100c26799">More...</a><br/></td></tr>
+<tr class="separator:a67250c48f81fee2b7c9f26d100c26799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e2223a0605a0ee67b5d004890b38c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a18e2223a0605a0ee67b5d004890b38c4">openStorageTube</a> ()</td></tr>
+<tr class="memdesc:a18e2223a0605a0ee67b5d004890b38c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the storage tub locations  <a href="#a18e2223a0605a0ee67b5d004890b38c4">More...</a><br/></td></tr>
+<tr class="separator:a18e2223a0605a0ee67b5d004890b38c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70cc30b8de8632bd6fb81972a9409a10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70cc30b8de8632bd6fb81972a9409a10"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendRadiationAlert</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10">sendRadiationAlert</a> ()</td></tr>
+<tr class="memdesc:a70cc30b8de8632bd6fb81972a9409a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">send 0xff to the field computer <br/></td></tr>
 <tr class="separator:a70cc30b8de8632bd6fb81972a9409a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bf8f58f2c83834cab585e69c55c171f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bf8f58f2c83834cab585e69c55c171f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendHeartbeat</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f">sendHeartbeat</a> ()</td></tr>
+<tr class="memdesc:a4bf8f58f2c83834cab585e69c55c171f"><td class="mdescLeft">&#160;</td><td class="mdescRight">send 0x00 to field computer <br/></td></tr>
 <tr class="separator:a4bf8f58f2c83834cab585e69c55c171f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57a82b64a1233a66450c1d9ebe48774c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57a82b64a1233a66450c1d9ebe48774c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendDebugString</b> (String message)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c">sendDebugString</a> (String message)</td></tr>
+<tr class="memdesc:a57a82b64a1233a66450c1d9ebe48774c"><td class="mdescLeft">&#160;</td><td class="mdescRight">send string to field computer for debugging <br/></td></tr>
 <tr class="separator:a57a82b64a1233a66450c1d9ebe48774c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8820e63eebe5ab16fac9b7cb522fc55a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendStatus</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a">sendStatus</a> ()</td></tr>
+<tr class="memdesc:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">send status <br/></td></tr>
 <tr class="separator:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e827d16926d45a4b7c18dda0e59837b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e827d16926d45a4b7c18dda0e59837b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>readMessage</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b">readMessage</a> ()</td></tr>
+<tr class="memdesc:a8e827d16926d45a4b7c18dda0e59837b"><td class="mdescLeft">&#160;</td><td class="mdescRight">read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful <br/></td></tr>
 <tr class="separator:a8e827d16926d45a4b7c18dda0e59837b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacff467239e0a6a85eab0ac77dbcfdf8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>movementStatus</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#aacff467239e0a6a85eab0ac77dbcfdf8">movementStatus</a></td></tr>
+<tr class="memdesc:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">status variables for sending messages <br/></td></tr>
 <tr class="separator:aacff467239e0a6a85eab0ac77dbcfdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdb5a8d964742a7236d2d0acc2e45585"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdb5a8d964742a7236d2d0acc2e45585"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>gripperStatus</b></td></tr>
@@ -131,6 +147,45 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>gripperStatus</b></td>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>operationStatus</b></td></tr>
 <tr class="separator:a419405603d661e07e630a6649e9592a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in member variables in this clas when a command wants to get the location of the tubes, it can do so instantaneously by looking at the last stored value </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a67250c48f81fee2b7c9f26d100c26799"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BTClient::availableSupplyTube </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the supply tub locations </p>
+<dl class="section return"><dt>Returns</dt><dd>the position of the available supply tube </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a18e2223a0605a0ee67b5d004890b38c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BTClient::openStorageTube </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the storage tub locations </p>
+<dl class="section return"><dt>Returns</dt><dd>the position of the open storage tube </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="BTClient_8h_source.html">BTClient.h</a></li>
 <li>Final_Project/BTClient.cpp</li>
@@ -138,7 +193,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>operationStatus</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 6 2015 22:58:18 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

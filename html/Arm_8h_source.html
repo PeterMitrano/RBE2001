@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,87 +91,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Encoder.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Gripper.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classArm.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classArm.html">Arm</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classArm.html">Arm</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Encoder.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Gripper.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classArm.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classArm.html">Arm</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classArm.html">Arm</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a0e642e1a6fc24f40268f2c759dee62e1">setup</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a009c19e5b213f692c24eab792cc40c47">control</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a9075166ca53ef3cd547a7725ee5bca1d">down</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a65ffd463407a6782a55dbd5b84f1e15e">up</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> stop();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classArm.html#ae3c0195535b15f56f9027aea0ae5ec76">atPosition</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> setPosition(<span class="keywordtype">long</span> setpoint);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a009c19e5b213f692c24eab792cc40c47">control</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a9075166ca53ef3cd547a7725ee5bca1d">down</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a65ffd463407a6782a55dbd5b84f1e15e">up</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a4a8274680d981524efbeb2b51eb49c28">stop</a>();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8">position</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classArm.html#ae3c0195535b15f56f9027aea0ae5ec76">atPosition</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classArm.html#a234397ff44a8ac5fda920d92b9b33237">atLim</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8">position</a>();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e">rawDown</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classArm.html#a234397ff44a8ac5fda920d92b9b33237">atLim</a>();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#afb44126b438f8dc00b0bf0720c84a737">resetEncoder</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classGripper.html">Gripper</a> gripper;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> calibrated = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> drive(<span class="keywordtype">int</span> power);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e">rawDown</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classArm.html#afb44126b438f8dc00b0bf0720c84a737">resetEncoder</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classArm.html#a1f237e56fc1e76c2b63f1f59d847945d">   53</a></span>&#160;    <a class="code" href="classGripper.html">Gripper</a> <a class="code" href="classArm.html#a1f237e56fc1e76c2b63f1f59d847945d">gripper</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> motorFwdPin = 10;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> motorRevPin = 9;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classArm.html#a3f6c85e5a8feacd8870b653a8163d99f">   56</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classArm.html#a3f6c85e5a8feacd8870b653a8163d99f">calibrated</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> encAPin = 19;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> encBPin = 18;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> limPin = 25;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> drive(<span class="keywordtype">int</span> power);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> oldTime = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    Encoder encoder;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">long</span> integral = 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> tolerance = 100;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">long</span> lastError = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> motorFwdPin = 10;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> motorRevPin = 9;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> encAPin = 19;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> encBPin = 18;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> limPin = 25;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> kP = 0.1;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> kI = 0.002;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> kD = 0.0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> MAX_INTEGRAL = 500l;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">long</span> setpoint = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> UP_POSITION = 6200l;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> DOWN_POSITION = 0l;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Encoder encoder;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="ttc" id="classArm_html_a90df7bcd3c225f6fc05ef2f77c773d2e"><div class="ttname"><a href="classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e">Arm::rawDown</a></div><div class="ttdeci">void rawDown()</div><div class="ttdoc">drives the arm down very slowly. used in calibrating </div><div class="ttdef"><b>Definition:</b> Arm.cpp:47</div></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastControlTime = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> CONTROL_TIME = 50l;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">long</span> integral = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">long</span> lastError = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> tolerance = 100;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> kP = 0.1;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> kI = 0.002;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> kD = 0.0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> MAX_INTEGRAL = 500l;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">long</span> setpoint = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> UP_POSITION = 6200l;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">long</span> DOWN_POSITION = 0l;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="ttc" id="classArm_html_a90df7bcd3c225f6fc05ef2f77c773d2e"><div class="ttname"><a href="classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e">Arm::rawDown</a></div><div class="ttdeci">void rawDown()</div><div class="ttdoc">drives the arm down very slowly. used in calibrating </div><div class="ttdef"><b>Definition:</b> Arm.cpp:60</div></div>
 <div class="ttc" id="classArm_html_a0e642e1a6fc24f40268f2c759dee62e1"><div class="ttname"><a href="classArm.html#a0e642e1a6fc24f40268f2c759dee62e1">Arm::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">initializes servos and other stuff. called by main arduino setup </div><div class="ttdef"><b>Definition:</b> Arm.cpp:5</div></div>
+<div class="ttc" id="classArm_html_a4a8274680d981524efbeb2b51eb49c28"><div class="ttname"><a href="classArm.html#a4a8274680d981524efbeb2b51eb49c28">Arm::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">cold stop the arm. This is used to calibrate the arm </div><div class="ttdef"><b>Definition:</b> Arm.cpp:43</div></div>
+<div class="ttc" id="classArm_html_a3f6c85e5a8feacd8870b653a8163d99f"><div class="ttname"><a href="classArm.html#a3f6c85e5a8feacd8870b653a8163d99f">Arm::calibrated</a></div><div class="ttdeci">bool calibrated</div><div class="ttdoc">flag to keep the control function from running without calibration </div><div class="ttdef"><b>Definition:</b> Arm.h:56</div></div>
+<div class="ttc" id="classArm_html_a1f237e56fc1e76c2b63f1f59d847945d"><div class="ttname"><a href="classArm.html#a1f237e56fc1e76c2b63f1f59d847945d">Arm::gripper</a></div><div class="ttdeci">Gripper gripper</div><div class="ttdoc">gripper object is part of the arm </div><div class="ttdef"><b>Definition:</b> Arm.h:53</div></div>
 <div class="ttc" id="classGripper_html"><div class="ttname"><a href="classGripper.html">Gripper</a></div><div class="ttdef"><b>Definition:</b> Gripper.h:7</div></div>
 <div class="ttc" id="classArm_html_a009c19e5b213f692c24eab792cc40c47"><div class="ttname"><a href="classArm.html#a009c19e5b213f692c24eab792cc40c47">Arm::control</a></div><div class="ttdeci">void control()</div><div class="ttdoc">the main function for controlling the arm. All other functions should just call this ...</div><div class="ttdef"><b>Definition:</b> Arm.cpp:13</div></div>
-<div class="ttc" id="classArm_html_ab49756ee4bfdc5f573a78f29678bf1d8"><div class="ttname"><a href="classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8">Arm::position</a></div><div class="ttdeci">int position()</div><div class="ttdoc">return position in encoder counts </div><div class="ttdef"><b>Definition:</b> Arm.cpp:56</div></div>
-<div class="ttc" id="classArm_html_afb44126b438f8dc00b0bf0720c84a737"><div class="ttname"><a href="classArm.html#afb44126b438f8dc00b0bf0720c84a737">Arm::resetEncoder</a></div><div class="ttdeci">void resetEncoder()</div><div class="ttdoc">sets encoder count to 0 </div><div class="ttdef"><b>Definition:</b> Arm.cpp:60</div></div>
-<div class="ttc" id="classArm_html_a9075166ca53ef3cd547a7725ee5bca1d"><div class="ttname"><a href="classArm.html#a9075166ca53ef3cd547a7725ee5bca1d">Arm::down</a></div><div class="ttdeci">void down()</div><div class="ttdoc">lower arm all the way to the top </div><div class="ttdef"><b>Definition:</b> Arm.cpp:43</div></div>
-<div class="ttc" id="classArm_html_a65ffd463407a6782a55dbd5b84f1e15e"><div class="ttname"><a href="classArm.html#a65ffd463407a6782a55dbd5b84f1e15e">Arm::up</a></div><div class="ttdeci">void up()</div><div class="ttdoc">raise arm all the way to the bottom </div><div class="ttdef"><b>Definition:</b> Arm.cpp:39</div></div>
-<div class="ttc" id="classArm_html_ae3c0195535b15f56f9027aea0ae5ec76"><div class="ttname"><a href="classArm.html#ae3c0195535b15f56f9027aea0ae5ec76">Arm::atPosition</a></div><div class="ttdeci">bool atPosition()</div><div class="ttdoc">return true if position is within tolerance of setpoint </div><div class="ttdef"><b>Definition:</b> Arm.cpp:51</div></div>
-<div class="ttc" id="classArm_html_a234397ff44a8ac5fda920d92b9b33237"><div class="ttname"><a href="classArm.html#a234397ff44a8ac5fda920d92b9b33237">Arm::atLim</a></div><div class="ttdeci">bool atLim()</div><div class="ttdoc">returns true if limit switch is hit </div><div class="ttdef"><b>Definition:</b> Arm.cpp:64</div></div>
-<div class="ttc" id="classArm_html"><div class="ttname"><a href="classArm.html">Arm</a></div><div class="ttdoc">arm class functions here control the 4 bar linkage/slider crank </div><div class="ttdef"><b>Definition:</b> Arm.h:12</div></div>
+<div class="ttc" id="classArm_html_ab49756ee4bfdc5f573a78f29678bf1d8"><div class="ttname"><a href="classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8">Arm::position</a></div><div class="ttdeci">int position()</div><div class="ttdoc">return position in encoder counts </div><div class="ttdef"><b>Definition:</b> Arm.cpp:52</div></div>
+<div class="ttc" id="classArm_html_afb44126b438f8dc00b0bf0720c84a737"><div class="ttname"><a href="classArm.html#afb44126b438f8dc00b0bf0720c84a737">Arm::resetEncoder</a></div><div class="ttdeci">void resetEncoder()</div><div class="ttdoc">sets encoder count to 0 </div><div class="ttdef"><b>Definition:</b> Arm.cpp:64</div></div>
+<div class="ttc" id="classArm_html_a9075166ca53ef3cd547a7725ee5bca1d"><div class="ttname"><a href="classArm.html#a9075166ca53ef3cd547a7725ee5bca1d">Arm::down</a></div><div class="ttdeci">void down()</div><div class="ttdoc">lower arm all the way to the top. This only needs to be called once, and the arm will continue to mai...</div><div class="ttdef"><b>Definition:</b> Arm.cpp:35</div></div>
+<div class="ttc" id="classArm_html_a65ffd463407a6782a55dbd5b84f1e15e"><div class="ttname"><a href="classArm.html#a65ffd463407a6782a55dbd5b84f1e15e">Arm::up</a></div><div class="ttdeci">void up()</div><div class="ttdoc">raise arm all the way to the bottom. This only needs to be called once, and the arm will continue to ...</div><div class="ttdef"><b>Definition:</b> Arm.cpp:39</div></div>
+<div class="ttc" id="classArm_html_ae3c0195535b15f56f9027aea0ae5ec76"><div class="ttname"><a href="classArm.html#ae3c0195535b15f56f9027aea0ae5ec76">Arm::atPosition</a></div><div class="ttdeci">bool atPosition()</div><div class="ttdoc">return true if position is within tolerance of setpoint </div><div class="ttdef"><b>Definition:</b> Arm.cpp:47</div></div>
+<div class="ttc" id="classArm_html_a234397ff44a8ac5fda920d92b9b33237"><div class="ttname"><a href="classArm.html#a234397ff44a8ac5fda920d92b9b33237">Arm::atLim</a></div><div class="ttdeci">bool atLim()</div><div class="ttdoc">returns true if limit switch is hit </div><div class="ttdef"><b>Definition:</b> Arm.cpp:56</div></div>
+<div class="ttc" id="classArm_html"><div class="ttname"><a href="classArm.html">Arm</a></div><div class="ttdoc">functions here control the 4 bar linkage/slider crank </div><div class="ttdef"><b>Definition:</b> Arm.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 6 2015 22:58:18 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

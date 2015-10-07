@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,86 +89,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="comment">/* functions for parsing and sending bluetooth messages</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Bluetooth is checked every loop and stored in member variables in this clas</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * when a command wants to get the location of the tubes, it can do so instantaneously</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * by looking at the last stored value</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Util.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;BluetoothMaster.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;ReactorProtocol.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* contains bluetooth message data */</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classBTClient.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBTClient.html">BTClient</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">/* constructor initializes btmaster and pcol */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classBTClient.html">BTClient</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/* start serial3 */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> setup();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/* returns the supply tub locations */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    byte availableSupplyTube();</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classBTClient.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBTClient.html">BTClient</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classBTClient.html#a60dc22e0906a1cea7a88813bb6d98f96">BTClient</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBTClient.html#aefdc156fe1f22455d249ec0bb7fa3fd5">setup</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBTClient.html#a67250c48f81fee2b7c9f26d100c26799">availableSupplyTube</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/* returns the storage tub locations */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    byte openStorageTube();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">/* send 0xff to the field computer */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> sendRadiationAlert();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">/* send 0x00 to field computer */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> sendHeartbeat();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/* send string to field computer for debugging */</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> sendDebugString(String message);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">/* send status */</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> sendStatus();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/* read from Serial3 and store into Message instance</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     * returns Message if successful, null if unsuccessful</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> readMessage();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">/* status variables for sending messages */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> movementStatus,gripperStatus,operationStatus;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;     <span class="keyword">typedef</span> <span class="keyword">enum</span> {STORAGE_MSG = 0x01,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;     SUPPLY_MSG = 0x02,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;     RADIATION_MSG = 0x03,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;     STOP_MSG = 0x04,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;     RESUME_MSG = 0x05,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;     STATUS_MSG = 0x06,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;     HEARTBEAT_MSG = 0x07,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     DEBUG_MSG = 0x10,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     WARN_MSG = 0x11,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;     INFO_MSG = 0x12} MSG_TYPE;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">/* send the given data to the field computer */</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> sendData(MSG_TYPE type, byte data[3]);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/* master object */</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    BluetoothMaster btMaster;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/* protocol decoder */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ReactorProtocol pcol;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastSent;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> received_storage = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         received_supply = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">/* raw integer (or hex if you want) representation for storage and supply */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> storage, supply;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
-<div class="ttc" id="classBTClient_html"><div class="ttname"><a href="classBTClient.html">BTClient</a></div><div class="ttdef"><b>Definition:</b> BTClient.h:13</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBTClient.html#a18e2223a0605a0ee67b5d004890b38c4">openStorageTube</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10">sendRadiationAlert</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f">sendHeartbeat</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c">sendDebugString</a>(String message);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a">sendStatus</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b">readMessage</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classBTClient.html#aacff467239e0a6a85eab0ac77dbcfdf8">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBTClient.html#aacff467239e0a6a85eab0ac77dbcfdf8">movementStatus</a>,gripperStatus,operationStatus;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;     <span class="keyword">typedef</span> <span class="keyword">enum</span> {STORAGE_MSG = 0x01,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;     SUPPLY_MSG = 0x02,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;     RADIATION_MSG = 0x03,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;     STOP_MSG = 0x04,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;     RESUME_MSG = 0x05,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;     STATUS_MSG = 0x06,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     HEARTBEAT_MSG = 0x07,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     DEBUG_MSG = 0x10,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;     WARN_MSG = 0x11,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;     INFO_MSG = 0x12} MSG_TYPE;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> sendData(MSG_TYPE type, byte data[3]);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    BluetoothMaster btMaster;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ReactorProtocol pcol;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastSent;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">bool</span> received_storage = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;         received_supply = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> storage, supply;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="ttc" id="classBTClient_html"><div class="ttname"><a href="classBTClient.html">BTClient</a></div><div class="ttdoc">functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in me...</div><div class="ttdef"><b>Definition:</b> BTClient.h:12</div></div>
+<div class="ttc" id="classBTClient_html_a57a82b64a1233a66450c1d9ebe48774c"><div class="ttname"><a href="classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c">BTClient::sendDebugString</a></div><div class="ttdeci">void sendDebugString(String message)</div><div class="ttdoc">send string to field computer for debugging </div></div>
+<div class="ttc" id="classBTClient_html_a60dc22e0906a1cea7a88813bb6d98f96"><div class="ttname"><a href="classBTClient.html#a60dc22e0906a1cea7a88813bb6d98f96">BTClient::BTClient</a></div><div class="ttdeci">BTClient()</div><div class="ttdoc">constructor initializes btmaster and pcol </div><div class="ttdef"><b>Definition:</b> BTClient.cpp:4</div></div>
+<div class="ttc" id="classBTClient_html_a8820e63eebe5ab16fac9b7cb522fc55a"><div class="ttname"><a href="classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a">BTClient::sendStatus</a></div><div class="ttdeci">void sendStatus()</div><div class="ttdoc">send status </div><div class="ttdef"><b>Definition:</b> BTClient.cpp:43</div></div>
+<div class="ttc" id="classBTClient_html_a8e827d16926d45a4b7c18dda0e59837b"><div class="ttname"><a href="classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b">BTClient::readMessage</a></div><div class="ttdeci">void readMessage()</div><div class="ttdoc">read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful...</div><div class="ttdef"><b>Definition:</b> BTClient.cpp:63</div></div>
+<div class="ttc" id="classBTClient_html_a18e2223a0605a0ee67b5d004890b38c4"><div class="ttname"><a href="classBTClient.html#a18e2223a0605a0ee67b5d004890b38c4">BTClient::openStorageTube</a></div><div class="ttdeci">int openStorageTube()</div><div class="ttdoc">returns the storage tub locations </div><div class="ttdef"><b>Definition:</b> BTClient.cpp:25</div></div>
+<div class="ttc" id="classBTClient_html_a70cc30b8de8632bd6fb81972a9409a10"><div class="ttname"><a href="classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10">BTClient::sendRadiationAlert</a></div><div class="ttdeci">void sendRadiationAlert()</div><div class="ttdoc">send 0xff to the field computer </div><div class="ttdef"><b>Definition:</b> BTClient.cpp:35</div></div>
+<div class="ttc" id="classBTClient_html_a67250c48f81fee2b7c9f26d100c26799"><div class="ttname"><a href="classBTClient.html#a67250c48f81fee2b7c9f26d100c26799">BTClient::availableSupplyTube</a></div><div class="ttdeci">int availableSupplyTube()</div><div class="ttdoc">returns the supply tub locations </div><div class="ttdef"><b>Definition:</b> BTClient.cpp:14</div></div>
+<div class="ttc" id="classBTClient_html_a4bf8f58f2c83834cab585e69c55c171f"><div class="ttname"><a href="classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f">BTClient::sendHeartbeat</a></div><div class="ttdeci">void sendHeartbeat()</div><div class="ttdoc">send 0x00 to field computer </div><div class="ttdef"><b>Definition:</b> BTClient.cpp:39</div></div>
+<div class="ttc" id="classBTClient_html_aacff467239e0a6a85eab0ac77dbcfdf8"><div class="ttname"><a href="classBTClient.html#aacff467239e0a6a85eab0ac77dbcfdf8">BTClient::movementStatus</a></div><div class="ttdeci">int movementStatus</div><div class="ttdoc">status variables for sending messages </div><div class="ttdef"><b>Definition:</b> BTClient.h:47</div></div>
+<div class="ttc" id="classBTClient_html_aefdc156fe1f22455d249ec0bb7fa3fd5"><div class="ttname"><a href="classBTClient.html#aefdc156fe1f22455d249ec0bb7fa3fd5">BTClient::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">start serial3 </div><div class="ttdef"><b>Definition:</b> BTClient.cpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 6 2015 22:58:18 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -71,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -80,6 +81,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
@@ -94,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,6 +122,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>atPosition()
 : <a class="el" href="classArm.html#ae3c0195535b15f56f9027aea0ae5ec76">Arm</a>
 </li>
+<li>atReactorTube()
+: <a class="el" href="classRobot.html#a9183b1dd60c7d39bf6c8ecea5690b22c">Robot</a>
+</li>
+<li>availableSupplyTube()
+: <a class="el" href="classBTClient.html#a67250c48f81fee2b7c9f26d100c26799">BTClient</a>
+</li>
 </ul>
 
 
@@ -128,6 +137,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>blinkLEDs()
 : <a class="el" href="classRobot.html#a4215f7e880311c2118f387df75effaf2">Robot</a>
+</li>
+<li>BTClient()
+: <a class="el" href="classBTClient.html#a60dc22e0906a1cea7a88813bb6d98f96">BTClient</a>
 </li>
 </ul>
 
@@ -211,6 +223,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 
 
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>followLine()
+: <a class="el" href="classRobot.html#a6e3caf6e0346f6a54557eb57a79fc4f4">Robot</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getInstance()
+: <a class="el" href="classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0">Robot</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>initialize()
 : <a class="el" href="classBackOffTube.html#a16b83364009db3cb58ec6c09458a8741">BackOffTube</a>
@@ -269,6 +295,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>onLine()
 : <a class="el" href="classLineSensor.html#ad9d3c5a694f1ff946d1137df1694b026">LineSensor</a>
 </li>
+<li>openStorageTube()
+: <a class="el" href="classBTClient.html#a18e2223a0605a0ee67b5d004890b38c4">BTClient</a>
+</li>
 <li>opn()
 : <a class="el" href="classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5">Gripper</a>
 </li>
@@ -278,6 +307,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>pauseSong()
 : <a class="el" href="classRobot.html#a7c4cf197187f9f7dcb883ebc58f52b93">Robot</a>
+</li>
+<li>playSong()
+: <a class="el" href="classRobot.html#ad86dbbb2ad0d065f3e4c30fd4b742e1c">Robot</a>
 </li>
 <li>position()
 : <a class="el" href="classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8">Arm</a>
@@ -289,25 +321,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>rawDown()
 : <a class="el" href="classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e">Arm</a>
 </li>
+<li>readMessage()
+: <a class="el" href="classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b">BTClient</a>
+</li>
 <li>resetEncoder()
 : <a class="el" href="classArm.html#afb44126b438f8dc00b0bf0720c84a737">Arm</a>
 </li>
 <li>resetTimerFlags()
 : <a class="el" href="classRobot.html#ab7c87529c987ede12b934bdfc768507e">Robot</a>
 </li>
+<li>rotateLeft()
+: <a class="el" href="classRobot.html#a82a61a1f5fb4a17fd2277329bc6e8fe4">Robot</a>
+</li>
+<li>rotateRight()
+: <a class="el" href="classRobot.html#a33e931c5ce2e2ce940c96203f1b6d057">Robot</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>sendDebugString()
+: <a class="el" href="classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c">BTClient</a>
+</li>
+<li>sendHeartbeat()
+: <a class="el" href="classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f">BTClient</a>
+</li>
+<li>sendRadiationAlert()
+: <a class="el" href="classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10">BTClient</a>
+</li>
+<li>sendStatus()
+: <a class="el" href="classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a">BTClient</a>
+</li>
 <li>setSong()
 : <a class="el" href="classRobot.html#a87e94e8db5092976d1125c674cf2b519">Robot</a>
 </li>
 <li>setup()
 : <a class="el" href="classArm.html#a0e642e1a6fc24f40268f2c759dee62e1">Arm</a>
+, <a class="el" href="classBTClient.html#aefdc156fe1f22455d249ec0bb7fa3fd5">BTClient</a>
 , <a class="el" href="classLineSensor.html#a555f6f7222ea1e76ed810edbde44c39c">LineSensor</a>
+, <a class="el" href="classRobot.html#a1fc37e3c329d59795f6adf44199d4df9">Robot</a>
 </li>
 <li>start()
 : <a class="el" href="classCommand.html#aef139180669b92534dd05a89323fb82f">Command</a>
+</li>
+<li>stop()
+: <a class="el" href="classArm.html#a4a8274680d981524efbeb2b51eb49c28">Arm</a>
+</li>
+<li>stopDriving()
+: <a class="el" href="classRobot.html#a959f64b4829ade78bb332f205b50ee70">Robot</a>
 </li>
 </ul>
 
@@ -320,7 +381,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 6 2015 22:58:18 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

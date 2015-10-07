@@ -1,0 +1,15 @@
+Here are the dank kids who made this\-:  Peter Mitrano  Chris O'Shea  Traivis Norris
+
+Friggen verison number\-:  3.\-14159\hypertarget{index_Introduction}{}\section{Introduction}\label{index_Introduction}
+Sometimes figuring out how a robot works is hard, so we made this nice documentation. Steve operates on a paradigm called \char`\"{}\-Command Based Programming\char`\"{}, as seen in \href{https://wpilib.screenstepslive.com/s/4485/m/13809/l/241892-what-is-command-based-programming}{\tt W\-P\-I\-Lib} Essentially, the main program flow is a combination of commands and command groups. Them main advantages of command based are that it makes changing the robot's routine easy. Base commands like \hyperlink{classRaiseArm}{Raise\-Arm} and \hyperlink{classDriveUntilIntersection}{Drive\-Until\-Intersection} are defined, and then composed into commands groups. In our program, the root command group is \hyperlink{classGetDemRods}{Get\-Dem\-Rods}, which is started in the setup. A \hyperlink{classScheduler}{Scheduler} class is used to keep track of which methods of which commands should run each loop. Along side our command based programming, there are a handful of time-\/based operations that are called directly in loop. These include\-:
+\begin{DoxyItemize}
+\item \hyperlink{classRobot_ad86dbbb2ad0d065f3e4c30fd4b742e1c}{Robot\-::play\-Song}
+\item \hyperlink{classRobot_a4215f7e880311c2118f387df75effaf2}{Robot\-::blink\-L\-E\-Ds}
+\item \hyperlink{classRobot_ab7c87529c987ede12b934bdfc768507e}{Robot\-::reset\-Timer\-Flags}
+\item \hyperlink{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{B\-T\-Client\-::read\-Message}
+\item \hyperlink{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{B\-T\-Client\-::send\-Heartbeat}
+\item \hyperlink{classLineSensor_afc809d2aa49426d949f76f68b0154050}{Line\-Sensor\-::cache}
+\item \hyperlink{classArm_a009c19e5b213f692c24eab792cc40c47}{Arm\-::control}
+\end{DoxyItemize}
+
+These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, blink\-L\-E\-Ds is controlled by the radiating variable, which is set at the end of commands like \hyperlink{classGetRodFromReactor}{Get\-Rod\-From\-Reactor}. 

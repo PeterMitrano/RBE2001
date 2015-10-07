@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['getdemrods',['GetDemRods',['../classGetDemRods.html',1,'']]],
-  ['getrodfromreactor',['GetRodFromReactor',['../classGetRodFromReactor.html',1,'']]],
-  ['getrodfromsupply',['GetRodFromSupply',['../classGetRodFromSupply.html',1,'']]],
-  ['gripper',['Gripper',['../classGripper.html',1,'']]]
+  ['followline',['followLine',['../classRobot.html#a6e3caf6e0346f6a54557eb57a79fc4f4',1,'Robot']]]
 ];

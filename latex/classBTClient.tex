@@ -1,45 +1,89 @@
 \hypertarget{classBTClient}{\section{B\-T\-Client Class Reference}
 \label{classBTClient}\index{B\-T\-Client@{B\-T\-Client}}
 }
+
+
+functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in member variables in this clas when a command wants to get the location of the tubes, it can do so instantaneously by looking at the last stored value  
+
+
+
+
+{\ttfamily \#include $<$B\-T\-Client.\-h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{void {\bfseries setup} ()}\label{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}
+\hypertarget{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}{\hyperlink{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}{B\-T\-Client} ()}\label{classBTClient_a60dc22e0906a1cea7a88813bb6d98f96}
 
-\item 
-\hypertarget{classBTClient_a2a2e8a132c281d57f821f4dc564b8302}{byte {\bfseries available\-Supply\-Tube} ()}\label{classBTClient_a2a2e8a132c281d57f821f4dc564b8302}
+\begin{DoxyCompactList}\small\item\em constructor initializes btmaster and pcol \end{DoxyCompactList}\item 
+\hypertarget{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{void \hyperlink{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{setup} ()}\label{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}
 
-\item 
-\hypertarget{classBTClient_a915995939be1e6ee8c32ab34121fc728}{byte {\bfseries open\-Storage\-Tube} ()}\label{classBTClient_a915995939be1e6ee8c32ab34121fc728}
+\begin{DoxyCompactList}\small\item\em start serial3 \end{DoxyCompactList}\item 
+int \hyperlink{classBTClient_a67250c48f81fee2b7c9f26d100c26799}{available\-Supply\-Tube} ()
+\begin{DoxyCompactList}\small\item\em returns the supply tub locations \end{DoxyCompactList}\item 
+int \hyperlink{classBTClient_a18e2223a0605a0ee67b5d004890b38c4}{open\-Storage\-Tube} ()
+\begin{DoxyCompactList}\small\item\em returns the storage tub locations \end{DoxyCompactList}\item 
+\hypertarget{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{void \hyperlink{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{send\-Radiation\-Alert} ()}\label{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}
 
-\item 
-\hypertarget{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{void {\bfseries send\-Radiation\-Alert} ()}\label{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}
+\begin{DoxyCompactList}\small\item\em send 0xff to the field computer \end{DoxyCompactList}\item 
+\hypertarget{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{void \hyperlink{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{send\-Heartbeat} ()}\label{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}
 
-\item 
-\hypertarget{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}{void {\bfseries send\-Heartbeat} ()}\label{classBTClient_a4bf8f58f2c83834cab585e69c55c171f}
+\begin{DoxyCompactList}\small\item\em send 0x00 to field computer \end{DoxyCompactList}\item 
+\hypertarget{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{void \hyperlink{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{send\-Debug\-String} (String message)}\label{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}
 
-\item 
-\hypertarget{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{void {\bfseries send\-Debug\-String} (String message)}\label{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}
+\begin{DoxyCompactList}\small\item\em send string to field computer for debugging \end{DoxyCompactList}\item 
+\hypertarget{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{void \hyperlink{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{send\-Status} ()}\label{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}
 
-\item 
-\hypertarget{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{void {\bfseries send\-Status} ()}\label{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}
+\begin{DoxyCompactList}\small\item\em send status \end{DoxyCompactList}\item 
+\hypertarget{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{void \hyperlink{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{read\-Message} ()}\label{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}
 
-\item 
-\hypertarget{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{void {\bfseries read\-Message} ()}\label{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{int {\bfseries movement\-Status}}\label{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}
+\hypertarget{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{int \hyperlink{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{movement\-Status}}\label{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}
 
-\item 
+\begin{DoxyCompactList}\small\item\em status variables for sending messages \end{DoxyCompactList}\item 
 \hypertarget{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}{int {\bfseries gripper\-Status}}\label{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}
 
 \item 
 \hypertarget{classBTClient_a419405603d661e07e630a6649e9592a0}{int {\bfseries operation\-Status}}\label{classBTClient_a419405603d661e07e630a6649e9592a0}
 
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in member variables in this clas when a command wants to get the location of the tubes, it can do so instantaneously by looking at the last stored value 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBTClient_a67250c48f81fee2b7c9f26d100c26799}{\index{B\-T\-Client@{B\-T\-Client}!available\-Supply\-Tube@{available\-Supply\-Tube}}
+\index{available\-Supply\-Tube@{available\-Supply\-Tube}!BTClient@{B\-T\-Client}}
+\subsubsection[{available\-Supply\-Tube}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::available\-Supply\-Tube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a67250c48f81fee2b7c9f26d100c26799}
+
+
+returns the supply tub locations 
+
+\begin{DoxyReturn}{Returns}
+the position of the available supply tube 
+\end{DoxyReturn}
+\hypertarget{classBTClient_a18e2223a0605a0ee67b5d004890b38c4}{\index{B\-T\-Client@{B\-T\-Client}!open\-Storage\-Tube@{open\-Storage\-Tube}}
+\index{open\-Storage\-Tube@{open\-Storage\-Tube}!BTClient@{B\-T\-Client}}
+\subsubsection[{open\-Storage\-Tube}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::open\-Storage\-Tube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a18e2223a0605a0ee67b5d004890b38c4}
+
+
+returns the storage tub locations 
+
+\begin{DoxyReturn}{Returns}
+the position of the open storage tube 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

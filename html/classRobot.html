@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,11 +93,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Robot Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Robot_8h_source.html">Robot.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fc37e3c329d59795f6adf44199d4df9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fc37e3c329d59795f6adf44199d4df9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a1fc37e3c329d59795f6adf44199d4df9">setup</a> ()</td></tr>
+<tr class="memdesc:a1fc37e3c329d59795f6adf44199d4df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">lsetup servos and stuff. called by main setup <br/></td></tr>
 <tr class="separator:a1fc37e3c329d59795f6adf44199d4df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4215f7e880311c2118f387df75effaf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4215f7e880311c2118f387df75effaf2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a4215f7e880311c2118f387df75effaf2">blinkLEDs</a> ()</td></tr>
@@ -105,24 +108,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a4215f7e880311c2118f387df75effaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e94e8db5092976d1125c674cf2b519"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87e94e8db5092976d1125c674cf2b519"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a87e94e8db5092976d1125c674cf2b519">setSong</a> (int trackNumber, bool repeat)</td></tr>
-<tr class="memdesc:a87e94e8db5092976d1125c674cf2b519"><td class="mdescLeft">&#160;</td><td class="mdescRight">sends correct int over i2c to slave to play song <br/></td></tr>
+<tr class="memdesc:a87e94e8db5092976d1125c674cf2b519"><td class="mdescLeft">&#160;</td><td class="mdescRight">sends correct int over i2c to slave to play song. Simple protocol is used to encode song data. If the first bit is 1, the song will repeat. All other bits are for the song number <br/></td></tr>
 <tr class="separator:a87e94e8db5092976d1125c674cf2b519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad86dbbb2ad0d065f3e4c30fd4b742e1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad86dbbb2ad0d065f3e4c30fd4b742e1c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>playSong</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#ad86dbbb2ad0d065f3e4c30fd4b742e1c">playSong</a> ()</td></tr>
+<tr class="memdesc:ad86dbbb2ad0d065f3e4c30fd4b742e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">sends the encoded data over i2c to the slave <br/></td></tr>
 <tr class="separator:ad86dbbb2ad0d065f3e4c30fd4b742e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c4cf197187f9f7dcb883ebc58f52b93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c4cf197187f9f7dcb883ebc58f52b93"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a7c4cf197187f9f7dcb883ebc58f52b93">pauseSong</a> ()</td></tr>
 <tr class="memdesc:a7c4cf197187f9f7dcb883ebc58f52b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">sends correct int over i2c to slave to plause song <br/></td></tr>
 <tr class="separator:a7c4cf197187f9f7dcb883ebc58f52b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e3caf6e0346f6a54557eb57a79fc4f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e3caf6e0346f6a54557eb57a79fc4f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>followLine</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a6e3caf6e0346f6a54557eb57a79fc4f4">followLine</a> ()</td></tr>
+<tr class="memdesc:a6e3caf6e0346f6a54557eb57a79fc4f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">uses line sensor to follow line following is done by a weighted power to each wheel weight is a function of the intensity of line sensors on that side low intensity -&gt; white -&gt; full motor power high intensity -&gt; black -&gt; full reverse motor power <br/></td></tr>
 <tr class="separator:a6e3caf6e0346f6a54557eb57a79fc4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a450cf38f963596663003f3d94b2bcf3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a450cf38f963596663003f3d94b2bcf3b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a450cf38f963596663003f3d94b2bcf3b">backUp</a> (int rPower, int lPower)</td></tr>
 <tr class="memdesc:a450cf38f963596663003f3d94b2bcf3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">blindly back up <br/></td></tr>
 <tr class="separator:a450cf38f963596663003f3d94b2bcf3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a959f64b4829ade78bb332f205b50ee70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a959f64b4829ade78bb332f205b50ee70"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stopDriving</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a959f64b4829ade78bb332f205b50ee70">stopDriving</a> ()</td></tr>
+<tr class="memdesc:a959f64b4829ade78bb332f205b50ee70"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop driving <br/></td></tr>
 <tr class="separator:a959f64b4829ade78bb332f205b50ee70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35897f5e7b5c8b29cc6d386c6089abea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35897f5e7b5c8b29cc6d386c6089abea"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a35897f5e7b5c8b29cc6d386c6089abea">driveFwd</a> ()</td></tr>
@@ -133,13 +139,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ac8d0a3e0308350bc1fc3a2a78be2aaca"><td class="mdescLeft">&#160;</td><td class="mdescRight">backward drive <br/></td></tr>
 <tr class="separator:ac8d0a3e0308350bc1fc3a2a78be2aaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82a61a1f5fb4a17fd2277329bc6e8fe4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82a61a1f5fb4a17fd2277329bc6e8fe4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rotateLeft</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a82a61a1f5fb4a17fd2277329bc6e8fe4">rotateLeft</a> ()</td></tr>
+<tr class="memdesc:a82a61a1f5fb4a17fd2277329bc6e8fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">fixed power rotate <br/></td></tr>
 <tr class="separator:a82a61a1f5fb4a17fd2277329bc6e8fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33e931c5ce2e2ce940c96203f1b6d057"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33e931c5ce2e2ce940c96203f1b6d057"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rotateRight</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a33e931c5ce2e2ce940c96203f1b6d057">rotateRight</a> ()</td></tr>
+<tr class="memdesc:a33e931c5ce2e2ce940c96203f1b6d057"><td class="mdescLeft">&#160;</td><td class="mdescRight">fixed power rotate <br/></td></tr>
 <tr class="separator:a33e931c5ce2e2ce940c96203f1b6d057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9183b1dd60c7d39bf6c8ecea5690b22c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9183b1dd60c7d39bf6c8ecea5690b22c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>atReactorTube</b> ()</td></tr>
+<tr class="memitem:a9183b1dd60c7d39bf6c8ecea5690b22c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a9183b1dd60c7d39bf6c8ecea5690b22c">atReactorTube</a> ()</td></tr>
+<tr class="memdesc:a9183b1dd60c7d39bf6c8ecea5690b22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">check is we've hit a reactor tube  <a href="#a9183b1dd60c7d39bf6c8ecea5690b22c">More...</a><br/></td></tr>
 <tr class="separator:a9183b1dd60c7d39bf6c8ecea5690b22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c87529c987ede12b934bdfc768507e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7c87529c987ede12b934bdfc768507e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#ab7c87529c987ede12b934bdfc768507e">resetTimerFlags</a> ()</td></tr>
@@ -149,13 +157,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6f19dc31b435f8a2d43944ba49286d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6f19dc31b435f8a2d43944ba49286d0"></a>
-static <a class="el" href="classRobot.html">Robot</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+static <a class="el" href="classRobot.html">Robot</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0">getInstance</a> ()</td></tr>
+<tr class="memdesc:ac6f19dc31b435f8a2d43944ba49286d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">lsingle accesor <br/></td></tr>
 <tr class="separator:ac6f19dc31b435f8a2d43944ba49286d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a35ce5c416a079fcf6b943843ec151d63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35ce5c416a079fcf6b943843ec151d63"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a35ce5c416a079fcf6b943843ec151d63">row</a></td></tr>
+<tr class="memdesc:a35ce5c416a079fcf6b943843ec151d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to store position updated by navigate commands should only be checked when the robot is done moving direction is as follow: N=0, E=1, S=2, W=3 <br/></td></tr>
 <tr class="separator:a35ce5c416a079fcf6b943843ec151d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e08d53491bb82defe2e28ee9ce1d096"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e08d53491bb82defe2e28ee9ce1d096"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
@@ -164,23 +174,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>direction</b></td></tr>
 <tr class="separator:ac25b4dfc2e9e5aa86ec5684d075d32b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9da91e6d551ed02038e935b3c755cc75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9da91e6d551ed02038e935b3c755cc75"></a>
-<a class="el" href="classBTClient.html">BTClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>btClient</b></td></tr>
+<a class="el" href="classBTClient.html">BTClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a9da91e6d551ed02038e935b3c755cc75">btClient</a></td></tr>
+<tr class="memdesc:a9da91e6d551ed02038e935b3c755cc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">the object for reading and sending bluetooth message <br/></td></tr>
 <tr class="separator:a9da91e6d551ed02038e935b3c755cc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a444673862cbe384992aceb066282b500"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a444673862cbe384992aceb066282b500"></a>
-<a class="el" href="classArm.html">Arm</a>&#160;</td><td class="memItemRight" valign="bottom"><b>arm</b></td></tr>
+<a class="el" href="classArm.html">Arm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a444673862cbe384992aceb066282b500">arm</a></td></tr>
+<tr class="memdesc:a444673862cbe384992aceb066282b500"><td class="mdescLeft">&#160;</td><td class="mdescRight">the object for controling the arm <br/></td></tr>
 <tr class="separator:a444673862cbe384992aceb066282b500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdc300045bea9a31013b25682629752d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdc300045bea9a31013b25682629752d"></a>
-<a class="el" href="classLineSensor.html">LineSensor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lineSensor</b></td></tr>
+<a class="el" href="classLineSensor.html">LineSensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#abdc300045bea9a31013b25682629752d">lineSensor</a></td></tr>
+<tr class="memdesc:abdc300045bea9a31013b25682629752d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the object for tracking position over the lines <br/></td></tr>
 <tr class="separator:abdc300045bea9a31013b25682629752d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a1fae6e6ee0a3298b9e60d3f50ad12a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a1fae6e6ee0a3298b9e60d3f50ad12a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>paused</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a">paused</a></td></tr>
+<tr class="memdesc:a6a1fae6e6ee0a3298b9e60d3f50ad12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set by bluetooth if resume/stop message is recieve all drive motor commands depend on it being true <br/></td></tr>
 <tr class="separator:a6a1fae6e6ee0a3298b9e60d3f50ad12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77f62d85ab1cf34e79c2a3acd470a4ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77f62d85ab1cf34e79c2a3acd470a4ce"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>radiating</b> = false</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce">radiating</a> = false</td></tr>
+<tr class="memdesc:a77f62d85ab1cf34e79c2a3acd470a4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag for blinking LEDs based on radiaiton to turn off LEDs, set this to false <br/></td></tr>
 <tr class="separator:a77f62d85ab1cf34e79c2a3acd470a4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7818916adfa736ab4cb21011fe302cdb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7818916adfa736ab4cb21011fe302cdb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>songData</b></td></tr>
-<tr class="separator:a7818916adfa736ab4cb21011fe302cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -188,6 +200,27 @@ Static Public Attributes</h2></td></tr>
 static const int&#160;</td><td class="memItemRight" valign="bottom"><b>CALIBRATE_TIME</b> = 3000</td></tr>
 <tr class="separator:ac40abfa06749a68604af90c00e2a3fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>robot class functions here control the robot as a whole, and should be called from main.ino </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9183b1dd60c7d39bf6c8ecea5690b22c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Robot::atReactorTube </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check is we've hit a reactor tube </p>
+<dl class="section return"><dt>Returns</dt><dd>true when limit switch is hit </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="Robot_8h_source.html">Robot.h</a></li>
 <li>Final_Project/Robot.cpp</li>
@@ -195,7 +228,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>CALIBRATE
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 6 2015 22:58:18 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 00:21:38 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

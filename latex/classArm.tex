@@ -3,7 +3,7 @@
 }
 
 
-arm class functions here control the 4 bar linkage/slider crank  
+functions here control the 4 bar linkage/slider crank  
 
 
 
@@ -21,19 +21,16 @@ arm class functions here control the 4 bar linkage/slider crank
 \begin{DoxyCompactList}\small\item\em the main function for controlling the arm. All other functions should just call this \end{DoxyCompactList}\item 
 \hypertarget{classArm_a9075166ca53ef3cd547a7725ee5bca1d}{void \hyperlink{classArm_a9075166ca53ef3cd547a7725ee5bca1d}{down} ()}\label{classArm_a9075166ca53ef3cd547a7725ee5bca1d}
 
-\begin{DoxyCompactList}\small\item\em lower arm all the way to the top \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em lower arm all the way to the top. This only needs to be called once, and the arm will continue to maintain that position \end{DoxyCompactList}\item 
 \hypertarget{classArm_a65ffd463407a6782a55dbd5b84f1e15e}{void \hyperlink{classArm_a65ffd463407a6782a55dbd5b84f1e15e}{up} ()}\label{classArm_a65ffd463407a6782a55dbd5b84f1e15e}
 
-\begin{DoxyCompactList}\small\item\em raise arm all the way to the bottom \end{DoxyCompactList}\item 
-\hypertarget{classArm_a4a8274680d981524efbeb2b51eb49c28}{void {\bfseries stop} ()}\label{classArm_a4a8274680d981524efbeb2b51eb49c28}
+\begin{DoxyCompactList}\small\item\em raise arm all the way to the bottom. This only needs to be called once, and the arm will continue to maintain that position \end{DoxyCompactList}\item 
+\hypertarget{classArm_a4a8274680d981524efbeb2b51eb49c28}{void \hyperlink{classArm_a4a8274680d981524efbeb2b51eb49c28}{stop} ()}\label{classArm_a4a8274680d981524efbeb2b51eb49c28}
 
-\item 
+\begin{DoxyCompactList}\small\item\em cold stop the arm. This is used to calibrate the arm \end{DoxyCompactList}\item 
 \hypertarget{classArm_ae3c0195535b15f56f9027aea0ae5ec76}{bool \hyperlink{classArm_ae3c0195535b15f56f9027aea0ae5ec76}{at\-Position} ()}\label{classArm_ae3c0195535b15f56f9027aea0ae5ec76}
 
 \begin{DoxyCompactList}\small\item\em return true if position is within tolerance of setpoint \end{DoxyCompactList}\item 
-\hypertarget{classArm_a11049528120ab063b71e5614d0c6b12c}{void {\bfseries set\-Position} (long setpoint)}\label{classArm_a11049528120ab063b71e5614d0c6b12c}
-
-\item 
 \hypertarget{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}{int \hyperlink{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}{position} ()}\label{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}
 
 \begin{DoxyCompactList}\small\item\em return position in encoder counts \end{DoxyCompactList}\item 
@@ -49,16 +46,16 @@ arm class functions here control the 4 bar linkage/slider crank
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classArm_a1f237e56fc1e76c2b63f1f59d847945d}{\hyperlink{classGripper}{Gripper} {\bfseries gripper}}\label{classArm_a1f237e56fc1e76c2b63f1f59d847945d}
+\hypertarget{classArm_a1f237e56fc1e76c2b63f1f59d847945d}{\hyperlink{classGripper}{Gripper} \hyperlink{classArm_a1f237e56fc1e76c2b63f1f59d847945d}{gripper}}\label{classArm_a1f237e56fc1e76c2b63f1f59d847945d}
 
-\item 
-\hypertarget{classArm_a3f6c85e5a8feacd8870b653a8163d99f}{bool {\bfseries calibrated} = false}\label{classArm_a3f6c85e5a8feacd8870b653a8163d99f}
+\begin{DoxyCompactList}\small\item\em gripper object is part of the arm \end{DoxyCompactList}\item 
+\hypertarget{classArm_a3f6c85e5a8feacd8870b653a8163d99f}{bool \hyperlink{classArm_a3f6c85e5a8feacd8870b653a8163d99f}{calibrated} = false}\label{classArm_a3f6c85e5a8feacd8870b653a8163d99f}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em flag to keep the control function from running without calibration \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-arm class functions here control the 4 bar linkage/slider crank 
+functions here control the 4 bar linkage/slider crank 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

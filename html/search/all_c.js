@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['scheduler',['Scheduler',['../classScheduler.html',1,'']]],
-  ['scootpastintersection',['ScootPastIntersection',['../classScootPastIntersection.html',1,'']]],
-  ['setsong',['setSong',['../classRobot.html#a87e94e8db5092976d1125c674cf2b519',1,'Robot']]],
-  ['setup',['setup',['../classArm.html#a0e642e1a6fc24f40268f2c759dee62e1',1,'Arm::setup()'],['../classLineSensor.html#a555f6f7222ea1e76ed810edbde44c39c',1,'LineSensor::setup()']]],
-  ['start',['start',['../classCommand.html#aef139180669b92534dd05a89323fb82f',1,'Command']]],
-  ['storerod',['StoreRod',['../classStoreRod.html',1,'']]],
-  ['storerodinreactor',['StoreRodInReactor',['../classStoreRodInReactor.html',1,'']]]
+  ['pathplanner',['PathPlanner',['../classPathPlanner.html',1,'']]],
+  ['paused',['paused',['../classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a',1,'Robot']]],
+  ['pausesong',['pauseSong',['../classRobot.html#a7c4cf197187f9f7dcb883ebc58f52b93',1,'Robot']]],
+  ['playsong',['playSong',['../classRobot.html#ad86dbbb2ad0d065f3e4c30fd4b742e1c',1,'Robot']]],
+  ['position',['position',['../classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8',1,'Arm']]]
 ];
