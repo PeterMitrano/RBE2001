@@ -6,7 +6,6 @@ TurnUntilLine::TurnUntilLine(int direction) : Command("turn unti line"){
 
 void TurnUntilLine::initialize(){
   Robot::getInstance()->setSong(2,false);
-  Serial.println("turn until line");
 }
 
 void TurnUntilLine::execute(){
@@ -28,6 +27,5 @@ bool TurnUntilLine::isFinished(){
 }
 
 void TurnUntilLine::end(){
-  Serial.println("done turning until line");
   Robot::getInstance()->stopDriving();
 }
