@@ -75,7 +75,10 @@ class Arm {
     /** \brief constant in millis for how often to calculate PID */
     const unsigned long CONTROL_TIME = 50l;
 
-    /** \brief used by PI to computer integral */
+    /** \brief used by PID to computer derivative */
+    long derivative = 0;
+
+    /** \brief used by PID to computer integral */
     long integral = 0;
 
     /** \brief last error in encoder ticks */

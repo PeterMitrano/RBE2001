@@ -5,7 +5,7 @@
 Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
 
-Robot::Robot(){
+Robot::Robot() : lcd(40,41,42,43,44,45) {
   direction = 3;
   row = 1;
   col = 0;
@@ -22,6 +22,7 @@ void Robot::setup(){
   paused = false;
 
   Wire.begin();
+  lcd.begin(16,2);
 
   leftWheel.attach(leftWheelPin,1000,2000);
   rightWheel.attach(rightWheelPin,1000,2000);
@@ -130,4 +131,18 @@ void Robot::pauseSong(){
 
 void Robot::resetTimerFlags(){
   timeToBlinkAndSend = false;
+}
+
+void Robot::debugPrint(int i){
+  lcd.setCursor(0,0);
+  char str[17];
+  sprintf(str,"%-6i",i);
+  lcd.print(str);
+}
+
+void Robot::debugPrint(char *s){
+  lcd.setCursor(0,0);
+  char str[17];
+  sprintf(str,"%-6s",s);
+  lcd.print(str);
 }

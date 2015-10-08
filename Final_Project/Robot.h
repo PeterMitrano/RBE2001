@@ -7,6 +7,7 @@
 #include <Arduino.h>
 #include <Servo.h>
 #include <TimerOne.h>
+#include <LiquidCrystal.h>
 #include "GetDemRods.h"
 #include "Arm.h"
 #include "LineSensor.h"
@@ -69,6 +70,10 @@ class Robot {
     /** \brief sets all timer flags to false */
     void resetTimerFlags();
 
+    /** \brief print to 0,0 on lcd */
+    void debugPrint(char *str);
+    void debugPrint(int i);
+
     /** \brief used to store position
      * updated by navigate commands
      * should only be checked when the robot is done moving
@@ -84,6 +89,9 @@ class Robot {
 
     /** \brief the object for tracking position over the lines */
     LineSensor lineSensor;
+
+    /** \brief lcd to debug */
+    LiquidCrystal lcd;
 
     /** \brief set by bluetooth if resume/stop message is recieve
      * all drive motor commands depend on it being true

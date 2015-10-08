@@ -1,6 +1,9 @@
 #include "Arm.h"
+#include "Robot.h"
 
-Arm::Arm() : encoder(encAPin, encBPin), gripper() {}
+Arm::Arm() : encoder(encAPin, encBPin), gripper() {
+  derivative = -1;
+}
 
 void Arm::setup() {
   pinMode(motorFwdPin, OUTPUT);
@@ -15,19 +18,21 @@ void Arm::control(){
     unsigned long t = millis();
     unsigned long dt = t - lastControlTime;
     if (dt > CONTROL_TIME){
-     long pos = position();
-     long error = setpoint - pos;
+      long pos = position();
+      long error = setpoint - pos;
 
-     integral += error;
-     integral = integral < MAX_INTEGRAL ? integral: MAX_INTEGRAL;
-     integral = integral > -MAX_INTEGRAL ? integral: -MAX_INTEGRAL;
-     long derivative = error - lastError;
+      integral += error;
+      integral = integral < MAX_INTEGRAL ? integral: MAX_INTEGRAL;
+      integral = integral > -MAX_INTEGRAL ? integral: -MAX_INTEGRAL;
+      derivative = error - lastError;
 
-     int val = kP * error + kI * integral + kD * derivative;
+      int val = kP * error + kI * integral + kD * derivative;
 
-     drive(val);
-     lastError = error;
-     lastControlTime = t;
+      Robot::getInstance()->debugPrint(derivative);
+
+      drive(val);
+      lastError = error;
+      lastControlTime = t;
     }
   }
 }
@@ -73,14 +78,24 @@ void Arm::drive(int power) {
     analogWrite(motorFwdPin, 0);
     analogWrite(motorRevPin, 0);
   }
-  else if (power > 0) {
-    int fwdAdjusted = map(power, 0, 100, 0, 200);
-    analogWrite(motorRevPin, 0);
-    analogWrite(motorFwdPin, fwdAdjusted);
+  else if (derivative != 0){
+    if (power > 0) {
+      int fwdAdjusted = map(power, 0, 100, 0, 200);
+      analogWrite(motorRevPin, 0);
+      analogWrite(motorFwdPin, fwdAdjusted);
+    }
+    else if (power < 0) {
+      int revAdjusted = map(power, -100, 0, 200, 0);
+      analogWrite(motorFwdPin, 0);
+      analogWrite(motorRevPin, revAdjusted);
+    }
+    else {
+      analogWrite(motorFwdPin, 0);
+      analogWrite(motorRevPin, 0);
+    }
   }
-  else if (power < 0) {
-    int revAdjusted = map(power, -100, 0, 200, 0);
+  else {
     analogWrite(motorFwdPin, 0);
-    analogWrite(motorRevPin, revAdjusted);
+    analogWrite(motorRevPin, 0);
   }
 }

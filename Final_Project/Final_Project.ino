@@ -9,8 +9,7 @@
 
 #include "Docs.h"
 
-Robot *steve = Robot::getInstance();
-
+Robot *steve;
 volatile bool paused = true;
 const int panicPin = 24;
 
@@ -19,12 +18,14 @@ void setup() {
 
   pinMode(panicPin,INPUT_PULLUP);
 
+  steve = Robot::getInstance();
   steve->setup();
+
+  steve->debugPrint("setup");
 
   // here we start the parent commands which should run throughout the life of the program
   GetDemRods *cmd = new GetDemRods();
   cmd->start();
-
 }
 
 
