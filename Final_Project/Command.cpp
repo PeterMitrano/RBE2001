@@ -30,10 +30,6 @@ bool Command::cycle() {
   return finished;
 }
 
-void print(){
-  Serial.print(name);
-}
-
 void Command::setTimeout(unsigned long timeout) {
   this->timeout = timeout;
 }
