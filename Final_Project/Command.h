@@ -54,6 +54,9 @@ class Command {
      */
     bool isRunning();
 
+    void print();
+
+
     String name;
 
   private:

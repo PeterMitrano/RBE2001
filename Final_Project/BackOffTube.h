@@ -13,5 +13,5 @@ class BackOffTube : public Command {
     void end();
   private:
     int rPower,lPower;
-    const int backOffTime =550;
+    const int backOffTime = 700;
 };

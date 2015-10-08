@@ -10,8 +10,8 @@
 
 GetDemRods::GetDemRods() : CommandGroup("get dem rods") {
   addSequential(new CalibrateRoutine());
-  addSequential(new GetRodFromReactor(1));
-  addSequential(new StoreRod());
+  addSequential(new GetRodFromReactor(2));
+  //addSequential(new StoreRod());
   //addSequential(new GetRodFromSupply());
   //addSequential(new StoreRodInReactor(1));
   //addSequential(new OpenGripper());

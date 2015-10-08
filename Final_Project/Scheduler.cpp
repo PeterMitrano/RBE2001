@@ -27,3 +27,12 @@ void Scheduler::run() {
     }
   }
 }
+
+void Scheduler::print(){
+  for (int i = 0; i < commands.size(); i++) {
+    Command *command = commands.get(i);
+    Serial.print("...");
+    Serial.println(command->name);
+    command->print();
+  }
+}

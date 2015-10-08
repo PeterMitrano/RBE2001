@@ -2,6 +2,7 @@
 #include "DriveUntilIntersection.h"
 #include "PathPlanner.h"
 #include "Robot.h"
+#include "Scheduler.h"
 
 NavigateToReactor::NavigateToReactor(int reactorNumber) : Command("nav to Reactor"){
   this->reactorNumber = reactorNumber;
@@ -15,7 +16,7 @@ void NavigateToReactor::initialize(){
   //length 2 array, row column
 
   if (reactorNumber == 2){
-    destCol = 4;
+    destCol = 5;
     destDirection = 1;
   }
 
@@ -24,12 +25,14 @@ void NavigateToReactor::initialize(){
   PathPlanner *planner = new PathPlanner(path);
   planner->plan(destRow, destCol, destDirection);
 
+  Scheduler::getInstance()->print();
+
   for (int i=0;i<path->commands.size();i++){
     Serial.print("  ");
     Serial.println(path->commands.get(i)._command->name);
   }
   Serial.println("...]");
-  path->start(); //tell scheduler to run this group of commands
+  path->start();
 }
 
 void NavigateToReactor::execute(){

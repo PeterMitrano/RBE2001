@@ -37,6 +37,7 @@ class Arm {
     bool atPosition();
 
     /** \brief return position in encoder counts */
+    int _position();
     int position();
 
     /** \brief returns true if limit switch is hit */
@@ -62,6 +63,7 @@ class Arm {
 
     Encoder encoder;
 
+    int potPin = 9;
     int motorFwdPin = 10;
     int motorRevPin = 9;
     int encAPin = 19;
@@ -85,12 +87,16 @@ class Arm {
     long lastError = 0;
 
     /** \brief how many encoder ticks until we're considered at our setpoint */
-    const long tolerance = 100;
+    const long _tolerance = 100;
+    const long tolerance = 12;
 
     /** \brief PI constants */
-    const double kP = 0.1;
-    const double kI = 0.002;
-    const double kD = 0.01;
+    const double kP = 0.65;
+    const double kI = 0.04;
+    const double kD = 0.03;
+    const double _kP = 0.1;
+    const double _kI = 0.002;
+    const double _kD = 0.01;
 
     /** \brief absolute value cap of integral.
      * this protects us from <a href = "https://en.wikipedia.org/wiki/Integral_windup">integral windup</a> */
@@ -99,6 +105,8 @@ class Arm {
     long setpoint = 0;
 
     /** positions */
-    const long UP_POSITION = 6200l;
-    const long DOWN_POSITION = 0l;
+    const long UP_POSITION = 835l;
+    const long _UP_POSITION = 6200l;
+    const long _DOWN_POSITION = 0l;
+    const long DOWN_POSITION = 180l;
 };

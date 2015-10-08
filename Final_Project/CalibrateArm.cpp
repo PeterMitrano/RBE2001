@@ -7,11 +7,12 @@ void CalibrateArm::initialize(){
 }
 
 void CalibrateArm::execute(){
-  Robot::getInstance()->arm.rawDown();
+//  Robot::getInstance()->arm.rawDown();
 }
 
 bool CalibrateArm::isFinished(){
-  return Robot::getInstance()->arm.atLim();
+//  return Robot::getInstance()->arm.atLim();
+  return true;
 }
 
 void CalibrateArm::end(){

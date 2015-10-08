@@ -16,6 +16,7 @@ class Scheduler {
     void addCommand(Command *command);
     void printCurrentCommands();
     void run();
+    void print();
 
   private:
     Scheduler();

@@ -22,13 +22,13 @@ void Arm::control(){
       long error = setpoint - pos;
 
       integral += error;
-      integral = integral < MAX_INTEGRAL ? integral: MAX_INTEGRAL;
-      integral = integral > -MAX_INTEGRAL ? integral: -MAX_INTEGRAL;
+      integral = integral < MAX_INTEGRAL ? integral : MAX_INTEGRAL;
+      integral = integral > -MAX_INTEGRAL ? integral : -MAX_INTEGRAL;
       derivative = error - lastError;
 
       int val = kP * error + kI * integral + kD * derivative;
 
-      Robot::getInstance()->debugPrint(derivative);
+      Robot::getInstance()->debugPrint(pos);
 
       drive(val);
       lastError = error;
@@ -54,8 +54,12 @@ bool Arm::atPosition(){
   return diff < tolerance;
 }
 
-int Arm::position(){
+int Arm::_position(){
   return encoder.read();
+}
+
+int Arm::position(){
+  return analogRead(potPin);
 }
 
 bool Arm::atLim(){
@@ -78,21 +82,15 @@ void Arm::drive(int power) {
     analogWrite(motorFwdPin, 0);
     analogWrite(motorRevPin, 0);
   }
-  else if (derivative != 0){
-    if (power > 0) {
-      int fwdAdjusted = map(power, 0, 100, 0, 200);
-      analogWrite(motorRevPin, 0);
-      analogWrite(motorFwdPin, fwdAdjusted);
-    }
-    else if (power < 0) {
-      int revAdjusted = map(power, -100, 0, 200, 0);
-      analogWrite(motorFwdPin, 0);
-      analogWrite(motorRevPin, revAdjusted);
-    }
-    else {
-      analogWrite(motorFwdPin, 0);
-      analogWrite(motorRevPin, 0);
-    }
+  else if (power > 0) {
+    int fwdAdjusted = map(power, 0, 100, 0, 255);
+    analogWrite(motorRevPin, 0);
+    analogWrite(motorFwdPin, fwdAdjusted);
+  }
+  else if (power < 0) {
+    int revAdjusted = map(power, -100, 0, 255, 0);
+    analogWrite(motorFwdPin, 0);
+    analogWrite(motorRevPin, revAdjusted);
   }
   else {
     analogWrite(motorFwdPin, 0);

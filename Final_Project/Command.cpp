@@ -7,8 +7,8 @@ Command::Command() : initialized(false) {}
 Command::Command(String name) : initialized(false), name(name), startTime(millis()) {}
 
 bool Command::cycle() {
-//  Serial.print("command: ");
-//  Serial.println(name);
+  Serial.print("command: ");
+  Serial.println(name);
   bool finished = false;
 
   if (!initialized) {
@@ -28,6 +28,10 @@ bool Command::cycle() {
 
 
   return finished;
+}
+
+void print(){
+  Serial.print(name);
 }
 
 void Command::setTimeout(unsigned long timeout) {

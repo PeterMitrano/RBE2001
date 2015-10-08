@@ -146,6 +146,6 @@ class Robot {
     static const int rightWheelPin = 4;
 
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeed = 28;
-    const int travelSpeed = 26;
+    const int rotateSpeed = 35;
+    const int travelSpeed = 30;
 };

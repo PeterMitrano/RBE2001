@@ -23,6 +23,12 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
       //this must mean you're at the supply/storage tubes
       path->addSequential(new TurnToNextLine());
       path->addSequential(new DriveThroughIntersection());
+      if (direction == 0) {
+        direction = 2;
+      }
+      else if (direction == 2){
+        direction = 0;
+      }
     }
     else {
       //this must mean you're facing a reactor tube
@@ -46,6 +52,7 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
     dist = abs(destCol - col);
     for (int i=0;i<dist;i++){
       path->addSequential(new DriveThroughIntersection());
+      col++;
     }
 
     //turn to face right direction for rows
@@ -57,14 +64,20 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
     }
 
     //now drive through all the rows
-    dist = abs(destRow - row);
-    for (int i=0;i<dist;i++){
-      path->addSequential(new DriveUntilReactorTube());
+    path->addSequential(new DriveUntilReactorTube());
+    if (direction == 0){
+      row++;
+    }
+    else if (direction == 2){
+      row--;
     }
   }
   else if (destDirection != direction){
     planToFace(direction);
   }
+  Robot::getInstance()->row = row;
+  Robot::getInstance()->col = col;
+  Robot::getInstance()->direction = direction;
 }
 
 void PathPlanner::planToFace(int destDirection){

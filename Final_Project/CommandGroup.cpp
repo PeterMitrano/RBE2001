@@ -13,6 +13,14 @@ void CommandGroup::addParallel(Command *command){
      CommandGroupEntry(command, CommandGroupEntry::kSequence_InParallel));
 }
 
+void print(){
+  for (int i=0;i<commands.size()){
+    Serial.print("....");
+    Serial.println(commands.get(i)._command->name);
+  }
+  Serial.print(name);
+}
+
 void CommandGroup::initialize(){}
 void CommandGroup::_initialize(){
   currentCommandIndex = -1;
@@ -20,6 +28,7 @@ void CommandGroup::_initialize(){
 
 void CommandGroup::execute(){}
 void CommandGroup::_execute(){
+
 
   CommandGroupEntry entry;
   Command *executingCommand = NULL;

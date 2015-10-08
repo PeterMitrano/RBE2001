@@ -35,6 +35,7 @@ void loop() {
   }
 
   if (!paused){
+
     // Scheduler is in charge of running all the commands, so it must always be called
     Scheduler::getInstance()->run();
 

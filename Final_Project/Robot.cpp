@@ -6,9 +6,9 @@ Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
 
 Robot::Robot() : lcd(40,41,42,43,44,45) {
-  direction = 3;
+  direction = 1;
   row = 1;
-  col = 0;
+  col = 4;
 }
 
 Robot *Robot::getInstance(){
@@ -82,7 +82,7 @@ void Robot::backUp(int lPower, int rPower){
 }
 
 void Robot::rotateLeft() {
-  drive(-rotateSpeed, rotateSpeed);
+  drive(-rotateSpeed, 10+rotateSpeed);
 }
 
 void Robot::rotateRight() {
