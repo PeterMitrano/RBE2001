@@ -7,14 +7,14 @@
 #include "TurnOffLine.h"
 #include "Robot.h"
 
-PathPlanner::PathPlanner(CommandGroup *path){
-  this->path = path;
+PathPlanner::PathPlanner(){
+  this->path = new CommandGroup();
   this->row = Robot::getInstance()->row;
   this->col = Robot::getInstance()->col;
   this->direction = Robot::getInstance()->direction;
 }
 
-void PathPlanner::plan(int destRow, int destCol, int destDirection){
+CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   int dist;
 
   if (col != destCol || row!=destRow){
@@ -23,12 +23,6 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
       //this must mean you're at the supply/storage tubes
       path->addSequential(new TurnToNextLine());
       path->addSequential(new DriveThroughIntersection());
-      if (direction == 0) {
-        direction = 2;
-      }
-      else if (direction == 2){
-        direction = 0;
-      }
     }
     else {
       //this must mean you're facing a reactor tube
@@ -36,16 +30,13 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
       planToFace(destDirection);
     }
 
-    //note that we're in row 1 on the line
-    row = 1;
-
     //now that we're on the line, navigate to our goal
     //first turn and face the right direction
     if (destCol > col){
-      planToFace(1);
+      planToFace(EAST);
     }
     else if (destCol < col){
-      planToFace(3);
+      planToFace(WEST);
     }
 
     //now drive through all the columns
@@ -57,27 +48,26 @@ void PathPlanner::plan(int destRow, int destCol, int destDirection){
 
     //turn to face right direction for rows
     if (destRow > row){
-      planToFace(2);
+      planToFace(SOUTH);
     }
     else if (destRow < row){
-      planToFace(0);
+      planToFace(NORTH);
     }
 
     //now drive through all the rows
     path->addSequential(new DriveUntilReactorTube());
-    if (direction == 0){
-      row++;
-    }
-    else if (direction == 2){
-      row--;
-    }
   }
   else if (destDirection != direction){
     planToFace(direction);
   }
-  Robot::getInstance()->row = row;
-  Robot::getInstance()->col = col;
-  Robot::getInstance()->direction = direction;
+
+  for (int i=0;i<path->commands.size();i++){
+    Serial.print("  ");
+    Serial.println(path->commands.get(i)->name);
+  }
+  Serial.println("...]");
+
+  return path;
 }
 
 void PathPlanner::planToFace(int destDirection){
@@ -98,9 +88,7 @@ void PathPlanner::planToFace(int destDirection){
       diff = diff / -3;
     }
     for (int i=0;i<abs(diff);i++){
-      path->addSequential(new TurnOffLine(turnDirection));
-      path->addSequential(new TurnUntilLine(turnDirection));
+      path->addSequential(new TurnToNextLine());
     }
-    direction = destDirection;
   }
 }

@@ -7,5 +7,8 @@
 DriveThroughIntersection::DriveThroughIntersection() : CommandGroup("drive through intersection") {
   addSequential(new DriveUntilIntersection());
   addSequential(new DriveOverIntersection());
-  addSequential(new ScootPastIntersection());
 } //drives over one intersecion
+
+void DriveThroughIntersection::end(){
+  Robot::getInstance()->incrementPosition();
+}

@@ -1,4 +1,5 @@
 #include "TurnUntilLine.h"
+#include "PathPlanner.h"
 
 TurnUntilLine::TurnUntilLine(int direction) : Command("turn unti line"){
   this->direction = direction;
@@ -9,19 +10,19 @@ void TurnUntilLine::initialize(){
 }
 
 void TurnUntilLine::execute(){
-  if (direction == 1){
-    Robot::getInstance()->rotateLeft();
+  if (direction == PathPlanner::CCW){
+    Robot::getInstance()->rotateCCW();
   }
-  else {
-    Robot::getInstance()->rotateRight();
+  else if (direction == PathPlanner::CW){
+    Robot::getInstance()->rotateCW();
   }
 }
 
 bool TurnUntilLine::isFinished(){
-  if (direction == 1){
+  if (direction == PathPlanner::CCW){
     return Robot::getInstance()->lineSensor.onLine();
   }
-  else {
+  else if (direction == PathPlanner::CW){
     return Robot::getInstance()->lineSensor.onLine();
   }
 }

@@ -6,4 +6,5 @@
 class DriveThroughIntersection: public CommandGroup {
   public:
     DriveThroughIntersection();
+    void end();
 };

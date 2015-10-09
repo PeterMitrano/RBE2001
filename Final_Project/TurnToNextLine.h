@@ -7,4 +7,7 @@ class TurnToNextLine : public CommandGroup {
   public:
     TurnToNextLine(int direction);
     TurnToNextLine();
+    void end();
+  private:
+    int direction;
 };
