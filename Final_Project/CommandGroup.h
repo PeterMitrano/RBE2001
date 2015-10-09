@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Command.h"
-#include "CommandGroupEntry.h"
 #include "LinkedList.h"
 
 /** \brief grouping commands is a useful abstraction.
@@ -23,7 +22,7 @@ class CommandGroup: public Command {
     virtual void execute();
     virtual void end();
     virtual bool isFinished();
-    LinkedList<CommandGroupEntry> commands;
+    LinkedList<Command *> commands;
 
   private:
 

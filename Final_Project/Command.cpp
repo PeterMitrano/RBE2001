@@ -7,8 +7,8 @@ Command::Command() : initialized(false) {}
 Command::Command(String name) : initialized(false), name(name), startTime(millis()) {}
 
 bool Command::cycle() {
-  Serial.print("command: ");
-  Serial.println(name);
+//  Serial.print("command: ");
+//  Serial.println(name);
   bool finished = false;
 
   if (!initialized) {
@@ -46,17 +46,26 @@ bool Command::isRunning() {
   return running;
 }
 
+void Command::initialize() {}
 void Command::_initialize() {
   running = true;
   startTime = millis();
 }
 
+void Command::execute() {}
 void Command::_execute() {}
 
+bool Command::isFinished() {}
+
+void Command::end() {}
 void Command::_end() {
   running = false;
 }
 
 void Command::start() {
   Scheduler::getInstance()->addCommand(this);
+}
+
+bool Command::operator!=(const Command& other){
+    return this->name != other.name;
 }
