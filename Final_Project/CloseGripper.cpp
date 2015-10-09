@@ -1,6 +1,6 @@
 #include "CloseGripper.h"
 
-CloseGripper::CloseGripper() : Command("				close gripper") {}
+CloseGripper::CloseGripper() : Command("close gripper") {}
 
 void CloseGripper::initialize(){
   setTimeout(400);

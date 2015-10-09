@@ -13,5 +13,5 @@ bool End::isFinished(){
 }
 
 void End::end(){
-  Robot::getInstance()->debugPrint("ROUTINE COMPLETE.");
+  Robot::getInstance()->debugPrint("COMPLETE.");
 }
