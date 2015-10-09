@@ -18,7 +18,7 @@ int BTClient::availableSupplyTube(){
   else if ((supply & 0x4) == 0x4) {return 3;}
   else if ((supply & 0x8) == 0x8) {return 4;}
   else {
-    return 0;
+    return -1;
   }
 }
 
@@ -28,7 +28,7 @@ int BTClient::openStorageTube(){
   else if ((storage & 0x4) == 0x4) {return 3;}
   else if ((storage & 0x8) == 0x8) {return 4;}
   else {
-    return 0;
+    return -1;
   }
 }
 
