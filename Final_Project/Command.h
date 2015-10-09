@@ -20,25 +20,25 @@ class Command {
     /** \brief run once in the first iteration of the command's life.
      * this will be overrided by individual commands
      * */
-    virtual void initialize() = 0;
+    virtual void initialize();
     virtual void _initialize();
 
     /** \brief stuff to do over and over each iteration.
      * this will be overrided by individual commands
      */
-    virtual void execute() = 0;
+    virtual void execute();
     virtual void _execute();
 
     /** \brief checked every iteration to see if we're done here.
      * this will be overrided by individual commands
      * @return is the function finished
      */
-    virtual bool isFinished() = 0;
+    virtual bool isFinished();
 
     /** \brief called once at the end, once isFinished() returned true.
      * this will be overrided by individual commands.
      */
-    virtual void end() = 0;
+    virtual void end();
     virtual void _end();
 
     /** \brief adds this command to the scheduler */
@@ -54,13 +54,19 @@ class Command {
      */
     bool isRunning();
 
+    /** \brief comparator overload for !=. used when checking if command is in list */
+    bool operator!=(const Command& other);
+
     void print();
 
+    /** \brief used by command group to organize commands */
+    bool inParallel;
 
+    /** \brief for convenient printing */
     String name;
 
   private:
     bool initialized,running;
-    unsigned long timeout;
-    unsigned long startTime;
+    unsigned long timeout = 0;
+    unsigned long startTime = 0;
 };

@@ -1,16 +1,15 @@
 #include "CommandGroup.h"
-#include "CommandGroupEntry.h"
 
 CommandGroup::CommandGroup(const String name) : Command(name) {}
 
 void CommandGroup::addSequential(Command *command){
-  commands.add(
-     CommandGroupEntry(command, CommandGroupEntry::kSequence_InSequence));
+  command->inParallel = false;
+  commands.add(command);
 }
 
 void CommandGroup::addParallel(Command *command){
-  commands.add(
-     CommandGroupEntry(command, CommandGroupEntry::kSequence_InParallel));
+  command->inParallel = true;
+  commands.add(command);
 }
 
 void CommandGroup::initialize(){}
@@ -21,16 +20,13 @@ void CommandGroup::_initialize(){
 void CommandGroup::execute(){}
 void CommandGroup::_execute(){
 
-
-  CommandGroupEntry entry;
   Command *executingCommand = NULL;
   bool done = false;
 
   currentCommandIndex = 0;
 
   while (!done && (currentCommandIndex < commands.size() )){
-    entry = commands.get(currentCommandIndex);
-    executingCommand = entry._command;
+    executingCommand = commands.get(currentCommandIndex);
 
     bool isFinished = executingCommand->cycle();
     if (isFinished){
@@ -38,7 +34,7 @@ void CommandGroup::_execute(){
      currentCommandIndex--;
     }
 
-    if (entry._state == CommandGroupEntry::kSequence_InSequence){
+    if (!executingCommand->inParallel){
      done = true;
     }
     else {
