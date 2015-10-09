@@ -6,4 +6,8 @@
 class GetRodFromSupply: public CommandGroup {
   public:
     GetRodFromSupply();
+    void initialize();
+    void end();
+  private:
+    int reactorNumber;
 };

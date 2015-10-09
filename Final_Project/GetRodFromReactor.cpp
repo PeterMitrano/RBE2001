@@ -22,22 +22,15 @@ void GetRodFromReactor::initialize(){
     destDirection = 1;
   }
 
-
-  CommandGroup *pathToReactor = new CommandGroup();
-  PathPlanner *planner = new PathPlanner(pathToReactor);
-  planner->plan(destRow, destCol, destDirection);
-
-  for (int i=0;i<pathToReactor->commands.size();i++){
-    Serial.print("  ");
-    Serial.println(pathToReactor->commands.get(i)._command->name);
-  }
-  Serial.println("...]");
+  PathPlanner *planner = new PathPlanner();
+  CommandGroup *pathToReactor = planner->plan(destRow, destCol, destDirection);
 
   addSequential(pathToReactor);
   addSequential(new LowerArm());
   addSequential(new CloseGripper());
   addSequential(new RaiseArm());
   addSequential(new BackOffTube());
+
 }
 
 void GetRodFromReactor::end(){
