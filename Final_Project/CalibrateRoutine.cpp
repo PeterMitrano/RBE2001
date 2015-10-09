@@ -1,11 +1,13 @@
 #include "CalibrateRoutine.h"
 
-#include "CalibrateArm.h"
 #include "RaiseArm.h"
+#include "CalibrateLineSensor.h"
+#include "TurnUntilLine.h"
 #include "OpenGripper.h"
 
 CalibrateRoutine::CalibrateRoutine(): CommandGroup("calibrate routine"){
-  addParallel(new CalibrateArm());
   addParallel(new OpenGripper());
-  addSequential(new RaiseArm());
+  addParallel(new RaiseArm());
+  addSequential(new CalibrateLineSensor());
+  addSequential(new TurnUntilLine(-1));
 }
