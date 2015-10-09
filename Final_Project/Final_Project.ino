@@ -2,6 +2,9 @@
 #include <Encoder.h>
 #include <BluetoothMaster.h>
 #include <ReactorProtocol.h>
+#include <TimerOne.h>
+#include <Wire.h>
+#include <LiquidCrystal.h>
 
 #include "Robot.h"
 #include "Scheduler.h"

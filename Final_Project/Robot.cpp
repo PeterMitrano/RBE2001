@@ -9,7 +9,7 @@ bool Robot::timeToBlinkAndSend = false;
 Robot::Robot() : lcd(40,41,42,43,44,45) {
   direction = PathPlanner::WEST;
   row = 1;
-  col = 2;
+  col = 1;
 }
 
 Robot *Robot::getInstance(){

@@ -20,7 +20,9 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   Serial.print("starting at ");
   Serial.print(row);
   Serial.print(",");
-  Serial.println(col);
+  Serial.print(col);
+  Serial.print(" facing ");
+  Serial.println(direction);
 
 
   if (col != destCol || row!=destRow){
@@ -33,7 +35,7 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
     else {
       //this must mean you're facing a reactor tube
       //or waiting in front of reactor tube
-      planToFace(destDirection);
+      //planToFace(destDirection);
     }
 
     //now that we're on the line, navigate to our goal

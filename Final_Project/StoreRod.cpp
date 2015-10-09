@@ -9,7 +9,7 @@ StoreRod::StoreRod() : CommandGroup("store rod") {
 
 void StoreRod::initialize(){
   //these are fixed, except destCol which should be bluetooth
-  int destDirection = 2, destRow = -1, destCol;
+  int destDirection = 2, destRow = 2, destCol;
 
   destCol = Robot::getInstance()->btClient.openStorageTube();
 
@@ -24,8 +24,8 @@ void StoreRod::initialize(){
   PathPlanner *planner = new PathPlanner();
   CommandGroup *pathToStorage = planner->plan(destRow, destCol, destDirection);
 
-//  addSequential(new RaiseArm());
-//  addSequential(pathToStorage);
+  addSequential(new RaiseArm());
+  addSequential(pathToStorage);
 //  addSequential(new OpenGripper());
 //  addSequential(new BackOffTube());
 }

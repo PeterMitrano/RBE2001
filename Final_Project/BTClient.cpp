@@ -15,20 +15,20 @@ void BTClient::setup(){
 
 int BTClient::availableSupplyTube(){
   // lookup the first 1 in this byte
-  if ((supply & 0x1) == 0x1) {return 1;}
-  else if ((supply & 0x2) == 0x2) {return 2;}
-  else if ((supply & 0x4) == 0x4) {return 3;}
-  else if ((supply & 0x8) == 0x8) {return 4;}
+  if ((supply & 0x1) == 0x1) {return 4;}
+  else if ((supply & 0x2) == 0x2) {return 3;}
+  else if ((supply & 0x4) == 0x4) {return 2;}
+  else if ((supply & 0x8) == 0x8) {return 1;}
   else {
     return -1;
   }
 }
 
 int BTClient::openStorageTube(){
-  if ((storage & 0x1) == 0x1) {return 1;}
-  else if ((storage & 0x2) == 0x2) {return 2;}
-  else if ((storage & 0x4) == 0x4) {return 3;}
-  else if ((storage & 0x8) == 0x8) {return 4;}
+  if ((storage & 0x1) == 0x1) {return 4;}
+  else if ((storage & 0x2) == 0x2) {return 3;}
+  else if ((storage & 0x4) == 0x4) {return 2;}
+  else if ((storage & 0x8) == 0x8) {return 1;}
   else {
     return -1;
   }
