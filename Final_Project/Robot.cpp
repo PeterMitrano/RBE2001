@@ -1,4 +1,5 @@
 #include "Robot.h"
+#include "PathPlanner.h"
 #include <stdlib.h>
 #include <Wire.h>
 
@@ -6,9 +7,9 @@ Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
 
 Robot::Robot() : lcd(40,41,42,43,44,45) {
-  direction = 1;
+  direction = 3;
   row = 1;
-  col = 4;
+  col = 1;
 }
 
 Robot *Robot::getInstance(){
@@ -72,8 +73,8 @@ void Robot::driveBwd(){
 }
 
 void Robot::followLine() {
-  int leftPower = travelSpeed - lineSensor.adjustmentPower();
-  int rightPower = travelSpeed + lineSensor.adjustmentPower();
+  int leftPower = travelSpeed + lineSensor.adjustmentPower();
+  int rightPower = travelSpeed - lineSensor.adjustmentPower();
   drive(leftPower, rightPower);
 }
 
@@ -81,11 +82,11 @@ void Robot::backUp(int lPower, int rPower){
   drive(lPower,rPower);
 }
 
-void Robot::rotateLeft() {
-  drive(-rotateSpeed, 10+rotateSpeed);
+void Robot::rotateCW() {
+  drive(-rotateSpeed, rotateSpeed);
 }
 
-void Robot::rotateRight() {
+void Robot::rotateCCW() {
   drive(rotateSpeed, -rotateSpeed);
 }
 
@@ -146,3 +147,35 @@ void Robot::debugPrint(char *s){
   sprintf(str,"%-6s",s);
   lcd.print(str);
 }
+
+void Robot::debugPrint2(int i){
+  lcd.setCursor(0,1);
+  char str[17];
+  sprintf(str,"%-6i",i);
+  lcd.print(str);
+}
+
+void Robot::debugPrint2(char *s){
+  lcd.setCursor(0,1);
+  char str[17];
+  sprintf(str,"%-6s",s);
+  lcd.print(str);
+}
+
+void Robot::incrementPosition(){
+  switch(direction){
+    case PathPlanner::NORTH:
+      Robot::getInstance()->row++;
+      break;
+    case PathPlanner::EAST:
+      Robot::getInstance()->col++;
+      break;
+    case PathPlanner::SOUTH:
+      Robot::getInstance()->row--;
+      break;
+    case PathPlanner::WEST:
+      Robot::getInstance()->col--;
+      break;
+  }
+}
+

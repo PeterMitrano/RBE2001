@@ -58,10 +58,10 @@ class Robot {
     void driveBwd();
 
     /** \brief fixed power rotate */
-    void rotateLeft();
+    void rotateCW();
 
     /** \brief fixed power rotate */
-    void rotateRight();
+    void rotateCCW();
 
     /** \brief check is we've hit a reactor tube
      * \return true when limit switch is hit */
@@ -73,6 +73,13 @@ class Robot {
     /** \brief print to 0,0 on lcd */
     void debugPrint(char *str);
     void debugPrint(int i);
+    void debugPrint2(char *str);
+    void debugPrint2(int i);
+
+    /** \brief changes position based on direction.
+     *  Assuming you've one row/col in your current direction
+     */
+    void incrementPosition();
 
     /** \brief used to store position
      * updated by navigate commands
@@ -147,5 +154,5 @@ class Robot {
 
     const int reactorTubeLimitPin = 28;
     const int rotateSpeed = 35;
-    const int travelSpeed = 30;
+    const int travelSpeed = 40;
 };
