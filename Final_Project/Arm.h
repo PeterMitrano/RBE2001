@@ -53,9 +53,6 @@ class Arm {
     /** \brief gripper object is part of the arm */
     Gripper gripper;
 
-    /** \brief flag to keep the control function from running without calibration */
-    bool calibrated = false;
-
   private:
 
     /** \brief raw function for controlling */
@@ -92,11 +89,8 @@ class Arm {
 
     /** \brief PI constants */
     const double kP = 0.65;
-    const double kI = 0.04;
-    const double kD = 0.03;
-    const double _kP = 0.1;
-    const double _kI = 0.002;
-    const double _kD = 0.01;
+    const double kI = 0.05;
+    const double kD = 0.06;
 
     /** \brief absolute value cap of integral.
      * this protects us from <a href = "https://en.wikipedia.org/wiki/Integral_windup">integral windup</a> */
@@ -105,8 +99,6 @@ class Arm {
     long setpoint = 0;
 
     /** positions */
-    const long UP_POSITION = 835l;
-    const long _UP_POSITION = 6200l;
-    const long _DOWN_POSITION = 0l;
-    const long DOWN_POSITION = 180l;
+    const long UP_POSITION = 812l;
+    const long DOWN_POSITION = 165l;
 };

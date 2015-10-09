@@ -3,6 +3,7 @@
 
 Arm::Arm() : encoder(encAPin, encBPin), gripper() {
   derivative = -1;
+  setpoint = 500;
 }
 
 void Arm::setup() {
@@ -14,26 +15,24 @@ void Arm::setup() {
 }
 
 void Arm::control(){
-  if (calibrated){
-    unsigned long t = millis();
-    unsigned long dt = t - lastControlTime;
-    if (dt > CONTROL_TIME){
-      long pos = position();
-      long error = setpoint - pos;
+  unsigned long t = millis();
+  unsigned long dt = t - lastControlTime;
+  if (dt > CONTROL_TIME){
+    long pos = position();
+    long error = setpoint - pos;
 
-      integral += error;
-      integral = integral < MAX_INTEGRAL ? integral : MAX_INTEGRAL;
-      integral = integral > -MAX_INTEGRAL ? integral : -MAX_INTEGRAL;
-      derivative = error - lastError;
+    integral += error;
+    integral = integral < MAX_INTEGRAL ? integral : MAX_INTEGRAL;
+    integral = integral > -MAX_INTEGRAL ? integral : -MAX_INTEGRAL;
+    derivative = error - lastError;
 
-      int val = kP * error + kI * integral + kD * derivative;
+    int val = kP * error + kI * integral + kD * derivative;
 
-      Robot::getInstance()->debugPrint(pos);
+    Robot::getInstance()->debugPrint(pos);
 
-      drive(val);
-      lastError = error;
-      lastControlTime = t;
-    }
+    drive(val);
+    lastError = error;
+    lastControlTime = t;
   }
 }
 
