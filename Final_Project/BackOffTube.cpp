@@ -21,4 +21,5 @@ bool BackOffTube::isFinished(){
 
 void BackOffTube::end(){
   Robot::getInstance()->stopDriving();
+  Robot::getInstance()->decrementPosition();
 }

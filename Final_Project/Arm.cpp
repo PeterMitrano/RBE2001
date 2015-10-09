@@ -28,8 +28,6 @@ void Arm::control(){
 
     int val = kP * error + kI * integral + kD * derivative;
 
-    Robot::getInstance()->debugPrint(pos);
-
     drive(val);
     lastError = error;
     lastControlTime = t;

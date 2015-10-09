@@ -17,6 +17,12 @@ PathPlanner::PathPlanner(){
 CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   int dist;
 
+  Serial.print("starting at ");
+  Serial.print(row);
+  Serial.print(",");
+  Serial.println(col);
+
+
   if (col != destCol || row!=destRow){
     //first navigate to center line
     if (row != 1){
@@ -43,7 +49,6 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
     dist = abs(destCol - col);
     for (int i=0;i<dist;i++){
       path->addSequential(new DriveThroughIntersection());
-      col++;
     }
 
     //turn to face right direction for rows
@@ -71,6 +76,8 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
 }
 
 void PathPlanner::planToFace(int destDirection){
+  Serial.print("   turn to face");
+  Serial.println(destDirection);
   // turning is dependant on location
   // some places (in from of storage/supply) don't have intersections
   if (row != 1){

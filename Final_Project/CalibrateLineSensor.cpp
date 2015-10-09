@@ -7,7 +7,7 @@ void CalibrateLineSensor::initialize(){
 }
 
 void CalibrateLineSensor::execute(){
-  Robot::getInstance()->rotateLeft();
+  Robot::getInstance()->rotateCCW();
   Robot::getInstance()->lineSensor.calibrateLineSensors();
 }
 

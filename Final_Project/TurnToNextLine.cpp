@@ -4,7 +4,7 @@
 #include "TurnUntilLine.h"
 #include "PathPlanner.h"
 
-TurnToNextLine::TurnToNextLine(int direction) : CommandGroup("turn around"){
+TurnToNextLine::TurnToNextLine(int direction) : CommandGroup("turn to next line"){
   //0 represents clockwise
   //1 represent counter clockwise
   this->direction = direction;

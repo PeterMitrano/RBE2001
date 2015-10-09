@@ -7,9 +7,9 @@ Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
 
 Robot::Robot() : lcd(40,41,42,43,44,45) {
-  direction = 3;
+  direction = PathPlanner::WEST;
   row = 1;
-  col = 1;
+  col = 2;
 }
 
 Robot *Robot::getInstance(){
@@ -83,11 +83,11 @@ void Robot::backUp(int lPower, int rPower){
 }
 
 void Robot::rotateCW() {
-  drive(-rotateSpeed, rotateSpeed);
+  drive(rotateSpeed, -rotateSpeed);
 }
 
 void Robot::rotateCCW() {
-  drive(rotateSpeed, -rotateSpeed);
+  drive(-rotateSpeed, rotateSpeed);
 }
 
 
@@ -179,3 +179,19 @@ void Robot::incrementPosition(){
   }
 }
 
+void Robot::decrementPosition(){
+  switch(direction){
+    case PathPlanner::NORTH:
+      Robot::getInstance()->row--;
+      break;
+    case PathPlanner::EAST:
+      Robot::getInstance()->col--;
+      break;
+    case PathPlanner::SOUTH:
+      Robot::getInstance()->row++;
+      break;
+    case PathPlanner::WEST:
+      Robot::getInstance()->col++;
+      break;
+  }
+}

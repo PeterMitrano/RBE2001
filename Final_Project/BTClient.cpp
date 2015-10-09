@@ -3,6 +3,8 @@
 
 BTClient::BTClient() :
   pcol(byte(::TEAM_NUMBER)) {
+    supply = 1;
+    storage = 1;
 }
 
 void BTClient::setup(){
@@ -90,5 +92,8 @@ void BTClient::readMessage(){
      }
     }
   }
+  char tubeInfo[17];
+  snprintf(tubeInfo,17,"str=%i sply=%i",storage,supply);
+  Robot::getInstance()->debugPrint(tubeInfo);
 }
 

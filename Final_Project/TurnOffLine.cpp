@@ -12,10 +12,10 @@ void TurnOffLine::initialize(){
 
 void TurnOffLine::execute(){
   if (direction == PathPlanner::CCW){
-    Robot::getInstance()->rotateRight();
+    Robot::getInstance()->rotateCCW();
   }
   else if (direction == PathPlanner::CW) {
-    Robot::getInstance()->rotateLeft();
+    Robot::getInstance()->rotateCW();
   }
 }
 

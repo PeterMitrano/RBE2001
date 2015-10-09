@@ -80,6 +80,7 @@ class Robot {
      *  Assuming you've one row/col in your current direction
      */
     void incrementPosition();
+    void decrementPosition();
 
     /** \brief used to store position
      * updated by navigate commands

@@ -9,9 +9,13 @@ StoreRod::StoreRod() : CommandGroup("store rod") {
 
 void StoreRod::initialize(){
   //these are fixed, except destCol which should be bluetooth
-  int destDirection = 2, destRow = -1, destCol = 1;
+  int destDirection = 2, destRow = -1, destCol;
 
   destCol = Robot::getInstance()->btClient.openStorageTube();
+
+  if (destCol < 2 || destCol > 5){
+    destCol = 2;
+  }
 
   Robot::getInstance()->debugPrint2(destCol);
   Serial.print("going to ");
