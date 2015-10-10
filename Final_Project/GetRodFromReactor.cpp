@@ -15,7 +15,7 @@ GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("ge
 
 void GetRodFromReactor::initialize(){
   //figure out where we're going
-  int destDirection = 3, destRow = 1, destCol = 0;
+  destDirection = 3, destRow = 1, destCol = 0;
 
   if (reactorNumber == 2){
     destCol = 5;
@@ -30,7 +30,6 @@ void GetRodFromReactor::initialize(){
   addSequential(new CloseGripper());
   addSequential(new RaiseArm());
   addSequential(new BackOffTube());
-
 }
 
 void GetRodFromReactor::end(){

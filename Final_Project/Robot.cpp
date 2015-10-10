@@ -5,6 +5,7 @@
 
 Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
+volatile unsigned long Robot::notPausedTime = 0l;
 
 Robot::Robot() : lcd(40,41,42,43,44,45) {
   direction = PathPlanner::WEST;
@@ -38,6 +39,8 @@ void Robot::setup(){
 
   Timer1.initialize(1000l * BLINK_AND_SEND_PERIOD);
   Timer1.attachInterrupt(&Robot::blinkAndSendInterrupt);
+  Timer3.initialize(1000l);
+  Timer3.attachInterrupt(&Robot::incrementTime);
 }
 
 void Robot::blinkAndSendInterrupt(){
@@ -162,36 +165,10 @@ void Robot::debugPrint2(char *s){
   lcd.print(str);
 }
 
-void Robot::incrementPosition(){
-  switch(direction){
-    case PathPlanner::NORTH:
-      Robot::getInstance()->row++;
-      break;
-    case PathPlanner::EAST:
-      Robot::getInstance()->col++;
-      break;
-    case PathPlanner::SOUTH:
-      Robot::getInstance()->row--;
-      break;
-    case PathPlanner::WEST:
-      Robot::getInstance()->col--;
-      break;
-  }
+unsigned long Robot::getTime(){
+  return notPausedTime;
 }
 
-void Robot::decrementPosition(){
-  switch(direction){
-    case PathPlanner::NORTH:
-      Robot::getInstance()->row--;
-      break;
-    case PathPlanner::EAST:
-      Robot::getInstance()->col--;
-      break;
-    case PathPlanner::SOUTH:
-      Robot::getInstance()->row++;
-      break;
-    case PathPlanner::WEST:
-      Robot::getInstance()->col++;
-      break;
-  }
+void Robot::incrementTime(){
+  notPausedTime++;
 }

@@ -17,14 +17,6 @@ PathPlanner::PathPlanner(){
 CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   int dist;
 
-  Serial.print("starting at ");
-  Serial.print(row);
-  Serial.print(",");
-  Serial.print(col);
-  Serial.print(" facing ");
-  Serial.println(direction);
-
-
   if (col != destCol || row!=destRow){
     //first navigate to center line
     if (row != 1){
@@ -32,11 +24,9 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
       path->addSequential(new TurnToNextLine());
       path->addSequential(new DriveThroughIntersection());
     }
-    else {
-      //this must mean you're facing a reactor tube
-      //or waiting in front of reactor tube
-      //planToFace(destDirection);
-    }
+
+    //now we're on the line
+    row = 1;
 
     //now that we're on the line, navigate to our goal
     //first turn and face the right direction
@@ -74,12 +64,14 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   }
   Serial.println("...]");
 
+  Robot::getInstance()->row = destRow;
+  Robot::getInstance()->col = destCol;
+  Robot::getInstance()->direction = destDirection;
+
   return path;
 }
 
 void PathPlanner::planToFace(int destDirection){
-  Serial.print("   turn to face");
-  Serial.println(destDirection);
   // turning is dependant on location
   // some places (in from of storage/supply) don't have intersections
   if (row != 1){
@@ -100,4 +92,6 @@ void PathPlanner::planToFace(int destDirection){
       path->addSequential(new TurnToNextLine());
     }
   }
+
+  direction = destDirection;
 }

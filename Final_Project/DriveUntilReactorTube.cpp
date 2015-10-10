@@ -16,5 +16,4 @@ bool DriveUntilReactorTube::isFinished(){
 
 void DriveUntilReactorTube::end(){
   Robot::getInstance()->stopDriving();
-  Robot::getInstance()->incrementPosition();
 }

@@ -15,6 +15,7 @@ void BTClient::setup(){
 
 int BTClient::availableSupplyTube(){
   // lookup the first 1 in this byte
+  // supply tube 1 is column 4, tub 4 is 1
   if ((supply & 0x1) == 0x1) {return 4;}
   else if ((supply & 0x2) == 0x2) {return 3;}
   else if ((supply & 0x4) == 0x4) {return 2;}
@@ -25,6 +26,7 @@ int BTClient::availableSupplyTube(){
 }
 
 int BTClient::openStorageTube(){
+  // storage tube 1 is column 4, tub 4 is 1
   if ((storage & 0x1) == 0x1) {return 4;}
   else if ((storage & 0x2) == 0x2) {return 3;}
   else if ((storage & 0x4) == 0x4) {return 2;}

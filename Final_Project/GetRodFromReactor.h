@@ -11,5 +11,8 @@ class GetRodFromReactor: public CommandGroup {
     void initialize();
     void end();
   private:
-    int reactorNumber;
+    int reactorNumber,
+        destCol,
+        destRow,
+        destDirection;
 };

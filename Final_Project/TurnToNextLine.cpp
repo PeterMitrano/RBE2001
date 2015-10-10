@@ -16,5 +16,4 @@ TurnToNextLine::TurnToNextLine() : TurnToNextLine(PathPlanner::CW){
 }
 
 void TurnToNextLine::end(){
-  Robot::getInstance()->direction += direction;
 }

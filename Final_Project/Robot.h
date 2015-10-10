@@ -7,6 +7,7 @@
 #include <Arduino.h>
 #include <Servo.h>
 #include <TimerOne.h>
+#include <TimerThree.h>
 #include <LiquidCrystal.h>
 #include "GetDemRods.h"
 #include "Arm.h"
@@ -76,11 +77,11 @@ class Robot {
     void debugPrint2(char *str);
     void debugPrint2(int i);
 
-    /** \brief changes position based on direction.
-     *  Assuming you've one row/col in your current direction
-     */
-    void incrementPosition();
-    void decrementPosition();
+    /** \brief returns the time while not paused. used by commands that run based on time */
+    static unsigned long getTime();
+
+    /** \brief increment time counter */
+    static void incrementTime();
 
     /** \brief used to store position
      * updated by navigate commands
@@ -156,4 +157,6 @@ class Robot {
     const int reactorTubeLimitPin = 28;
     const int rotateSpeed = 35;
     const int travelSpeed = 40;
+
+    static volatile unsigned long notPausedTime;
 };

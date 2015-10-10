@@ -10,5 +10,4 @@ DriveThroughIntersection::DriveThroughIntersection() : CommandGroup("drive throu
 } //drives over one intersecion
 
 void DriveThroughIntersection::end(){
-  Robot::getInstance()->incrementPosition();
 }
