@@ -1,5 +1,7 @@
 #pragma once
-
+/** \brief
+* just ends the program, does nothing 
+*/
 #include "Robot.h"
 #include "Command.h"
 

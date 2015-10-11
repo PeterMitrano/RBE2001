@@ -27,7 +27,7 @@ class TurnUntilLine : public Command {
     */
     bool isFinished();
 
-    /** \brief
+    /** \briefgitlgit 
     * stops robot
     */
     void end();

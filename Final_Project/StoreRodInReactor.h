@@ -1,5 +1,7 @@
 #pragma once
-
+/** \brief
+* puts the rod into the reactor specified 
+*/
 #include "Robot.h"
 #include "CommandGroup.h"
 
