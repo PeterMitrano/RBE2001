@@ -18,8 +18,6 @@ void StoreRod::initialize(){
   }
 
   Robot::getInstance()->debugPrint2(destCol);
-  Serial.print("going to ");
-  Serial.println(destCol);
 
   PathPlanner *planner = new PathPlanner();
   CommandGroup *pathToStorage = planner->plan(destRow, destCol, destDirection);

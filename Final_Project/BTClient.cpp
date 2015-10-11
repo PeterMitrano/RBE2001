@@ -91,11 +91,11 @@ void BTClient::readMessage(){
             //only these 4 should be sent by field
             break;
 				}
+        char tubeInfo[17];
+        snprintf(tubeInfo,17,"str=%i sply=%i",storage,supply);
+        Robot::getInstance()->debugPrint(tubeInfo);
      }
     }
   }
-  char tubeInfo[17];
-  snprintf(tubeInfo,17,"str=%i sply=%i",storage,supply);
-  Robot::getInstance()->debugPrint(tubeInfo);
 }
 
