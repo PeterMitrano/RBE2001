@@ -13,8 +13,8 @@ void StoreRod::initialize(){
 
   destCol = Robot::getInstance()->btClient.openStorageTube();
 
-  if (destCol < 2 || destCol > 5){
-    destCol = 2;
+  if (destCol < 1 || destCol > 4){
+    destCol = 1;
   }
 
   Robot::getInstance()->debugPrint2(destCol);

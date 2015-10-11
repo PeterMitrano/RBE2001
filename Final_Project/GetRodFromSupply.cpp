@@ -13,8 +13,8 @@ void GetRodFromSupply::initialize(){
 
   destCol = Robot::getInstance()->btClient.availableSupplyTube();
 
-  if (destCol < 2 || destCol > 5){
-    destCol = 2;
+  if (destCol < 1 || destCol > 4){
+    destCol = 1;
   }
 
   Robot::getInstance()->debugPrint2(destCol);
@@ -34,11 +34,6 @@ void GetRodFromSupply::initialize(){
 	addSequential(new CloseGripper());
 	addSequential(new BackOffTube());
 
-}
-
-void GetRodFromSupply::execute(){
-  //if bluetooth says we've failed to remove the rod, try again
-  if (Robot::getInstance()->btClient.noRodAt(destCol)
 }
 
 void GetRodFromSupply::end(){

@@ -25,12 +25,16 @@ int BTClient::availableSupplyTube(){
   }
 }
 
+bool BTClient::isRodAt(int column){
+  return availableSupplyTube() == column;
+}
+
 int BTClient::openStorageTube(){
   // storage tube 1 is column 4, tub 4 is 1
-  if ((storage & 0x1) == 0x1) {return 4;}
-  else if ((storage & 0x2) == 0x2) {return 3;}
-  else if ((storage & 0x4) == 0x4) {return 2;}
-  else if ((storage & 0x8) == 0x8) {return 1;}
+  if ((storage & 0x1) != 0x1) {return 4;}
+  else if ((storage & 0x2) != 0x2) {return 3;}
+  else if ((storage & 0x4) != 0x4) {return 2;}
+  else if ((storage & 0x8) != 0x8) {return 1;}
   else {
     return -1;
   }
@@ -92,7 +96,7 @@ void BTClient::readMessage(){
             break;
 				}
         char tubeInfo[17];
-        snprintf(tubeInfo,17,"str=%i sply=%i",storage,supply);
+        snprintf(tubeInfo,17,"str=%02i sply=%02i",storage,supply);
         Robot::getInstance()->debugPrint(tubeInfo);
      }
     }

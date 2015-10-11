@@ -22,6 +22,13 @@ class BTClient {
      * \return the position of the available supply tube */
     int availableSupplyTube();
 
+    /** \brief retuns if there's a rod in the supply tube
+     * at our column
+     * \param[_in] column the column the robot is trying to get a rod from
+     */
+    bool isRodAt(int column);
+
+
     /** \brief returns the storage tub locations
      * \return the position of the open storage tube */
     int openStorageTube();
