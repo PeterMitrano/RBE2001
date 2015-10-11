@@ -155,9 +155,9 @@ class Robot {
     static const int rightWheelPin = 4;
 
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeedForward = 42;
-    const int rotateSpeedBackward = -37;
-    const int travelSpeed = 28;
+    const int rotateSpeedForward = 43;
+    const int rotateSpeedBackward = -38;
+    const int travelSpeed = 34;
 
     static volatile unsigned long notPausedTime;
 };

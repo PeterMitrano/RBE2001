@@ -15,6 +15,9 @@ PathPlanner::PathPlanner(){
 }
 
 CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
+  char str[17];
+  snprintf(str,17,"(%i,%i) to (%i,%i)",row,col,destRow,destCol);
+
   int dist;
   if (col != destCol || row!=destRow){
     //first navigate to center line
@@ -77,6 +80,8 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   Robot::getInstance()->row = destRow;
   Robot::getInstance()->col = destCol;
   Robot::getInstance()->direction = destDirection;
+
+  Robot::getInstance()->debugPrint2(str);
 
   return path;
 }

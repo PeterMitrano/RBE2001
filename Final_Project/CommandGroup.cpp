@@ -10,10 +10,6 @@ void CommandGroup::addSequential(Command *command){
 void CommandGroup::addParallel(Command *command){
   command->inParallel = true;
   commands.add(command);
-
-  for (int i=0;i<commands.size()){
-    Serial.println(commands.get(i)->name);
-  }
 }
 
 void CommandGroup::initialize(){}

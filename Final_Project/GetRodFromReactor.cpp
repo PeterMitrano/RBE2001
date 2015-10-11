@@ -11,6 +11,7 @@
 
 GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("get rod from reactor") {
   this->reactorNumber = reactorNumber;
+  Serial.println("noting to go to a reactor");
 }
 
 void GetRodFromReactor::initialize(){

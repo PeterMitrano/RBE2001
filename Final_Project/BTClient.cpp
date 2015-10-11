@@ -99,7 +99,7 @@ void BTClient::readMessage(){
 				}
         char tubeInfo[17];
         snprintf(tubeInfo,17,"str=%02i sply=%02i",storage,supply);
-        Robot::getInstance()->debugPrint(tubeInfo);
+//        Robot::getInstance()->debugPrint(tubeInfo);
      }
     }
   }

@@ -17,10 +17,6 @@ void GetRodFromSupply::initialize(){
     destCol = 1;
   }
 
-  Robot::getInstance()->debugPrint2(destCol);
-  Serial.print("going to ");
-  Serial.println(destCol);
-
   PathPlanner *planner = new PathPlanner();
   CommandGroup *pathToStorage = planner->plan(destRow, destCol, destDirection);
 
@@ -33,6 +29,7 @@ void GetRodFromSupply::initialize(){
   addSequential(new DriveUntilReactorTube());
 	addSequential(new CloseGripper(CloseGripper::HARD));
 	addSequential(new BackOffTube(-30,-33));
+  Robot::getInstance()->debugPrint("added commands!");
 }
 
 void GetRodFromSupply::end(){

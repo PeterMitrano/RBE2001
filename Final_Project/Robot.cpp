@@ -67,7 +67,7 @@ void Robot::stopDriving(){
 }
 
 void Robot::driveFwd(){
-  drive(travelSpeed,travelSpeed);
+  drive(travelSpeed+10,travelSpeed+10);
 }
 
 

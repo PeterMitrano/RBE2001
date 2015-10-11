@@ -17,12 +17,9 @@ void StoreRod::initialize(){
     destCol = 1;
   }
 
-  Robot::getInstance()->debugPrint2(destCol);
-
   PathPlanner *planner = new PathPlanner();
   CommandGroup *pathToStorage = planner->plan(destRow, destCol, destDirection);
 
-  addSequential(new RaiseArm());
   addSequential(pathToStorage);
   addSequential(new OpenGripper());
   addSequential(new BackOffTube(-30, -35));
