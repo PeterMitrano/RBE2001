@@ -1,10 +1,14 @@
 #include "CloseGripper.h"
 
-CloseGripper::CloseGripper() : Command("close gripper") {}
+CloseGripper::CloseGripper() : CloseGripper(CloseGripper::SOFT) {}
+
+CloseGripper::CloseGripper(int force) : Command("close gripper") {
+  this->force = force;
+}
 
 void CloseGripper::initialize(){
   setTimeout(400);
-  Robot::getInstance()->arm.gripper.cls();
+  Robot::getInstance()->arm.gripper.cls(force);
 }
 
 
