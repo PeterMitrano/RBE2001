@@ -33,11 +33,15 @@ void GetRodFromSupply::initialize(){
   addSequential(new DriveUntilReactorTube());
 	addSequential(new CloseGripper());
 	addSequential(new BackOffTube());
-	
+
+}
+
+void GetRodFromSupply::execute(){
+  //if bluetooth says we've failed to remove the rod, try again
+  if (Robot::getInstance()->btClient.noRodAt(destCol)
 }
 
 void GetRodFromSupply::end(){
   Robot::getInstance()->radiating = true;
 }
-
 
