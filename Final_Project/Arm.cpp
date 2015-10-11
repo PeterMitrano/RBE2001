@@ -21,6 +21,10 @@ void Arm::control(){
     long pos = position();
     long error = setpoint - pos;
 
+    if ((error > 0 && lastError < 0) || (error < 0 && lastError > 0)){
+      integral = 0;
+    }
+
     integral += error;
     integral = integral < MAX_INTEGRAL ? integral : MAX_INTEGRAL;
     integral = integral > -MAX_INTEGRAL ? integral : -MAX_INTEGRAL;

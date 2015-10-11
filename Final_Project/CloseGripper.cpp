@@ -4,6 +4,7 @@ CloseGripper::CloseGripper() : CloseGripper(CloseGripper::SOFT) {}
 
 CloseGripper::CloseGripper(int force) : Command("close gripper") {
   this->force = force;
+  Robot::getInstance()->setSong(11,false);
 }
 
 void CloseGripper::initialize(){

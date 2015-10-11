@@ -3,7 +3,7 @@
 DriveOverIntersection::DriveOverIntersection() : Command("drive over intersection"){}
 
 void DriveOverIntersection::initialize(){
-  Robot::getInstance()->setSong(18,true);
+  Robot::getInstance()->setSong(13,true);
 }
 
 void DriveOverIntersection::execute(){

@@ -5,7 +5,6 @@
 
 class BackOffTube : public Command {
   public:
-    BackOffTube();
     BackOffTube(int leftSpeed, int rightSpeed);
     void initialize();
     void execute();

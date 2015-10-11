@@ -64,8 +64,11 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   else if (destDirection != direction){
     planToFace(direction);
   }
+  else {
+    path->addSequential(new DriveUntilReactorTube());
+  }
 
-  for (int i=0;i<path->commands.size();i++){
+  for (int i = 0; i < path->commands.size(); i++){
     Serial.print("  ");
     Serial.println(path->commands.get(i)->name);
   }
@@ -96,7 +99,12 @@ void PathPlanner::planToFace(int destDirection){
       diff = diff / -3;
     }
     for (int i=0;i<abs(diff);i++){
-      path->addSequential(new TurnToNextLine());
+      if (diff > 0){
+        path->addSequential(new TurnToNextLine());
+      }
+      else {
+        path->addSequential(new TurnToNextLine(-1));
+      }
     }
   }
 

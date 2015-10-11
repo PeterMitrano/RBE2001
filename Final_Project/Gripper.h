@@ -11,7 +11,7 @@ class Gripper {
     void setup();
 
     /** \brief close the gripper */
-    void cls();
+    void cls(int force);
 
     /** \brief open the gripper */
     void opn();

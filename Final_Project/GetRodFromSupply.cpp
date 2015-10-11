@@ -27,13 +27,12 @@ void GetRodFromSupply::initialize(){
   addSequential(new RaiseArm());
   addSequential(new OpenGripper());
   addSequential(pathToStorage);
-	addSequential(new CloseGripper());
-	addSequential(new BackOffTube(-24,-16));
+	addSequential(new CloseGripper(CloseGripper::HARD));
+	addSequential(new BackOffTube(-23,-23));
 	addSequential(new OpenGripper());
   addSequential(new DriveUntilReactorTube());
-	addSequential(new CloseGripper());
-	addSequential(new BackOffTube());
-
+	addSequential(new CloseGripper(CloseGripper::HARD));
+	addSequential(new BackOffTube(-30,-33));
 }
 
 void GetRodFromSupply::end(){

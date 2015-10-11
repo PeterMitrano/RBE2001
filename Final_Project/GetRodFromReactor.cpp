@@ -27,9 +27,9 @@ void GetRodFromReactor::initialize(){
 
   addSequential(pathToReactor);
   addSequential(new LowerArm());
-  addSequential(new CloseGripper());
+  addSequential(new CloseGripper(CloseGripper::SOFT));
   addSequential(new RaiseArm());
-  addSequential(new BackOffTube());
+  addSequential(new BackOffTube(-46,-28));
 }
 
 void GetRodFromReactor::end(){

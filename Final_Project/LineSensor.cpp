@@ -26,7 +26,7 @@ void LineSensor::cache(){
      wsum += scaled*(i-4);
     }
   }
-  linePosition = wsum /((float) sum);// + COMPENSATION;
+  linePosition = wsum /((float) sum);
 }
 
 int LineSensor::scale(int sensorValue, int sensorPosition){

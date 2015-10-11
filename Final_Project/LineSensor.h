@@ -57,11 +57,8 @@ class LineSensor {
 
     /** PID constants for line following */
     const float kP = 11.0;
-    const float kD = 5.0;
+    const float kD = 20.0;
     int derivative;
-
-    /** \brief account for broken line sensors */
-    const static float COMPENSATION = 1;
 
     /** \brief test if we're at a line */
     const static int INTERSECTION_THRESHOLD = 0;

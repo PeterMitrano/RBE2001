@@ -1,7 +1,5 @@
 #include "BackOffTube.h"
 
-BackOffTube::BackOffTube() : BackOffTube(-40, -40) {}
-
 BackOffTube::BackOffTube(int lPower, int rPower) : Command("back off tube") {
   this->rPower = rPower;
   this->lPower = lPower;
@@ -12,7 +10,7 @@ void BackOffTube::initialize(){
 }
 
 void BackOffTube::execute(){
-  Robot::getInstance()->backUp(rPower,lPower);
+  Robot::getInstance()->backUp(lPower,rPower);
 }
 
 bool BackOffTube::isFinished(){

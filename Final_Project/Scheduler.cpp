@@ -12,9 +12,7 @@ Scheduler *Scheduler::getInstance() {
 }
 
 void Scheduler::addCommand(Command *command) {
-  if (!commands.contains(command)) {
-    commands.add(command);
-  }
+  commands.add(command);
 }
 
 void Scheduler::run() {

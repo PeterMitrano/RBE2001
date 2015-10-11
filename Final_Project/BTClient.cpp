@@ -88,8 +88,10 @@ void BTClient::readMessage(){
             break;
           case STOP_MSG:
             Robot::getInstance()->paused = true;
+            Serial.println("STOP!!!");
             break;
           case RESUME_MSG:
+            Serial.println("RESUME...");
             Robot::getInstance()->paused = false;
           default:
             //only these 4 should be sent by field
