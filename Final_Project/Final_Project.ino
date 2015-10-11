@@ -38,6 +38,9 @@ void loop() {
     paused = !paused;
   }
 
+  steve->btClient.readMessage();
+  steve->btClient.sendHeartbeat();
+
   if (!paused){
 
     // Scheduler is in charge of running all the commands, so it must always be called
@@ -46,8 +49,6 @@ void loop() {
     // we also a few special functions, like cache and controlArm, which must run continuously, outside of all commands
     // while these could be done with commands, it's easier to just functions
     steve->playSong();
-    steve->btClient.readMessage();
-    steve->btClient.sendHeartbeat();
     steve->lineSensor.cache();
     steve->blinkLEDs();
     steve->arm.control();
