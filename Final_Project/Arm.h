@@ -99,6 +99,6 @@ class Arm {
     long setpoint = 0;
 
     /** positions */
-    const long UP_POSITION = 816l;
-    const long DOWN_POSITION = 170l;
+    const long UP_POSITION = 798l;
+    const long DOWN_POSITION = 150l;
 };

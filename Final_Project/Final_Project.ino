@@ -5,6 +5,7 @@
 #include <TimerOne.h>
 #include <Wire.h>
 #include <LiquidCrystal.h>
+#include <TimerThree.h>
 
 #include "Robot.h"
 #include "Scheduler.h"

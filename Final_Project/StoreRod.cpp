@@ -27,7 +27,7 @@ void StoreRod::initialize(){
   addSequential(new RaiseArm());
   addSequential(pathToStorage);
   addSequential(new OpenGripper());
-  addSequential(new BackOffTube());
+  addSequential(new BackOffTube(-30,-40));
 }
 
 void StoreRod::end(){

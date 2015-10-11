@@ -11,5 +11,5 @@ class CalibrateLineSensor : public Command {
     bool isFinished();
     void end();
   private:
-    const static int CALIBRATE_TIME = 3000;
+    const static int CALIBRATE_TIME = 2000;
 };

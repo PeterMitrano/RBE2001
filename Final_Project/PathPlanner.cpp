@@ -16,13 +16,20 @@ PathPlanner::PathPlanner(){
 
 CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   int dist;
-
   if (col != destCol || row!=destRow){
     //first navigate to center line
     if (row != 1){
       //this must mean you're at the supply/storage tubes
       path->addSequential(new TurnToNextLine());
       path->addSequential(new DriveThroughIntersection());
+      if(direction == 0)
+      {
+        direction = 2;
+      }
+      else if (direction == 2)
+      {
+        direction = 0;
+      }
     }
 
     //now we're on the line

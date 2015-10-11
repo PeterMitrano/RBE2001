@@ -3,8 +3,8 @@
 
 BTClient::BTClient() :
   pcol(byte(::TEAM_NUMBER)) {
-    supply = 1;
-    storage = 1;
+    supply = -1;
+    storage = -1;
 }
 
 void BTClient::setup(){

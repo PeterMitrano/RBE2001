@@ -56,7 +56,7 @@ class LineSensor {
     const static float ON_POS_THRESHOLD = 0.4;
 
     /** PID constants for line following */
-    const float kP = 9.0;
+    const float kP = 11.0;
     const float kD = 5.0;
     int derivative;
 

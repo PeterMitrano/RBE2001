@@ -86,11 +86,11 @@ void Robot::backUp(int lPower, int rPower){
 }
 
 void Robot::rotateCW() {
-  drive(rotateSpeed, -rotateSpeed);
+  drive(rotateSpeedForward, rotateSpeedBackward);
 }
 
 void Robot::rotateCCW() {
-  drive(-rotateSpeed, rotateSpeed);
+  drive(rotateSpeedBackward, rotateSpeedForward);
 }
 
 
