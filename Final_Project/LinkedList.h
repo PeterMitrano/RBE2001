@@ -2,6 +2,7 @@
 
 #pragma once
 
+/** \brief basic struct for data in list */
 template<class T>
 struct ListNode
 {

@@ -1,5 +1,5 @@
 #pragma once
-/** /brief 
+/** \brief
 * turns until it hits a line
 */
 #include "Command.h"
@@ -7,12 +7,12 @@
 
 class TurnUntilLine : public Command {
   public:
-  	/** \brief 
+  	/** \brief
   	* turns until the line sensor is on line
   	*/
     TurnUntilLine(int direction);
 
-    /** \brief 
+    /** \brief
     * plays a song
     */
     void initialize();
@@ -27,7 +27,7 @@ class TurnUntilLine : public Command {
     */
     bool isFinished();
 
-    /** \briefgitlgit 
+    /** \briefgitlgit
     * stops robot
     */
     void end();
