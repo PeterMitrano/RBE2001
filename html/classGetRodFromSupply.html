@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classGetRodFromSupply-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GetRodFromSupply Class Reference</div>  </div>
@@ -108,6 +109,12 @@ Inheritance diagram for GetRodFromSupply:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c06b54ce60f0547d4cb68465081c042"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromSupply.html#a8c06b54ce60f0547d4cb68465081c042">GetRodFromSupply</a> ()</td></tr>
 <tr class="separator:a8c06b54ce60f0547d4cb68465081c042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab843b3e54e3d6c51869453edf0ba1ac3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromSupply.html#ab843b3e54e3d6c51869453edf0ba1ac3">initialize</a> ()</td></tr>
+<tr class="memdesc:ab843b3e54e3d6c51869453edf0ba1ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">run once in the first iteration of the command's life. this will be overrided by individual commands  <a href="#ab843b3e54e3d6c51869453edf0ba1ac3">More...</a><br/></td></tr>
+<tr class="separator:ab843b3e54e3d6c51869453edf0ba1ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd4c581c1a6a0aac1ccf6667e532757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromSupply.html#a6cd4c581c1a6a0aac1ccf6667e532757">end</a> ()</td></tr>
+<tr class="memdesc:a6cd4c581c1a6a0aac1ccf6667e532757"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once at the end, once <a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands.  <a href="#a6cd4c581c1a6a0aac1ccf6667e532757">More...</a><br/></td></tr>
+<tr class="separator:a6cd4c581c1a6a0aac1ccf6667e532757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classCommandGroup"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classCommandGroup')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classCommandGroup.html">CommandGroup</a></td></tr>
 <tr class="memitem:a0167d59d8a96fbc0c1999f19610c7358 inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a0167d59d8a96fbc0c1999f19610c7358">CommandGroup</a> (const String <a class="el" href="classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610">name</a>)</td></tr>
 <tr class="separator:a0167d59d8a96fbc0c1999f19610c7358 inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,15 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a09355b6bb1018bdadaa0f5a1c0dec007 inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11f0ae6eb2ba052138d5a8930f23bb4f inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a11f0ae6eb2ba052138d5a8930f23bb4f">_end</a> ()</td></tr>
 <tr class="separator:a11f0ae6eb2ba052138d5a8930f23bb4f inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99800c5dbd05ab750aa0bb27518d0467 inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">initialize</a> ()</td></tr>
-<tr class="memdesc:a99800c5dbd05ab750aa0bb27518d0467 inherit pub_methods_classCommandGroup"><td class="mdescLeft">&#160;</td><td class="mdescRight">run once in the first iteration of the command's life. this will be overrided by individual commands  <a href="#a99800c5dbd05ab750aa0bb27518d0467">More...</a><br/></td></tr>
-<tr class="separator:a99800c5dbd05ab750aa0bb27518d0467 inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e91d370cafde43548d79945ccb4d8fe inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a5e91d370cafde43548d79945ccb4d8fe">execute</a> ()</td></tr>
 <tr class="memdesc:a5e91d370cafde43548d79945ccb4d8fe inherit pub_methods_classCommandGroup"><td class="mdescLeft">&#160;</td><td class="mdescRight">stuff to do over and over each iteration. this will be overrided by individual commands  <a href="#a5e91d370cafde43548d79945ccb4d8fe">More...</a><br/></td></tr>
 <tr class="separator:a5e91d370cafde43548d79945ccb4d8fe inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28ad3a1c2f6b4f9aea10efa1a824895e inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">end</a> ()</td></tr>
-<tr class="memdesc:a28ad3a1c2f6b4f9aea10efa1a824895e inherit pub_methods_classCommandGroup"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once at the end, once <a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands.  <a href="#a28ad3a1c2f6b4f9aea10efa1a824895e">More...</a><br/></td></tr>
-<tr class="separator:a28ad3a1c2f6b4f9aea10efa1a824895e inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96807a2763adf9e21ebf2cb9e3574e3c inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c">isFinished</a> ()</td></tr>
 <tr class="memdesc:a96807a2763adf9e21ebf2cb9e3574e3c inherit pub_methods_classCommandGroup"><td class="mdescLeft">&#160;</td><td class="mdescRight">checked every iteration to see if we're done here. this will be overrided by individual commands  <a href="#a96807a2763adf9e21ebf2cb9e3574e3c">More...</a><br/></td></tr>
 <tr class="separator:a96807a2763adf9e21ebf2cb9e3574e3c inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,14 +156,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a0252c920dd7114c29ef04526cfd0f39a">isRunning</a> ()</td></tr>
 <tr class="memdesc:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the command is running. not yet implemented.  <a href="#a0252c920dd7114c29ef04526cfd0f39a">More...</a><br/></td></tr>
 <tr class="separator:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a51103f3b209bdbd421f40a38521a9e5e">operator!=</a> (const <a class="el" href="classCommand.html">Command</a> &amp;other)</td></tr>
+<tr class="memdesc:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparator overload for !=. used when checking if command is in list  <a href="#a51103f3b209bdbd421f40a38521a9e5e">More...</a><br/></td></tr>
+<tr class="separator:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a03a7f03b29c4cbb748a15c9c83233023">print</a> ()</td></tr>
+<tr class="separator:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa1f52824921af63ffd7a17ed40f95b3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromSupply.html#aa1f52824921af63ffd7a17ed40f95b3f">reactorNumber</a></td></tr>
+<tr class="separator:aa1f52824921af63ffd7a17ed40f95b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classCommandGroup"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classCommandGroup')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classCommandGroup.html">CommandGroup</a></td></tr>
-<tr class="memitem:a5906e7052c71befb25842e1f6c55e0b8 inherit pub_attribs_classCommandGroup"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommandGroupEntry.html">CommandGroupEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a5906e7052c71befb25842e1f6c55e0b8">commands</a></td></tr>
-<tr class="separator:a5906e7052c71befb25842e1f6c55e0b8 inherit pub_attribs_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3feebac04f16af88c50c4541f5e8b62a inherit pub_attribs_classCommandGroup"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommand.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a3feebac04f16af88c50c4541f5e8b62a">commands</a></td></tr>
+<tr class="separator:a3feebac04f16af88c50c4541f5e8b62a inherit pub_attribs_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classCommand')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
+<tr class="memitem:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ad6e763c58ca2751de879c6eb3f3ae48f">inParallel</a></td></tr>
+<tr class="memdesc:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">used by command group to organize commands  <a href="#ad6e763c58ca2751de879c6eb3f3ae48f">More...</a><br/></td></tr>
+<tr class="separator:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610">name</a></td></tr>
+<tr class="memdesc:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">for convenient printing  <a href="#a19f7ad73ca8599ad47f9b7bcccc52610">More...</a><br/></td></tr>
 <tr class="separator:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -186,6 +201,88 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6cd4c581c1a6a0aac1ccf6667e532757"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetRodFromSupply::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>called once at the end, once <a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands. </p>
+
+<p>Reimplemented from <a class="el" href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">CommandGroup</a>.</p>
+
+<p>Definition at line <a class="el" href="GetRodFromSupply_8cpp_source.html#l00034">34</a> of file <a class="el" href="GetRodFromSupply_8cpp_source.html">GetRodFromSupply.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab843b3e54e3d6c51869453edf0ba1ac3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetRodFromSupply::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>run once in the first iteration of the command's life. this will be overrided by individual commands </p>
+
+<p>Reimplemented from <a class="el" href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">CommandGroup</a>.</p>
+
+<p>Definition at line <a class="el" href="GetRodFromSupply_8cpp_source.html#l00011">11</a> of file <a class="el" href="GetRodFromSupply_8cpp_source.html">GetRodFromSupply.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa1f52824921af63ffd7a17ed40f95b3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetRodFromSupply::reactorNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetRodFromSupply_8h_source.html#l00012">12</a> of file <a class="el" href="GetRodFromSupply_8h_source.html">GetRodFromSupply.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Final_Project/<a class="el" href="GetRodFromSupply_8h_source.html">GetRodFromSupply.h</a></li>
 <li>Final_Project/<a class="el" href="GetRodFromSupply_8cpp_source.html">GetRodFromSupply.cpp</a></li>
@@ -193,7 +290,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

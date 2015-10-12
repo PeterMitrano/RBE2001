@@ -1,21 +1,6 @@
 var searchData=
 [
-  ['scheduler',['Scheduler',['../classScheduler.html#a3b61aac11466cd45ae42ab8c2b0013f6',1,'Scheduler']]],
-  ['scootpastintersection',['ScootPastIntersection',['../classScootPastIntersection.html#ac496bf3a58f4754025b32757c3fb1094',1,'ScootPastIntersection']]],
-  ['senddata',['sendData',['../classBTClient.html#a0561b17912b37892d4f4226d1769f7e8',1,'BTClient']]],
-  ['senddebugstring',['sendDebugString',['../classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c',1,'BTClient']]],
-  ['sendheartbeat',['sendHeartbeat',['../classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f',1,'BTClient']]],
-  ['sendradiationalert',['sendRadiationAlert',['../classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10',1,'BTClient']]],
-  ['sendstatus',['sendStatus',['../classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a',1,'BTClient']]],
-  ['set',['set',['../classLinkedList.html#a08ce5b6527cefbd221324569fdb10969',1,'LinkedList']]],
-  ['setsong',['setSong',['../classRobot.html#a87e94e8db5092976d1125c674cf2b519',1,'Robot']]],
-  ['settimeout',['setTimeout',['../classCommand.html#adfbbaa47b15c80c2a713d24e48b843a8',1,'Command']]],
-  ['setup',['setup',['../classArm.html#a0e642e1a6fc24f40268f2c759dee62e1',1,'Arm::setup()'],['../classBTClient.html#aefdc156fe1f22455d249ec0bb7fa3fd5',1,'BTClient::setup()'],['../classGripper.html#a7eff7781d1109b4e988fa66c8141a6d7',1,'Gripper::setup()'],['../classLineSensor.html#a555f6f7222ea1e76ed810edbde44c39c',1,'LineSensor::setup()'],['../classRobot.html#a1fc37e3c329d59795f6adf44199d4df9',1,'Robot::setup()']]],
-  ['shift',['shift',['../classLinkedList.html#aaf7239844a9d745b6dd11249ff4990c8',1,'LinkedList']]],
-  ['size',['size',['../classLinkedList.html#ab8388ea027c2de8125f5d1e5901c2b2e',1,'LinkedList']]],
-  ['start',['start',['../classCommand.html#aef139180669b92534dd05a89323fb82f',1,'Command']]],
-  ['stop',['stop',['../classArm.html#a4a8274680d981524efbeb2b51eb49c28',1,'Arm']]],
-  ['stopdriving',['stopDriving',['../classRobot.html#a959f64b4829ade78bb332f205b50ee70',1,'Robot']]],
-  ['storerod',['StoreRod',['../classStoreRod.html#aa93884f16d225969adecca7efc75d900',1,'StoreRod']]],
-  ['storerodinreactor',['StoreRodInReactor',['../classStoreRodInReactor.html#a1a72a4e2f134e009b8c911efd4ced737',1,'StoreRodInReactor']]]
+  ['turnoffline',['TurnOffLine',['../classTurnOffLine.html#a646faf11da687b4ed4330c6248b6e99e',1,'TurnOffLine']]],
+  ['turntonextline',['TurnToNextLine',['../classTurnToNextLine.html#adf08caa64eb869d5aad0d49f4f491e84',1,'TurnToNextLine::TurnToNextLine(int direction)'],['../classTurnToNextLine.html#af7924c8caf2cd6e2f7b2ba5d773bfe83',1,'TurnToNextLine::TurnToNextLine()']]],
+  ['turnuntilline',['TurnUntilLine',['../classTurnUntilLine.html#a737bfe72e0d4dbcce9f91182e319d28d',1,'TurnUntilLine']]]
 ];

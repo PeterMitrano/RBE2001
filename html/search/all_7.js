@@ -12,7 +12,7 @@ var searchData=
   ['getrodfromsupply',['GetRodFromSupply',['../classGetRodFromSupply.html',1,'GetRodFromSupply'],['../classGetRodFromSupply.html#a8c06b54ce60f0547d4cb68465081c042',1,'GetRodFromSupply::GetRodFromSupply()']]],
   ['getrodfromsupply_2ecpp',['GetRodFromSupply.cpp',['../GetRodFromSupply_8cpp.html',1,'']]],
   ['getrodfromsupply_2eh',['GetRodFromSupply.h',['../GetRodFromSupply_8h.html',1,'']]],
-  ['gettime',['getTime',['../classCommand.html#a53de8c6445ccd2f51fe7535a71e20c98',1,'Command']]],
+  ['gettime',['getTime',['../classCommand.html#a53de8c6445ccd2f51fe7535a71e20c98',1,'Command::getTime()'],['../classRobot.html#a7fa6a61bffbc8e1e6ba1dd01fd297d63',1,'Robot::getTime()']]],
   ['gripper',['Gripper',['../classGripper.html',1,'Gripper'],['../classArm.html#a1f237e56fc1e76c2b63f1f59d847945d',1,'Arm::gripper()']]],
   ['gripper_2ecpp',['Gripper.cpp',['../Gripper_8cpp.html',1,'']]],
   ['gripper_2eh',['Gripper.h',['../Gripper_8h.html',1,'']]],

@@ -105,15 +105,16 @@ Inheritance diagram for CommandGroup:</div>
   <img src="classCommandGroup.png" usemap="#CommandGroup_map" alt=""/>
   <map id="CommandGroup_map" name="CommandGroup_map">
 <area href="classCommand.html" title="this class is the very core of the framework commands are initialized once, then run until they&#39;re do..." alt="Command" shape="rect" coords="0,0,155,24"/>
-<area href="classCalibrateRoutine.html" alt="CalibrateRoutine" shape="rect" coords="165,112,320,136"/>
-<area href="classDriveThroughIntersection.html" alt="DriveThroughIntersection" shape="rect" coords="165,168,320,192"/>
-<area href="classGetDemRods.html" alt="GetDemRods" shape="rect" coords="165,224,320,248"/>
-<area href="classGetRodFromReactor.html" alt="GetRodFromReactor" shape="rect" coords="165,280,320,304"/>
-<area href="classGetRodFromSupply.html" alt="GetRodFromSupply" shape="rect" coords="165,336,320,360"/>
-<area href="classStoreRod.html" alt="StoreRod" shape="rect" coords="165,392,320,416"/>
-<area href="classStoreRodInReactor.html" alt="StoreRodInReactor" shape="rect" coords="165,448,320,472"/>
-<area href="classTurnAround.html" alt="TurnAround" shape="rect" coords="165,504,320,528"/>
-<area href="classTurnToNextLine.html" alt="TurnToNextLine" shape="rect" coords="165,560,320,584"/>
+<area href="classCalibrateRoutine.html" title="opens the gripper and raises the arm, calibrates line sensor then turns until a line ..." alt="CalibrateRoutine" shape="rect" coords="165,112,320,136"/>
+<area href="classDriveThroughIntersection.html" title="drives over an intersection and increments the position of the robot " alt="DriveThroughIntersection" shape="rect" coords="165,168,320,192"/>
+<area href="classFirstHalf.html" alt="FirstHalf" shape="rect" coords="165,224,320,248"/>
+<area href="classGetDemRods.html" alt="GetDemRods" shape="rect" coords="165,280,320,304"/>
+<area href="classGetRodFromReactor.html" alt="GetRodFromReactor" shape="rect" coords="165,336,320,360"/>
+<area href="classGetRodFromSupply.html" alt="GetRodFromSupply" shape="rect" coords="165,392,320,416"/>
+<area href="classSecondHalf.html" alt="SecondHalf" shape="rect" coords="165,448,320,472"/>
+<area href="classStoreRod.html" alt="StoreRod" shape="rect" coords="165,504,320,528"/>
+<area href="classStoreRodInReactor.html" title="puts the rod into the reactor specified " alt="StoreRodInReactor" shape="rect" coords="165,560,320,584"/>
+<area href="classTurnToNextLine.html" title="turns until it finds the next line and updates current direction " alt="TurnToNextLine" shape="rect" coords="165,616,320,640"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -165,13 +166,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a0252c920dd7114c29ef04526cfd0f39a">isRunning</a> ()</td></tr>
 <tr class="memdesc:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the command is running. not yet implemented.  <a href="#a0252c920dd7114c29ef04526cfd0f39a">More...</a><br/></td></tr>
 <tr class="separator:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a51103f3b209bdbd421f40a38521a9e5e">operator!=</a> (const <a class="el" href="classCommand.html">Command</a> &amp;other)</td></tr>
+<tr class="memdesc:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparator overload for !=. used when checking if command is in list  <a href="#a51103f3b209bdbd421f40a38521a9e5e">More...</a><br/></td></tr>
+<tr class="separator:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a03a7f03b29c4cbb748a15c9c83233023">print</a> ()</td></tr>
+<tr class="separator:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5906e7052c71befb25842e1f6c55e0b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommandGroupEntry.html">CommandGroupEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a5906e7052c71befb25842e1f6c55e0b8">commands</a></td></tr>
-<tr class="separator:a5906e7052c71befb25842e1f6c55e0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3feebac04f16af88c50c4541f5e8b62a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommand.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a3feebac04f16af88c50c4541f5e8b62a">commands</a></td></tr>
+<tr class="separator:a3feebac04f16af88c50c4541f5e8b62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classCommand')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
+<tr class="memitem:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ad6e763c58ca2751de879c6eb3f3ae48f">inParallel</a></td></tr>
+<tr class="memdesc:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">used by command group to organize commands  <a href="#ad6e763c58ca2751de879c6eb3f3ae48f">More...</a><br/></td></tr>
+<tr class="separator:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610">name</a></td></tr>
+<tr class="memdesc:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">for convenient printing  <a href="#a19f7ad73ca8599ad47f9b7bcccc52610">More...</a><br/></td></tr>
 <tr class="separator:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -182,7 +192,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>grouping commands is a useful abstraction. Commands groups execute commands in parallel or series </p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8h_source.html#l00010">10</a> of file <a class="el" href="CommandGroup_8h_source.html">CommandGroup.h</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8h_source.html#l00009">9</a> of file <a class="el" href="CommandGroup_8h_source.html">CommandGroup.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0167d59d8a96fbc0c1999f19610c7358"></a>
 <div class="memitem">
@@ -198,7 +208,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00004">4</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00003">3</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +259,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCommand.html#a9173c74652cb69c8807170bf16151ae2">Command</a>.</p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00050">50</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00048">48</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +286,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCommand.html#a49e6861e0c14411d6860f0b3211db9c9">Command</a>.</p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00022">22</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00021">21</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +313,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCommand.html#ae7c58ad4895c51ff18f1d432dbd4f4ec">Command</a>.</p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00017">17</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00016">16</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +331,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00011">11</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00010">10</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +349,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00006">6</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00005">5</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -366,11 +376,11 @@ Private Attributes</h2></td></tr>
 
 <p>called once at the end, once <a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands. </p>
 
-<p>Implements <a class="el" href="classCommand.html#abed8b7871ba1078bc10056cac5b471be">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#a147da4a43c939870018324a0af4c7b0b">Command</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classGetRodFromReactor.html#a8d375cbbf822ea0f22058a264347bd37">GetRodFromReactor</a>, and <a class="el" href="classStoreRod.html#a2fe691b28cb7c6942242caa35e43eecb">StoreRod</a>.</p>
+<p>Reimplemented in <a class="el" href="classTurnToNextLine.html#a79081a085e73cdb82d71770c996f5b1b">TurnToNextLine</a>, <a class="el" href="classSecondHalf.html#af5109aeb943c0ec9384f065bc862a43c">SecondHalf</a>, <a class="el" href="classGetRodFromReactor.html#a8d375cbbf822ea0f22058a264347bd37">GetRodFromReactor</a>, <a class="el" href="classStoreRodInReactor.html#a39f60444f52164e7405331e61b050e83">StoreRodInReactor</a>, <a class="el" href="classDriveThroughIntersection.html#a5498f89533f3451cc2aa43ca57b763f4">DriveThroughIntersection</a>, <a class="el" href="classGetRodFromSupply.html#a6cd4c581c1a6a0aac1ccf6667e532757">GetRodFromSupply</a>, <a class="el" href="classStoreRod.html#a2fe691b28cb7c6942242caa35e43eecb">StoreRod</a>, and <a class="el" href="classFirstHalf.html#a62ea70262aea29375e5ce5d57bae6638">FirstHalf</a>.</p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00049">49</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00047">47</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -397,9 +407,9 @@ Private Attributes</h2></td></tr>
 
 <p>stuff to do over and over each iteration. this will be overrided by individual commands </p>
 
-<p>Implements <a class="el" href="classCommand.html#a6fd7d9bd8df8bfc881e4d6c7cd1878b7">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#abc8574913684044b0f1a9f810b4e969b">Command</a>.</p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00021">21</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00020">20</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -426,9 +436,11 @@ Private Attributes</h2></td></tr>
 
 <p>run once in the first iteration of the command's life. this will be overrided by individual commands </p>
 
-<p>Implements <a class="el" href="classCommand.html#af186abe582ab15ac64750e4b5d7944de">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#a8044ac332a61df571c3454d9fea9684a">Command</a>.</p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00016">16</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classSecondHalf.html#ac10f048815ccf919db94e8989296c476">SecondHalf</a>, <a class="el" href="classGetRodFromReactor.html#afb5a43f9368820438622cc6e08a9df10">GetRodFromReactor</a>, <a class="el" href="classStoreRodInReactor.html#aa315630b1fcbb752dcc7f6425c96959f">StoreRodInReactor</a>, <a class="el" href="classGetRodFromSupply.html#ab843b3e54e3d6c51869453edf0ba1ac3">GetRodFromSupply</a>, <a class="el" href="classStoreRod.html#adc7dcbbc465900aebefe4b990e88f74a">StoreRod</a>, and <a class="el" href="classFirstHalf.html#ac4f77825ae21e644d2cbc71bfeb92aab">FirstHalf</a>.</p>
+
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00015">15</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -456,24 +468,24 @@ Private Attributes</h2></td></tr>
 <p>checked every iteration to see if we're done here. this will be overrided by individual commands </p>
 <dl class="section return"><dt>Returns</dt><dd>is the function finished </dd></dl>
 
-<p>Implements <a class="el" href="classCommand.html#a9aa704d5f9d98f510a79e645701dc72a">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#ae5846b4332a262e055c7a96759fa18f2">Command</a>.</p>
 
-<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00054">54</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8cpp_source.html#l00053">53</a> of file <a class="el" href="CommandGroup_8cpp_source.html">CommandGroup.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a5906e7052c71befb25842e1f6c55e0b8"></a>
+<a class="anchor" id="a3feebac04f16af88c50c4541f5e8b62a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classLinkedList.html">LinkedList</a>&lt;<a class="el" href="classCommandGroupEntry.html">CommandGroupEntry</a>&gt; CommandGroup::commands</td>
+          <td class="memname"><a class="el" href="classLinkedList.html">LinkedList</a>&lt;<a class="el" href="classCommand.html">Command</a> *&gt; CommandGroup::commands</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CommandGroup_8h_source.html#l00026">26</a> of file <a class="el" href="CommandGroup_8h_source.html">CommandGroup.h</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8h_source.html#l00025">25</a> of file <a class="el" href="CommandGroup_8h_source.html">CommandGroup.h</a>.</p>
 
 </div>
 </div>
@@ -495,7 +507,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CommandGroup_8h_source.html#l00030">30</a> of file <a class="el" href="CommandGroup_8h_source.html">CommandGroup.h</a>.</p>
+<p>Definition at line <a class="el" href="CommandGroup_8h_source.html#l00029">29</a> of file <a class="el" href="CommandGroup_8h_source.html">CommandGroup.h</a>.</p>
 
 </div>
 </div>
@@ -506,7 +518,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

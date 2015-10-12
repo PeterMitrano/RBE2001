@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['off_5fpos_5fthreshold',['OFF_POS_THRESHOLD',['../classLineSensor.html#a8db50f7d2c026003180d0c5c7e184d9f',1,'LineSensor']]],
-  ['on_5fpos_5fthreshold',['ON_POS_THRESHOLD',['../classLineSensor.html#a3e3c5f134159562e56fcd06e55cc7024',1,'LineSensor']]],
-  ['operationstatus',['operationStatus',['../classBTClient.html#a419405603d661e07e630a6649e9592a0',1,'BTClient']]]
+  ['name',['name',['../classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610',1,'Command']]],
+  ['next',['next',['../structListNode.html#a97909c9598053ffd24b77ec715f745f1',1,'ListNode']]],
+  ['north',['NORTH',['../classPathPlanner.html#a701384da34d065d821a936893c5ddd8d',1,'PathPlanner']]],
+  ['notpausedtime',['notPausedTime',['../classRobot.html#a4eb9957add77241230cdf010b4eced16',1,'Robot']]]
 ];

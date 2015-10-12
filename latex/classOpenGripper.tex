@@ -3,6 +3,11 @@
 }
 
 
+opens the gripper  
+
+
+
+
 {\ttfamily \#include $<$Open\-Gripper.\-h$>$}
 
 Inheritance diagram for Open\-Gripper\-:\begin{figure}[H]
@@ -17,20 +22,20 @@ Inheritance diagram for Open\-Gripper\-:\begin{figure}[H]
 \hyperlink{classOpenGripper_af3ca0a56d41c4fbb98e2e5deba76a5a1}{Open\-Gripper} ()
 \item 
 void \hyperlink{classOpenGripper_a13dc36eb38dc51e85fefbccbef87a981}{initialize} ()
-\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em sets a timeout and begins opening the gripper \end{DoxyCompactList}\item 
 void \hyperlink{classOpenGripper_a358b40de6a9c051a2c7f322747c37dad}{execute} ()
-\begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em does nothing \end{DoxyCompactList}\item 
 bool \hyperlink{classOpenGripper_a334eebec59e348ec33a78d238de85baa}{is\-Finished} ()
-\begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\item 
 void \hyperlink{classOpenGripper_ad807b567e6ca9c8ef0a4f7a143506546}{end} ()
-\begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classOpenGripper_a334eebec59e348ec33a78d238de85baa}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em does nothing \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+opens the gripper 
 
-
-Definition at line 6 of file Open\-Gripper.\-h.
+Definition at line 8 of file Open\-Gripper.\-h.
 
 
 
@@ -58,11 +63,11 @@ Definition at line 3 of file Open\-Gripper.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classOpenGripper_ad807b567e6ca9c8ef0a4f7a143506546}
 
 
-called once at the end, once \hyperlink{classOpenGripper_a334eebec59e348ec33a78d238de85baa}{is\-Finished()} returned true. this will be overrided by individual commands. 
+does nothing 
 
 
 
-Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+Reimplemented from \hyperlink{classCommand_a147da4a43c939870018324a0af4c7b0b}{Command}.
 
 
 
@@ -77,11 +82,11 @@ Definition at line 18 of file Open\-Gripper.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classOpenGripper_a358b40de6a9c051a2c7f322747c37dad}
 
 
-stuff to do over and over each iteration. this will be overrided by individual commands 
+does nothing 
 
 
 
-Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+Reimplemented from \hyperlink{classCommand_abc8574913684044b0f1a9f810b4e969b}{Command}.
 
 
 
@@ -96,11 +101,11 @@ Definition at line 11 of file Open\-Gripper.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classOpenGripper_a13dc36eb38dc51e85fefbccbef87a981}
 
 
-run once in the first iteration of the command's life. this will be overrided by individual commands 
+sets a timeout and begins opening the gripper 
 
 
 
-Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+Reimplemented from \hyperlink{classCommand_a8044ac332a61df571c3454d9fea9684a}{Command}.
 
 
 
@@ -113,16 +118,12 @@ Definition at line 5 of file Open\-Gripper.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classOpenGripper_a334eebec59e348ec33a78d238de85baa}
-
-
-checked every iteration to see if we're done here. this will be overrided by individual commands 
-
 \begin{DoxyReturn}{Returns}
-is the function finished 
+true when timeout occurs 
 \end{DoxyReturn}
 
 
-Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
+Reimplemented from \hyperlink{classCommand_ae5846b4332a262e055c7a96759fa18f2}{Command}.
 
 
 

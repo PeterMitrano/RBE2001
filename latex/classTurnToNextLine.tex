@@ -3,6 +3,11 @@
 }
 
 
+turns until it finds the next line and updates current direction  
+
+
+
+
 {\ttfamily \#include $<$Turn\-To\-Next\-Line.\-h$>$}
 
 Inheritance diagram for Turn\-To\-Next\-Line\-:\begin{figure}[H]
@@ -14,17 +19,24 @@ Inheritance diagram for Turn\-To\-Next\-Line\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classTurnToNextLine_adf08caa64eb869d5aad0d49f4f491e84}{Turn\-To\-Next\-Line} (int direction)
+\hyperlink{classTurnToNextLine_adf08caa64eb869d5aad0d49f4f491e84}{Turn\-To\-Next\-Line} (int \hyperlink{classTurnToNextLine_a20415d3992141e6187fa25397373d330}{direction})
 \item 
 \hyperlink{classTurnToNextLine_af7924c8caf2cd6e2f7b2ba5d773bfe83}{Turn\-To\-Next\-Line} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em turns cw to next line \end{DoxyCompactList}\item 
+void \hyperlink{classTurnToNextLine_a79081a085e73cdb82d71770c996f5b1b}{end} ()
+\begin{DoxyCompactList}\small\item\em updates direction \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classTurnToNextLine_a20415d3992141e6187fa25397373d330}{direction}
+\begin{DoxyCompactList}\small\item\em direction specified by bluetooth \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+turns until it finds the next line and updates current direction 
 
-
-Definition at line 6 of file Turn\-To\-Next\-Line.\-h.
+Definition at line 8 of file Turn\-To\-Next\-Line.\-h.
 
 
 
@@ -37,8 +49,13 @@ Definition at line 6 of file Turn\-To\-Next\-Line.\-h.
 \end{DoxyParamCaption}
 )}}\label{classTurnToNextLine_adf08caa64eb869d5aad0d49f4f491e84}
 
+\begin{DoxyParams}{Parameters}
+{\em direction} & given by bluetooth, either ccw or cw \\
+\hline
+\end{DoxyParams}
 
-Definition at line 6 of file Turn\-To\-Next\-Line.\-cpp.
+
+Definition at line 7 of file Turn\-To\-Next\-Line.\-cpp.
 
 \hypertarget{classTurnToNextLine_af7924c8caf2cd6e2f7b2ba5d773bfe83}{\index{Turn\-To\-Next\-Line@{Turn\-To\-Next\-Line}!Turn\-To\-Next\-Line@{Turn\-To\-Next\-Line}}
 \index{Turn\-To\-Next\-Line@{Turn\-To\-Next\-Line}!TurnToNextLine@{Turn\-To\-Next\-Line}}
@@ -49,7 +66,47 @@ Definition at line 6 of file Turn\-To\-Next\-Line.\-cpp.
 )}}\label{classTurnToNextLine_af7924c8caf2cd6e2f7b2ba5d773bfe83}
 
 
-Definition at line 13 of file Turn\-To\-Next\-Line.\-cpp.
+turns cw to next line 
+
+
+
+Definition at line 15 of file Turn\-To\-Next\-Line.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTurnToNextLine_a79081a085e73cdb82d71770c996f5b1b}{\index{Turn\-To\-Next\-Line@{Turn\-To\-Next\-Line}!end@{end}}
+\index{end@{end}!TurnToNextLine@{Turn\-To\-Next\-Line}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Turn\-To\-Next\-Line\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnToNextLine_a79081a085e73cdb82d71770c996f5b1b}
+
+
+updates direction 
+
+
+
+Reimplemented from \hyperlink{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{Command\-Group}.
+
+
+
+Definition at line 18 of file Turn\-To\-Next\-Line.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classTurnToNextLine_a20415d3992141e6187fa25397373d330}{\index{Turn\-To\-Next\-Line@{Turn\-To\-Next\-Line}!direction@{direction}}
+\index{direction@{direction}!TurnToNextLine@{Turn\-To\-Next\-Line}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}int Turn\-To\-Next\-Line\-::direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classTurnToNextLine_a20415d3992141e6187fa25397373d330}
+
+
+direction specified by bluetooth 
+
+
+
+Definition at line 28 of file Turn\-To\-Next\-Line.\-h.
 
 
 

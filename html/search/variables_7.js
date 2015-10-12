@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['high_5fsum_5fthreshold',['HIGH_SUM_THRESHOLD',['../classLineSensor.html#a3e7f65abc054f54cb74f8aa3eb552e89',1,'LineSensor']]]
+  ['gripper',['gripper',['../classArm.html#a1f237e56fc1e76c2b63f1f59d847945d',1,'Arm']]],
+  ['gripperstatus',['gripperStatus',['../classBTClient.html#acdb5a8d964742a7236d2d0acc2e45585',1,'BTClient']]]
 ];

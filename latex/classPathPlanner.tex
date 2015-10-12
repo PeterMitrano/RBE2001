@@ -8,11 +8,26 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classPathPlanner_a09453b54df73c22775e488a20d6a3e82}{Path\-Planner} (\hyperlink{classCommandGroup}{Command\-Group} $\ast$\hyperlink{classPathPlanner_a9b41e5ee68a78a45e46003102a6c3b91}{path})
+\hyperlink{classPathPlanner_a376f30d795cfe0a40f8923f49336f7da}{Path\-Planner} ()
 \item 
-void \hyperlink{classPathPlanner_a82f75ef3111891f20ba2c59f8b305d55}{plan} (int dest\-Row, int dest\-Col, int dest\-Direction)
+\hyperlink{classCommandGroup}{Command\-Group} $\ast$ \hyperlink{classPathPlanner_acfae981cdde0b63b700bb1e2e9ffc1a6}{plan} (int dest\-Row, int dest\-Col, int dest\-Direction)
 \item 
 void \hyperlink{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}{plan\-To\-Face} (int current\-Direction)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classPathPlanner_a701384da34d065d821a936893c5ddd8d}{N\-O\-R\-T\-H} = 0
+\item 
+static const int \hyperlink{classPathPlanner_a45399b95a063acdff309e376ccac0fa2}{E\-A\-S\-T} = 1
+\item 
+static const int \hyperlink{classPathPlanner_a0d74731cd6e012a8724689f8c8f6492e}{S\-O\-U\-T\-H} = 2
+\item 
+static const int \hyperlink{classPathPlanner_aac8f18908f761050a3801acd476ea0ce}{W\-E\-S\-T} = 3
+\item 
+static const int \hyperlink{classPathPlanner_af08949a4cd572b26f4f37ff441191b3a}{C\-W} = 1
+\item 
+static const int \hyperlink{classPathPlanner_ab08a4cb0f762a4401a804bf0ce1bbbe6}{C\-C\-W} = -\/1
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -35,32 +50,32 @@ Definition at line 3 of file Path\-Planner.\-h.
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classPathPlanner_a09453b54df73c22775e488a20d6a3e82}{\index{Path\-Planner@{Path\-Planner}!Path\-Planner@{Path\-Planner}}
+\hypertarget{classPathPlanner_a376f30d795cfe0a40f8923f49336f7da}{\index{Path\-Planner@{Path\-Planner}!Path\-Planner@{Path\-Planner}}
 \index{Path\-Planner@{Path\-Planner}!PathPlanner@{Path\-Planner}}
 \subsubsection[{Path\-Planner}]{\setlength{\rightskip}{0pt plus 5cm}Path\-Planner\-::\-Path\-Planner (
 \begin{DoxyParamCaption}
-\item[{{\bf Command\-Group} $\ast$}]{path}
+{}
 \end{DoxyParamCaption}
-)}}\label{classPathPlanner_a09453b54df73c22775e488a20d6a3e82}
+)}}\label{classPathPlanner_a376f30d795cfe0a40f8923f49336f7da}
 
 
-Definition at line 10 of file Path\-Planner.\-cpp.
+Definition at line 11 of file Path\-Planner.\-cpp.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classPathPlanner_a82f75ef3111891f20ba2c59f8b305d55}{\index{Path\-Planner@{Path\-Planner}!plan@{plan}}
+\hypertarget{classPathPlanner_acfae981cdde0b63b700bb1e2e9ffc1a6}{\index{Path\-Planner@{Path\-Planner}!plan@{plan}}
 \index{plan@{plan}!PathPlanner@{Path\-Planner}}
-\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}void Path\-Planner\-::plan (
+\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\-Group} $\ast$ Path\-Planner\-::plan (
 \begin{DoxyParamCaption}
 \item[{int}]{dest\-Row, }
 \item[{int}]{dest\-Col, }
 \item[{int}]{dest\-Direction}
 \end{DoxyParamCaption}
-)}}\label{classPathPlanner_a82f75ef3111891f20ba2c59f8b305d55}
+)}}\label{classPathPlanner_acfae981cdde0b63b700bb1e2e9ffc1a6}
 
 
-Definition at line 17 of file Path\-Planner.\-cpp.
+Definition at line 18 of file Path\-Planner.\-cpp.
 
 \hypertarget{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}{\index{Path\-Planner@{Path\-Planner}!plan\-To\-Face@{plan\-To\-Face}}
 \index{plan\-To\-Face@{plan\-To\-Face}!PathPlanner@{Path\-Planner}}
@@ -71,38 +86,80 @@ Definition at line 17 of file Path\-Planner.\-cpp.
 )}}\label{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}
 
 
-Definition at line 70 of file Path\-Planner.\-cpp.
+Definition at line 91 of file Path\-Planner.\-cpp.
 
 
 
 \subsection{Member Data Documentation}
+\hypertarget{classPathPlanner_ab08a4cb0f762a4401a804bf0ce1bbbe6}{\index{Path\-Planner@{Path\-Planner}!C\-C\-W@{C\-C\-W}}
+\index{C\-C\-W@{C\-C\-W}!PathPlanner@{Path\-Planner}}
+\subsubsection[{C\-C\-W}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-C\-C\-W = -\/1\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_ab08a4cb0f762a4401a804bf0ce1bbbe6}
+
+
+Definition at line 13 of file Path\-Planner.\-h.
+
 \hypertarget{classPathPlanner_a20d2bf800c63aacfd1af314ad400d119}{\index{Path\-Planner@{Path\-Planner}!col@{col}}
 \index{col@{col}!PathPlanner@{Path\-Planner}}
 \subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}int Path\-Planner\-::col\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a20d2bf800c63aacfd1af314ad400d119}
 
 
-Definition at line 9 of file Path\-Planner.\-h.
+Definition at line 15 of file Path\-Planner.\-h.
+
+\hypertarget{classPathPlanner_af08949a4cd572b26f4f37ff441191b3a}{\index{Path\-Planner@{Path\-Planner}!C\-W@{C\-W}}
+\index{C\-W@{C\-W}!PathPlanner@{Path\-Planner}}
+\subsubsection[{C\-W}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-C\-W = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_af08949a4cd572b26f4f37ff441191b3a}
+
+
+Definition at line 12 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a1f9985b79ca49ca0b2992176a10a6210}{\index{Path\-Planner@{Path\-Planner}!direction@{direction}}
 \index{direction@{direction}!PathPlanner@{Path\-Planner}}
 \subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}int Path\-Planner\-::direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a1f9985b79ca49ca0b2992176a10a6210}
 
 
+Definition at line 15 of file Path\-Planner.\-h.
+
+\hypertarget{classPathPlanner_a45399b95a063acdff309e376ccac0fa2}{\index{Path\-Planner@{Path\-Planner}!E\-A\-S\-T@{E\-A\-S\-T}}
+\index{E\-A\-S\-T@{E\-A\-S\-T}!PathPlanner@{Path\-Planner}}
+\subsubsection[{E\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-E\-A\-S\-T = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_a45399b95a063acdff309e376ccac0fa2}
+
+
 Definition at line 9 of file Path\-Planner.\-h.
+
+\hypertarget{classPathPlanner_a701384da34d065d821a936893c5ddd8d}{\index{Path\-Planner@{Path\-Planner}!N\-O\-R\-T\-H@{N\-O\-R\-T\-H}}
+\index{N\-O\-R\-T\-H@{N\-O\-R\-T\-H}!PathPlanner@{Path\-Planner}}
+\subsubsection[{N\-O\-R\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-N\-O\-R\-T\-H = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_a701384da34d065d821a936893c5ddd8d}
+
+
+Definition at line 8 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a9b41e5ee68a78a45e46003102a6c3b91}{\index{Path\-Planner@{Path\-Planner}!path@{path}}
 \index{path@{path}!PathPlanner@{Path\-Planner}}
 \subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\-Group}$\ast$ Path\-Planner\-::path\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a9b41e5ee68a78a45e46003102a6c3b91}
 
 
-Definition at line 10 of file Path\-Planner.\-h.
+Definition at line 16 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a00b0fa8525a5fe9c8088ccaa005c4c54}{\index{Path\-Planner@{Path\-Planner}!row@{row}}
 \index{row@{row}!PathPlanner@{Path\-Planner}}
 \subsubsection[{row}]{\setlength{\rightskip}{0pt plus 5cm}int Path\-Planner\-::row\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a00b0fa8525a5fe9c8088ccaa005c4c54}
 
 
-Definition at line 9 of file Path\-Planner.\-h.
+Definition at line 15 of file Path\-Planner.\-h.
+
+\hypertarget{classPathPlanner_a0d74731cd6e012a8724689f8c8f6492e}{\index{Path\-Planner@{Path\-Planner}!S\-O\-U\-T\-H@{S\-O\-U\-T\-H}}
+\index{S\-O\-U\-T\-H@{S\-O\-U\-T\-H}!PathPlanner@{Path\-Planner}}
+\subsubsection[{S\-O\-U\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-S\-O\-U\-T\-H = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_a0d74731cd6e012a8724689f8c8f6492e}
+
+
+Definition at line 10 of file Path\-Planner.\-h.
+
+\hypertarget{classPathPlanner_aac8f18908f761050a3801acd476ea0ce}{\index{Path\-Planner@{Path\-Planner}!W\-E\-S\-T@{W\-E\-S\-T}}
+\index{W\-E\-S\-T@{W\-E\-S\-T}!PathPlanner@{Path\-Planner}}
+\subsubsection[{W\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-W\-E\-S\-T = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_aac8f18908f761050a3801acd476ea0ce}
+
+
+Definition at line 11 of file Path\-Planner.\-h.
 
 
 

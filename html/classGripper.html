@@ -104,9 +104,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7eff7781d1109b4e988fa66c8141a6d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGripper.html#a7eff7781d1109b4e988fa66c8141a6d7">setup</a> ()</td></tr>
 <tr class="memdesc:a7eff7781d1109b4e988fa66c8141a6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">setup servo  <a href="#a7eff7781d1109b4e988fa66c8141a6d7">More...</a><br/></td></tr>
 <tr class="separator:a7eff7781d1109b4e988fa66c8141a6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada511826dbf5abcdd12532ae725efeaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGripper.html#ada511826dbf5abcdd12532ae725efeaf">cls</a> ()</td></tr>
-<tr class="memdesc:ada511826dbf5abcdd12532ae725efeaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">close the gripper  <a href="#ada511826dbf5abcdd12532ae725efeaf">More...</a><br/></td></tr>
-<tr class="separator:ada511826dbf5abcdd12532ae725efeaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a54cffb0b8662dc0819646f585acc88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGripper.html#a6a54cffb0b8662dc0819646f585acc88">cls</a> (int force)</td></tr>
+<tr class="memdesc:a6a54cffb0b8662dc0819646f585acc88"><td class="mdescLeft">&#160;</td><td class="mdescRight">close the gripper  <a href="#a6a54cffb0b8662dc0819646f585acc88">More...</a><br/></td></tr>
+<tr class="separator:a6a54cffb0b8662dc0819646f585acc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4fa689ad3f08e97c7fcd10247965ff5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGripper.html#ab4fa689ad3f08e97c7fcd10247965ff5">opn</a> ()</td></tr>
 <tr class="memdesc:ab4fa689ad3f08e97c7fcd10247965ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">open the gripper  <a href="#ab4fa689ad3f08e97c7fcd10247965ff5">More...</a><br/></td></tr>
 <tr class="separator:ab4fa689ad3f08e97c7fcd10247965ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,14 +128,15 @@ Static Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Gripper_8h_source.html#l00007">7</a> of file <a class="el" href="Gripper_8h_source.html">Gripper.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ada511826dbf5abcdd12532ae725efeaf"></a>
+<a class="anchor" id="a6a54cffb0b8662dc0819646f585acc88"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Gripper::cls </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>force</em> = <code><a class="el" href="classCloseGripper.html#a2b6cac5f41e2d57f180fdcf18aacae45">CloseGripper::SOFT</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -143,7 +144,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>close the gripper </p>
 
-<p>Definition at line <a class="el" href="Gripper_8cpp_source.html#l00010">10</a> of file <a class="el" href="Gripper_8cpp_source.html">Gripper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Gripper_8cpp_source.html#l00011">11</a> of file <a class="el" href="Gripper_8cpp_source.html">Gripper.cpp</a>.</p>
 
 </div>
 </div>
@@ -162,7 +163,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>open the gripper </p>
 
-<p>Definition at line <a class="el" href="Gripper_8cpp_source.html#l00015">15</a> of file <a class="el" href="Gripper_8cpp_source.html">Gripper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Gripper_8cpp_source.html#l00016">16</a> of file <a class="el" href="Gripper_8cpp_source.html">Gripper.cpp</a>.</p>
 
 </div>
 </div>
@@ -181,7 +182,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>setup servo </p>
 
-<p>Definition at line <a class="el" href="Gripper_8cpp_source.html#l00006">6</a> of file <a class="el" href="Gripper_8cpp_source.html">Gripper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Gripper_8cpp_source.html#l00007">7</a> of file <a class="el" href="Gripper_8cpp_source.html">Gripper.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +242,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

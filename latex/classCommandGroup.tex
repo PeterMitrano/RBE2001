@@ -13,7 +13,7 @@ grouping commands is a useful abstraction. Commands groups execute commands in p
 Inheritance diagram for Command\-Group\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=11.000000cm]{classCommandGroup}
+\includegraphics[height=12.000000cm]{classCommandGroup}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -44,7 +44,7 @@ virtual bool \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classLinkedList}{Linked\-List}$<$ \hyperlink{classCommandGroupEntry}{Command\-Group\-Entry} $>$ \hyperlink{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}{commands}
+\hyperlink{classLinkedList}{Linked\-List}$<$ \hyperlink{classCommand}{Command} $\ast$ $>$ \hyperlink{classCommandGroup_a3feebac04f16af88c50c4541f5e8b62a}{commands}
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -56,7 +56,7 @@ int \hyperlink{classCommandGroup_aeb8729b909aafeb23eafcfd0eec22c71}{current\-Com
 \subsection{Detailed Description}
 grouping commands is a useful abstraction. Commands groups execute commands in parallel or series 
 
-Definition at line 10 of file Command\-Group.\-h.
+Definition at line 9 of file Command\-Group.\-h.
 
 
 
@@ -70,7 +70,7 @@ Definition at line 10 of file Command\-Group.\-h.
 )}}\label{classCommandGroup_a0167d59d8a96fbc0c1999f19610c7358}
 
 
-Definition at line 4 of file Command\-Group.\-cpp.
+Definition at line 3 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a7b85f5b297c50c9466276c59804ed196}{\index{Command\-Group@{Command\-Group}!Command\-Group@{Command\-Group}}
 \index{Command\-Group@{Command\-Group}!CommandGroup@{Command\-Group}}
@@ -95,7 +95,7 @@ Reimplemented from \hyperlink{classCommand_a9173c74652cb69c8807170bf16151ae2}{Co
 
 
 
-Definition at line 50 of file Command\-Group.\-cpp.
+Definition at line 48 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a09355b6bb1018bdadaa0f5a1c0dec007}{\index{Command\-Group@{Command\-Group}!\-\_\-execute@{\-\_\-execute}}
 \index{\-\_\-execute@{\-\_\-execute}!CommandGroup@{Command\-Group}}
@@ -110,7 +110,7 @@ Reimplemented from \hyperlink{classCommand_a49e6861e0c14411d6860f0b3211db9c9}{Co
 
 
 
-Definition at line 22 of file Command\-Group.\-cpp.
+Definition at line 21 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_aad0c9576993f9f8d2431cd44f0bf0072}{\index{Command\-Group@{Command\-Group}!\-\_\-initialize@{\-\_\-initialize}}
 \index{\-\_\-initialize@{\-\_\-initialize}!CommandGroup@{Command\-Group}}
@@ -125,7 +125,7 @@ Reimplemented from \hyperlink{classCommand_ae7c58ad4895c51ff18f1d432dbd4f4ec}{Co
 
 
 
-Definition at line 17 of file Command\-Group.\-cpp.
+Definition at line 16 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a8709a47f6f44a6993cd9f705b360054b}{\index{Command\-Group@{Command\-Group}!add\-Parallel@{add\-Parallel}}
 \index{add\-Parallel@{add\-Parallel}!CommandGroup@{Command\-Group}}
@@ -136,7 +136,7 @@ Definition at line 17 of file Command\-Group.\-cpp.
 )}}\label{classCommandGroup_a8709a47f6f44a6993cd9f705b360054b}
 
 
-Definition at line 11 of file Command\-Group.\-cpp.
+Definition at line 10 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a6b75192504dc74794651e0d82bb83488}{\index{Command\-Group@{Command\-Group}!add\-Sequential@{add\-Sequential}}
 \index{add\-Sequential@{add\-Sequential}!CommandGroup@{Command\-Group}}
@@ -147,7 +147,7 @@ Definition at line 11 of file Command\-Group.\-cpp.
 )}}\label{classCommandGroup_a6b75192504dc74794651e0d82bb83488}
 
 
-Definition at line 6 of file Command\-Group.\-cpp.
+Definition at line 5 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{\index{Command\-Group@{Command\-Group}!end@{end}}
 \index{end@{end}!CommandGroup@{Command\-Group}}
@@ -162,15 +162,15 @@ called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2
 
 
 
-Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+Reimplemented from \hyperlink{classCommand_a147da4a43c939870018324a0af4c7b0b}{Command}.
 
 
 
-Reimplemented in \hyperlink{classGetRodFromReactor_a8d375cbbf822ea0f22058a264347bd37}{Get\-Rod\-From\-Reactor}, and \hyperlink{classStoreRod_a2fe691b28cb7c6942242caa35e43eecb}{Store\-Rod}.
+Reimplemented in \hyperlink{classTurnToNextLine_a79081a085e73cdb82d71770c996f5b1b}{Turn\-To\-Next\-Line}, \hyperlink{classSecondHalf_af5109aeb943c0ec9384f065bc862a43c}{Second\-Half}, \hyperlink{classGetRodFromReactor_a8d375cbbf822ea0f22058a264347bd37}{Get\-Rod\-From\-Reactor}, \hyperlink{classStoreRodInReactor_a39f60444f52164e7405331e61b050e83}{Store\-Rod\-In\-Reactor}, \hyperlink{classDriveThroughIntersection_a5498f89533f3451cc2aa43ca57b763f4}{Drive\-Through\-Intersection}, \hyperlink{classGetRodFromSupply_a6cd4c581c1a6a0aac1ccf6667e532757}{Get\-Rod\-From\-Supply}, \hyperlink{classStoreRod_a2fe691b28cb7c6942242caa35e43eecb}{Store\-Rod}, and \hyperlink{classFirstHalf_a62ea70262aea29375e5ce5d57bae6638}{First\-Half}.
 
 
 
-Definition at line 49 of file Command\-Group.\-cpp.
+Definition at line 47 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a5e91d370cafde43548d79945ccb4d8fe}{\index{Command\-Group@{Command\-Group}!execute@{execute}}
 \index{execute@{execute}!CommandGroup@{Command\-Group}}
@@ -185,11 +185,11 @@ stuff to do over and over each iteration. this will be overrided by individual c
 
 
 
-Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+Reimplemented from \hyperlink{classCommand_abc8574913684044b0f1a9f810b4e969b}{Command}.
 
 
 
-Definition at line 21 of file Command\-Group.\-cpp.
+Definition at line 20 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{\index{Command\-Group@{Command\-Group}!initialize@{initialize}}
 \index{initialize@{initialize}!CommandGroup@{Command\-Group}}
@@ -204,11 +204,15 @@ run once in the first iteration of the command's life. this will be overrided by
 
 
 
-Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+Reimplemented from \hyperlink{classCommand_a8044ac332a61df571c3454d9fea9684a}{Command}.
 
 
 
-Definition at line 16 of file Command\-Group.\-cpp.
+Reimplemented in \hyperlink{classSecondHalf_ac10f048815ccf919db94e8989296c476}{Second\-Half}, \hyperlink{classGetRodFromReactor_afb5a43f9368820438622cc6e08a9df10}{Get\-Rod\-From\-Reactor}, \hyperlink{classStoreRodInReactor_aa315630b1fcbb752dcc7f6425c96959f}{Store\-Rod\-In\-Reactor}, \hyperlink{classGetRodFromSupply_ab843b3e54e3d6c51869453edf0ba1ac3}{Get\-Rod\-From\-Supply}, \hyperlink{classStoreRod_adc7dcbbc465900aebefe4b990e88f74a}{Store\-Rod}, and \hyperlink{classFirstHalf_ac4f77825ae21e644d2cbc71bfeb92aab}{First\-Half}.
+
+
+
+Definition at line 15 of file Command\-Group.\-cpp.
 
 \hypertarget{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{\index{Command\-Group@{Command\-Group}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!CommandGroup@{Command\-Group}}
@@ -226,28 +230,28 @@ is the function finished
 \end{DoxyReturn}
 
 
-Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
+Reimplemented from \hyperlink{classCommand_ae5846b4332a262e055c7a96759fa18f2}{Command}.
 
 
 
-Definition at line 54 of file Command\-Group.\-cpp.
+Definition at line 53 of file Command\-Group.\-cpp.
 
 
 
 \subsection{Member Data Documentation}
-\hypertarget{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}{\index{Command\-Group@{Command\-Group}!commands@{commands}}
+\hypertarget{classCommandGroup_a3feebac04f16af88c50c4541f5e8b62a}{\index{Command\-Group@{Command\-Group}!commands@{commands}}
 \index{commands@{commands}!CommandGroup@{Command\-Group}}
-\subsubsection[{commands}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linked\-List}$<${\bf Command\-Group\-Entry}$>$ Command\-Group\-::commands}}\label{classCommandGroup_a5906e7052c71befb25842e1f6c55e0b8}
+\subsubsection[{commands}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linked\-List}$<${\bf Command} $\ast$$>$ Command\-Group\-::commands}}\label{classCommandGroup_a3feebac04f16af88c50c4541f5e8b62a}
 
 
-Definition at line 26 of file Command\-Group.\-h.
+Definition at line 25 of file Command\-Group.\-h.
 
 \hypertarget{classCommandGroup_aeb8729b909aafeb23eafcfd0eec22c71}{\index{Command\-Group@{Command\-Group}!current\-Command\-Index@{current\-Command\-Index}}
 \index{current\-Command\-Index@{current\-Command\-Index}!CommandGroup@{Command\-Group}}
 \subsubsection[{current\-Command\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Command\-Group\-::current\-Command\-Index\hspace{0.3cm}{\ttfamily [private]}}}\label{classCommandGroup_aeb8729b909aafeb23eafcfd0eec22c71}
 
 
-Definition at line 30 of file Command\-Group.\-h.
+Definition at line 29 of file Command\-Group.\-h.
 
 
 

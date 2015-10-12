@@ -3,6 +3,11 @@
 }
 
 
+drives over an intersection and increments the position of the robot  
+
+
+
+
 {\ttfamily \#include $<$Drive\-Through\-Intersection.\-h$>$}
 
 Inheritance diagram for Drive\-Through\-Intersection\-:\begin{figure}[H]
@@ -15,14 +20,16 @@ Inheritance diagram for Drive\-Through\-Intersection\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classDriveThroughIntersection_ab294711ce88640b5ee19fc0c609e0fbd}{Drive\-Through\-Intersection} ()
-\end{DoxyCompactItemize}
+\item 
+void \hyperlink{classDriveThroughIntersection_a5498f89533f3451cc2aa43ca57b763f4}{end} ()
+\begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+drives over an intersection and increments the position of the robot 
 
-
-Definition at line 6 of file Drive\-Through\-Intersection.\-h.
+Definition at line 8 of file Drive\-Through\-Intersection.\-h.
 
 
 
@@ -37,6 +44,28 @@ Definition at line 6 of file Drive\-Through\-Intersection.\-h.
 
 
 Definition at line 7 of file Drive\-Through\-Intersection.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDriveThroughIntersection_a5498f89533f3451cc2aa43ca57b763f4}{\index{Drive\-Through\-Intersection@{Drive\-Through\-Intersection}!end@{end}}
+\index{end@{end}!DriveThroughIntersection@{Drive\-Through\-Intersection}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Drive\-Through\-Intersection\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDriveThroughIntersection_a5498f89533f3451cc2aa43ca57b763f4}
+
+
+called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Reimplemented from \hyperlink{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{Command\-Group}.
+
+
+
+Definition at line 12 of file Drive\-Through\-Intersection.\-cpp.
 
 
 

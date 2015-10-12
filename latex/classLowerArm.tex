@@ -3,6 +3,11 @@
 }
 
 
+lowers the arm  
+
+
+
+
 {\ttfamily \#include $<$Lower\-Arm.\-h$>$}
 
 Inheritance diagram for Lower\-Arm\-:\begin{figure}[H]
@@ -17,20 +22,20 @@ Inheritance diagram for Lower\-Arm\-:\begin{figure}[H]
 \hyperlink{classLowerArm_a94252e4c3f22881def50fb2415649f21}{Lower\-Arm} ()
 \item 
 void \hyperlink{classLowerArm_a4fe99e8f0cdb3526e3847823f69a60b8}{initialize} ()
-\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em begins lowering the arm and plays a song \end{DoxyCompactList}\item 
 void \hyperlink{classLowerArm_aca65c2ae64b1ff601213b1ed38ddf8b0}{execute} ()
-\begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em does nothing \end{DoxyCompactList}\item 
 bool \hyperlink{classLowerArm_ad7bb0aadf698f341d737ccefdb015ce2}{is\-Finished} ()
-\begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\item 
 void \hyperlink{classLowerArm_aa46179794b13132a2a353f24c785db37}{end} ()
-\begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classLowerArm_ad7bb0aadf698f341d737ccefdb015ce2}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em does nothing \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+lowers the arm 
 
-
-Definition at line 6 of file Lower\-Arm.\-h.
+Definition at line 8 of file Lower\-Arm.\-h.
 
 
 
@@ -58,11 +63,11 @@ Definition at line 3 of file Lower\-Arm.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLowerArm_aa46179794b13132a2a353f24c785db37}
 
 
-called once at the end, once \hyperlink{classLowerArm_ad7bb0aadf698f341d737ccefdb015ce2}{is\-Finished()} returned true. this will be overrided by individual commands. 
+does nothing 
 
 
 
-Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+Reimplemented from \hyperlink{classCommand_a147da4a43c939870018324a0af4c7b0b}{Command}.
 
 
 
@@ -77,11 +82,11 @@ Definition at line 17 of file Lower\-Arm.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLowerArm_aca65c2ae64b1ff601213b1ed38ddf8b0}
 
 
-stuff to do over and over each iteration. this will be overrided by individual commands 
+does nothing 
 
 
 
-Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+Reimplemented from \hyperlink{classCommand_abc8574913684044b0f1a9f810b4e969b}{Command}.
 
 
 
@@ -96,11 +101,11 @@ Definition at line 10 of file Lower\-Arm.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLowerArm_a4fe99e8f0cdb3526e3847823f69a60b8}
 
 
-run once in the first iteration of the command's life. this will be overrided by individual commands 
+begins lowering the arm and plays a song 
 
 
 
-Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+Reimplemented from \hyperlink{classCommand_a8044ac332a61df571c3454d9fea9684a}{Command}.
 
 
 
@@ -113,16 +118,12 @@ Definition at line 5 of file Lower\-Arm.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLowerArm_ad7bb0aadf698f341d737ccefdb015ce2}
-
-
-checked every iteration to see if we're done here. this will be overrided by individual commands 
-
 \begin{DoxyReturn}{Returns}
-is the function finished 
+true when arm is at bottom position 
 \end{DoxyReturn}
 
 
-Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
+Reimplemented from \hyperlink{classCommand_ae5846b4332a262e055c7a96759fa18f2}{Command}.
 
 
 

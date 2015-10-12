@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classGetRodFromReactor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GetRodFromReactor Class Reference</div>  </div>
@@ -106,8 +107,11 @@ Inheritance diagram for GetRodFromReactor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae6432d3e1fd6ca0e882d9cbff1b14737"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#ae6432d3e1fd6ca0e882d9cbff1b14737">GetRodFromReactor</a> (const int reactorNumber)</td></tr>
+<tr class="memitem:ae6432d3e1fd6ca0e882d9cbff1b14737"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#ae6432d3e1fd6ca0e882d9cbff1b14737">GetRodFromReactor</a> (const int <a class="el" href="classGetRodFromReactor.html#ad2c4d389db38e728e540206aed467670">reactorNumber</a>)</td></tr>
 <tr class="separator:ae6432d3e1fd6ca0e882d9cbff1b14737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb5a43f9368820438622cc6e08a9df10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#afb5a43f9368820438622cc6e08a9df10">initialize</a> ()</td></tr>
+<tr class="memdesc:afb5a43f9368820438622cc6e08a9df10"><td class="mdescLeft">&#160;</td><td class="mdescRight">since this routime is dependant on bluetooth messages, and must be determined on execution, not on declaration, we defer the adding of commands to the initialize method. This way, we can safely call NavigateToReactor, which checks bluetooth at excution time, and it will add commands to the group sequentially.  <a href="#afb5a43f9368820438622cc6e08a9df10">More...</a><br/></td></tr>
+<tr class="separator:afb5a43f9368820438622cc6e08a9df10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d375cbbf822ea0f22058a264347bd37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#a8d375cbbf822ea0f22058a264347bd37">end</a> ()</td></tr>
 <tr class="memdesc:a8d375cbbf822ea0f22058a264347bd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once at the end, once <a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands.  <a href="#a8d375cbbf822ea0f22058a264347bd37">More...</a><br/></td></tr>
 <tr class="separator:a8d375cbbf822ea0f22058a264347bd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +130,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a09355b6bb1018bdadaa0f5a1c0dec007 inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11f0ae6eb2ba052138d5a8930f23bb4f inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a11f0ae6eb2ba052138d5a8930f23bb4f">_end</a> ()</td></tr>
 <tr class="separator:a11f0ae6eb2ba052138d5a8930f23bb4f inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99800c5dbd05ab750aa0bb27518d0467 inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">initialize</a> ()</td></tr>
-<tr class="memdesc:a99800c5dbd05ab750aa0bb27518d0467 inherit pub_methods_classCommandGroup"><td class="mdescLeft">&#160;</td><td class="mdescRight">run once in the first iteration of the command's life. this will be overrided by individual commands  <a href="#a99800c5dbd05ab750aa0bb27518d0467">More...</a><br/></td></tr>
-<tr class="separator:a99800c5dbd05ab750aa0bb27518d0467 inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e91d370cafde43548d79945ccb4d8fe inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a5e91d370cafde43548d79945ccb4d8fe">execute</a> ()</td></tr>
 <tr class="memdesc:a5e91d370cafde43548d79945ccb4d8fe inherit pub_methods_classCommandGroup"><td class="mdescLeft">&#160;</td><td class="mdescRight">stuff to do over and over each iteration. this will be overrided by individual commands  <a href="#a5e91d370cafde43548d79945ccb4d8fe">More...</a><br/></td></tr>
 <tr class="separator:a5e91d370cafde43548d79945ccb4d8fe inherit pub_methods_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,14 +156,34 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a0252c920dd7114c29ef04526cfd0f39a">isRunning</a> ()</td></tr>
 <tr class="memdesc:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the command is running. not yet implemented.  <a href="#a0252c920dd7114c29ef04526cfd0f39a">More...</a><br/></td></tr>
 <tr class="separator:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a51103f3b209bdbd421f40a38521a9e5e">operator!=</a> (const <a class="el" href="classCommand.html">Command</a> &amp;other)</td></tr>
+<tr class="memdesc:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparator overload for !=. used when checking if command is in list  <a href="#a51103f3b209bdbd421f40a38521a9e5e">More...</a><br/></td></tr>
+<tr class="separator:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a03a7f03b29c4cbb748a15c9c83233023">print</a> ()</td></tr>
+<tr class="separator:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad2c4d389db38e728e540206aed467670"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#ad2c4d389db38e728e540206aed467670">reactorNumber</a></td></tr>
+<tr class="separator:ad2c4d389db38e728e540206aed467670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375425052a9973441a9a990f79fedd93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#a375425052a9973441a9a990f79fedd93">destCol</a></td></tr>
+<tr class="separator:a375425052a9973441a9a990f79fedd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7a2b3591016b6c7fec6b908fd0a3e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#a6e7a2b3591016b6c7fec6b908fd0a3e7">destRow</a></td></tr>
+<tr class="separator:a6e7a2b3591016b6c7fec6b908fd0a3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f79f55c3202c51136455a9c29b7273"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetRodFromReactor.html#a04f79f55c3202c51136455a9c29b7273">destDirection</a></td></tr>
+<tr class="separator:a04f79f55c3202c51136455a9c29b7273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classCommandGroup"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classCommandGroup')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classCommandGroup.html">CommandGroup</a></td></tr>
-<tr class="memitem:a5906e7052c71befb25842e1f6c55e0b8 inherit pub_attribs_classCommandGroup"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommandGroupEntry.html">CommandGroupEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a5906e7052c71befb25842e1f6c55e0b8">commands</a></td></tr>
-<tr class="separator:a5906e7052c71befb25842e1f6c55e0b8 inherit pub_attribs_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3feebac04f16af88c50c4541f5e8b62a inherit pub_attribs_classCommandGroup"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommand.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a3feebac04f16af88c50c4541f5e8b62a">commands</a></td></tr>
+<tr class="separator:a3feebac04f16af88c50c4541f5e8b62a inherit pub_attribs_classCommandGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classCommand')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
+<tr class="memitem:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ad6e763c58ca2751de879c6eb3f3ae48f">inParallel</a></td></tr>
+<tr class="memdesc:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">used by command group to organize commands  <a href="#ad6e763c58ca2751de879c6eb3f3ae48f">More...</a><br/></td></tr>
+<tr class="separator:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610">name</a></td></tr>
+<tr class="memdesc:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">for convenient printing  <a href="#a19f7ad73ca8599ad47f9b7bcccc52610">More...</a><br/></td></tr>
 <tr class="separator:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -183,7 +204,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="GetRodFromReactor_8cpp_source.html#l00013">13</a> of file <a class="el" href="GetRodFromReactor_8cpp_source.html">GetRodFromReactor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GetRodFromReactor_8cpp_source.html#l00012">12</a> of file <a class="el" href="GetRodFromReactor_8cpp_source.html">GetRodFromReactor.cpp</a>.</p>
 
 </div>
 </div>
@@ -213,7 +234,125 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">CommandGroup</a>.</p>
 
-<p>Definition at line <a class="el" href="GetRodFromReactor_8cpp_source.html#l00024">24</a> of file <a class="el" href="GetRodFromReactor_8cpp_source.html">GetRodFromReactor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GetRodFromReactor_8cpp_source.html#l00036">36</a> of file <a class="el" href="GetRodFromReactor_8cpp_source.html">GetRodFromReactor.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb5a43f9368820438622cc6e08a9df10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetRodFromReactor::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>since this routime is dependant on bluetooth messages, and must be determined on execution, not on declaration, we defer the adding of commands to the initialize method. This way, we can safely call NavigateToReactor, which checks bluetooth at excution time, and it will add commands to the group sequentially. </p>
+
+<p>Reimplemented from <a class="el" href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">CommandGroup</a>.</p>
+
+<p>Definition at line <a class="el" href="GetRodFromReactor_8cpp_source.html#l00017">17</a> of file <a class="el" href="GetRodFromReactor_8cpp_source.html">GetRodFromReactor.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a375425052a9973441a9a990f79fedd93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetRodFromReactor::destCol</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetRodFromReactor_8h_source.html#l00014">14</a> of file <a class="el" href="GetRodFromReactor_8h_source.html">GetRodFromReactor.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04f79f55c3202c51136455a9c29b7273"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetRodFromReactor::destDirection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetRodFromReactor_8h_source.html#l00014">14</a> of file <a class="el" href="GetRodFromReactor_8h_source.html">GetRodFromReactor.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e7a2b3591016b6c7fec6b908fd0a3e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetRodFromReactor::destRow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetRodFromReactor_8h_source.html#l00014">14</a> of file <a class="el" href="GetRodFromReactor_8h_source.html">GetRodFromReactor.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2c4d389db38e728e540206aed467670"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetRodFromReactor::reactorNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetRodFromReactor_8h_source.html#l00014">14</a> of file <a class="el" href="GetRodFromReactor_8h_source.html">GetRodFromReactor.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +363,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

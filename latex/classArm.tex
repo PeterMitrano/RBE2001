@@ -27,8 +27,10 @@ void \hyperlink{classArm_a4a8274680d981524efbeb2b51eb49c28}{stop} ()
 \begin{DoxyCompactList}\small\item\em cold stop the arm. This is used to calibrate the arm \end{DoxyCompactList}\item 
 bool \hyperlink{classArm_ae3c0195535b15f56f9027aea0ae5ec76}{at\-Position} ()
 \begin{DoxyCompactList}\small\item\em return true if position is within tolerance of setpoint \end{DoxyCompactList}\item 
-int \hyperlink{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}{position} ()
+int \hyperlink{classArm_a45b8faa17da013c35ada035a0a88659f}{\-\_\-position} ()
 \begin{DoxyCompactList}\small\item\em return position in encoder counts \end{DoxyCompactList}\item 
+int \hyperlink{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}{position} ()
+\item 
 bool \hyperlink{classArm_a234397ff44a8ac5fda920d92b9b33237}{at\-Lim} ()
 \begin{DoxyCompactList}\small\item\em returns true if limit switch is hit \end{DoxyCompactList}\item 
 void \hyperlink{classArm_a90df7bcd3c225f6fc05ef2f77c773d2e}{raw\-Down} ()
@@ -39,9 +41,7 @@ void \hyperlink{classArm_afb44126b438f8dc00b0bf0720c84a737}{reset\-Encoder} ()
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classGripper}{Gripper} \hyperlink{classArm_a1f237e56fc1e76c2b63f1f59d847945d}{gripper}
-\begin{DoxyCompactList}\small\item\em gripper object is part of the arm \end{DoxyCompactList}\item 
-bool \hyperlink{classArm_a3f6c85e5a8feacd8870b653a8163d99f}{calibrated} = false
-\begin{DoxyCompactList}\small\item\em flag to keep the control function from running without calibration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em gripper object is part of the arm \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,6 +51,8 @@ void \hyperlink{classArm_aef69c0a871a4443e3e1109c5a742e4b8}{drive} (int power)
 \begin{DoxyCompactItemize}
 \item 
 Encoder \hyperlink{classArm_afe912e5b20439c082abb66920658805c}{encoder}
+\item 
+int \hyperlink{classArm_a73ec96a3c36efbf71fe5301b82e9fd4d}{pot\-Pin} = 9
 \item 
 int \hyperlink{classArm_ad4a5718ff10ff30ece49108effc28dd2}{motor\-Fwd\-Pin} = 10
 \item 
@@ -66,25 +68,29 @@ unsigned long \hyperlink{classArm_a99d553dd144c5fd2bf8b4c68a66fea1b}{last\-Contr
 \begin{DoxyCompactList}\small\item\em last time in millis that the P\-I\-D was run. used to only update P\-I\-D every C\-O\-N\-T\-R\-O\-L\-\_\-\-T\-I\-M\-E \end{DoxyCompactList}\item 
 const unsigned long \hyperlink{classArm_ae85014b5f9a8698790faa73bae76217c}{C\-O\-N\-T\-R\-O\-L\-\_\-\-T\-I\-M\-E} = 50l
 \begin{DoxyCompactList}\small\item\em constant in millis for how often to calculate P\-I\-D \end{DoxyCompactList}\item 
+long \hyperlink{classArm_ad8cf7ca1ae47f7ddffcffb02889c8c69}{derivative} = 0
+\begin{DoxyCompactList}\small\item\em used by P\-I\-D to computer derivative \end{DoxyCompactList}\item 
 long \hyperlink{classArm_aef466ce8350e1d73ed9a7b529512e90c}{integral} = 0
-\begin{DoxyCompactList}\small\item\em used by P\-I to computer integral \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em used by P\-I\-D to computer integral \end{DoxyCompactList}\item 
 long \hyperlink{classArm_a5061b95381cc72d417f5a5275b871e47}{last\-Error} = 0
 \begin{DoxyCompactList}\small\item\em last error in encoder ticks \end{DoxyCompactList}\item 
-const long \hyperlink{classArm_afb4e56fd59b92d0b4c157c0ea7fe9db8}{tolerance} = 100
+const long \hyperlink{classArm_af2251ac7ebd3c88f660e7a6dcc62ffd0}{\-\_\-tolerance} = 100
 \begin{DoxyCompactList}\small\item\em how many encoder ticks until we're considered at our setpoint \end{DoxyCompactList}\item 
-const double \hyperlink{classArm_ac6d95b0c5f8a7700b3d25a9fcead2291}{k\-P} = 0.\-1
-\begin{DoxyCompactList}\small\item\em P\-I constants. \end{DoxyCompactList}\item 
-const double \hyperlink{classArm_a15dca8014bd3994a0d9b62efc0bcb983}{k\-I} = 0.\-002
+const long \hyperlink{classArm_afb4e56fd59b92d0b4c157c0ea7fe9db8}{tolerance} = 12
 \item 
-const double \hyperlink{classArm_aba816c407060b76429a785f6b15a6980}{k\-D} = 0.\-0
+const double \hyperlink{classArm_ac6d95b0c5f8a7700b3d25a9fcead2291}{k\-P} = 0.\-65
+\begin{DoxyCompactList}\small\item\em P\-I constants. \end{DoxyCompactList}\item 
+const double \hyperlink{classArm_a15dca8014bd3994a0d9b62efc0bcb983}{k\-I} = 0.\-04
+\item 
+const double \hyperlink{classArm_aba816c407060b76429a785f6b15a6980}{k\-D} = 0.\-07
 \item 
 const long \hyperlink{classArm_a05988f2c31e40dd3894c1343bf73a7b8}{M\-A\-X\-\_\-\-I\-N\-T\-E\-G\-R\-A\-L} = 500l
 \begin{DoxyCompactList}\small\item\em absolute value cap of integral. this protects us from \href{https://en.wikipedia.org/wiki/Integral_windup}{\tt integral windup} \end{DoxyCompactList}\item 
 long \hyperlink{classArm_aa168ca685ff8170699ca535590c2af14}{setpoint} = 0
 \item 
-const long \hyperlink{classArm_a44fed3661f22f9acd7f3cd8635a4fc6a}{U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N} = 6200l
+const long \hyperlink{classArm_a44fed3661f22f9acd7f3cd8635a4fc6a}{U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N} = 795l
 \item 
-const long \hyperlink{classArm_a3a95b43d43f1e4858829ff474555f81f}{D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N} = 0l
+const long \hyperlink{classArm_a3a95b43d43f1e4858829ff474555f81f}{D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N} = 154l
 \end{DoxyCompactItemize}
 
 
@@ -105,11 +111,26 @@ Definition at line 11 of file Arm.\-h.
 )}}\label{classArm_a920d0f828c6e76188827cf0c073963de}
 
 
-Definition at line 3 of file Arm.\-cpp.
+Definition at line 4 of file Arm.\-cpp.
 
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classArm_a45b8faa17da013c35ada035a0a88659f}{\index{Arm@{Arm}!\-\_\-position@{\-\_\-position}}
+\index{\-\_\-position@{\-\_\-position}!Arm@{Arm}}
+\subsubsection[{\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}int Arm\-::\-\_\-position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArm_a45b8faa17da013c35ada035a0a88659f}
+
+
+return position in encoder counts 
+
+
+
+Definition at line 58 of file Arm.\-cpp.
+
 \hypertarget{classArm_a234397ff44a8ac5fda920d92b9b33237}{\index{Arm@{Arm}!at\-Lim@{at\-Lim}}
 \index{at\-Lim@{at\-Lim}!Arm@{Arm}}
 \subsubsection[{at\-Lim}]{\setlength{\rightskip}{0pt plus 5cm}bool Arm\-::at\-Lim (
@@ -123,7 +144,7 @@ returns true if limit switch is hit
 
 
 
-Definition at line 56 of file Arm.\-cpp.
+Definition at line 66 of file Arm.\-cpp.
 
 \hypertarget{classArm_ae3c0195535b15f56f9027aea0ae5ec76}{\index{Arm@{Arm}!at\-Position@{at\-Position}}
 \index{at\-Position@{at\-Position}!Arm@{Arm}}
@@ -138,7 +159,7 @@ return true if position is within tolerance of setpoint
 
 
 
-Definition at line 47 of file Arm.\-cpp.
+Definition at line 53 of file Arm.\-cpp.
 
 \hypertarget{classArm_a009c19e5b213f692c24eab792cc40c47}{\index{Arm@{Arm}!control@{control}}
 \index{control@{control}!Arm@{Arm}}
@@ -153,7 +174,7 @@ the main function for controlling the arm. All other functions should just call 
 
 
 
-Definition at line 13 of file Arm.\-cpp.
+Definition at line 17 of file Arm.\-cpp.
 
 \hypertarget{classArm_a9075166ca53ef3cd547a7725ee5bca1d}{\index{Arm@{Arm}!down@{down}}
 \index{down@{down}!Arm@{Arm}}
@@ -168,7 +189,7 @@ lower arm all the way to the top. This only needs to be called once, and the arm
 
 
 
-Definition at line 35 of file Arm.\-cpp.
+Definition at line 41 of file Arm.\-cpp.
 
 \hypertarget{classArm_aef69c0a871a4443e3e1109c5a742e4b8}{\index{Arm@{Arm}!drive@{drive}}
 \index{drive@{drive}!Arm@{Arm}}
@@ -183,7 +204,7 @@ raw function for controlling
 
 
 
-Definition at line 68 of file Arm.\-cpp.
+Definition at line 78 of file Arm.\-cpp.
 
 \hypertarget{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}{\index{Arm@{Arm}!position@{position}}
 \index{position@{position}!Arm@{Arm}}
@@ -194,11 +215,7 @@ Definition at line 68 of file Arm.\-cpp.
 )}}\label{classArm_ab49756ee4bfdc5f573a78f29678bf1d8}
 
 
-return position in encoder counts 
-
-
-
-Definition at line 52 of file Arm.\-cpp.
+Definition at line 62 of file Arm.\-cpp.
 
 \hypertarget{classArm_a90df7bcd3c225f6fc05ef2f77c773d2e}{\index{Arm@{Arm}!raw\-Down@{raw\-Down}}
 \index{raw\-Down@{raw\-Down}!Arm@{Arm}}
@@ -213,7 +230,7 @@ drives the arm down very slowly. used in calibrating
 
 
 
-Definition at line 60 of file Arm.\-cpp.
+Definition at line 70 of file Arm.\-cpp.
 
 \hypertarget{classArm_afb44126b438f8dc00b0bf0720c84a737}{\index{Arm@{Arm}!reset\-Encoder@{reset\-Encoder}}
 \index{reset\-Encoder@{reset\-Encoder}!Arm@{Arm}}
@@ -228,7 +245,7 @@ sets encoder count to 0
 
 
 
-Definition at line 64 of file Arm.\-cpp.
+Definition at line 74 of file Arm.\-cpp.
 
 \hypertarget{classArm_a0e642e1a6fc24f40268f2c759dee62e1}{\index{Arm@{Arm}!setup@{setup}}
 \index{setup@{setup}!Arm@{Arm}}
@@ -243,7 +260,7 @@ initializes servos and other stuff. called by main arduino setup
 
 
 
-Definition at line 5 of file Arm.\-cpp.
+Definition at line 9 of file Arm.\-cpp.
 
 \hypertarget{classArm_a4a8274680d981524efbeb2b51eb49c28}{\index{Arm@{Arm}!stop@{stop}}
 \index{stop@{stop}!Arm@{Arm}}
@@ -258,7 +275,7 @@ cold stop the arm. This is used to calibrate the arm
 
 
 
-Definition at line 43 of file Arm.\-cpp.
+Definition at line 49 of file Arm.\-cpp.
 
 \hypertarget{classArm_a65ffd463407a6782a55dbd5b84f1e15e}{\index{Arm@{Arm}!up@{up}}
 \index{up@{up}!Arm@{Arm}}
@@ -273,21 +290,21 @@ raise arm all the way to the bottom. This only needs to be called once, and the 
 
 
 
-Definition at line 39 of file Arm.\-cpp.
+Definition at line 45 of file Arm.\-cpp.
 
 
 
 \subsection{Member Data Documentation}
-\hypertarget{classArm_a3f6c85e5a8feacd8870b653a8163d99f}{\index{Arm@{Arm}!calibrated@{calibrated}}
-\index{calibrated@{calibrated}!Arm@{Arm}}
-\subsubsection[{calibrated}]{\setlength{\rightskip}{0pt plus 5cm}bool Arm\-::calibrated = false}}\label{classArm_a3f6c85e5a8feacd8870b653a8163d99f}
+\hypertarget{classArm_af2251ac7ebd3c88f660e7a6dcc62ffd0}{\index{Arm@{Arm}!\-\_\-tolerance@{\-\_\-tolerance}}
+\index{\-\_\-tolerance@{\-\_\-tolerance}!Arm@{Arm}}
+\subsubsection[{\-\_\-tolerance}]{\setlength{\rightskip}{0pt plus 5cm}const long Arm\-::\-\_\-tolerance = 100\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_af2251ac7ebd3c88f660e7a6dcc62ffd0}
 
 
-flag to keep the control function from running without calibration 
+how many encoder ticks until we're considered at our setpoint 
 
 
 
-Definition at line 56 of file Arm.\-h.
+Definition at line 87 of file Arm.\-h.
 
 \hypertarget{classArm_ae85014b5f9a8698790faa73bae76217c}{\index{Arm@{Arm}!C\-O\-N\-T\-R\-O\-L\-\_\-\-T\-I\-M\-E@{C\-O\-N\-T\-R\-O\-L\-\_\-\-T\-I\-M\-E}}
 \index{C\-O\-N\-T\-R\-O\-L\-\_\-\-T\-I\-M\-E@{C\-O\-N\-T\-R\-O\-L\-\_\-\-T\-I\-M\-E}!Arm@{Arm}}
@@ -298,35 +315,46 @@ constant in millis for how often to calculate P\-I\-D
 
 
 
-Definition at line 76 of file Arm.\-h.
+Definition at line 75 of file Arm.\-h.
+
+\hypertarget{classArm_ad8cf7ca1ae47f7ddffcffb02889c8c69}{\index{Arm@{Arm}!derivative@{derivative}}
+\index{derivative@{derivative}!Arm@{Arm}}
+\subsubsection[{derivative}]{\setlength{\rightskip}{0pt plus 5cm}long Arm\-::derivative = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_ad8cf7ca1ae47f7ddffcffb02889c8c69}
+
+
+used by P\-I\-D to computer derivative 
+
+
+
+Definition at line 78 of file Arm.\-h.
 
 \hypertarget{classArm_a3a95b43d43f1e4858829ff474555f81f}{\index{Arm@{Arm}!D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N@{D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}}
 \index{D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N@{D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}!Arm@{Arm}}
-\subsubsection[{D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const long Arm\-::\-D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N = 0l\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a3a95b43d43f1e4858829ff474555f81f}
+\subsubsection[{D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const long Arm\-::\-D\-O\-W\-N\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N = 154l\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a3a95b43d43f1e4858829ff474555f81f}
 
 
-Definition at line 100 of file Arm.\-h.
+Definition at line 103 of file Arm.\-h.
 
 \hypertarget{classArm_ad36ceeef302fda4b8e162feae7961c41}{\index{Arm@{Arm}!enc\-A\-Pin@{enc\-A\-Pin}}
 \index{enc\-A\-Pin@{enc\-A\-Pin}!Arm@{Arm}}
 \subsubsection[{enc\-A\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Arm\-::enc\-A\-Pin = 19\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_ad36ceeef302fda4b8e162feae7961c41}
 
 
-Definition at line 67 of file Arm.\-h.
+Definition at line 66 of file Arm.\-h.
 
 \hypertarget{classArm_ab1111e111610b38214e703cd88887f24}{\index{Arm@{Arm}!enc\-B\-Pin@{enc\-B\-Pin}}
 \index{enc\-B\-Pin@{enc\-B\-Pin}!Arm@{Arm}}
 \subsubsection[{enc\-B\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Arm\-::enc\-B\-Pin = 18\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_ab1111e111610b38214e703cd88887f24}
 
 
-Definition at line 68 of file Arm.\-h.
+Definition at line 67 of file Arm.\-h.
 
 \hypertarget{classArm_afe912e5b20439c082abb66920658805c}{\index{Arm@{Arm}!encoder@{encoder}}
 \index{encoder@{encoder}!Arm@{Arm}}
 \subsubsection[{encoder}]{\setlength{\rightskip}{0pt plus 5cm}Encoder Arm\-::encoder\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_afe912e5b20439c082abb66920658805c}
 
 
-Definition at line 63 of file Arm.\-h.
+Definition at line 61 of file Arm.\-h.
 
 \hypertarget{classArm_a1f237e56fc1e76c2b63f1f59d847945d}{\index{Arm@{Arm}!gripper@{gripper}}
 \index{gripper@{gripper}!Arm@{Arm}}
@@ -337,43 +365,43 @@ gripper object is part of the arm
 
 
 
-Definition at line 53 of file Arm.\-h.
+Definition at line 54 of file Arm.\-h.
 
 \hypertarget{classArm_aef466ce8350e1d73ed9a7b529512e90c}{\index{Arm@{Arm}!integral@{integral}}
 \index{integral@{integral}!Arm@{Arm}}
 \subsubsection[{integral}]{\setlength{\rightskip}{0pt plus 5cm}long Arm\-::integral = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_aef466ce8350e1d73ed9a7b529512e90c}
 
 
-used by P\-I to computer integral 
+used by P\-I\-D to computer integral 
 
 
 
-Definition at line 79 of file Arm.\-h.
+Definition at line 81 of file Arm.\-h.
 
 \hypertarget{classArm_aba816c407060b76429a785f6b15a6980}{\index{Arm@{Arm}!k\-D@{k\-D}}
 \index{k\-D@{k\-D}!Arm@{Arm}}
-\subsubsection[{k\-D}]{\setlength{\rightskip}{0pt plus 5cm}const double Arm\-::k\-D = 0.\-0\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_aba816c407060b76429a785f6b15a6980}
+\subsubsection[{k\-D}]{\setlength{\rightskip}{0pt plus 5cm}const double Arm\-::k\-D = 0.\-07\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_aba816c407060b76429a785f6b15a6980}
 
 
-Definition at line 90 of file Arm.\-h.
+Definition at line 93 of file Arm.\-h.
 
 \hypertarget{classArm_a15dca8014bd3994a0d9b62efc0bcb983}{\index{Arm@{Arm}!k\-I@{k\-I}}
 \index{k\-I@{k\-I}!Arm@{Arm}}
-\subsubsection[{k\-I}]{\setlength{\rightskip}{0pt plus 5cm}const double Arm\-::k\-I = 0.\-002\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a15dca8014bd3994a0d9b62efc0bcb983}
+\subsubsection[{k\-I}]{\setlength{\rightskip}{0pt plus 5cm}const double Arm\-::k\-I = 0.\-04\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a15dca8014bd3994a0d9b62efc0bcb983}
 
 
-Definition at line 89 of file Arm.\-h.
+Definition at line 92 of file Arm.\-h.
 
 \hypertarget{classArm_ac6d95b0c5f8a7700b3d25a9fcead2291}{\index{Arm@{Arm}!k\-P@{k\-P}}
 \index{k\-P@{k\-P}!Arm@{Arm}}
-\subsubsection[{k\-P}]{\setlength{\rightskip}{0pt plus 5cm}const double Arm\-::k\-P = 0.\-1\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_ac6d95b0c5f8a7700b3d25a9fcead2291}
+\subsubsection[{k\-P}]{\setlength{\rightskip}{0pt plus 5cm}const double Arm\-::k\-P = 0.\-65\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_ac6d95b0c5f8a7700b3d25a9fcead2291}
 
 
 P\-I constants. 
 
 
 
-Definition at line 88 of file Arm.\-h.
+Definition at line 91 of file Arm.\-h.
 
 \hypertarget{classArm_a99d553dd144c5fd2bf8b4c68a66fea1b}{\index{Arm@{Arm}!last\-Control\-Time@{last\-Control\-Time}}
 \index{last\-Control\-Time@{last\-Control\-Time}!Arm@{Arm}}
@@ -384,7 +412,7 @@ last time in millis that the P\-I\-D was run. used to only update P\-I\-D every 
 
 
 
-Definition at line 73 of file Arm.\-h.
+Definition at line 72 of file Arm.\-h.
 
 \hypertarget{classArm_a5061b95381cc72d417f5a5275b871e47}{\index{Arm@{Arm}!last\-Error@{last\-Error}}
 \index{last\-Error@{last\-Error}!Arm@{Arm}}
@@ -395,14 +423,14 @@ last error in encoder ticks
 
 
 
-Definition at line 82 of file Arm.\-h.
+Definition at line 84 of file Arm.\-h.
 
 \hypertarget{classArm_aade413d7d638bff08bcc0c9ac50818e1}{\index{Arm@{Arm}!lim\-Pin@{lim\-Pin}}
 \index{lim\-Pin@{lim\-Pin}!Arm@{Arm}}
 \subsubsection[{lim\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Arm\-::lim\-Pin = 25\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_aade413d7d638bff08bcc0c9ac50818e1}
 
 
-Definition at line 69 of file Arm.\-h.
+Definition at line 68 of file Arm.\-h.
 
 \hypertarget{classArm_a05988f2c31e40dd3894c1343bf73a7b8}{\index{Arm@{Arm}!M\-A\-X\-\_\-\-I\-N\-T\-E\-G\-R\-A\-L@{M\-A\-X\-\_\-\-I\-N\-T\-E\-G\-R\-A\-L}}
 \index{M\-A\-X\-\_\-\-I\-N\-T\-E\-G\-R\-A\-L@{M\-A\-X\-\_\-\-I\-N\-T\-E\-G\-R\-A\-L}!Arm@{Arm}}
@@ -413,46 +441,49 @@ absolute value cap of integral. this protects us from \href{https://en.wikipedia
 
 
 
-Definition at line 94 of file Arm.\-h.
+Definition at line 97 of file Arm.\-h.
 
 \hypertarget{classArm_ad4a5718ff10ff30ece49108effc28dd2}{\index{Arm@{Arm}!motor\-Fwd\-Pin@{motor\-Fwd\-Pin}}
 \index{motor\-Fwd\-Pin@{motor\-Fwd\-Pin}!Arm@{Arm}}
 \subsubsection[{motor\-Fwd\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Arm\-::motor\-Fwd\-Pin = 10\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_ad4a5718ff10ff30ece49108effc28dd2}
 
 
-Definition at line 65 of file Arm.\-h.
+Definition at line 64 of file Arm.\-h.
 
 \hypertarget{classArm_a0d5927881e33ce4e039a71e83d7caf6a}{\index{Arm@{Arm}!motor\-Rev\-Pin@{motor\-Rev\-Pin}}
 \index{motor\-Rev\-Pin@{motor\-Rev\-Pin}!Arm@{Arm}}
 \subsubsection[{motor\-Rev\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Arm\-::motor\-Rev\-Pin = 9\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a0d5927881e33ce4e039a71e83d7caf6a}
 
 
-Definition at line 66 of file Arm.\-h.
+Definition at line 65 of file Arm.\-h.
+
+\hypertarget{classArm_a73ec96a3c36efbf71fe5301b82e9fd4d}{\index{Arm@{Arm}!pot\-Pin@{pot\-Pin}}
+\index{pot\-Pin@{pot\-Pin}!Arm@{Arm}}
+\subsubsection[{pot\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Arm\-::pot\-Pin = 9\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a73ec96a3c36efbf71fe5301b82e9fd4d}
+
+
+Definition at line 63 of file Arm.\-h.
 
 \hypertarget{classArm_aa168ca685ff8170699ca535590c2af14}{\index{Arm@{Arm}!setpoint@{setpoint}}
 \index{setpoint@{setpoint}!Arm@{Arm}}
 \subsubsection[{setpoint}]{\setlength{\rightskip}{0pt plus 5cm}long Arm\-::setpoint = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_aa168ca685ff8170699ca535590c2af14}
 
 
-Definition at line 96 of file Arm.\-h.
+Definition at line 99 of file Arm.\-h.
 
 \hypertarget{classArm_afb4e56fd59b92d0b4c157c0ea7fe9db8}{\index{Arm@{Arm}!tolerance@{tolerance}}
 \index{tolerance@{tolerance}!Arm@{Arm}}
-\subsubsection[{tolerance}]{\setlength{\rightskip}{0pt plus 5cm}const long Arm\-::tolerance = 100\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_afb4e56fd59b92d0b4c157c0ea7fe9db8}
+\subsubsection[{tolerance}]{\setlength{\rightskip}{0pt plus 5cm}const long Arm\-::tolerance = 12\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_afb4e56fd59b92d0b4c157c0ea7fe9db8}
 
 
-how many encoder ticks until we're considered at our setpoint 
-
-
-
-Definition at line 85 of file Arm.\-h.
+Definition at line 88 of file Arm.\-h.
 
 \hypertarget{classArm_a44fed3661f22f9acd7f3cd8635a4fc6a}{\index{Arm@{Arm}!U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N@{U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}}
 \index{U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N@{U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}!Arm@{Arm}}
-\subsubsection[{U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const long Arm\-::\-U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N = 6200l\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a44fed3661f22f9acd7f3cd8635a4fc6a}
+\subsubsection[{U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const long Arm\-::\-U\-P\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N = 795l\hspace{0.3cm}{\ttfamily [private]}}}\label{classArm_a44fed3661f22f9acd7f3cd8635a4fc6a}
 positions 
 
-Definition at line 99 of file Arm.\-h.
+Definition at line 102 of file Arm.\-h.
 
 
 

@@ -92,23 +92,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="TurnToNextLine_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="CommandGroup_8h.html">CommandGroup.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Robot_8h.html">Robot.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classTurnToNextLine.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTurnToNextLine.html">TurnToNextLine</a> : <span class="keyword">public</span> <a class="code" href="classCommandGroup.html">CommandGroup</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classTurnToNextLine.html#af7924c8caf2cd6e2f7b2ba5d773bfe83">TurnToNextLine</a>(<span class="keywordtype">int</span> direction);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classTurnToNextLine.html#af7924c8caf2cd6e2f7b2ba5d773bfe83">TurnToNextLine</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
-<div class="ttc" id="classTurnToNextLine_html_af7924c8caf2cd6e2f7b2ba5d773bfe83"><div class="ttname"><a href="classTurnToNextLine.html#af7924c8caf2cd6e2f7b2ba5d773bfe83">TurnToNextLine::TurnToNextLine</a></div><div class="ttdeci">TurnToNextLine()</div><div class="ttdef"><b>Definition:</b> <a href="TurnToNextLine_8cpp_source.html#l00013">TurnToNextLine.cpp:13</a></div></div>
-<div class="ttc" id="classCommandGroup_html"><div class="ttname"><a href="classCommandGroup.html">CommandGroup</a></div><div class="ttdoc">grouping commands is a useful abstraction. Commands groups execute commands in parallel or series ...</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroup_8h_source.html#l00010">CommandGroup.h:10</a></div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="CommandGroup_8h.html">CommandGroup.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Robot_8h.html">Robot.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classTurnToNextLine.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTurnToNextLine.html">TurnToNextLine</a> : <span class="keyword">public</span> <a class="code" href="classCommandGroup.html">CommandGroup</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classTurnToNextLine.html#af7924c8caf2cd6e2f7b2ba5d773bfe83">TurnToNextLine</a>(<span class="keywordtype">int</span> <a class="code" href="classTurnToNextLine.html#a20415d3992141e6187fa25397373d330">direction</a>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classTurnToNextLine.html#af7924c8caf2cd6e2f7b2ba5d773bfe83">TurnToNextLine</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTurnToNextLine.html#a79081a085e73cdb82d71770c996f5b1b">end</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classTurnToNextLine.html#a20415d3992141e6187fa25397373d330">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTurnToNextLine.html#a20415d3992141e6187fa25397373d330">direction</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="ttc" id="classTurnToNextLine_html_af7924c8caf2cd6e2f7b2ba5d773bfe83"><div class="ttname"><a href="classTurnToNextLine.html#af7924c8caf2cd6e2f7b2ba5d773bfe83">TurnToNextLine::TurnToNextLine</a></div><div class="ttdeci">TurnToNextLine()</div><div class="ttdoc">turns cw to next line </div><div class="ttdef"><b>Definition:</b> <a href="TurnToNextLine_8cpp_source.html#l00015">TurnToNextLine.cpp:15</a></div></div>
+<div class="ttc" id="classCommandGroup_html"><div class="ttname"><a href="classCommandGroup.html">CommandGroup</a></div><div class="ttdoc">grouping commands is a useful abstraction. Commands groups execute commands in parallel or series ...</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroup_8h_source.html#l00009">CommandGroup.h:9</a></div></div>
+<div class="ttc" id="classTurnToNextLine_html_a79081a085e73cdb82d71770c996f5b1b"><div class="ttname"><a href="classTurnToNextLine.html#a79081a085e73cdb82d71770c996f5b1b">TurnToNextLine::end</a></div><div class="ttdeci">void end()</div><div class="ttdoc">updates direction </div><div class="ttdef"><b>Definition:</b> <a href="TurnToNextLine_8cpp_source.html#l00018">TurnToNextLine.cpp:18</a></div></div>
 <div class="ttc" id="Robot_8h_html"><div class="ttname"><a href="Robot_8h.html">Robot.h</a></div></div>
-<div class="ttc" id="classTurnToNextLine_html"><div class="ttname"><a href="classTurnToNextLine.html">TurnToNextLine</a></div><div class="ttdef"><b>Definition:</b> <a href="TurnToNextLine_8h_source.html#l00006">TurnToNextLine.h:6</a></div></div>
+<div class="ttc" id="classTurnToNextLine_html"><div class="ttname"><a href="classTurnToNextLine.html">TurnToNextLine</a></div><div class="ttdoc">turns until it finds the next line and updates current direction </div><div class="ttdef"><b>Definition:</b> <a href="TurnToNextLine_8h_source.html#l00008">TurnToNextLine.h:8</a></div></div>
+<div class="ttc" id="classTurnToNextLine_html_a20415d3992141e6187fa25397373d330"><div class="ttname"><a href="classTurnToNextLine.html#a20415d3992141e6187fa25397373d330">TurnToNextLine::direction</a></div><div class="ttdeci">int direction</div><div class="ttdoc">direction specified by bluetooth </div><div class="ttdef"><b>Definition:</b> <a href="TurnToNextLine_8h_source.html#l00028">TurnToNextLine.h:28</a></div></div>
 <div class="ttc" id="CommandGroup_8h_html"><div class="ttname"><a href="CommandGroup_8h.html">CommandGroup.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

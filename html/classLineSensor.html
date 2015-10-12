@@ -101,9 +101,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af1f1d8c89ae0992f53b44c845cf7b9e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#af1f1d8c89ae0992f53b44c845cf7b9e1">LineSensor</a> ()</td></tr>
+<tr class="memdesc:af1f1d8c89ae0992f53b44c845cf7b9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">boring contsructor  <a href="#af1f1d8c89ae0992f53b44c845cf7b9e1">More...</a><br/></td></tr>
+<tr class="separator:af1f1d8c89ae0992f53b44c845cf7b9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a555f6f7222ea1e76ed810edbde44c39c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a555f6f7222ea1e76ed810edbde44c39c">setup</a> ()</td></tr>
 <tr class="memdesc:a555f6f7222ea1e76ed810edbde44c39c"><td class="mdescLeft">&#160;</td><td class="mdescRight">setup servos and stuff. called by main setup  <a href="#a555f6f7222ea1e76ed810edbde44c39c">More...</a><br/></td></tr>
 <tr class="separator:a555f6f7222ea1e76ed810edbde44c39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e0254f9f1e26734b551a124ea21ca3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a71e0254f9f1e26734b551a124ea21ca3">scale</a> (int sensorValue, int sensorPosition)</td></tr>
+<tr class="memdesc:a71e0254f9f1e26734b551a124ea21ca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">scale sensor value between it's min and max.  <a href="#a71e0254f9f1e26734b551a124ea21ca3">More...</a><br/></td></tr>
+<tr class="separator:a71e0254f9f1e26734b551a124ea21ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab134af3ba9f3368a91e3f0e095c86b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#ab134af3ba9f3368a91e3f0e095c86b53">calibrateLineSensors</a> ()</td></tr>
+<tr class="memdesc:ab134af3ba9f3368a91e3f0e095c86b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">captures min and max line sensor values  <a href="#ab134af3ba9f3368a91e3f0e095c86b53">More...</a><br/></td></tr>
+<tr class="separator:ab134af3ba9f3368a91e3f0e095c86b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6769cf781edb7ac4a43086cd62be01e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a6769cf781edb7ac4a43086cd62be01e2">atIntersection</a> ()</td></tr>
 <tr class="memdesc:a6769cf781edb7ac4a43086cd62be01e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if both sensors are on the line  <a href="#a6769cf781edb7ac4a43086cd62be01e2">More...</a><br/></td></tr>
 <tr class="separator:a6769cf781edb7ac4a43086cd62be01e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,15 +136,21 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ac21af83a73e9e55500324d9d34ed2498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a347e843234a242ded12e83badf4718ed"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a347e843234a242ded12e83badf4718ed">lastLinePosition</a></td></tr>
 <tr class="separator:a347e843234a242ded12e83badf4718ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af246497cb5a3386afcc4ce864949c57f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#af246497cb5a3386afcc4ce864949c57f">kP</a> = 8.0</td></tr>
+<tr class="memitem:af246497cb5a3386afcc4ce864949c57f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#af246497cb5a3386afcc4ce864949c57f">kP</a> = 11.0</td></tr>
 <tr class="separator:af246497cb5a3386afcc4ce864949c57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c587ff3d58f72a74ae39429b7d0837"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a62c587ff3d58f72a74ae39429b7d0837">kD</a> = 1.5</td></tr>
+<tr class="memitem:a62c587ff3d58f72a74ae39429b7d0837"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a62c587ff3d58f72a74ae39429b7d0837">kD</a> = 20.0</td></tr>
 <tr class="separator:a62c587ff3d58f72a74ae39429b7d0837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5bd7119b2332eab8b6c850f8fa3d558"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#aa5bd7119b2332eab8b6c850f8fa3d558">derivative</a></td></tr>
 <tr class="separator:aa5bd7119b2332eab8b6c850f8fa3d558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af574319adc88f5949f03239b2bcbc222"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#af574319adc88f5949f03239b2bcbc222">sum</a></td></tr>
 <tr class="memdesc:af574319adc88f5949f03239b2bcbc222"><td class="mdescLeft">&#160;</td><td class="mdescRight">sum of raw line sensor values. used to detect intersections  <a href="#af574319adc88f5949f03239b2bcbc222">More...</a><br/></td></tr>
 <tr class="separator:af574319adc88f5949f03239b2bcbc222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17bcec64c67b17748d50401e79d5c6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#ae17bcec64c67b17748d50401e79d5c6f">limits</a> [8][2]</td></tr>
+<tr class="memdesc:ae17bcec64c67b17748d50401e79d5c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">contains the min and maxes for each line sensor. the first row is for min, and the second row is for max  <a href="#ae17bcec64c67b17748d50401e79d5c6f">More...</a><br/></td></tr>
+<tr class="separator:ae17bcec64c67b17748d50401e79d5c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d48bb25f8e1ee25a4757b9e201bd1a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a0d48bb25f8e1ee25a4757b9e201bd1a9">rawValues</a> [8]</td></tr>
+<tr class="memdesc:a0d48bb25f8e1ee25a4757b9e201bd1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">contains the raw values for each line sensor  <a href="#a0d48bb25f8e1ee25a4757b9e201bd1a9">More...</a><br/></td></tr>
+<tr class="separator:a0d48bb25f8e1ee25a4757b9e201bd1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -145,27 +160,42 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a09da44442cb9e026af2053b5d0b4f2ce"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a09da44442cb9e026af2053b5d0b4f2ce">LEDPIN</a> = 29</td></tr>
 <tr class="memdesc:a09da44442cb9e026af2053b5d0b4f2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">the board contains IR LEDs, this pin controls those LEDs  <a href="#a09da44442cb9e026af2053b5d0b4f2ce">More...</a><br/></td></tr>
 <tr class="separator:a09da44442cb9e026af2053b5d0b4f2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db50f7d2c026003180d0c5c7e184d9f"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a8db50f7d2c026003180d0c5c7e184d9f">OFF_POS_THRESHOLD</a> = 1.3</td></tr>
-<tr class="memdesc:a8db50f7d2c026003180d0c5c7e184d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">determines what constitutes a black line (from -100 to 100) these numbers may be the same, but don't have to be  <a href="#a8db50f7d2c026003180d0c5c7e184d9f">More...</a><br/></td></tr>
-<tr class="separator:a8db50f7d2c026003180d0c5c7e184d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3c5f134159562e56fcd06e55cc7024"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a3e3c5f134159562e56fcd06e55cc7024">ON_POS_THRESHOLD</a> = 0.6</td></tr>
+<tr class="memitem:a3e3c5f134159562e56fcd06e55cc7024"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a3e3c5f134159562e56fcd06e55cc7024">ON_POS_THRESHOLD</a> = 0.4</td></tr>
+<tr class="memdesc:a3e3c5f134159562e56fcd06e55cc7024"><td class="mdescLeft">&#160;</td><td class="mdescRight">determines what constitutes a black line (from -100 to 100) these numbers may be the same, but don't have to be  <a href="#a3e3c5f134159562e56fcd06e55cc7024">More...</a><br/></td></tr>
 <tr class="separator:a3e3c5f134159562e56fcd06e55cc7024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affb177c49a3381f380b6ff7dd298297f"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#affb177c49a3381f380b6ff7dd298297f">COMPENSATION</a> = 1</td></tr>
-<tr class="memdesc:affb177c49a3381f380b6ff7dd298297f"><td class="mdescLeft">&#160;</td><td class="mdescRight">account for broken line sensors  <a href="#affb177c49a3381f380b6ff7dd298297f">More...</a><br/></td></tr>
-<tr class="separator:affb177c49a3381f380b6ff7dd298297f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55b9f63bd4c01990f6f2d7baa830d2ec"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a55b9f63bd4c01990f6f2d7baa830d2ec">INTERSECTION_THRESHOLD</a> = 2800</td></tr>
+<tr class="memitem:a55b9f63bd4c01990f6f2d7baa830d2ec"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a55b9f63bd4c01990f6f2d7baa830d2ec">INTERSECTION_THRESHOLD</a> = 0</td></tr>
 <tr class="memdesc:a55b9f63bd4c01990f6f2d7baa830d2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">test if we're at a line  <a href="#a55b9f63bd4c01990f6f2d7baa830d2ec">More...</a><br/></td></tr>
 <tr class="separator:a55b9f63bd4c01990f6f2d7baa830d2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a929091ad1746a0a337c2259ba79c959a"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a929091ad1746a0a337c2259ba79c959a">LOW_SUM_THRESHOLD</a> = 1000</td></tr>
+<tr class="memitem:a929091ad1746a0a337c2259ba79c959a"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a929091ad1746a0a337c2259ba79c959a">LOW_SUM_THRESHOLD</a> = -500</td></tr>
 <tr class="separator:a929091ad1746a0a337c2259ba79c959a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e7f65abc054f54cb74f8aa3eb552e89"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a3e7f65abc054f54cb74f8aa3eb552e89">HIGH_SUM_THRESHOLD</a> = 1600</td></tr>
+<tr class="memitem:a3e7f65abc054f54cb74f8aa3eb552e89"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLineSensor.html#a3e7f65abc054f54cb74f8aa3eb552e89">HIGH_SUM_THRESHOLD</a> = -200</td></tr>
 <tr class="separator:a3e7f65abc054f54cb74f8aa3eb552e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>functions for reading the position with respect to the line </p>
 
 <p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00006">6</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af1f1d8c89ae0992f53b44c845cf7b9e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LineSensor::LineSensor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>boring contsructor </p>
+
+<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00005">5</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a74c3c2d7a454aeacae90501670d01bdc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +211,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>get how much motor power you should adjust by. from -100 to 100 </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00025">25</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00052">52</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
 
 </div>
 </div>
@@ -200,7 +230,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>returns true if both sensors are on the line </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00021">21</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00048">48</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +249,26 @@ Static Private Attributes</h2></td></tr>
 
 <p>does raw read and storage of line sensor. This must be caled every loop </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00008">8</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00016">16</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab134af3ba9f3368a91e3f0e095c86b53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LineSensor::calibrateLineSensors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>captures min and max line sensor values </p>
+
+<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00039">39</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
 
 </div>
 </div>
@@ -238,8 +287,6 @@ Static Private Attributes</h2></td></tr>
 
 <p>returns if line sensor is off the line </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00037">37</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ad9d3c5a694f1ff946d1137df1694b026"></a>
@@ -256,6 +303,44 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>returns if line sensor is on the line </p>
+
+<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00059">59</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71e0254f9f1e26734b551a124ea21ca3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LineSensor::scale </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sensorValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sensorPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>scale sensor value between it's min and max. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_in]</td><td>sensorValue the current value of the sensor </td></tr>
+    <tr><td class="paramname">_in[</td><td>sensorPosition the position of the sensor given </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number from -100 to 100 </dd></dl>
 
 <p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00032">32</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
 
@@ -276,35 +361,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>setup servos and stuff. called by main setup </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00004">4</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8cpp_source.html#l00012">12</a> of file <a class="el" href="LineSensor_8cpp_source.html">LineSensor.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="affb177c49a3381f380b6ff7dd298297f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float LineSensor::COMPENSATION = 1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>account for broken line sensors </p>
-
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00052">52</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa5bd7119b2332eab8b6c850f8fa3d558"></a>
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +384,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00049">49</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00061">61</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -335,7 +396,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int LineSensor::HIGH_SUM_THRESHOLD = 1600</td>
+          <td class="memname">const int LineSensor::HIGH_SUM_THRESHOLD = -200</td>
         </tr>
       </table>
   </td>
@@ -345,7 +406,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00057">57</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00066">66</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +418,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int LineSensor::INTERSECTION_THRESHOLD = 2800</td>
+          <td class="memname">const int LineSensor::INTERSECTION_THRESHOLD = 0</td>
         </tr>
       </table>
   </td>
@@ -369,7 +430,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>test if we're at a line </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00055">55</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00064">64</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -381,7 +442,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float LineSensor::kD = 1.5</td>
+          <td class="memname">const float LineSensor::kD = 20.0</td>
         </tr>
       </table>
   </td>
@@ -391,7 +452,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00048">48</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00060">60</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -403,7 +464,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float LineSensor::kP = 8.0</td>
+          <td class="memname">const float LineSensor::kP = 11.0</td>
         </tr>
       </table>
   </td>
@@ -414,7 +475,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>PID constants for line following </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00047">47</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00059">59</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +497,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00032">32</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00045">45</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -460,7 +521,31 @@ Static Private Attributes</h2></td></tr>
 
 <p>the board contains IR LEDs, this pin controls those LEDs </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00038">38</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00051">51</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae17bcec64c67b17748d50401e79d5c6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LineSensor::limits[8][2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>contains the min and maxes for each line sensor. the first row is for min, and the second row is for max </p>
+
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00073">73</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -484,7 +569,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>holds the line position as calculated by cache. On scale of tens </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00031">31</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00044">44</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -496,7 +581,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int LineSensor::LOW_SUM_THRESHOLD = 1000</td>
+          <td class="memname">const int LineSensor::LOW_SUM_THRESHOLD = -500</td>
         </tr>
       </table>
   </td>
@@ -506,31 +591,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00056">56</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8db50f7d2c026003180d0c5c7e184d9f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float LineSensor::OFF_POS_THRESHOLD = 1.3</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>determines what constitutes a black line (from -100 to 100) these numbers may be the same, but don't have to be </p>
-
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00043">43</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00065">65</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -542,7 +603,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float LineSensor::ON_POS_THRESHOLD = 0.6</td>
+          <td class="memname">const float LineSensor::ON_POS_THRESHOLD = 0.4</td>
         </tr>
       </table>
   </td>
@@ -552,7 +613,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00044">44</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>determines what constitutes a black line (from -100 to 100) these numbers may be the same, but don't have to be </p>
+
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00056">56</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -576,7 +639,31 @@ Static Private Attributes</h2></td></tr>
 
 <p>this assumes line sensor pins are in order. This is the first (leftmost pin) </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00035">35</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00048">48</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d48bb25f8e1ee25a4757b9e201bd1a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LineSensor::rawValues[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>contains the raw values for each line sensor </p>
+
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00076">76</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -600,7 +687,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>sum of raw line sensor values. used to detect intersections </p>
 
-<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00060">60</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
+<p>Definition at line <a class="el" href="LineSensor_8h_source.html#l00069">69</a> of file <a class="el" href="LineSensor_8h_source.html">LineSensor.h</a>.</p>
 
 </div>
 </div>
@@ -611,7 +698,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

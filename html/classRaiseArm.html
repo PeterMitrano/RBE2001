@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>raises the arm  
+ <a href="classRaiseArm.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="RaiseArm_8h_source.html">RaiseArm.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for RaiseArm:</div>
@@ -108,16 +111,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91b62d0ce0bae3391a2fdb617b603f8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRaiseArm.html#a91b62d0ce0bae3391a2fdb617b603f8b">RaiseArm</a> ()</td></tr>
 <tr class="separator:a91b62d0ce0bae3391a2fdb617b603f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a643abff446802bf06eb0141d3cad5ef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRaiseArm.html#a643abff446802bf06eb0141d3cad5ef4">initialize</a> ()</td></tr>
-<tr class="memdesc:a643abff446802bf06eb0141d3cad5ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">run once in the first iteration of the command's life. this will be overrided by individual commands  <a href="#a643abff446802bf06eb0141d3cad5ef4">More...</a><br/></td></tr>
+<tr class="memdesc:a643abff446802bf06eb0141d3cad5ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">plays a song and begins bringing the arm up  <a href="#a643abff446802bf06eb0141d3cad5ef4">More...</a><br/></td></tr>
 <tr class="separator:a643abff446802bf06eb0141d3cad5ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e73ea27587532325bfea84e2fe72f62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRaiseArm.html#a4e73ea27587532325bfea84e2fe72f62">execute</a> ()</td></tr>
-<tr class="memdesc:a4e73ea27587532325bfea84e2fe72f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">stuff to do over and over each iteration. this will be overrided by individual commands  <a href="#a4e73ea27587532325bfea84e2fe72f62">More...</a><br/></td></tr>
+<tr class="memdesc:a4e73ea27587532325bfea84e2fe72f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">does nothing  <a href="#a4e73ea27587532325bfea84e2fe72f62">More...</a><br/></td></tr>
 <tr class="separator:a4e73ea27587532325bfea84e2fe72f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2f2806c7b255589864feae9322bbd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRaiseArm.html#a3f2f2806c7b255589864feae9322bbd1">isFinished</a> ()</td></tr>
-<tr class="memdesc:a3f2f2806c7b255589864feae9322bbd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">checked every iteration to see if we're done here. this will be overrided by individual commands  <a href="#a3f2f2806c7b255589864feae9322bbd1">More...</a><br/></td></tr>
 <tr class="separator:a3f2f2806c7b255589864feae9322bbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61c556ef1ca7e8c92970cec3baef933e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRaiseArm.html#a61c556ef1ca7e8c92970cec3baef933e">end</a> ()</td></tr>
-<tr class="memdesc:a61c556ef1ca7e8c92970cec3baef933e"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once at the end, once <a class="el" href="classRaiseArm.html#a3f2f2806c7b255589864feae9322bbd1" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands.  <a href="#a61c556ef1ca7e8c92970cec3baef933e">More...</a><br/></td></tr>
+<tr class="memdesc:a61c556ef1ca7e8c92970cec3baef933e"><td class="mdescLeft">&#160;</td><td class="mdescRight">does nothing  <a href="#a61c556ef1ca7e8c92970cec3baef933e">More...</a><br/></td></tr>
 <tr class="separator:a61c556ef1ca7e8c92970cec3baef933e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classCommand')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
 <tr class="memitem:a18df2d81039392daeb0b78c346a70537 inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a18df2d81039392daeb0b78c346a70537">Command</a> ()</td></tr>
@@ -145,16 +147,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a0252c920dd7114c29ef04526cfd0f39a">isRunning</a> ()</td></tr>
 <tr class="memdesc:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the command is running. not yet implemented.  <a href="#a0252c920dd7114c29ef04526cfd0f39a">More...</a><br/></td></tr>
 <tr class="separator:a0252c920dd7114c29ef04526cfd0f39a inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a51103f3b209bdbd421f40a38521a9e5e">operator!=</a> (const <a class="el" href="classCommand.html">Command</a> &amp;other)</td></tr>
+<tr class="memdesc:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparator overload for !=. used when checking if command is in list  <a href="#a51103f3b209bdbd421f40a38521a9e5e">More...</a><br/></td></tr>
+<tr class="separator:a51103f3b209bdbd421f40a38521a9e5e inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a03a7f03b29c4cbb748a15c9c83233023">print</a> ()</td></tr>
+<tr class="separator:a03a7f03b29c4cbb748a15c9c83233023 inherit pub_methods_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classCommand"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classCommand')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classCommand.html">Command</a></td></tr>
+<tr class="memitem:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ad6e763c58ca2751de879c6eb3f3ae48f">inParallel</a></td></tr>
+<tr class="memdesc:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">used by command group to organize commands  <a href="#ad6e763c58ca2751de879c6eb3f3ae48f">More...</a><br/></td></tr>
+<tr class="separator:ad6e763c58ca2751de879c6eb3f3ae48f inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610">name</a></td></tr>
+<tr class="memdesc:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="mdescLeft">&#160;</td><td class="mdescRight">for convenient printing  <a href="#a19f7ad73ca8599ad47f9b7bcccc52610">More...</a><br/></td></tr>
 <tr class="separator:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="RaiseArm_8h_source.html#l00006">6</a> of file <a class="el" href="RaiseArm_8h_source.html">RaiseArm.h</a>.</p>
+<div class="textblock"><p>raises the arm </p>
+
+<p>Definition at line <a class="el" href="RaiseArm_8h_source.html#l00008">8</a> of file <a class="el" href="RaiseArm_8h_source.html">RaiseArm.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a91b62d0ce0bae3391a2fdb617b603f8b"></a>
 <div class="memitem">
@@ -195,9 +207,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>called once at the end, once <a class="el" href="classRaiseArm.html#a3f2f2806c7b255589864feae9322bbd1" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands. </p>
+<p>does nothing </p>
 
-<p>Implements <a class="el" href="classCommand.html#abed8b7871ba1078bc10056cac5b471be">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#a147da4a43c939870018324a0af4c7b0b">Command</a>.</p>
 
 <p>Definition at line <a class="el" href="RaiseArm_8cpp_source.html#l00016">16</a> of file <a class="el" href="RaiseArm_8cpp_source.html">RaiseArm.cpp</a>.</p>
 
@@ -224,9 +236,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>stuff to do over and over each iteration. this will be overrided by individual commands </p>
+<p>does nothing </p>
 
-<p>Implements <a class="el" href="classCommand.html#a6fd7d9bd8df8bfc881e4d6c7cd1878b7">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#abc8574913684044b0f1a9f810b4e969b">Command</a>.</p>
 
 <p>Definition at line <a class="el" href="RaiseArm_8cpp_source.html#l00010">10</a> of file <a class="el" href="RaiseArm_8cpp_source.html">RaiseArm.cpp</a>.</p>
 
@@ -253,9 +265,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>run once in the first iteration of the command's life. this will be overrided by individual commands </p>
+<p>plays a song and begins bringing the arm up </p>
 
-<p>Implements <a class="el" href="classCommand.html#af186abe582ab15ac64750e4b5d7944de">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#a8044ac332a61df571c3454d9fea9684a">Command</a>.</p>
 
 <p>Definition at line <a class="el" href="RaiseArm_8cpp_source.html#l00005">5</a> of file <a class="el" href="RaiseArm_8cpp_source.html">RaiseArm.cpp</a>.</p>
 
@@ -281,11 +293,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true when arm is at top </dd></dl>
 
-<p>checked every iteration to see if we're done here. this will be overrided by individual commands </p>
-<dl class="section return"><dt>Returns</dt><dd>is the function finished </dd></dl>
-
-<p>Implements <a class="el" href="classCommand.html#a9aa704d5f9d98f510a79e645701dc72a">Command</a>.</p>
+<p>Reimplemented from <a class="el" href="classCommand.html#ae5846b4332a262e055c7a96759fa18f2">Command</a>.</p>
 
 <p>Definition at line <a class="el" href="RaiseArm_8cpp_source.html#l00012">12</a> of file <a class="el" href="RaiseArm_8cpp_source.html">RaiseArm.cpp</a>.</p>
 
@@ -298,7 +308,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

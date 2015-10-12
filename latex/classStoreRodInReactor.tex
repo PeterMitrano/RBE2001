@@ -3,6 +3,11 @@
 }
 
 
+puts the rod into the reactor specified  
+
+
+
+
 {\ttfamily \#include $<$Store\-Rod\-In\-Reactor.\-h$>$}
 
 Inheritance diagram for Store\-Rod\-In\-Reactor\-:\begin{figure}[H]
@@ -14,15 +19,24 @@ Inheritance diagram for Store\-Rod\-In\-Reactor\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classStoreRodInReactor_a1a72a4e2f134e009b8c911efd4ced737}{Store\-Rod\-In\-Reactor} (const int reactor\-Number)
+\hyperlink{classStoreRodInReactor_a1a72a4e2f134e009b8c911efd4ced737}{Store\-Rod\-In\-Reactor} (const int \hyperlink{classStoreRodInReactor_a5d989548741b48953a5bb4e20f294d72}{reactor\-Number})
+\item 
+void \hyperlink{classStoreRodInReactor_aa315630b1fcbb752dcc7f6425c96959f}{initialize} ()
+\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
+void \hyperlink{classStoreRodInReactor_a39f60444f52164e7405331e61b050e83}{end} ()
+\begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classStoreRodInReactor_a5d989548741b48953a5bb4e20f294d72}{reactor\-Number}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+puts the rod into the reactor specified 
 
-
-Definition at line 6 of file Store\-Rod\-In\-Reactor.\-h.
+Definition at line 8 of file Store\-Rod\-In\-Reactor.\-h.
 
 
 
@@ -36,7 +50,58 @@ Definition at line 6 of file Store\-Rod\-In\-Reactor.\-h.
 )}}\label{classStoreRodInReactor_a1a72a4e2f134e009b8c911efd4ced737}
 
 
-Definition at line 11 of file Store\-Rod\-In\-Reactor.\-cpp.
+Definition at line 9 of file Store\-Rod\-In\-Reactor.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classStoreRodInReactor_a39f60444f52164e7405331e61b050e83}{\index{Store\-Rod\-In\-Reactor@{Store\-Rod\-In\-Reactor}!end@{end}}
+\index{end@{end}!StoreRodInReactor@{Store\-Rod\-In\-Reactor}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Store\-Rod\-In\-Reactor\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classStoreRodInReactor_a39f60444f52164e7405331e61b050e83}
+
+
+called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Reimplemented from \hyperlink{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895e}{Command\-Group}.
+
+
+
+Definition at line 34 of file Store\-Rod\-In\-Reactor.\-cpp.
+
+\hypertarget{classStoreRodInReactor_aa315630b1fcbb752dcc7f6425c96959f}{\index{Store\-Rod\-In\-Reactor@{Store\-Rod\-In\-Reactor}!initialize@{initialize}}
+\index{initialize@{initialize}!StoreRodInReactor@{Store\-Rod\-In\-Reactor}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Store\-Rod\-In\-Reactor\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classStoreRodInReactor_aa315630b1fcbb752dcc7f6425c96959f}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Reimplemented from \hyperlink{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{Command\-Group}.
+
+
+
+Definition at line 14 of file Store\-Rod\-In\-Reactor.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classStoreRodInReactor_a5d989548741b48953a5bb4e20f294d72}{\index{Store\-Rod\-In\-Reactor@{Store\-Rod\-In\-Reactor}!reactor\-Number@{reactor\-Number}}
+\index{reactor\-Number@{reactor\-Number}!StoreRodInReactor@{Store\-Rod\-In\-Reactor}}
+\subsubsection[{reactor\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Store\-Rod\-In\-Reactor\-::reactor\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{classStoreRodInReactor_a5d989548741b48953a5bb4e20f294d72}
+
+
+Definition at line 14 of file Store\-Rod\-In\-Reactor.\-h.
 
 
 

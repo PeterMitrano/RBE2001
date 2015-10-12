@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 674.846626
+%%BoundingBox: 0 0 500 736.196319
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.740909 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.679167 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 11 def
+/rows 12 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -177,12 +177,13 @@ boxfont setfont
 (Command) cw
 (CalibrateRoutine) cw
 (DriveThroughIntersection) cw
+(FirstHalf) cw
 (GetDemRods) cw
 (GetRodFromReactor) cw
 (GetRodFromSupply) cw
+(SecondHalf) cw
 (StoreRod) cw
 (StoreRodInReactor) cw
-(TurnAround) cw
 (TurnToNextLine) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -195,26 +196,29 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (CommandGroup) 0.000000 9.000000 box
- (Command) 0.000000 10.000000 box
- (CalibrateRoutine) 1.000000 8.000000 box
- (DriveThroughIntersection) 1.000000 7.000000 box
+ (CommandGroup) 0.000000 10.000000 box
+ (Command) 0.000000 11.000000 box
+ (CalibrateRoutine) 1.000000 9.000000 box
+ (DriveThroughIntersection) 1.000000 8.000000 box
+ (FirstHalf) 1.000000 7.000000 box
  (GetDemRods) 1.000000 6.000000 box
  (GetRodFromReactor) 1.000000 5.000000 box
  (GetRodFromSupply) 1.000000 4.000000 box
- (StoreRod) 1.000000 3.000000 box
- (StoreRodInReactor) 1.000000 2.000000 box
- (TurnAround) 1.000000 1.000000 box
+ (SecondHalf) 1.000000 3.000000 box
+ (StoreRod) 1.000000 2.000000 box
+ (StoreRodInReactor) 1.000000 1.000000 box
  (TurnToNextLine) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-0 0.000000 9.000000 out
+0 0.000000 10.000000 out
 solid
-1 0.000000 10.000000 in
+1 0.000000 11.000000 in
 solid
-1 0.000000 8.250000 out
+1 0.000000 9.250000 out
+solid
+0 0.000000 9.500000 hedge
 solid
 0 0.000000 8.500000 hedge
 solid
@@ -234,4 +238,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 9.000000 0.500000 vedge
+0.000000 10.000000 0.500000 vedge

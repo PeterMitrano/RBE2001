@@ -19,6 +19,8 @@ void \hyperlink{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{setup} ()
 \begin{DoxyCompactList}\small\item\em start serial3 \end{DoxyCompactList}\item 
 int \hyperlink{classBTClient_a67250c48f81fee2b7c9f26d100c26799}{available\-Supply\-Tube} ()
 \begin{DoxyCompactList}\small\item\em returns the supply tub locations \end{DoxyCompactList}\item 
+bool \hyperlink{classBTClient_a3140dacfc561f8c122a76961cc71f9d9}{is\-Rod\-At} (int column)
+\begin{DoxyCompactList}\small\item\em retuns if there's a rod in the supply tube at our column \end{DoxyCompactList}\item 
 int \hyperlink{classBTClient_a18e2223a0605a0ee67b5d004890b38c4}{open\-Storage\-Tube} ()
 \begin{DoxyCompactList}\small\item\em returns the storage tub locations \end{DoxyCompactList}\item 
 void \hyperlink{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{send\-Radiation\-Alert} ()
@@ -80,6 +82,11 @@ int \hyperlink{classBTClient_a5ba419e7e6be73f5ec26f6b6c8d4ccf1}{storage}
 \begin{DoxyCompactList}\small\item\em raw integer (or hex if you want) representation for storage and supply \end{DoxyCompactList}\item 
 int \hyperlink{classBTClient_a3974a28859432eeef27cfd7391ed7d60}{supply}
 \end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classBTClient_a9467446e5173d60a224c22f07dbba8de}{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-P\-E\-R\-I\-O\-D} = 1500
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -120,7 +127,7 @@ Definition at line 12 of file B\-T\-Client.\-h.
 \end{Desc}
 
 
-Definition at line 51 of file B\-T\-Client.\-h.
+Definition at line 58 of file B\-T\-Client.\-h.
 
 
 
@@ -159,7 +166,27 @@ the position of the available supply tube
 \end{DoxyReturn}
 
 
-Definition at line 14 of file B\-T\-Client.\-cpp.
+Definition at line 16 of file B\-T\-Client.\-cpp.
+
+\hypertarget{classBTClient_a3140dacfc561f8c122a76961cc71f9d9}{\index{B\-T\-Client@{B\-T\-Client}!is\-Rod\-At@{is\-Rod\-At}}
+\index{is\-Rod\-At@{is\-Rod\-At}!BTClient@{B\-T\-Client}}
+\subsubsection[{is\-Rod\-At}]{\setlength{\rightskip}{0pt plus 5cm}bool B\-T\-Client\-::is\-Rod\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{column}
+\end{DoxyParamCaption}
+)}}\label{classBTClient_a3140dacfc561f8c122a76961cc71f9d9}
+
+
+retuns if there's a rod in the supply tube at our column 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-in\mbox{]}} & column the column the robot is trying to get a rod from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file B\-T\-Client.\-cpp.
 
 \hypertarget{classBTClient_a18e2223a0605a0ee67b5d004890b38c4}{\index{B\-T\-Client@{B\-T\-Client}!open\-Storage\-Tube@{open\-Storage\-Tube}}
 \index{open\-Storage\-Tube@{open\-Storage\-Tube}!BTClient@{B\-T\-Client}}
@@ -177,7 +204,7 @@ the position of the open storage tube
 \end{DoxyReturn}
 
 
-Definition at line 25 of file B\-T\-Client.\-cpp.
+Definition at line 32 of file B\-T\-Client.\-cpp.
 
 \hypertarget{classBTClient_a8e827d16926d45a4b7c18dda0e59837b}{\index{B\-T\-Client@{B\-T\-Client}!read\-Message@{read\-Message}}
 \index{read\-Message@{read\-Message}!BTClient@{B\-T\-Client}}
@@ -192,7 +219,7 @@ read from Serial3 and store into Message instance returns Message if successful,
 
 
 
-Definition at line 63 of file B\-T\-Client.\-cpp.
+Definition at line 71 of file B\-T\-Client.\-cpp.
 
 \hypertarget{classBTClient_a0561b17912b37892d4f4226d1769f7e8}{\index{B\-T\-Client@{B\-T\-Client}!send\-Data@{send\-Data}}
 \index{send\-Data@{send\-Data}!BTClient@{B\-T\-Client}}
@@ -208,7 +235,7 @@ send the given data to the field computer
 
 
 
-Definition at line 51 of file B\-T\-Client.\-cpp.
+Definition at line 59 of file B\-T\-Client.\-cpp.
 
 \hypertarget{classBTClient_a57a82b64a1233a66450c1d9ebe48774c}{\index{B\-T\-Client@{B\-T\-Client}!send\-Debug\-String@{send\-Debug\-String}}
 \index{send\-Debug\-String@{send\-Debug\-String}!BTClient@{B\-T\-Client}}
@@ -234,7 +261,7 @@ send 0x00 to field computer
 
 
 
-Definition at line 39 of file B\-T\-Client.\-cpp.
+Definition at line 47 of file B\-T\-Client.\-cpp.
 
 \hypertarget{classBTClient_a70cc30b8de8632bd6fb81972a9409a10}{\index{B\-T\-Client@{B\-T\-Client}!send\-Radiation\-Alert@{send\-Radiation\-Alert}}
 \index{send\-Radiation\-Alert@{send\-Radiation\-Alert}!BTClient@{B\-T\-Client}}
@@ -249,7 +276,7 @@ send 0xff to the field computer
 
 
 
-Definition at line 35 of file B\-T\-Client.\-cpp.
+Definition at line 43 of file B\-T\-Client.\-cpp.
 
 \hypertarget{classBTClient_a8820e63eebe5ab16fac9b7cb522fc55a}{\index{B\-T\-Client@{B\-T\-Client}!send\-Status@{send\-Status}}
 \index{send\-Status@{send\-Status}!BTClient@{B\-T\-Client}}
@@ -264,7 +291,7 @@ send status
 
 
 
-Definition at line 43 of file B\-T\-Client.\-cpp.
+Definition at line 51 of file B\-T\-Client.\-cpp.
 
 \hypertarget{classBTClient_aefdc156fe1f22455d249ec0bb7fa3fd5}{\index{B\-T\-Client@{B\-T\-Client}!setup@{setup}}
 \index{setup@{setup}!BTClient@{B\-T\-Client}}
@@ -279,7 +306,7 @@ start serial3
 
 
 
-Definition at line 8 of file B\-T\-Client.\-cpp.
+Definition at line 10 of file B\-T\-Client.\-cpp.
 
 
 
@@ -293,21 +320,28 @@ master object
 
 
 
-Definition at line 66 of file B\-T\-Client.\-h.
+Definition at line 73 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}{\index{B\-T\-Client@{B\-T\-Client}!gripper\-Status@{gripper\-Status}}
 \index{gripper\-Status@{gripper\-Status}!BTClient@{B\-T\-Client}}
 \subsubsection[{gripper\-Status}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::gripper\-Status}}\label{classBTClient_acdb5a8d964742a7236d2d0acc2e45585}
 
 
-Definition at line 47 of file B\-T\-Client.\-h.
+Definition at line 54 of file B\-T\-Client.\-h.
+
+\hypertarget{classBTClient_a9467446e5173d60a224c22f07dbba8de}{\index{B\-T\-Client@{B\-T\-Client}!H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-P\-E\-R\-I\-O\-D@{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-P\-E\-R\-I\-O\-D}}
+\index{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-P\-E\-R\-I\-O\-D@{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-P\-E\-R\-I\-O\-D}!BTClient@{B\-T\-Client}}
+\subsubsection[{H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-P\-E\-R\-I\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int B\-T\-Client\-::\-H\-E\-A\-R\-T\-B\-E\-A\-T\-\_\-\-P\-E\-R\-I\-O\-D = 1500\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classBTClient_a9467446e5173d60a224c22f07dbba8de}
+
+
+Definition at line 78 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_a946cc60b431ec813642b97b0c4b76cf3}{\index{B\-T\-Client@{B\-T\-Client}!last\-Sent@{last\-Sent}}
 \index{last\-Sent@{last\-Sent}!BTClient@{B\-T\-Client}}
 \subsubsection[{last\-Sent}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long B\-T\-Client\-::last\-Sent\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a946cc60b431ec813642b97b0c4b76cf3}
 
 
-Definition at line 71 of file B\-T\-Client.\-h.
+Definition at line 80 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_aacff467239e0a6a85eab0ac77dbcfdf8}{\index{B\-T\-Client@{B\-T\-Client}!movement\-Status@{movement\-Status}}
 \index{movement\-Status@{movement\-Status}!BTClient@{B\-T\-Client}}
@@ -318,14 +352,14 @@ status variables for sending messages
 
 
 
-Definition at line 47 of file B\-T\-Client.\-h.
+Definition at line 54 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_a419405603d661e07e630a6649e9592a0}{\index{B\-T\-Client@{B\-T\-Client}!operation\-Status@{operation\-Status}}
 \index{operation\-Status@{operation\-Status}!BTClient@{B\-T\-Client}}
 \subsubsection[{operation\-Status}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::operation\-Status}}\label{classBTClient_a419405603d661e07e630a6649e9592a0}
 
 
-Definition at line 47 of file B\-T\-Client.\-h.
+Definition at line 54 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_a64bd4b5e464d0b6a57957428ef559142}{\index{B\-T\-Client@{B\-T\-Client}!pcol@{pcol}}
 \index{pcol@{pcol}!BTClient@{B\-T\-Client}}
@@ -336,21 +370,21 @@ protocol decoder
 
 
 
-Definition at line 69 of file B\-T\-Client.\-h.
+Definition at line 76 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_a41a7d3382ab8bbdf4b7d78b7b69ff85f}{\index{B\-T\-Client@{B\-T\-Client}!received\-\_\-storage@{received\-\_\-storage}}
 \index{received\-\_\-storage@{received\-\_\-storage}!BTClient@{B\-T\-Client}}
 \subsubsection[{received\-\_\-storage}]{\setlength{\rightskip}{0pt plus 5cm}bool B\-T\-Client\-::received\-\_\-storage = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a41a7d3382ab8bbdf4b7d78b7b69ff85f}
 
 
-Definition at line 72 of file B\-T\-Client.\-h.
+Definition at line 81 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_af00b18b695ecc4bdeea133572eb0fd6d}{\index{B\-T\-Client@{B\-T\-Client}!received\-\_\-supply@{received\-\_\-supply}}
 \index{received\-\_\-supply@{received\-\_\-supply}!BTClient@{B\-T\-Client}}
 \subsubsection[{received\-\_\-supply}]{\setlength{\rightskip}{0pt plus 5cm}bool B\-T\-Client\-::received\-\_\-supply = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_af00b18b695ecc4bdeea133572eb0fd6d}
 
 
-Definition at line 73 of file B\-T\-Client.\-h.
+Definition at line 82 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_a5ba419e7e6be73f5ec26f6b6c8d4ccf1}{\index{B\-T\-Client@{B\-T\-Client}!storage@{storage}}
 \index{storage@{storage}!BTClient@{B\-T\-Client}}
@@ -361,14 +395,14 @@ raw integer (or hex if you want) representation for storage and supply
 
 
 
-Definition at line 76 of file B\-T\-Client.\-h.
+Definition at line 85 of file B\-T\-Client.\-h.
 
 \hypertarget{classBTClient_a3974a28859432eeef27cfd7391ed7d60}{\index{B\-T\-Client@{B\-T\-Client}!supply@{supply}}
 \index{supply@{supply}!BTClient@{B\-T\-Client}}
 \subsubsection[{supply}]{\setlength{\rightskip}{0pt plus 5cm}int B\-T\-Client\-::supply\hspace{0.3cm}{\ttfamily [private]}}}\label{classBTClient_a3974a28859432eeef27cfd7391ed7d60}
 
 
-Definition at line 76 of file B\-T\-Client.\-h.
+Definition at line 85 of file B\-T\-Client.\-h.
 
 
 

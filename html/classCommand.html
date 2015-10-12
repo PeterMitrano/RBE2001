@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classCommand-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Command Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Command Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -104,25 +104,22 @@ Inheritance diagram for Command:</div>
  <div class="center">
   <img src="classCommand.png" usemap="#Command_map" alt=""/>
   <map id="Command_map" name="Command_map">
-<area href="classBackOffTube.html" alt="BackOffTube" shape="rect" coords="178,56,346,80"/>
-<area href="classCalibrate.html" alt="Calibrate" shape="rect" coords="178,112,346,136"/>
-<area href="classCalibrateArm.html" alt="CalibrateArm" shape="rect" coords="178,168,346,192"/>
-<area href="classCloseGripper.html" alt="CloseGripper" shape="rect" coords="178,224,346,248"/>
-<area href="classCommandGroup.html" title="grouping commands is a useful abstraction. Commands groups execute commands in parallel or series ..." alt="CommandGroup" shape="rect" coords="178,280,346,304"/>
-<area href="classDrive.html" alt="Drive" shape="rect" coords="178,336,346,360"/>
-<area href="classDriveOverIntersection.html" alt="DriveOverIntersection" shape="rect" coords="178,392,346,416"/>
-<area href="classDriveUntilIntersection.html" alt="DriveUntilIntersection" shape="rect" coords="178,448,346,472"/>
-<area href="classDriveUntilReactorTube.html" alt="DriveUntilReactorTube" shape="rect" coords="178,504,346,528"/>
-<area href="classEnd.html" alt="End" shape="rect" coords="178,560,346,584"/>
-<area href="classLowerArm.html" alt="LowerArm" shape="rect" coords="178,616,346,640"/>
-<area href="classNavigateToAvailableSupply.html" alt="NavigateToAvailableSupply" shape="rect" coords="178,672,346,696"/>
-<area href="classNavigateToOpenStorage.html" alt="NavigateToOpenStorage" shape="rect" coords="178,728,346,752"/>
-<area href="classNavigateToReactor.html" alt="NavigateToReactor" shape="rect" coords="178,784,346,808"/>
-<area href="classOpenGripper.html" alt="OpenGripper" shape="rect" coords="178,840,346,864"/>
-<area href="classRaiseArm.html" alt="RaiseArm" shape="rect" coords="178,896,346,920"/>
-<area href="classScootPastIntersection.html" alt="ScootPastIntersection" shape="rect" coords="178,952,346,976"/>
-<area href="classTurnOffLine.html" alt="TurnOffLine" shape="rect" coords="178,1008,346,1032"/>
-<area href="classTurnUntilLine.html" alt="TurnUntilLine" shape="rect" coords="178,1064,346,1088"/>
+<area href="classBackOffTube.html" alt="BackOffTube" shape="rect" coords="149,56,288,80"/>
+<area href="classCalibrate.html" alt="Calibrate" shape="rect" coords="149,112,288,136"/>
+<area href="classCalibrateLineSensor.html" title="calibrates the line sensor " alt="CalibrateLineSensor" shape="rect" coords="149,168,288,192"/>
+<area href="classCloseGripper.html" title="closes the gripper " alt="CloseGripper" shape="rect" coords="149,224,288,248"/>
+<area href="classCommandGroup.html" title="grouping commands is a useful abstraction. Commands groups execute commands in parallel or series ..." alt="CommandGroup" shape="rect" coords="149,280,288,304"/>
+<area href="classDrive.html" title="drives forward forever " alt="Drive" shape="rect" coords="149,336,288,360"/>
+<area href="classDriveOverIntersection.html" title="drives over an intersection " alt="DriveOverIntersection" shape="rect" coords="149,392,288,416"/>
+<area href="classDriveUntilIntersection.html" title="drives until there is an intersection " alt="DriveUntilIntersection" shape="rect" coords="149,448,288,472"/>
+<area href="classDriveUntilReactorTube.html" title="drives until it reaches the reactor tube " alt="DriveUntilReactorTube" shape="rect" coords="149,504,288,528"/>
+<area href="classEnd.html" title="just ends the program, does nothing " alt="End" shape="rect" coords="149,560,288,584"/>
+<area href="classLowerArm.html" title="lowers the arm " alt="LowerArm" shape="rect" coords="149,616,288,640"/>
+<area href="classOpenGripper.html" title="opens the gripper " alt="OpenGripper" shape="rect" coords="149,672,288,696"/>
+<area href="classRaiseArm.html" title="raises the arm " alt="RaiseArm" shape="rect" coords="149,728,288,752"/>
+<area href="classScootPastIntersection.html" title="drives past the intersection " alt="ScootPastIntersection" shape="rect" coords="149,784,288,808"/>
+<area href="classTurnOffLine.html" title="turns off of the line in a direction " alt="TurnOffLine" shape="rect" coords="149,840,288,864"/>
+<area href="classTurnUntilLine.html" alt="TurnUntilLine" shape="rect" coords="149,896,288,920"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -138,22 +135,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a53de8c6445ccd2f51fe7535a71e20c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62a4b3acc8db6c5e396d5c97ca51a98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ac62a4b3acc8db6c5e396d5c97ca51a98">isTimedOut</a> ()</td></tr>
 <tr class="separator:ac62a4b3acc8db6c5e396d5c97ca51a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af186abe582ab15ac64750e4b5d7944de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#af186abe582ab15ac64750e4b5d7944de">initialize</a> ()=0</td></tr>
-<tr class="memdesc:af186abe582ab15ac64750e4b5d7944de"><td class="mdescLeft">&#160;</td><td class="mdescRight">run once in the first iteration of the command's life. this will be overrided by individual commands  <a href="#af186abe582ab15ac64750e4b5d7944de">More...</a><br/></td></tr>
-<tr class="separator:af186abe582ab15ac64750e4b5d7944de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8044ac332a61df571c3454d9fea9684a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a8044ac332a61df571c3454d9fea9684a">initialize</a> ()</td></tr>
+<tr class="memdesc:a8044ac332a61df571c3454d9fea9684a"><td class="mdescLeft">&#160;</td><td class="mdescRight">run once in the first iteration of the command's life. this will be overrided by individual commands  <a href="#a8044ac332a61df571c3454d9fea9684a">More...</a><br/></td></tr>
+<tr class="separator:a8044ac332a61df571c3454d9fea9684a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7c58ad4895c51ff18f1d432dbd4f4ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ae7c58ad4895c51ff18f1d432dbd4f4ec">_initialize</a> ()</td></tr>
 <tr class="separator:ae7c58ad4895c51ff18f1d432dbd4f4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fd7d9bd8df8bfc881e4d6c7cd1878b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a6fd7d9bd8df8bfc881e4d6c7cd1878b7">execute</a> ()=0</td></tr>
-<tr class="memdesc:a6fd7d9bd8df8bfc881e4d6c7cd1878b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">stuff to do over and over each iteration. this will be overrided by individual commands  <a href="#a6fd7d9bd8df8bfc881e4d6c7cd1878b7">More...</a><br/></td></tr>
-<tr class="separator:a6fd7d9bd8df8bfc881e4d6c7cd1878b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc8574913684044b0f1a9f810b4e969b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#abc8574913684044b0f1a9f810b4e969b">execute</a> ()</td></tr>
+<tr class="memdesc:abc8574913684044b0f1a9f810b4e969b"><td class="mdescLeft">&#160;</td><td class="mdescRight">stuff to do over and over each iteration. this will be overrided by individual commands  <a href="#abc8574913684044b0f1a9f810b4e969b">More...</a><br/></td></tr>
+<tr class="separator:abc8574913684044b0f1a9f810b4e969b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49e6861e0c14411d6860f0b3211db9c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a49e6861e0c14411d6860f0b3211db9c9">_execute</a> ()</td></tr>
 <tr class="separator:a49e6861e0c14411d6860f0b3211db9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa704d5f9d98f510a79e645701dc72a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a9aa704d5f9d98f510a79e645701dc72a">isFinished</a> ()=0</td></tr>
-<tr class="memdesc:a9aa704d5f9d98f510a79e645701dc72a"><td class="mdescLeft">&#160;</td><td class="mdescRight">checked every iteration to see if we're done here. this will be overrided by individual commands  <a href="#a9aa704d5f9d98f510a79e645701dc72a">More...</a><br/></td></tr>
-<tr class="separator:a9aa704d5f9d98f510a79e645701dc72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed8b7871ba1078bc10056cac5b471be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#abed8b7871ba1078bc10056cac5b471be">end</a> ()=0</td></tr>
-<tr class="memdesc:abed8b7871ba1078bc10056cac5b471be"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once at the end, once <a class="el" href="classCommand.html#a9aa704d5f9d98f510a79e645701dc72a" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands.  <a href="#abed8b7871ba1078bc10056cac5b471be">More...</a><br/></td></tr>
-<tr class="separator:abed8b7871ba1078bc10056cac5b471be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5846b4332a262e055c7a96759fa18f2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ae5846b4332a262e055c7a96759fa18f2">isFinished</a> ()</td></tr>
+<tr class="memdesc:ae5846b4332a262e055c7a96759fa18f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">checked every iteration to see if we're done here. this will be overrided by individual commands  <a href="#ae5846b4332a262e055c7a96759fa18f2">More...</a><br/></td></tr>
+<tr class="separator:ae5846b4332a262e055c7a96759fa18f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147da4a43c939870018324a0af4c7b0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a147da4a43c939870018324a0af4c7b0b">end</a> ()</td></tr>
+<tr class="memdesc:a147da4a43c939870018324a0af4c7b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once at the end, once <a class="el" href="classCommand.html#ae5846b4332a262e055c7a96759fa18f2" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands.  <a href="#a147da4a43c939870018324a0af4c7b0b">More...</a><br/></td></tr>
+<tr class="separator:a147da4a43c939870018324a0af4c7b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9173c74652cb69c8807170bf16151ae2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a9173c74652cb69c8807170bf16151ae2">_end</a> ()</td></tr>
 <tr class="separator:a9173c74652cb69c8807170bf16151ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef139180669b92534dd05a89323fb82f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#aef139180669b92534dd05a89323fb82f">start</a> ()</td></tr>
@@ -165,10 +162,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0252c920dd7114c29ef04526cfd0f39a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a0252c920dd7114c29ef04526cfd0f39a">isRunning</a> ()</td></tr>
 <tr class="memdesc:a0252c920dd7114c29ef04526cfd0f39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the command is running. not yet implemented.  <a href="#a0252c920dd7114c29ef04526cfd0f39a">More...</a><br/></td></tr>
 <tr class="separator:a0252c920dd7114c29ef04526cfd0f39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51103f3b209bdbd421f40a38521a9e5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a51103f3b209bdbd421f40a38521a9e5e">operator!=</a> (const <a class="el" href="classCommand.html">Command</a> &amp;other)</td></tr>
+<tr class="memdesc:a51103f3b209bdbd421f40a38521a9e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparator overload for !=. used when checking if command is in list  <a href="#a51103f3b209bdbd421f40a38521a9e5e">More...</a><br/></td></tr>
+<tr class="separator:a51103f3b209bdbd421f40a38521a9e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a7f03b29c4cbb748a15c9c83233023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a03a7f03b29c4cbb748a15c9c83233023">print</a> ()</td></tr>
+<tr class="separator:a03a7f03b29c4cbb748a15c9c83233023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ad6e763c58ca2751de879c6eb3f3ae48f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ad6e763c58ca2751de879c6eb3f3ae48f">inParallel</a></td></tr>
+<tr class="memdesc:ad6e763c58ca2751de879c6eb3f3ae48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">used by command group to organize commands  <a href="#ad6e763c58ca2751de879c6eb3f3ae48f">More...</a><br/></td></tr>
+<tr class="separator:ad6e763c58ca2751de879c6eb3f3ae48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f7ad73ca8599ad47f9b7bcccc52610"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610">name</a></td></tr>
+<tr class="memdesc:a19f7ad73ca8599ad47f9b7bcccc52610"><td class="mdescLeft">&#160;</td><td class="mdescRight">for convenient printing  <a href="#a19f7ad73ca8599ad47f9b7bcccc52610">More...</a><br/></td></tr>
 <tr class="separator:a19f7ad73ca8599ad47f9b7bcccc52610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -177,9 +183,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aa9dd747d430f9367da9b17545404f79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e31897f049af332a2421c9721fda18b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a8e31897f049af332a2421c9721fda18b">running</a></td></tr>
 <tr class="separator:a8e31897f049af332a2421c9721fda18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a687b30a3d41c93f91dfba5a88c98f270"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a687b30a3d41c93f91dfba5a88c98f270">timeout</a></td></tr>
+<tr class="memitem:a687b30a3d41c93f91dfba5a88c98f270"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a687b30a3d41c93f91dfba5a88c98f270">timeout</a> = 0</td></tr>
 <tr class="separator:a687b30a3d41c93f91dfba5a88c98f270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af537856a06286a62d7200d84f901c72e"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#af537856a06286a62d7200d84f901c72e">startTime</a></td></tr>
+<tr class="memitem:af537856a06286a62d7200d84f901c72e"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#af537856a06286a62d7200d84f901c72e">startTime</a> = 0</td></tr>
 <tr class="separator:af537856a06286a62d7200d84f901c72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -200,7 +206,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00005">5</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00006">6</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -218,7 +224,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00007">7</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00008">8</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -246,7 +252,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classCommandGroup.html#a11f0ae6eb2ba052138d5a8930f23bb4f">CommandGroup</a>.</p>
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00056">56</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00060">60</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +279,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classCommandGroup.html#a09355b6bb1018bdadaa0f5a1c0dec007">CommandGroup</a>.</p>
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00054">54</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00055">55</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -320,11 +326,11 @@ Private Attributes</h2></td></tr>
 <p>actually does the excuting. </p>
 <dl class="section return"><dt>Returns</dt><dd>if command is finished </dd></dl>
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00009">9</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00010">10</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abed8b7871ba1078bc10056cac5b471be"></a>
+<a class="anchor" id="a147da4a43c939870018324a0af4c7b0b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -332,7 +338,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Command::end </td>
+          <td class="memname">void Command::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -340,18 +346,20 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>called once at the end, once <a class="el" href="classCommand.html#a9aa704d5f9d98f510a79e645701dc72a" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands. </p>
+<p>called once at the end, once <a class="el" href="classCommand.html#ae5846b4332a262e055c7a96759fa18f2" title="checked every iteration to see if we&#39;re done here. this will be overrided by individual commands ...">isFinished()</a> returned true. this will be overrided by individual commands. </p>
 
-<p>Implemented in <a class="el" href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">CommandGroup</a>, <a class="el" href="classBackOffTube.html#a6753fa3b5148d3b8cc06b8e2f7f02be7">BackOffTube</a>, <a class="el" href="classCalibrate.html#a2ea8ff643d8450473d6245e407415f03">Calibrate</a>, <a class="el" href="classCalibrateArm.html#a32c6c258858dde9a091e5fd0fa04c825">CalibrateArm</a>, <a class="el" href="classCloseGripper.html#a06ab30ca6e30278ab74e973e268c5d97">CloseGripper</a>, <a class="el" href="classDrive.html#aa52dc86430f29f4ddc7c6b7c35bd2232">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a90d8b3592d6c67e9ef1ae1a6396aa1c2">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#a309d1f37d92844707c2f3dcb2f5d5638">DriveUntilIntersection</a>, <a class="el" href="classDriveUntilReactorTube.html#a34011a5721faf7cd169ac4e56f9c901b">DriveUntilReactorTube</a>, <a class="el" href="classEnd.html#a84e2ceb14d9465c580c162a26fa3e6de">End</a>, <a class="el" href="classLowerArm.html#aa46179794b13132a2a353f24c785db37">LowerArm</a>, <a class="el" href="classNavigateToAvailableSupply.html#a92842db484c7f60fe217403783cb8bed">NavigateToAvailableSupply</a>, <a class="el" href="classNavigateToOpenStorage.html#af25a3397f1d4aaa94982615fe81f30a2">NavigateToOpenStorage</a>, <a class="el" href="classOpenGripper.html#ad807b567e6ca9c8ef0a4f7a143506546">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a61c556ef1ca7e8c92970cec3baef933e">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#a7696d93dc3789a4f3923aba22028b093">ScootPastIntersection</a>, <a class="el" href="classTurnOffLine.html#ad888d865fb75e8139825f4dcf7709f1e">TurnOffLine</a>, <a class="el" href="classTurnUntilLine.html#a769864873e706e0ca6701eac7f947ede">TurnUntilLine</a>, <a class="el" href="classNavigateToReactor.html#a8d42713588dfb661c778ff6aad6c0085">NavigateToReactor</a>, <a class="el" href="classGetRodFromReactor.html#a8d375cbbf822ea0f22058a264347bd37">GetRodFromReactor</a>, and <a class="el" href="classStoreRod.html#a2fe691b28cb7c6942242caa35e43eecb">StoreRod</a>.</p>
+<p>Reimplemented in <a class="el" href="classBackOffTube.html#a6753fa3b5148d3b8cc06b8e2f7f02be7">BackOffTube</a>, <a class="el" href="classTurnUntilLine.html#a769864873e706e0ca6701eac7f947ede">TurnUntilLine</a>, <a class="el" href="classTurnOffLine.html#ad888d865fb75e8139825f4dcf7709f1e">TurnOffLine</a>, <a class="el" href="classCloseGripper.html#a06ab30ca6e30278ab74e973e268c5d97">CloseGripper</a>, <a class="el" href="classDriveUntilReactorTube.html#a34011a5721faf7cd169ac4e56f9c901b">DriveUntilReactorTube</a>, <a class="el" href="classCalibrateLineSensor.html#ae5cdfbb59fa0fd63828ae70f865998b2">CalibrateLineSensor</a>, <a class="el" href="classDrive.html#aa52dc86430f29f4ddc7c6b7c35bd2232">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a90d8b3592d6c67e9ef1ae1a6396aa1c2">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#a309d1f37d92844707c2f3dcb2f5d5638">DriveUntilIntersection</a>, <a class="el" href="classLowerArm.html#aa46179794b13132a2a353f24c785db37">LowerArm</a>, <a class="el" href="classOpenGripper.html#ad807b567e6ca9c8ef0a4f7a143506546">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a61c556ef1ca7e8c92970cec3baef933e">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#a7696d93dc3789a4f3923aba22028b093">ScootPastIntersection</a>, <a class="el" href="classCommandGroup.html#a28ad3a1c2f6b4f9aea10efa1a824895e">CommandGroup</a>, <a class="el" href="classTurnToNextLine.html#a79081a085e73cdb82d71770c996f5b1b">TurnToNextLine</a>, <a class="el" href="classSecondHalf.html#af5109aeb943c0ec9384f065bc862a43c">SecondHalf</a>, <a class="el" href="classEnd.html#a84e2ceb14d9465c580c162a26fa3e6de">End</a>, <a class="el" href="classCalibrate.html#a2ea8ff643d8450473d6245e407415f03">Calibrate</a>, <a class="el" href="classGetRodFromReactor.html#a8d375cbbf822ea0f22058a264347bd37">GetRodFromReactor</a>, <a class="el" href="classStoreRodInReactor.html#a39f60444f52164e7405331e61b050e83">StoreRodInReactor</a>, <a class="el" href="classDriveThroughIntersection.html#a5498f89533f3451cc2aa43ca57b763f4">DriveThroughIntersection</a>, <a class="el" href="classGetRodFromSupply.html#a6cd4c581c1a6a0aac1ccf6667e532757">GetRodFromSupply</a>, <a class="el" href="classStoreRod.html#a2fe691b28cb7c6942242caa35e43eecb">StoreRod</a>, and <a class="el" href="classFirstHalf.html#a62ea70262aea29375e5ce5d57bae6638">FirstHalf</a>.</p>
+
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00059">59</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6fd7d9bd8df8bfc881e4d6c7cd1878b7"></a>
+<a class="anchor" id="abc8574913684044b0f1a9f810b4e969b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -359,7 +367,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Command::execute </td>
+          <td class="memname">void Command::execute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -367,14 +375,16 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>stuff to do over and over each iteration. this will be overrided by individual commands </p>
 
-<p>Implemented in <a class="el" href="classCommandGroup.html#a5e91d370cafde43548d79945ccb4d8fe">CommandGroup</a>, <a class="el" href="classBackOffTube.html#a9d40125cdd95f7ca2db13a5d48e91a93">BackOffTube</a>, <a class="el" href="classCalibrate.html#ac4d34bf2f831065219b7a930b0389b6e">Calibrate</a>, <a class="el" href="classCalibrateArm.html#a931974eeaf4951b57b83219a905d89a7">CalibrateArm</a>, <a class="el" href="classCloseGripper.html#a11b489ca1de2f1be5cb82f47345360d8">CloseGripper</a>, <a class="el" href="classDrive.html#acda08e791c3016be8336a888d4baab3d">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a0bb9f5c91c23583810510f60cdd49523">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#ae670d4da34843889558d42c94fc1e292">DriveUntilIntersection</a>, <a class="el" href="classDriveUntilReactorTube.html#a8d2c383dcf8e2424113cd6e546b58870">DriveUntilReactorTube</a>, <a class="el" href="classEnd.html#a45a7411a23472e3297b48b6760a0d331">End</a>, <a class="el" href="classLowerArm.html#aca65c2ae64b1ff601213b1ed38ddf8b0">LowerArm</a>, <a class="el" href="classNavigateToAvailableSupply.html#a2c1c22325cc0fa1399530b23ddca7e96">NavigateToAvailableSupply</a>, <a class="el" href="classNavigateToOpenStorage.html#a12d20167227f6359b0fe95a5d4bd3257">NavigateToOpenStorage</a>, <a class="el" href="classOpenGripper.html#a358b40de6a9c051a2c7f322747c37dad">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a4e73ea27587532325bfea84e2fe72f62">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#adce5027b638c8d23dbcff7cbb837885f">ScootPastIntersection</a>, <a class="el" href="classTurnOffLine.html#a9897de245832cd3ee74edc35b342fc03">TurnOffLine</a>, <a class="el" href="classTurnUntilLine.html#a90feb7840ebc51984e4d0a31383ec5a9">TurnUntilLine</a>, and <a class="el" href="classNavigateToReactor.html#a50a9743b979ee2a5b35866bbad6f1faa">NavigateToReactor</a>.</p>
+<p>Reimplemented in <a class="el" href="classBackOffTube.html#a9d40125cdd95f7ca2db13a5d48e91a93">BackOffTube</a>, <a class="el" href="classTurnUntilLine.html#a90feb7840ebc51984e4d0a31383ec5a9">TurnUntilLine</a>, <a class="el" href="classCommandGroup.html#a5e91d370cafde43548d79945ccb4d8fe">CommandGroup</a>, <a class="el" href="classTurnOffLine.html#a9897de245832cd3ee74edc35b342fc03">TurnOffLine</a>, <a class="el" href="classCloseGripper.html#a11b489ca1de2f1be5cb82f47345360d8">CloseGripper</a>, <a class="el" href="classCalibrateLineSensor.html#af9915cde1364b1cc235088f755abccd6">CalibrateLineSensor</a>, <a class="el" href="classDrive.html#acda08e791c3016be8336a888d4baab3d">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a0bb9f5c91c23583810510f60cdd49523">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#ae670d4da34843889558d42c94fc1e292">DriveUntilIntersection</a>, <a class="el" href="classDriveUntilReactorTube.html#a8d2c383dcf8e2424113cd6e546b58870">DriveUntilReactorTube</a>, <a class="el" href="classLowerArm.html#aca65c2ae64b1ff601213b1ed38ddf8b0">LowerArm</a>, <a class="el" href="classOpenGripper.html#a358b40de6a9c051a2c7f322747c37dad">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a4e73ea27587532325bfea84e2fe72f62">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#adce5027b638c8d23dbcff7cbb837885f">ScootPastIntersection</a>, <a class="el" href="classEnd.html#a45a7411a23472e3297b48b6760a0d331">End</a>, and <a class="el" href="classCalibrate.html#ac4d34bf2f831065219b7a930b0389b6e">Calibrate</a>.</p>
+
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00054">54</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -391,11 +401,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00037">37</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00036">36</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af186abe582ab15ac64750e4b5d7944de"></a>
+<a class="anchor" id="a8044ac332a61df571c3454d9fea9684a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -403,7 +413,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Command::initialize </td>
+          <td class="memname">void Command::initialize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -411,18 +421,20 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>run once in the first iteration of the command's life. this will be overrided by individual commands </p>
 
-<p>Implemented in <a class="el" href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">CommandGroup</a>, <a class="el" href="classBackOffTube.html#a16b83364009db3cb58ec6c09458a8741">BackOffTube</a>, <a class="el" href="classCalibrate.html#a67ac70871401c5b6e74fa92fa4b57f1e">Calibrate</a>, <a class="el" href="classCalibrateArm.html#acc9f34841c2ff2806338c3fe5a6d4cb6">CalibrateArm</a>, <a class="el" href="classCloseGripper.html#a91b194b7afe5bdc70ccb97fb6a77e956">CloseGripper</a>, <a class="el" href="classDrive.html#af986858a5eebcca5a80569d7d4174c7f">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a1c8abfebdde3f16e3110bca280365640">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#a7f42c796bcea682dea57f1439cc59f7b">DriveUntilIntersection</a>, <a class="el" href="classDriveUntilReactorTube.html#af0c43c271f20406266ed1423bf6d980d">DriveUntilReactorTube</a>, <a class="el" href="classEnd.html#a0f844207902db51f8992c2a1f23a47d9">End</a>, <a class="el" href="classLowerArm.html#a4fe99e8f0cdb3526e3847823f69a60b8">LowerArm</a>, <a class="el" href="classNavigateToAvailableSupply.html#a77445727df0f590be945ee6fefe418a0">NavigateToAvailableSupply</a>, <a class="el" href="classNavigateToOpenStorage.html#a206ea745d04ffce485b59a7732c932e3">NavigateToOpenStorage</a>, <a class="el" href="classOpenGripper.html#a13dc36eb38dc51e85fefbccbef87a981">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a643abff446802bf06eb0141d3cad5ef4">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#a8f741b21641a42bb5bcf4e0b67c6f0b5">ScootPastIntersection</a>, <a class="el" href="classTurnOffLine.html#a4072817ff86f237d276a430e56e912a3">TurnOffLine</a>, <a class="el" href="classTurnUntilLine.html#a99e42f7512b95097df29633877e72cbd">TurnUntilLine</a>, and <a class="el" href="classNavigateToReactor.html#a8b319bd246a3d1c818e38e82ed6ab25f">NavigateToReactor</a>.</p>
+<p>Reimplemented in <a class="el" href="classBackOffTube.html#a16b83364009db3cb58ec6c09458a8741">BackOffTube</a>, <a class="el" href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">CommandGroup</a>, <a class="el" href="classTurnUntilLine.html#a99e42f7512b95097df29633877e72cbd">TurnUntilLine</a>, <a class="el" href="classTurnOffLine.html#a4072817ff86f237d276a430e56e912a3">TurnOffLine</a>, <a class="el" href="classCloseGripper.html#a91b194b7afe5bdc70ccb97fb6a77e956">CloseGripper</a>, <a class="el" href="classCalibrateLineSensor.html#a45da26c9f90a457f7dc3cad6d660f1b6">CalibrateLineSensor</a>, <a class="el" href="classDrive.html#af986858a5eebcca5a80569d7d4174c7f">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a1c8abfebdde3f16e3110bca280365640">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#a7f42c796bcea682dea57f1439cc59f7b">DriveUntilIntersection</a>, <a class="el" href="classDriveUntilReactorTube.html#af0c43c271f20406266ed1423bf6d980d">DriveUntilReactorTube</a>, <a class="el" href="classSecondHalf.html#ac10f048815ccf919db94e8989296c476">SecondHalf</a>, <a class="el" href="classLowerArm.html#a4fe99e8f0cdb3526e3847823f69a60b8">LowerArm</a>, <a class="el" href="classOpenGripper.html#a13dc36eb38dc51e85fefbccbef87a981">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a643abff446802bf06eb0141d3cad5ef4">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#a8f741b21641a42bb5bcf4e0b67c6f0b5">ScootPastIntersection</a>, <a class="el" href="classEnd.html#a0f844207902db51f8992c2a1f23a47d9">End</a>, <a class="el" href="classGetRodFromReactor.html#afb5a43f9368820438622cc6e08a9df10">GetRodFromReactor</a>, <a class="el" href="classStoreRodInReactor.html#aa315630b1fcbb752dcc7f6425c96959f">StoreRodInReactor</a>, <a class="el" href="classCalibrate.html#a67ac70871401c5b6e74fa92fa4b57f1e">Calibrate</a>, <a class="el" href="classGetRodFromSupply.html#ab843b3e54e3d6c51869453edf0ba1ac3">GetRodFromSupply</a>, <a class="el" href="classStoreRod.html#adc7dcbbc465900aebefe4b990e88f74a">StoreRod</a>, and <a class="el" href="classFirstHalf.html#ac4f77825ae21e644d2cbc71bfeb92aab">FirstHalf</a>.</p>
+
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00048">48</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9aa704d5f9d98f510a79e645701dc72a"></a>
+<a class="anchor" id="ae5846b4332a262e055c7a96759fa18f2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -430,7 +442,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Command::isFinished </td>
+          <td class="memname">bool Command::isFinished </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -438,7 +450,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -446,7 +458,9 @@ Private Attributes</h2></td></tr>
 <p>checked every iteration to see if we're done here. this will be overrided by individual commands </p>
 <dl class="section return"><dt>Returns</dt><dd>is the function finished </dd></dl>
 
-<p>Implemented in <a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c">CommandGroup</a>, <a class="el" href="classBackOffTube.html#abda2334a9432829830a51195a9cce4e6">BackOffTube</a>, <a class="el" href="classCalibrate.html#afb77ae82fa06d139612f11dec7b6ed5f">Calibrate</a>, <a class="el" href="classCalibrateArm.html#a1f0193e75d78560e076166b42603bc76">CalibrateArm</a>, <a class="el" href="classCloseGripper.html#afab2b93b62904d6fd70a794a9f954abf">CloseGripper</a>, <a class="el" href="classDrive.html#a8f75240bfe7e8ca61f48bf6c322a3e6c">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a5dc540c24099462e2bc14923648f42b0">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#a345809c722142166801f6ecbca117758">DriveUntilIntersection</a>, <a class="el" href="classDriveUntilReactorTube.html#ab22da4688ca46cc3e33b1a7aca879a74">DriveUntilReactorTube</a>, <a class="el" href="classEnd.html#a2e5c37f16b83f9e354b34ee3ed63aae8">End</a>, <a class="el" href="classLowerArm.html#ad7bb0aadf698f341d737ccefdb015ce2">LowerArm</a>, <a class="el" href="classNavigateToAvailableSupply.html#a7c07bb4eb88b04c835c0b0d27453c43a">NavigateToAvailableSupply</a>, <a class="el" href="classNavigateToOpenStorage.html#ad0b18ef9e40b69bccc01986426e3605c">NavigateToOpenStorage</a>, <a class="el" href="classOpenGripper.html#a334eebec59e348ec33a78d238de85baa">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a3f2f2806c7b255589864feae9322bbd1">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#a190d072051601ebc40b193d91bc323df">ScootPastIntersection</a>, <a class="el" href="classTurnOffLine.html#ad924499a6bc07a7331222e9b4aba3517">TurnOffLine</a>, <a class="el" href="classTurnUntilLine.html#ad9232508d735c78d6443958fe2f18002">TurnUntilLine</a>, and <a class="el" href="classNavigateToReactor.html#ae1619462539af71d2ba9ea167db9dfaf">NavigateToReactor</a>.</p>
+<p>Reimplemented in <a class="el" href="classBackOffTube.html#abda2334a9432829830a51195a9cce4e6">BackOffTube</a>, <a class="el" href="classTurnUntilLine.html#ad9232508d735c78d6443958fe2f18002">TurnUntilLine</a>, <a class="el" href="classTurnOffLine.html#ad924499a6bc07a7331222e9b4aba3517">TurnOffLine</a>, <a class="el" href="classCloseGripper.html#afab2b93b62904d6fd70a794a9f954abf">CloseGripper</a>, <a class="el" href="classDriveUntilReactorTube.html#ab22da4688ca46cc3e33b1a7aca879a74">DriveUntilReactorTube</a>, <a class="el" href="classCalibrateLineSensor.html#a59ae2007e64462f50034006eeee0bc5f">CalibrateLineSensor</a>, <a class="el" href="classCommandGroup.html#a96807a2763adf9e21ebf2cb9e3574e3c">CommandGroup</a>, <a class="el" href="classDrive.html#a8f75240bfe7e8ca61f48bf6c322a3e6c">Drive</a>, <a class="el" href="classDriveOverIntersection.html#a5dc540c24099462e2bc14923648f42b0">DriveOverIntersection</a>, <a class="el" href="classDriveUntilIntersection.html#a345809c722142166801f6ecbca117758">DriveUntilIntersection</a>, <a class="el" href="classLowerArm.html#ad7bb0aadf698f341d737ccefdb015ce2">LowerArm</a>, <a class="el" href="classOpenGripper.html#a334eebec59e348ec33a78d238de85baa">OpenGripper</a>, <a class="el" href="classRaiseArm.html#a3f2f2806c7b255589864feae9322bbd1">RaiseArm</a>, <a class="el" href="classScootPastIntersection.html#a190d072051601ebc40b193d91bc323df">ScootPastIntersection</a>, <a class="el" href="classEnd.html#a2e5c37f16b83f9e354b34ee3ed63aae8">End</a>, and <a class="el" href="classCalibrate.html#afb77ae82fa06d139612f11dec7b6ed5f">Calibrate</a>.</p>
+
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00057">57</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +480,7 @@ Private Attributes</h2></td></tr>
 <p>check if the command is running. not yet implemented. </p>
 <dl class="section return"><dt>Returns</dt><dd>if command is still running </dd></dl>
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00045">45</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00044">44</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +497,42 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00041">41</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00040">40</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a51103f3b209bdbd421f40a38521a9e5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Command::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCommand.html">Command</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>comparator overload for !=. used when checking if command is in list </p>
+
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00068">68</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03a7f03b29c4cbb748a15c9c83233023"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Command::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -501,7 +550,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00033">33</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00032">32</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -520,7 +569,7 @@ Private Attributes</h2></td></tr>
 
 <p>adds this command to the scheduler </p>
 
-<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00060">60</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Command_8cpp_source.html#l00064">64</a> of file <a class="el" href="Command_8cpp_source.html">Command.cpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +592,23 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8h_source.html#l00060">60</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
+<p>Definition at line <a class="el" href="Command_8h_source.html#l00069">69</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6e763c58ca2751de879c6eb3f3ae48f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Command::inParallel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>used by command group to organize commands </p>
+
+<p>Definition at line <a class="el" href="Command_8h_source.html#l00063">63</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
 
 </div>
 </div>
@@ -557,7 +622,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8h_source.html#l00057">57</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
+<p>for convenient printing </p>
+
+<p>Definition at line <a class="el" href="Command_8h_source.html#l00066">66</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
 
 </div>
 </div>
@@ -579,7 +646,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8h_source.html#l00060">60</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
+<p>Definition at line <a class="el" href="Command_8h_source.html#l00069">69</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
 
 </div>
 </div>
@@ -591,7 +658,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long Command::startTime</td>
+          <td class="memname">unsigned long Command::startTime = 0</td>
         </tr>
       </table>
   </td>
@@ -601,7 +668,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8h_source.html#l00062">62</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
+<p>Definition at line <a class="el" href="Command_8h_source.html#l00071">71</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
 
 </div>
 </div>
@@ -613,7 +680,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long Command::timeout</td>
+          <td class="memname">unsigned long Command::timeout = 0</td>
         </tr>
       </table>
   </td>
@@ -623,7 +690,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Command_8h_source.html#l00061">61</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
+<p>Definition at line <a class="el" href="Command_8h_source.html#l00070">70</a> of file <a class="el" href="Command_8h_source.html">Command.h</a>.</p>
 
 </div>
 </div>
@@ -634,7 +701,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 7 2015 00:52:53 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:08:28 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

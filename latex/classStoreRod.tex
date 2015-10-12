@@ -16,6 +16,8 @@ Inheritance diagram for Store\-Rod\-:\begin{figure}[H]
 \item 
 \hyperlink{classStoreRod_aa93884f16d225969adecca7efc75d900}{Store\-Rod} ()
 \item 
+void \hyperlink{classStoreRod_adc7dcbbc465900aebefe4b990e88f74a}{initialize} ()
+\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
 void \hyperlink{classStoreRod_a2fe691b28cb7c6942242caa35e43eecb}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
@@ -38,7 +40,7 @@ Definition at line 6 of file Store\-Rod.\-h.
 )}}\label{classStoreRod_aa93884f16d225969adecca7efc75d900}
 
 
-Definition at line 13 of file Store\-Rod.\-cpp.
+Definition at line 7 of file Store\-Rod.\-cpp.
 
 
 
@@ -60,7 +62,26 @@ Reimplemented from \hyperlink{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895
 
 
 
-Definition at line 18 of file Store\-Rod.\-cpp.
+Definition at line 28 of file Store\-Rod.\-cpp.
+
+\hypertarget{classStoreRod_adc7dcbbc465900aebefe4b990e88f74a}{\index{Store\-Rod@{Store\-Rod}!initialize@{initialize}}
+\index{initialize@{initialize}!StoreRod@{Store\-Rod}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Store\-Rod\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classStoreRod_adc7dcbbc465900aebefe4b990e88f74a}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Reimplemented from \hyperlink{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{Command\-Group}.
+
+
+
+Definition at line 10 of file Store\-Rod.\-cpp.
 
 
 

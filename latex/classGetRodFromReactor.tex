@@ -14,10 +14,23 @@ Inheritance diagram for Get\-Rod\-From\-Reactor\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classGetRodFromReactor_ae6432d3e1fd6ca0e882d9cbff1b14737}{Get\-Rod\-From\-Reactor} (const int reactor\-Number)
+\hyperlink{classGetRodFromReactor_ae6432d3e1fd6ca0e882d9cbff1b14737}{Get\-Rod\-From\-Reactor} (const int \hyperlink{classGetRodFromReactor_ad2c4d389db38e728e540206aed467670}{reactor\-Number})
 \item 
+void \hyperlink{classGetRodFromReactor_afb5a43f9368820438622cc6e08a9df10}{initialize} ()
+\begin{DoxyCompactList}\small\item\em since this routime is dependant on bluetooth messages, and must be determined on execution, not on declaration, we defer the adding of commands to the initialize method. This way, we can safely call Navigate\-To\-Reactor, which checks bluetooth at excution time, and it will add commands to the group sequentially. \end{DoxyCompactList}\item 
 void \hyperlink{classGetRodFromReactor_a8d375cbbf822ea0f22058a264347bd37}{end} ()
 \begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classCommandGroup_a96807a2763adf9e21ebf2cb9e3574e3c}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classGetRodFromReactor_ad2c4d389db38e728e540206aed467670}{reactor\-Number}
+\item 
+int \hyperlink{classGetRodFromReactor_a375425052a9973441a9a990f79fedd93}{dest\-Col}
+\item 
+int \hyperlink{classGetRodFromReactor_a6e7a2b3591016b6c7fec6b908fd0a3e7}{dest\-Row}
+\item 
+int \hyperlink{classGetRodFromReactor_a04f79f55c3202c51136455a9c29b7273}{dest\-Direction}
+\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -38,7 +51,7 @@ Definition at line 6 of file Get\-Rod\-From\-Reactor.\-h.
 )}}\label{classGetRodFromReactor_ae6432d3e1fd6ca0e882d9cbff1b14737}
 
 
-Definition at line 13 of file Get\-Rod\-From\-Reactor.\-cpp.
+Definition at line 12 of file Get\-Rod\-From\-Reactor.\-cpp.
 
 
 
@@ -60,7 +73,57 @@ Reimplemented from \hyperlink{classCommandGroup_a28ad3a1c2f6b4f9aea10efa1a824895
 
 
 
-Definition at line 24 of file Get\-Rod\-From\-Reactor.\-cpp.
+Definition at line 36 of file Get\-Rod\-From\-Reactor.\-cpp.
+
+\hypertarget{classGetRodFromReactor_afb5a43f9368820438622cc6e08a9df10}{\index{Get\-Rod\-From\-Reactor@{Get\-Rod\-From\-Reactor}!initialize@{initialize}}
+\index{initialize@{initialize}!GetRodFromReactor@{Get\-Rod\-From\-Reactor}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Get\-Rod\-From\-Reactor\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classGetRodFromReactor_afb5a43f9368820438622cc6e08a9df10}
+
+
+since this routime is dependant on bluetooth messages, and must be determined on execution, not on declaration, we defer the adding of commands to the initialize method. This way, we can safely call Navigate\-To\-Reactor, which checks bluetooth at excution time, and it will add commands to the group sequentially. 
+
+
+
+Reimplemented from \hyperlink{classCommandGroup_a99800c5dbd05ab750aa0bb27518d0467}{Command\-Group}.
+
+
+
+Definition at line 17 of file Get\-Rod\-From\-Reactor.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classGetRodFromReactor_a375425052a9973441a9a990f79fedd93}{\index{Get\-Rod\-From\-Reactor@{Get\-Rod\-From\-Reactor}!dest\-Col@{dest\-Col}}
+\index{dest\-Col@{dest\-Col}!GetRodFromReactor@{Get\-Rod\-From\-Reactor}}
+\subsubsection[{dest\-Col}]{\setlength{\rightskip}{0pt plus 5cm}int Get\-Rod\-From\-Reactor\-::dest\-Col\hspace{0.3cm}{\ttfamily [private]}}}\label{classGetRodFromReactor_a375425052a9973441a9a990f79fedd93}
+
+
+Definition at line 14 of file Get\-Rod\-From\-Reactor.\-h.
+
+\hypertarget{classGetRodFromReactor_a04f79f55c3202c51136455a9c29b7273}{\index{Get\-Rod\-From\-Reactor@{Get\-Rod\-From\-Reactor}!dest\-Direction@{dest\-Direction}}
+\index{dest\-Direction@{dest\-Direction}!GetRodFromReactor@{Get\-Rod\-From\-Reactor}}
+\subsubsection[{dest\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int Get\-Rod\-From\-Reactor\-::dest\-Direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classGetRodFromReactor_a04f79f55c3202c51136455a9c29b7273}
+
+
+Definition at line 14 of file Get\-Rod\-From\-Reactor.\-h.
+
+\hypertarget{classGetRodFromReactor_a6e7a2b3591016b6c7fec6b908fd0a3e7}{\index{Get\-Rod\-From\-Reactor@{Get\-Rod\-From\-Reactor}!dest\-Row@{dest\-Row}}
+\index{dest\-Row@{dest\-Row}!GetRodFromReactor@{Get\-Rod\-From\-Reactor}}
+\subsubsection[{dest\-Row}]{\setlength{\rightskip}{0pt plus 5cm}int Get\-Rod\-From\-Reactor\-::dest\-Row\hspace{0.3cm}{\ttfamily [private]}}}\label{classGetRodFromReactor_a6e7a2b3591016b6c7fec6b908fd0a3e7}
+
+
+Definition at line 14 of file Get\-Rod\-From\-Reactor.\-h.
+
+\hypertarget{classGetRodFromReactor_ad2c4d389db38e728e540206aed467670}{\index{Get\-Rod\-From\-Reactor@{Get\-Rod\-From\-Reactor}!reactor\-Number@{reactor\-Number}}
+\index{reactor\-Number@{reactor\-Number}!GetRodFromReactor@{Get\-Rod\-From\-Reactor}}
+\subsubsection[{reactor\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Get\-Rod\-From\-Reactor\-::reactor\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{classGetRodFromReactor_ad2c4d389db38e728e540206aed467670}
+
+
+Definition at line 14 of file Get\-Rod\-From\-Reactor.\-h.
 
 
 

@@ -3,6 +3,11 @@
 }
 
 
+turns off of the line in a direction  
+
+
+
+
 {\ttfamily \#include $<$Turn\-Off\-Line.\-h$>$}
 
 Inheritance diagram for Turn\-Off\-Line\-:\begin{figure}[H]
@@ -17,25 +22,25 @@ Inheritance diagram for Turn\-Off\-Line\-:\begin{figure}[H]
 \hyperlink{classTurnOffLine_a646faf11da687b4ed4330c6248b6e99e}{Turn\-Off\-Line} (int \hyperlink{classTurnOffLine_a7f229d3b3f2e9707b550affb60e7a71a}{direction})
 \item 
 void \hyperlink{classTurnOffLine_a4072817ff86f237d276a430e56e912a3}{initialize} ()
-\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em sets a timeout and plays a song \end{DoxyCompactList}\item 
 virtual void \hyperlink{classTurnOffLine_a9897de245832cd3ee74edc35b342fc03}{execute} ()
-\begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em determines the direction then turns that direction \end{DoxyCompactList}\item 
 bool \hyperlink{classTurnOffLine_ad924499a6bc07a7331222e9b4aba3517}{is\-Finished} ()
-\begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
+\item 
 virtual void \hyperlink{classTurnOffLine_ad888d865fb75e8139825f4dcf7709f1e}{end} ()
-\begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classTurnOffLine_ad924499a6bc07a7331222e9b4aba3517}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em stops the robot \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{classTurnOffLine_a7f229d3b3f2e9707b550affb60e7a71a}{direction}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em direction specified by bluetooth \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+turns off of the line in a direction 
 
-
-Definition at line 6 of file Turn\-Off\-Line.\-h.
+Definition at line 8 of file Turn\-Off\-Line.\-h.
 
 
 
@@ -48,8 +53,13 @@ Definition at line 6 of file Turn\-Off\-Line.\-h.
 \end{DoxyParamCaption}
 )}}\label{classTurnOffLine_a646faf11da687b4ed4330c6248b6e99e}
 
+\begin{DoxyParams}{Parameters}
+{\em direction} & specified by bluetooth, either ccw or cw \\
+\hline
+\end{DoxyParams}
 
-Definition at line 3 of file Turn\-Off\-Line.\-cpp.
+
+Definition at line 4 of file Turn\-Off\-Line.\-cpp.
 
 
 
@@ -63,15 +73,15 @@ Definition at line 3 of file Turn\-Off\-Line.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnOffLine_ad888d865fb75e8139825f4dcf7709f1e}
 
 
-called once at the end, once \hyperlink{classTurnOffLine_ad924499a6bc07a7331222e9b4aba3517}{is\-Finished()} returned true. this will be overrided by individual commands. 
+stops the robot 
 
 
 
-Implements \hyperlink{classCommand_abed8b7871ba1078bc10056cac5b471be}{Command}.
+Reimplemented from \hyperlink{classCommand_a147da4a43c939870018324a0af4c7b0b}{Command}.
 
 
 
-Definition at line 30 of file Turn\-Off\-Line.\-cpp.
+Definition at line 26 of file Turn\-Off\-Line.\-cpp.
 
 \hypertarget{classTurnOffLine_a9897de245832cd3ee74edc35b342fc03}{\index{Turn\-Off\-Line@{Turn\-Off\-Line}!execute@{execute}}
 \index{execute@{execute}!TurnOffLine@{Turn\-Off\-Line}}
@@ -82,15 +92,15 @@ Definition at line 30 of file Turn\-Off\-Line.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnOffLine_a9897de245832cd3ee74edc35b342fc03}
 
 
-stuff to do over and over each iteration. this will be overrided by individual commands 
+determines the direction then turns that direction 
 
 
 
-Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+Reimplemented from \hyperlink{classCommand_abc8574913684044b0f1a9f810b4e969b}{Command}.
 
 
 
-Definition at line 12 of file Turn\-Off\-Line.\-cpp.
+Definition at line 13 of file Turn\-Off\-Line.\-cpp.
 
 \hypertarget{classTurnOffLine_a4072817ff86f237d276a430e56e912a3}{\index{Turn\-Off\-Line@{Turn\-Off\-Line}!initialize@{initialize}}
 \index{initialize@{initialize}!TurnOffLine@{Turn\-Off\-Line}}
@@ -101,15 +111,15 @@ Definition at line 12 of file Turn\-Off\-Line.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnOffLine_a4072817ff86f237d276a430e56e912a3}
 
 
-run once in the first iteration of the command's life. this will be overrided by individual commands 
+sets a timeout and plays a song 
 
 
 
-Implements \hyperlink{classCommand_af186abe582ab15ac64750e4b5d7944de}{Command}.
+Reimplemented from \hyperlink{classCommand_a8044ac332a61df571c3454d9fea9684a}{Command}.
 
 
 
-Definition at line 7 of file Turn\-Off\-Line.\-cpp.
+Definition at line 8 of file Turn\-Off\-Line.\-cpp.
 
 \hypertarget{classTurnOffLine_ad924499a6bc07a7331222e9b4aba3517}{\index{Turn\-Off\-Line@{Turn\-Off\-Line}!is\-Finished@{is\-Finished}}
 \index{is\-Finished@{is\-Finished}!TurnOffLine@{Turn\-Off\-Line}}
@@ -118,20 +128,16 @@ Definition at line 7 of file Turn\-Off\-Line.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnOffLine_ad924499a6bc07a7331222e9b4aba3517}
-
-
-checked every iteration to see if we're done here. this will be overrided by individual commands 
-
 \begin{DoxyReturn}{Returns}
-is the function finished 
+true when timeout occurs 
 \end{DoxyReturn}
 
 
-Implements \hyperlink{classCommand_a9aa704d5f9d98f510a79e645701dc72a}{Command}.
+Reimplemented from \hyperlink{classCommand_ae5846b4332a262e055c7a96759fa18f2}{Command}.
 
 
 
-Definition at line 21 of file Turn\-Off\-Line.\-cpp.
+Definition at line 22 of file Turn\-Off\-Line.\-cpp.
 
 
 
@@ -141,7 +147,11 @@ Definition at line 21 of file Turn\-Off\-Line.\-cpp.
 \subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}int Turn\-Off\-Line\-::direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classTurnOffLine_a7f229d3b3f2e9707b550affb60e7a71a}
 
 
-Definition at line 14 of file Turn\-Off\-Line.\-h.
+direction specified by bluetooth 
+
+
+
+Definition at line 37 of file Turn\-Off\-Line.\-h.
 
 
 
