@@ -30,7 +30,8 @@ void CommandGroup::_execute(){
 
     bool isFinished = executingCommand->cycle();
     if (isFinished){
-     commands.remove(currentCommandIndex);
+     Command *removed = commands.remove(currentCommandIndex);
+     delete removed;
      currentCommandIndex--;
     }
 

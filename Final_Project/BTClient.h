@@ -75,6 +75,8 @@ class BTClient {
     /** \brief protocol decoder */
     ReactorProtocol pcol;
 
+    static const int HEARTBEAT_PERIOD = 1500;
+
     unsigned long lastSent;
     bool received_storage = false,
          received_supply = false;

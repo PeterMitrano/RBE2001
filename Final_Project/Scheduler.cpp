@@ -21,7 +21,8 @@ void Scheduler::run() {
     Command *command = commands.get(i);
     bool finished = command->cycle();
     if (finished) {
-     commands.remove(i);
+     Command *removed = commands.remove(i);
+     delete removed;
     }
   }
 }

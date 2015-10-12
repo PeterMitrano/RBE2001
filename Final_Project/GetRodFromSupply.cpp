@@ -29,7 +29,6 @@ void GetRodFromSupply::initialize(){
   addSequential(new DriveUntilReactorTube());
 	addSequential(new CloseGripper(CloseGripper::HARD));
 	addSequential(new BackOffTube(-30,-33));
-  Robot::getInstance()->debugPrint("added commands!");
 }
 
 void GetRodFromSupply::end(){

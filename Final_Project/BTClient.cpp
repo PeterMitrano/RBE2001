@@ -59,7 +59,7 @@ void BTClient::sendStatus(){
 void BTClient::sendData(MSG_TYPE type, byte data[3]){
   unsigned long t = millis();
   unsigned long dt = t - lastSent;
-  if (dt > 1500){
+  if (dt > HEARTBEAT_PERIOD){
     lastSent = t;
     byte pkt[10];
     pcol.setDst(0x00);
@@ -99,7 +99,7 @@ void BTClient::readMessage(){
 				}
         char tubeInfo[17];
         snprintf(tubeInfo,17,"str=%02i sply=%02i",storage,supply);
-//        Robot::getInstance()->debugPrint(tubeInfo);
+        Robot::getInstance()->debugPrint(tubeInfo);
      }
     }
   }

@@ -102,6 +102,11 @@ class Robot {
     /** \brief lcd to debug */
     LiquidCrystal lcd;
 
+    /** \brief set by bluetooth if resume/stop message is recieve
+     * all drive motor commands depend on it being true
+     */
+    bool paused;
+
     /** \brief flag for blinking LEDs based on radiaiton
      * to turn off LEDs, set this to false
      */
@@ -152,7 +157,7 @@ class Robot {
     const int reactorTubeLimitPin = 28;
     const int rotateSpeedForward = 43;
     const int rotateSpeedBackward = -38;
-    const int travelSpeed = 34;
+    const int travelSpeed = 30;
 
     static volatile unsigned long notPausedTime;
 };

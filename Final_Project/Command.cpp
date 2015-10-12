@@ -5,7 +5,7 @@
 
 Command::Command() : initialized(false) {}
 
-Command::Command(String name) : initialized(false), name(name), startTime(millis()) {}
+Command::Command(String name) : initialized(false), name(name), startTime(Robot::getTime()) {}
 
 bool Command::cycle() {
   bool finished = false;
@@ -34,7 +34,7 @@ void Command::setTimeout(unsigned long timeout) {
 }
 
 unsigned long Command::getTime() {
-  return millis() - startTime;
+  return Robot::getTime() - startTime;
 }
 
 bool Command::isTimedOut() {
@@ -48,7 +48,7 @@ bool Command::isRunning() {
 void Command::initialize() {}
 void Command::_initialize() {
   running = true;
-  startTime = millis();
+  startTime = Robot::getTime();
 }
 
 void Command::execute() {}
