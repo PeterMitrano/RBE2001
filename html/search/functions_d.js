@@ -3,7 +3,6 @@ var searchData=
   ['scale',['scale',['../classLineSensor.html#a71e0254f9f1e26734b551a124ea21ca3',1,'LineSensor']]],
   ['scheduler',['Scheduler',['../classScheduler.html#a3b61aac11466cd45ae42ab8c2b0013f6',1,'Scheduler']]],
   ['scootpastintersection',['ScootPastIntersection',['../classScootPastIntersection.html#ac496bf3a58f4754025b32757c3fb1094',1,'ScootPastIntersection']]],
-  ['secondhalf',['SecondHalf',['../classSecondHalf.html#a5e09fa157f0527e3d1235440e7cbb38e',1,'SecondHalf']]],
   ['senddata',['sendData',['../classBTClient.html#a0561b17912b37892d4f4226d1769f7e8',1,'BTClient']]],
   ['senddebugstring',['sendDebugString',['../classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c',1,'BTClient']]],
   ['sendheartbeat',['sendHeartbeat',['../classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f',1,'BTClient']]],

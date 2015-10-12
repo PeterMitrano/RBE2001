@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opengripper',['OpenGripper',['../classOpenGripper.html',1,'']]]
+  ['pathplanner',['PathPlanner',['../classPathPlanner.html',1,'']]]
 ];

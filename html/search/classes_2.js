@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['calibrate',['Calibrate',['../classCalibrate.html',1,'']]],
   ['calibratelinesensor',['CalibrateLineSensor',['../classCalibrateLineSensor.html',1,'']]],
   ['calibrateroutine',['CalibrateRoutine',['../classCalibrateRoutine.html',1,'']]],
   ['closegripper',['CloseGripper',['../classCloseGripper.html',1,'']]],

@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classPathPlanner-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -94,20 +95,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Assemble command groups to go from one location to another.  
+ <a href="classPathPlanner.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a376f30d795cfe0a40f8923f49336f7da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a376f30d795cfe0a40f8923f49336f7da">PathPlanner</a> ()</td></tr>
+<tr class="memdesc:a376f30d795cfe0a40f8923f49336f7da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Grabs robot's current position and direction. make sure you call this from the location you want to plan from.  <a href="#a376f30d795cfe0a40f8923f49336f7da">More...</a><br/></td></tr>
 <tr class="separator:a376f30d795cfe0a40f8923f49336f7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfae981cdde0b63b700bb1e2e9ffc1a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCommandGroup.html">CommandGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#acfae981cdde0b63b700bb1e2e9ffc1a6">plan</a> (int destRow, int destCol, int destDirection)</td></tr>
+<tr class="memdesc:acfae981cdde0b63b700bb1e2e9ffc1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">plan from the robot's current position (at time of construction of the plath planner object) to some other point on the field Format is (row,column) 0,0 is the top corner (nothing actually there) 1,0 is the first reactor, (2,2) is storage tube 4, (0,4) is supply tube 1  <a href="#acfae981cdde0b63b700bb1e2e9ffc1a6">More...</a><br/></td></tr>
 <tr class="separator:acfae981cdde0b63b700bb1e2e9ffc1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a435470288f6e2b5f99ce590db0bfc5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a435470288f6e2b5f99ce590db0bfc5db">planToFace</a> (int currentDirection)</td></tr>
-<tr class="separator:a435470288f6e2b5f99ce590db0bfc5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a701384da34d065d821a936893c5ddd8d"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a701384da34d065d821a936893c5ddd8d">NORTH</a> = 0</td></tr>
+<tr class="memdesc:a701384da34d065d821a936893c5ddd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenient constants for navigations  <a href="#a701384da34d065d821a936893c5ddd8d">More...</a><br/></td></tr>
 <tr class="separator:a701384da34d065d821a936893c5ddd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45399b95a063acdff309e376ccac0fa2"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a45399b95a063acdff309e376ccac0fa2">EAST</a> = 1</td></tr>
 <tr class="separator:a45399b95a063acdff309e376ccac0fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,20 +125,29 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ab08a4cb0f762a4401a804bf0ce1bbbe6"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#ab08a4cb0f762a4401a804bf0ce1bbbe6">CCW</a> = -1</td></tr>
 <tr class="separator:ab08a4cb0f762a4401a804bf0ce1bbbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a435470288f6e2b5f99ce590db0bfc5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a435470288f6e2b5f99ce590db0bfc5db">planToFace</a> (int currentDirection)</td></tr>
+<tr class="memdesc:a435470288f6e2b5f99ce590db0bfc5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds command groups to the path for turning  <a href="#a435470288f6e2b5f99ce590db0bfc5db">More...</a><br/></td></tr>
+<tr class="separator:a435470288f6e2b5f99ce590db0bfc5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a20d2bf800c63aacfd1af314ad400d119"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a20d2bf800c63aacfd1af314ad400d119">col</a></td></tr>
+<tr class="memdesc:a20d2bf800c63aacfd1af314ad400d119"><td class="mdescLeft">&#160;</td><td class="mdescRight">ints for storing current col row and direction in the plan  <a href="#a20d2bf800c63aacfd1af314ad400d119">More...</a><br/></td></tr>
 <tr class="separator:a20d2bf800c63aacfd1af314ad400d119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00b0fa8525a5fe9c8088ccaa005c4c54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a00b0fa8525a5fe9c8088ccaa005c4c54">row</a></td></tr>
 <tr class="separator:a00b0fa8525a5fe9c8088ccaa005c4c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f9985b79ca49ca0b2992176a10a6210"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a1f9985b79ca49ca0b2992176a10a6210">direction</a></td></tr>
 <tr class="separator:a1f9985b79ca49ca0b2992176a10a6210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b41e5ee68a78a45e46003102a6c3b91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCommandGroup.html">CommandGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a9b41e5ee68a78a45e46003102a6c3b91">path</a></td></tr>
+<tr class="memdesc:a9b41e5ee68a78a45e46003102a6c3b91"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommandGroup.html" title="grouping commands is a useful abstraction. Commands groups execute commands in parallel or series ...">CommandGroup</a> to be assembled.  <a href="#a9b41e5ee68a78a45e46003102a6c3b91">More...</a><br/></td></tr>
 <tr class="separator:a9b41e5ee68a78a45e46003102a6c3b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00003">3</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<div class="textblock"><p>Assemble command groups to go from one location to another. </p>
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00004">4</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a376f30d795cfe0a40f8923f49336f7da"></a>
 <div class="memitem">
@@ -147,6 +161,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor. Grabs robot's current position and direction. make sure you call this from the location you want to plan from. </p>
 
 <p>Definition at line <a class="el" href="PathPlanner_8cpp_source.html#l00011">11</a> of file <a class="el" href="PathPlanner_8cpp_source.html">PathPlanner.cpp</a>.</p>
 
@@ -183,6 +199,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>plan from the robot's current position (at time of construction of the plath planner object) to some other point on the field Format is (row,column) 0,0 is the top corner (nothing actually there) 1,0 is the first reactor, (2,2) is storage tube 4, (0,4) is supply tube 1 </p>
+
 <p>Definition at line <a class="el" href="PathPlanner_8cpp_source.html#l00018">18</a> of file <a class="el" href="PathPlanner_8cpp_source.html">PathPlanner.cpp</a>.</p>
 
 </div>
@@ -190,6 +208,9 @@ Private Attributes</h2></td></tr>
 <a class="anchor" id="a435470288f6e2b5f99ce590db0bfc5db"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void PathPlanner::planToFace </td>
@@ -199,7 +220,20 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>adds command groups to the path for turning </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_in]</td><td>currentDirection the direction you're facing at this point in the plan </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="PathPlanner_8cpp_source.html#l00091">91</a> of file <a class="el" href="PathPlanner_8cpp_source.html">PathPlanner.cpp</a>.</p>
 
@@ -224,7 +258,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00013">13</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00026">26</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -246,7 +280,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00015">15</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>ints for storing current col row and direction in the plan </p>
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00036">36</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +304,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00012">12</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00025">25</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -290,7 +326,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00015">15</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00036">36</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +348,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00009">9</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00022">22</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -334,7 +370,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00008">8</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>convenient constants for navigations </p>
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00021">21</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +394,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00016">16</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p><a class="el" href="classCommandGroup.html" title="grouping commands is a useful abstraction. Commands groups execute commands in parallel or series ...">CommandGroup</a> to be assembled. </p>
+
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00039">39</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +418,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00015">15</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00036">36</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +440,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00010">10</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00023">23</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -422,7 +462,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00011">11</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
+<p>Definition at line <a class="el" href="PathPlanner_8h_source.html#l00024">24</a> of file <a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>.</p>
 
 </div>
 </div>
@@ -433,7 +473,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 12 2015 13:19:46 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:53:54 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

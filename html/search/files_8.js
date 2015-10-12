@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['opengripper_2ecpp',['OpenGripper.cpp',['../OpenGripper_8cpp.html',1,'']]],
-  ['opengripper_2eh',['OpenGripper.h',['../OpenGripper_8h.html',1,'']]]
+  ['pathplanner_2ecpp',['PathPlanner.cpp',['../PathPlanner_8cpp.html',1,'']]],
+  ['pathplanner_2eh',['PathPlanner.h',['../PathPlanner_8h.html',1,'']]]
 ];

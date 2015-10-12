@@ -3,41 +3,46 @@
 }
 
 
+is the master of all commands. It knows executes the inialize, execute, and end functions of each commands. \hyperlink{classScheduler}{Scheduler} is also a singleton, so the constructor is private and there's only one instance.  
+
+
+
+
 {\ttfamily \#include $<$Scheduler.\-h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classScheduler_a73f2e49a61315d8138cfce5b180fd891}{add\-Command} (\hyperlink{classCommand}{Command} $\ast$command)
-\item 
+\begin{DoxyCompactList}\small\item\em adds a command to the command group \end{DoxyCompactList}\item 
 void \hyperlink{classScheduler_a58fba108ce2748870a6288cd6f5fd1e3}{run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em runs all the commands. Iterates through the list of commands and runs them. If they are done, it removes them from the list of commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{classScheduler}{Scheduler} $\ast$ \hyperlink{classScheduler_a3fc3905ac5589d51e464100f3b8c0138}{get\-Instance} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em returns pointer to the singleton of scheduler \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classScheduler_a3b61aac11466cd45ae42ab8c2b0013f6}{Scheduler} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em singleton accessor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classLinkedList}{Linked\-List}$<$ \hyperlink{classCommand}{Command} $\ast$ $>$ \hyperlink{classScheduler_ad320e81fdf3a591b1f1d638f8fa5065d}{commands}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em list of commands \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{classScheduler}{Scheduler} $\ast$ \hyperlink{classScheduler_ae683641d0a2c37275631cebb77387e2f}{instance} = N\-U\-L\-L
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em singleton instance \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+is the master of all commands. It knows executes the inialize, execute, and end functions of each commands. \hyperlink{classScheduler}{Scheduler} is also a singleton, so the constructor is private and there's only one instance. 
 
-
-Definition at line 13 of file Scheduler.\-h.
+Definition at line 12 of file Scheduler.\-h.
 
 
 
@@ -49,6 +54,10 @@ Definition at line 13 of file Scheduler.\-h.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{classScheduler_a3b61aac11466cd45ae42ab8c2b0013f6}
+
+
+singleton accessor 
+
 
 
 Definition at line 5 of file Scheduler.\-cpp.
@@ -65,6 +74,15 @@ Definition at line 5 of file Scheduler.\-cpp.
 )}}\label{classScheduler_a73f2e49a61315d8138cfce5b180fd891}
 
 
+adds a command to the command group 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-in\mbox{]}} & command the pointer \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 14 of file Scheduler.\-cpp.
 
 \hypertarget{classScheduler_a3fc3905ac5589d51e464100f3b8c0138}{\index{Scheduler@{Scheduler}!get\-Instance@{get\-Instance}}
@@ -74,6 +92,13 @@ Definition at line 14 of file Scheduler.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{classScheduler_a3fc3905ac5589d51e464100f3b8c0138}
+
+
+returns pointer to the singleton of scheduler 
+
+\begin{DoxyReturn}{Returns}
+pointer to singleton 
+\end{DoxyReturn}
 
 
 Definition at line 7 of file Scheduler.\-cpp.
@@ -87,6 +112,10 @@ Definition at line 7 of file Scheduler.\-cpp.
 )}}\label{classScheduler_a58fba108ce2748870a6288cd6f5fd1e3}
 
 
+runs all the commands. Iterates through the list of commands and runs them. If they are done, it removes them from the list of commands. 
+
+
+
 Definition at line 18 of file Scheduler.\-cpp.
 
 
@@ -97,14 +126,22 @@ Definition at line 18 of file Scheduler.\-cpp.
 \subsubsection[{commands}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linked\-List}$<${\bf Command} $\ast$$>$ Scheduler\-::commands\hspace{0.3cm}{\ttfamily [private]}}}\label{classScheduler_ad320e81fdf3a591b1f1d638f8fa5065d}
 
 
-Definition at line 23 of file Scheduler.\-h.
+list of commands 
+
+
+
+Definition at line 40 of file Scheduler.\-h.
 
 \hypertarget{classScheduler_ae683641d0a2c37275631cebb77387e2f}{\index{Scheduler@{Scheduler}!instance@{instance}}
 \index{instance@{instance}!Scheduler@{Scheduler}}
 \subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scheduler} $\ast$ Scheduler\-::instance = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classScheduler_ae683641d0a2c37275631cebb77387e2f}
 
 
-Definition at line 21 of file Scheduler.\-h.
+singleton instance 
+
+
+
+Definition at line 37 of file Scheduler.\-h.
 
 
 

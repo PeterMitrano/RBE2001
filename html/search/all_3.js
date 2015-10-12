@@ -1,8 +1,6 @@
 var searchData=
 [
   ['cache',['cache',['../classLineSensor.html#afc809d2aa49426d949f76f68b0154050',1,'LineSensor']]],
-  ['calibrate',['Calibrate',['../classCalibrate.html',1,'Calibrate'],['../classCalibrate.html#af7fd8ee2339ee66f6f8e4d9953025796',1,'Calibrate::Calibrate()']]],
-  ['calibrate_2eh',['Calibrate.h',['../Calibrate_8h.html',1,'']]],
   ['calibrate_5ftime',['CALIBRATE_TIME',['../classCalibrateLineSensor.html#a16e1b5dd15700dbb8176373532ea771e',1,'CalibrateLineSensor::CALIBRATE_TIME()'],['../classRobot.html#ac40abfa06749a68604af90c00e2a3fee',1,'Robot::CALIBRATE_TIME()']]],
   ['calibratelinesensor',['CalibrateLineSensor',['../classCalibrateLineSensor.html',1,'CalibrateLineSensor'],['../classCalibrateLineSensor.html#a1fe03550069716cc8c201255b75be4ea',1,'CalibrateLineSensor::CalibrateLineSensor()']]],
   ['calibratelinesensor_2ecpp',['CalibrateLineSensor.cpp',['../CalibrateLineSensor_8cpp.html',1,'']]],

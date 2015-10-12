@@ -3,22 +3,25 @@
 }
 
 
+Assemble command groups to go from one location to another.  
+
+
+
+
 {\ttfamily \#include $<$Path\-Planner.\-h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classPathPlanner_a376f30d795cfe0a40f8923f49336f7da}{Path\-Planner} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. Grabs robot's current position and direction. make sure you call this from the location you want to plan from. \end{DoxyCompactList}\item 
 \hyperlink{classCommandGroup}{Command\-Group} $\ast$ \hyperlink{classPathPlanner_acfae981cdde0b63b700bb1e2e9ffc1a6}{plan} (int dest\-Row, int dest\-Col, int dest\-Direction)
-\item 
-void \hyperlink{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}{plan\-To\-Face} (int current\-Direction)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em plan from the robot's current position (at time of construction of the plath planner object) to some other point on the field Format is (row,column) 0,0 is the top corner (nothing actually there) 1,0 is the first reactor, (2,2) is storage tube 4, (0,4) is supply tube 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static const int \hyperlink{classPathPlanner_a701384da34d065d821a936893c5ddd8d}{N\-O\-R\-T\-H} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em convenient constants for navigations \end{DoxyCompactList}\item 
 static const int \hyperlink{classPathPlanner_a45399b95a063acdff309e376ccac0fa2}{E\-A\-S\-T} = 1
 \item 
 static const int \hyperlink{classPathPlanner_a0d74731cd6e012a8724689f8c8f6492e}{S\-O\-U\-T\-H} = 2
@@ -29,23 +32,28 @@ static const int \hyperlink{classPathPlanner_af08949a4cd572b26f4f37ff441191b3a}{
 \item 
 static const int \hyperlink{classPathPlanner_ab08a4cb0f762a4401a804bf0ce1bbbe6}{C\-C\-W} = -\/1
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}{plan\-To\-Face} (int current\-Direction)
+\begin{DoxyCompactList}\small\item\em adds command groups to the path for turning \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{classPathPlanner_a20d2bf800c63aacfd1af314ad400d119}{col}
-\item 
+\begin{DoxyCompactList}\small\item\em ints for storing current col row and direction in the plan \end{DoxyCompactList}\item 
 int \hyperlink{classPathPlanner_a00b0fa8525a5fe9c8088ccaa005c4c54}{row}
 \item 
 int \hyperlink{classPathPlanner_a1f9985b79ca49ca0b2992176a10a6210}{direction}
 \item 
 \hyperlink{classCommandGroup}{Command\-Group} $\ast$ \hyperlink{classPathPlanner_a9b41e5ee68a78a45e46003102a6c3b91}{path}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCommandGroup}{Command\-Group} to be assembled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Assemble command groups to go from one location to another. 
 
-
-Definition at line 3 of file Path\-Planner.\-h.
+Definition at line 4 of file Path\-Planner.\-h.
 
 
 
@@ -57,6 +65,10 @@ Definition at line 3 of file Path\-Planner.\-h.
 {}
 \end{DoxyParamCaption}
 )}}\label{classPathPlanner_a376f30d795cfe0a40f8923f49336f7da}
+
+
+Constructor. Grabs robot's current position and direction. make sure you call this from the location you want to plan from. 
+
 
 
 Definition at line 11 of file Path\-Planner.\-cpp.
@@ -75,6 +87,10 @@ Definition at line 11 of file Path\-Planner.\-cpp.
 )}}\label{classPathPlanner_acfae981cdde0b63b700bb1e2e9ffc1a6}
 
 
+plan from the robot's current position (at time of construction of the plath planner object) to some other point on the field Format is (row,column) 0,0 is the top corner (nothing actually there) 1,0 is the first reactor, (2,2) is storage tube 4, (0,4) is supply tube 1 
+
+
+
 Definition at line 18 of file Path\-Planner.\-cpp.
 
 \hypertarget{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}{\index{Path\-Planner@{Path\-Planner}!plan\-To\-Face@{plan\-To\-Face}}
@@ -83,7 +99,16 @@ Definition at line 18 of file Path\-Planner.\-cpp.
 \begin{DoxyParamCaption}
 \item[{int}]{current\-Direction}
 \end{DoxyParamCaption}
-)}}\label{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a435470288f6e2b5f99ce590db0bfc5db}
+
+
+adds command groups to the path for turning 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-in\mbox{]}} & current\-Direction the direction you're facing at this point in the plan \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 91 of file Path\-Planner.\-cpp.
@@ -96,70 +121,82 @@ Definition at line 91 of file Path\-Planner.\-cpp.
 \subsubsection[{C\-C\-W}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-C\-C\-W = -\/1\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_ab08a4cb0f762a4401a804bf0ce1bbbe6}
 
 
-Definition at line 13 of file Path\-Planner.\-h.
+Definition at line 26 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a20d2bf800c63aacfd1af314ad400d119}{\index{Path\-Planner@{Path\-Planner}!col@{col}}
 \index{col@{col}!PathPlanner@{Path\-Planner}}
 \subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}int Path\-Planner\-::col\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a20d2bf800c63aacfd1af314ad400d119}
 
 
-Definition at line 15 of file Path\-Planner.\-h.
+ints for storing current col row and direction in the plan 
+
+
+
+Definition at line 36 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_af08949a4cd572b26f4f37ff441191b3a}{\index{Path\-Planner@{Path\-Planner}!C\-W@{C\-W}}
 \index{C\-W@{C\-W}!PathPlanner@{Path\-Planner}}
 \subsubsection[{C\-W}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-C\-W = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_af08949a4cd572b26f4f37ff441191b3a}
 
 
-Definition at line 12 of file Path\-Planner.\-h.
+Definition at line 25 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a1f9985b79ca49ca0b2992176a10a6210}{\index{Path\-Planner@{Path\-Planner}!direction@{direction}}
 \index{direction@{direction}!PathPlanner@{Path\-Planner}}
 \subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}int Path\-Planner\-::direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a1f9985b79ca49ca0b2992176a10a6210}
 
 
-Definition at line 15 of file Path\-Planner.\-h.
+Definition at line 36 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a45399b95a063acdff309e376ccac0fa2}{\index{Path\-Planner@{Path\-Planner}!E\-A\-S\-T@{E\-A\-S\-T}}
 \index{E\-A\-S\-T@{E\-A\-S\-T}!PathPlanner@{Path\-Planner}}
 \subsubsection[{E\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-E\-A\-S\-T = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_a45399b95a063acdff309e376ccac0fa2}
 
 
-Definition at line 9 of file Path\-Planner.\-h.
+Definition at line 22 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a701384da34d065d821a936893c5ddd8d}{\index{Path\-Planner@{Path\-Planner}!N\-O\-R\-T\-H@{N\-O\-R\-T\-H}}
 \index{N\-O\-R\-T\-H@{N\-O\-R\-T\-H}!PathPlanner@{Path\-Planner}}
 \subsubsection[{N\-O\-R\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-N\-O\-R\-T\-H = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_a701384da34d065d821a936893c5ddd8d}
 
 
-Definition at line 8 of file Path\-Planner.\-h.
+convenient constants for navigations 
+
+
+
+Definition at line 21 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a9b41e5ee68a78a45e46003102a6c3b91}{\index{Path\-Planner@{Path\-Planner}!path@{path}}
 \index{path@{path}!PathPlanner@{Path\-Planner}}
 \subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\-Group}$\ast$ Path\-Planner\-::path\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a9b41e5ee68a78a45e46003102a6c3b91}
 
 
-Definition at line 16 of file Path\-Planner.\-h.
+\hyperlink{classCommandGroup}{Command\-Group} to be assembled. 
+
+
+
+Definition at line 39 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a00b0fa8525a5fe9c8088ccaa005c4c54}{\index{Path\-Planner@{Path\-Planner}!row@{row}}
 \index{row@{row}!PathPlanner@{Path\-Planner}}
 \subsubsection[{row}]{\setlength{\rightskip}{0pt plus 5cm}int Path\-Planner\-::row\hspace{0.3cm}{\ttfamily [private]}}}\label{classPathPlanner_a00b0fa8525a5fe9c8088ccaa005c4c54}
 
 
-Definition at line 15 of file Path\-Planner.\-h.
+Definition at line 36 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_a0d74731cd6e012a8724689f8c8f6492e}{\index{Path\-Planner@{Path\-Planner}!S\-O\-U\-T\-H@{S\-O\-U\-T\-H}}
 \index{S\-O\-U\-T\-H@{S\-O\-U\-T\-H}!PathPlanner@{Path\-Planner}}
 \subsubsection[{S\-O\-U\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-S\-O\-U\-T\-H = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_a0d74731cd6e012a8724689f8c8f6492e}
 
 
-Definition at line 10 of file Path\-Planner.\-h.
+Definition at line 23 of file Path\-Planner.\-h.
 
 \hypertarget{classPathPlanner_aac8f18908f761050a3801acd476ea0ce}{\index{Path\-Planner@{Path\-Planner}!W\-E\-S\-T@{W\-E\-S\-T}}
 \index{W\-E\-S\-T@{W\-E\-S\-T}!PathPlanner@{Path\-Planner}}
 \subsubsection[{W\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\-Planner\-::\-W\-E\-S\-T = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{classPathPlanner_aac8f18908f761050a3801acd476ea0ce}
 
 
-Definition at line 11 of file Path\-Planner.\-h.
+Definition at line 24 of file Path\-Planner.\-h.
 
 
 

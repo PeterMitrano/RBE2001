@@ -8,7 +8,6 @@ var searchData=
   ['scootpastintersection_2ecpp',['ScootPastIntersection.cpp',['../ScootPastIntersection_8cpp.html',1,'']]],
   ['scootpastintersection_2eh',['ScootPastIntersection.h',['../ScootPastIntersection_8h.html',1,'']]],
   ['scoottime',['scootTime',['../classScootPastIntersection.html#acfb41e5180724c0ffb71c841e0bb9ec3',1,'ScootPastIntersection']]],
-  ['secondhalf',['SecondHalf',['../classSecondHalf.html',1,'SecondHalf'],['../classSecondHalf.html#a5e09fa157f0527e3d1235440e7cbb38e',1,'SecondHalf::SecondHalf()']]],
   ['senddata',['sendData',['../classBTClient.html#a0561b17912b37892d4f4226d1769f7e8',1,'BTClient']]],
   ['senddebugstring',['sendDebugString',['../classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c',1,'BTClient']]],
   ['sendheartbeat',['sendHeartbeat',['../classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f',1,'BTClient']]],

@@ -96,38 +96,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>is the master of all commands. It knows executes the inialize, execute, and end functions of each commands. <a class="el" href="classScheduler.html" title="is the master of all commands. It knows executes the inialize, execute, and end functions of each com...">Scheduler</a> is also a singleton, so the constructor is private and there's only one instance.  
+ <a href="classScheduler.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a73f2e49a61315d8138cfce5b180fd891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a73f2e49a61315d8138cfce5b180fd891">addCommand</a> (<a class="el" href="classCommand.html">Command</a> *command)</td></tr>
+<tr class="memdesc:a73f2e49a61315d8138cfce5b180fd891"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a command to the command group  <a href="#a73f2e49a61315d8138cfce5b180fd891">More...</a><br/></td></tr>
 <tr class="separator:a73f2e49a61315d8138cfce5b180fd891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fba108ce2748870a6288cd6f5fd1e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a58fba108ce2748870a6288cd6f5fd1e3">run</a> ()</td></tr>
+<tr class="memdesc:a58fba108ce2748870a6288cd6f5fd1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs all the commands. Iterates through the list of commands and runs them. If they are done, it removes them from the list of commands.  <a href="#a58fba108ce2748870a6288cd6f5fd1e3">More...</a><br/></td></tr>
 <tr class="separator:a58fba108ce2748870a6288cd6f5fd1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3fc3905ac5589d51e464100f3b8c0138"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classScheduler.html">Scheduler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a3fc3905ac5589d51e464100f3b8c0138">getInstance</a> ()</td></tr>
+<tr class="memdesc:a3fc3905ac5589d51e464100f3b8c0138"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns pointer to the singleton of scheduler  <a href="#a3fc3905ac5589d51e464100f3b8c0138">More...</a><br/></td></tr>
 <tr class="separator:a3fc3905ac5589d51e464100f3b8c0138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a3b61aac11466cd45ae42ab8c2b0013f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a3b61aac11466cd45ae42ab8c2b0013f6">Scheduler</a> ()</td></tr>
+<tr class="memdesc:a3b61aac11466cd45ae42ab8c2b0013f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">singleton accessor  <a href="#a3b61aac11466cd45ae42ab8c2b0013f6">More...</a><br/></td></tr>
 <tr class="separator:a3b61aac11466cd45ae42ab8c2b0013f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad320e81fdf3a591b1f1d638f8fa5065d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinkedList.html">LinkedList</a>&lt; <a class="el" href="classCommand.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ad320e81fdf3a591b1f1d638f8fa5065d">commands</a></td></tr>
+<tr class="memdesc:ad320e81fdf3a591b1f1d638f8fa5065d"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of commands  <a href="#ad320e81fdf3a591b1f1d638f8fa5065d">More...</a><br/></td></tr>
 <tr class="separator:ad320e81fdf3a591b1f1d638f8fa5065d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:ae683641d0a2c37275631cebb77387e2f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classScheduler.html">Scheduler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ae683641d0a2c37275631cebb77387e2f">instance</a> = NULL</td></tr>
+<tr class="memdesc:ae683641d0a2c37275631cebb77387e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">singleton instance  <a href="#ae683641d0a2c37275631cebb77387e2f">More...</a><br/></td></tr>
 <tr class="separator:ae683641d0a2c37275631cebb77387e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00013">13</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+<div class="textblock"><p>is the master of all commands. It knows executes the inialize, execute, and end functions of each commands. <a class="el" href="classScheduler.html" title="is the master of all commands. It knows executes the inialize, execute, and end functions of each com...">Scheduler</a> is also a singleton, so the constructor is private and there's only one instance. </p>
+
+<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00012">12</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3b61aac11466cd45ae42ab8c2b0013f6"></a>
 <div class="memitem">
@@ -150,6 +160,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>singleton accessor </p>
+
 <p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00005">5</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
 
 </div>
@@ -168,6 +180,14 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>adds a command to the command group </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_in]</td><td>command the pointer </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00014">14</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
 
@@ -194,6 +214,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>returns pointer to the singleton of scheduler </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to singleton </dd></dl>
+
 <p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00007">7</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
 
 </div>
@@ -210,6 +233,8 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>runs all the commands. Iterates through the list of commands and runs them. If they are done, it removes them from the list of commands. </p>
 
 <p>Definition at line <a class="el" href="Scheduler_8cpp_source.html#l00018">18</a> of file <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a>.</p>
 
@@ -234,7 +259,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00023">23</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+<p>list of commands </p>
+
+<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00040">40</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +283,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00021">21</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
+<p>singleton instance </p>
+
+<p>Definition at line <a class="el" href="Scheduler_8h_source.html#l00037">37</a> of file <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -267,7 +296,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 12 2015 13:19:46 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 12 2015 13:53:54 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
