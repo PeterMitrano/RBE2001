@@ -6,7 +6,7 @@ TurnOffLine::TurnOffLine(int direction) : Command("turn off line"){
 }
 
 void TurnOffLine::initialize(){
-  setTimeout(400);
+  setTimeout(500);
   Robot::getInstance()->setSong(1,false);
 }
 

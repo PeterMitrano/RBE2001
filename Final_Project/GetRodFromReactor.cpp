@@ -16,11 +16,11 @@ GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("ge
 
 void GetRodFromReactor::initialize(){
   //figure out where we're going
-  destDirection = 3, destRow = 1, destCol = 0;
+  destDirection = PathPlanner::WEST, destRow = 1, destCol = 0;
 
   if (reactorNumber == 2){
     destCol = 5;
-    destDirection = 1;
+    destDirection = PathPlanner::EAST;
   }
 
   PathPlanner *planner = new PathPlanner();

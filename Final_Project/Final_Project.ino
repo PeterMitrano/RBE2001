@@ -6,6 +6,7 @@
 #include <Wire.h>
 #include <LiquidCrystal.h>
 #include <TimerThree.h>
+#include <MemoryFree.h>
 
 #include "Robot.h"
 #include "Scheduler.h"
@@ -40,6 +41,7 @@ void loop() {
 
   steve->btClient.readMessage();
   steve->btClient.sendHeartbeat();
+  steve->debugPrint2(freeMemory());
 
   if (!paused){
 

@@ -1,5 +1,6 @@
 #include "PathPlanner.h"
 
+#include <MemoryFree.h>
 #include "DriveThroughIntersection.h"
 #include "DriveUntilReactorTube.h"
 #include "TurnToNextLine.h"
@@ -81,12 +82,16 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   Robot::getInstance()->col = destCol;
   Robot::getInstance()->direction = destDirection;
 
-  Robot::getInstance()->debugPrint2(str);
+ // Robot::getInstance()->debugPrint2(str);
+  Serial.println(str);
 
   return path;
 }
 
 void PathPlanner::planToFace(int destDirection){
+  
+  Robot::getInstance()->debugPrint2(freeMemory());
+
   // turning is dependant on location
   // some places (in from of storage/supply) don't have intersections
   if (row != 1){

@@ -45,6 +45,7 @@ void CommandGroup::_execute(){
 
 void CommandGroup::end(){}
 void CommandGroup::_end(){
+  currentCommandIndex=0;
 }
 
 
