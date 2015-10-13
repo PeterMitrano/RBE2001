@@ -54,15 +54,14 @@ void Robot::blinkLEDs(){
 
   if (radiating){
     digitalWrite(Robot::LED_PIN1,ledState);
+
     if (highRadiating){
       digitalWrite(Robot::LED_PIN0,ledState);
     }
   }
   else {
     digitalWrite(Robot::LED_PIN0,LOW);
-    if (highRadiating){
-      digitalWrite(Robot::LED_PIN1,LOW);
-    }
+    digitalWrite(Robot::LED_PIN1,LOW);
   }
 }
 
