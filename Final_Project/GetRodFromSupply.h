@@ -1,5 +1,7 @@
 #pragma once
 
+/** \brief navigate to supply, get rod, and back up */
+
 #include "Robot.h"
 #include "CommandGroup.h"
 

@@ -1,5 +1,8 @@
 #pragma once
 
+/** \brief Navigate to reactor, pick up rod, and turn around
+ */
+
 #include "Robot.h"
 #include "CommandGroup.h"
 
