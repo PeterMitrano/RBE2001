@@ -1,0 +1,166 @@
+\hypertarget{classTurnToEdge}{\section{Turn\-To\-Edge Class Reference}
+\label{classTurnToEdge}\index{Turn\-To\-Edge@{Turn\-To\-Edge}}
+}
+
+
+turn to the edge of the line possible combinations\-: turn C\-W until the left side of the line turn C\-W until the right side of the line turn C\-C\-W until the left side of the line turn C\-C\-W until the right side of the line  
+
+
+
+
+{\ttfamily \#include $<$Turn\-To\-Edge.\-h$>$}
+
+Inheritance diagram for Turn\-To\-Edge\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTurnToEdge}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTurnToEdge_ae426a19ff06e0b402dcbb5cfbb2d178f}{Turn\-To\-Edge} (int \hyperlink{classTurnToEdge_a2a5053fc4cc07dd36874e327d4790a72}{which\-Edge}, int \hyperlink{classTurnToEdge_aebef6e8ce9b5c39f21bd065f1c474aab}{turn\-Direction})
+\item 
+void \hyperlink{classTurnToEdge_a74715c9f813240b7280fef04277ab890}{execute} ()
+\begin{DoxyCompactList}\small\item\em stuff to do over and over each iteration. this will be overrided by individual commands \end{DoxyCompactList}\item 
+void \hyperlink{classTurnToEdge_a9cad8754ff556ad6b10eef959ec701d5}{initialize} ()
+\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\item 
+bool \hyperlink{classTurnToEdge_a6ebfe539f6800404da5c6a69c578f30d}{is\-Finished} ()
+\begin{DoxyCompactList}\small\item\em checked every iteration to see if we're done here. this will be overrided by individual commands \end{DoxyCompactList}\item 
+void \hyperlink{classTurnToEdge_a5a7467ec0d1775fa2c78e751ddc4f0a9}{end} ()
+\begin{DoxyCompactList}\small\item\em called once at the end, once \hyperlink{classTurnToEdge_a6ebfe539f6800404da5c6a69c578f30d}{is\-Finished()} returned true. this will be overrided by individual commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classTurnToEdge_a2a5053fc4cc07dd36874e327d4790a72}{which\-Edge}
+\item 
+int \hyperlink{classTurnToEdge_aebef6e8ce9b5c39f21bd065f1c474aab}{turn\-Direction}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+turn to the edge of the line possible combinations\-: turn C\-W until the left side of the line turn C\-W until the right side of the line turn C\-C\-W until the left side of the line turn C\-C\-W until the right side of the line 
+
+Definition at line 14 of file Turn\-To\-Edge.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTurnToEdge_ae426a19ff06e0b402dcbb5cfbb2d178f}{\index{Turn\-To\-Edge@{Turn\-To\-Edge}!Turn\-To\-Edge@{Turn\-To\-Edge}}
+\index{Turn\-To\-Edge@{Turn\-To\-Edge}!TurnToEdge@{Turn\-To\-Edge}}
+\subsubsection[{Turn\-To\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}Turn\-To\-Edge\-::\-Turn\-To\-Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{which\-Edge, }
+\item[{int}]{turn\-Direction}
+\end{DoxyParamCaption}
+)}}\label{classTurnToEdge_ae426a19ff06e0b402dcbb5cfbb2d178f}
+
+
+Definition at line 4 of file Turn\-To\-Edge.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTurnToEdge_a5a7467ec0d1775fa2c78e751ddc4f0a9}{\index{Turn\-To\-Edge@{Turn\-To\-Edge}!end@{end}}
+\index{end@{end}!TurnToEdge@{Turn\-To\-Edge}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Turn\-To\-Edge\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnToEdge_a5a7467ec0d1775fa2c78e751ddc4f0a9}
+
+
+called once at the end, once \hyperlink{classTurnToEdge_a6ebfe539f6800404da5c6a69c578f30d}{is\-Finished()} returned true. this will be overrided by individual commands. 
+
+
+
+Reimplemented from \hyperlink{classCommand_a147da4a43c939870018324a0af4c7b0b}{Command}.
+
+
+
+Definition at line 30 of file Turn\-To\-Edge.\-cpp.
+
+\hypertarget{classTurnToEdge_a74715c9f813240b7280fef04277ab890}{\index{Turn\-To\-Edge@{Turn\-To\-Edge}!execute@{execute}}
+\index{execute@{execute}!TurnToEdge@{Turn\-To\-Edge}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Turn\-To\-Edge\-::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnToEdge_a74715c9f813240b7280fef04277ab890}
+
+
+stuff to do over and over each iteration. this will be overrided by individual commands 
+
+
+
+Reimplemented from \hyperlink{classCommand_abc8574913684044b0f1a9f810b4e969b}{Command}.
+
+
+
+Definition at line 12 of file Turn\-To\-Edge.\-cpp.
+
+\hypertarget{classTurnToEdge_a9cad8754ff556ad6b10eef959ec701d5}{\index{Turn\-To\-Edge@{Turn\-To\-Edge}!initialize@{initialize}}
+\index{initialize@{initialize}!TurnToEdge@{Turn\-To\-Edge}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Turn\-To\-Edge\-::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnToEdge_a9cad8754ff556ad6b10eef959ec701d5}
+
+
+run once in the first iteration of the command's life. this will be overrided by individual commands 
+
+
+
+Reimplemented from \hyperlink{classCommand_a8044ac332a61df571c3454d9fea9684a}{Command}.
+
+
+
+Definition at line 9 of file Turn\-To\-Edge.\-cpp.
+
+\hypertarget{classTurnToEdge_a6ebfe539f6800404da5c6a69c578f30d}{\index{Turn\-To\-Edge@{Turn\-To\-Edge}!is\-Finished@{is\-Finished}}
+\index{is\-Finished@{is\-Finished}!TurnToEdge@{Turn\-To\-Edge}}
+\subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Turn\-To\-Edge\-::is\-Finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTurnToEdge_a6ebfe539f6800404da5c6a69c578f30d}
+
+
+checked every iteration to see if we're done here. this will be overrided by individual commands 
+
+\begin{DoxyReturn}{Returns}
+is the function finished 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classCommand_ae5846b4332a262e055c7a96759fa18f2}{Command}.
+
+
+
+Definition at line 21 of file Turn\-To\-Edge.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classTurnToEdge_aebef6e8ce9b5c39f21bd065f1c474aab}{\index{Turn\-To\-Edge@{Turn\-To\-Edge}!turn\-Direction@{turn\-Direction}}
+\index{turn\-Direction@{turn\-Direction}!TurnToEdge@{Turn\-To\-Edge}}
+\subsubsection[{turn\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int Turn\-To\-Edge\-::turn\-Direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classTurnToEdge_aebef6e8ce9b5c39f21bd065f1c474aab}
+
+
+Definition at line 22 of file Turn\-To\-Edge.\-h.
+
+\hypertarget{classTurnToEdge_a2a5053fc4cc07dd36874e327d4790a72}{\index{Turn\-To\-Edge@{Turn\-To\-Edge}!which\-Edge@{which\-Edge}}
+\index{which\-Edge@{which\-Edge}!TurnToEdge@{Turn\-To\-Edge}}
+\subsubsection[{which\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}int Turn\-To\-Edge\-::which\-Edge\hspace{0.3cm}{\ttfamily [private]}}}\label{classTurnToEdge_a2a5053fc4cc07dd36874e327d4790a72}
+
+
+Definition at line 22 of file Turn\-To\-Edge.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Final\-\_\-\-Project/\hyperlink{TurnToEdge_8h}{Turn\-To\-Edge.\-h}\item 
+Final\-\_\-\-Project/\hyperlink{TurnToEdge_8cpp}{Turn\-To\-Edge.\-cpp}\end{DoxyCompactItemize}

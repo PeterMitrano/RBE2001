@@ -78,7 +78,9 @@ Liquid\-Crystal \hyperlink{classRobot_aa2182958e636a5b3e0383643a48ca6f8}{lcd}
 bool \hyperlink{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}{paused}
 \begin{DoxyCompactList}\small\item\em set by bluetooth if resume/stop message is recieve all drive motor commands depend on it being true \end{DoxyCompactList}\item 
 bool \hyperlink{classRobot_a77f62d85ab1cf34e79c2a3acd470a4ce}{radiating} = false
-\begin{DoxyCompactList}\small\item\em flag for blinking L\-E\-Ds based on radiaiton to turn off L\-E\-Ds, set this to false \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em flag for blinking L\-E\-Ds based on radiaiton to turn off L\-E\-Ds, set this to false \end{DoxyCompactList}\item 
+bool \hyperlink{classRobot_a52d4eac720f8d9afe84ebb5f4ea4a82e}{high\-Radiating} = false
+\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -111,9 +113,9 @@ int \hyperlink{classRobot_a7818916adfa736ab4cb21011fe302cdb}{song\-Data}
 \begin{DoxyCompactList}\small\item\em the encoded data to send over i2\-C \end{DoxyCompactList}\item 
 const int \hyperlink{classRobot_a351d754436c8f569432ef7a06641f98a}{reactor\-Tube\-Limit\-Pin} = 28
 \item 
-const int \hyperlink{classRobot_a9cf41f47520ed8f848da5c6e2d0ff7b0}{rotate\-Speed\-Forward} = 43
+const int \hyperlink{classRobot_a9cf41f47520ed8f848da5c6e2d0ff7b0}{rotate\-Speed\-Forward} = 34
 \item 
-const int \hyperlink{classRobot_a04bc29522467c056ae6698017f32f048}{rotate\-Speed\-Backward} = -\/38
+const int \hyperlink{classRobot_a04bc29522467c056ae6698017f32f048}{rotate\-Speed\-Backward} = -\/32
 \item 
 const int \hyperlink{classRobot_a87ec942d7d53b1a4b1c46422f6a134eb}{travel\-Speed} = 30
 \end{DoxyCompactItemize}
@@ -128,7 +130,7 @@ static const int \hyperlink{classRobot_a431ea8916b52ddfddbe6d80a09fe71e0}{L\-E\-
 \item 
 static const int \hyperlink{classRobot_a4c6f4e38b77bf470d757ebea1b8c3cf0}{L\-E\-D\-\_\-\-P\-I\-N1} = 23
 \item 
-static const int \hyperlink{classRobot_ad0f5c1ce14363f3c05232eceab37ceff}{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D} = 100
+static const int \hyperlink{classRobot_ad0f5c1ce14363f3c05232eceab37ceff}{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D} = 50
 \item 
 static const int \hyperlink{classRobot_a46298d7fb4c8c3932221c6a5ac14af9d}{left\-Wheel\-Pin} = 5
 \item 
@@ -180,7 +182,7 @@ true when limit switch is hit
 \end{DoxyReturn}
 
 
-Definition at line 111 of file Robot.\-cpp.
+Definition at line 115 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ace271ca13d78102450dbd929b4302560}{\index{Robot@{Robot}!back\-Up@{back\-Up}}
 \index{back\-Up@{back\-Up}!Robot@{Robot}}
@@ -196,7 +198,7 @@ blindly back up
 
 
 
-Definition at line 84 of file Robot.\-cpp.
+Definition at line 88 of file Robot.\-cpp.
 
 \hypertarget{classRobot_afb5418d31b61a64e0930fd1fb495c8c9}{\index{Robot@{Robot}!blink\-And\-Send\-Interrupt@{blink\-And\-Send\-Interrupt}}
 \index{blink\-And\-Send\-Interrupt@{blink\-And\-Send\-Interrupt}!Robot@{Robot}}
@@ -241,7 +243,7 @@ print to 0,0 on lcd
 
 
 
-Definition at line 147 of file Robot.\-cpp.
+Definition at line 151 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a99842e804accd91c9b1a246f04a1336b}{\index{Robot@{Robot}!debug\-Print@{debug\-Print}}
 \index{debug\-Print@{debug\-Print}!Robot@{Robot}}
@@ -252,7 +254,7 @@ Definition at line 147 of file Robot.\-cpp.
 )}}\label{classRobot_a99842e804accd91c9b1a246f04a1336b}
 
 
-Definition at line 140 of file Robot.\-cpp.
+Definition at line 144 of file Robot.\-cpp.
 
 \hypertarget{classRobot_aeec39516d614f74a4512e1cb0d309f30}{\index{Robot@{Robot}!debug\-Print2@{debug\-Print2}}
 \index{debug\-Print2@{debug\-Print2}!Robot@{Robot}}
@@ -263,7 +265,7 @@ Definition at line 140 of file Robot.\-cpp.
 )}}\label{classRobot_aeec39516d614f74a4512e1cb0d309f30}
 
 
-Definition at line 161 of file Robot.\-cpp.
+Definition at line 165 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a1ab0c3edf15750d4f1cd5de56b1547dd}{\index{Robot@{Robot}!debug\-Print2@{debug\-Print2}}
 \index{debug\-Print2@{debug\-Print2}!Robot@{Robot}}
@@ -274,7 +276,7 @@ Definition at line 161 of file Robot.\-cpp.
 )}}\label{classRobot_a1ab0c3edf15750d4f1cd5de56b1547dd}
 
 
-Definition at line 154 of file Robot.\-cpp.
+Definition at line 158 of file Robot.\-cpp.
 
 \hypertarget{classRobot_aad8723ec56e9fc8ca17da5ef79de37d6}{\index{Robot@{Robot}!drive@{drive}}
 \index{drive@{drive}!Robot@{Robot}}
@@ -290,7 +292,7 @@ low level function for setting motor power input is limited between -\/100 (full
 
 
 
-Definition at line 97 of file Robot.\-cpp.
+Definition at line 101 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ac8d0a3e0308350bc1fc3a2a78be2aaca}{\index{Robot@{Robot}!drive\-Bwd@{drive\-Bwd}}
 \index{drive\-Bwd@{drive\-Bwd}!Robot@{Robot}}
@@ -305,7 +307,7 @@ backward drive
 
 
 
-Definition at line 74 of file Robot.\-cpp.
+Definition at line 78 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a35897f5e7b5c8b29cc6d386c6089abea}{\index{Robot@{Robot}!drive\-Fwd@{drive\-Fwd}}
 \index{drive\-Fwd@{drive\-Fwd}!Robot@{Robot}}
@@ -320,7 +322,7 @@ forward drive no line track
 
 
 
-Definition at line 69 of file Robot.\-cpp.
+Definition at line 73 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a6e3caf6e0346f6a54557eb57a79fc4f4}{\index{Robot@{Robot}!follow\-Line@{follow\-Line}}
 \index{follow\-Line@{follow\-Line}!Robot@{Robot}}
@@ -335,7 +337,7 @@ uses line sensor to follow line following is done by a weighted power to each wh
 
 
 
-Definition at line 78 of file Robot.\-cpp.
+Definition at line 82 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ac6f19dc31b435f8a2d43944ba49286d0}{\index{Robot@{Robot}!get\-Instance@{get\-Instance}}
 \index{get\-Instance@{get\-Instance}!Robot@{Robot}}
@@ -365,7 +367,7 @@ returns the time while not paused. used by commands that run based on time
 
 
 
-Definition at line 168 of file Robot.\-cpp.
+Definition at line 172 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a1e33a376bf08bdbe5ac0d84221d06be9}{\index{Robot@{Robot}!increment\-Time@{increment\-Time}}
 \index{increment\-Time@{increment\-Time}!Robot@{Robot}}
@@ -380,7 +382,7 @@ increment time counter
 
 
 
-Definition at line 172 of file Robot.\-cpp.
+Definition at line 176 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a9908dfe5a06008e6203edca94d30327a}{\index{Robot@{Robot}!pause@{pause}}
 \index{pause@{pause}!Robot@{Robot}}
@@ -406,7 +408,7 @@ sends correct int over i2c to slave to plause song
 
 
 
-Definition at line 132 of file Robot.\-cpp.
+Definition at line 136 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ad86dbbb2ad0d065f3e4c30fd4b742e1c}{\index{Robot@{Robot}!play\-Song@{play\-Song}}
 \index{play\-Song@{play\-Song}!Robot@{Robot}}
@@ -421,7 +423,7 @@ sends the encoded data over i2c to the slave
 
 
 
-Definition at line 124 of file Robot.\-cpp.
+Definition at line 128 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ab7c87529c987ede12b934bdfc768507e}{\index{Robot@{Robot}!reset\-Timer\-Flags@{reset\-Timer\-Flags}}
 \index{reset\-Timer\-Flags@{reset\-Timer\-Flags}!Robot@{Robot}}
@@ -436,7 +438,7 @@ sets all timer flags to false
 
 
 
-Definition at line 136 of file Robot.\-cpp.
+Definition at line 140 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ac521de09b10ea0ee7f14171d54fee195}{\index{Robot@{Robot}!rotate\-C\-C\-W@{rotate\-C\-C\-W}}
 \index{rotate\-C\-C\-W@{rotate\-C\-C\-W}!Robot@{Robot}}
@@ -451,7 +453,7 @@ fixed power rotate
 
 
 
-Definition at line 92 of file Robot.\-cpp.
+Definition at line 96 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a9aa9c5a6f1b28861ffcee6ef1c1ed90d}{\index{Robot@{Robot}!rotate\-C\-W@{rotate\-C\-W}}
 \index{rotate\-C\-W@{rotate\-C\-W}!Robot@{Robot}}
@@ -466,7 +468,7 @@ fixed power rotate
 
 
 
-Definition at line 88 of file Robot.\-cpp.
+Definition at line 92 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a87e94e8db5092976d1125c674cf2b519}{\index{Robot@{Robot}!set\-Song@{set\-Song}}
 \index{set\-Song@{set\-Song}!Robot@{Robot}}
@@ -482,7 +484,7 @@ sends correct int over i2c to slave to play song. Simple protocol is used to enc
 
 
 
-Definition at line 116 of file Robot.\-cpp.
+Definition at line 120 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a1fc37e3c329d59795f6adf44199d4df9}{\index{Robot@{Robot}!setup@{setup}}
 \index{setup@{setup}!Robot@{Robot}}
@@ -512,7 +514,7 @@ stop driving
 
 
 
-Definition at line 65 of file Robot.\-cpp.
+Definition at line 69 of file Robot.\-cpp.
 
 
 
@@ -530,10 +532,10 @@ Definition at line 97 of file Robot.\-h.
 
 \hypertarget{classRobot_ad0f5c1ce14363f3c05232eceab37ceff}{\index{Robot@{Robot}!B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D@{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D}}
 \index{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D@{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D}!Robot@{Robot}}
-\subsubsection[{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D = 100\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_ad0f5c1ce14363f3c05232eceab37ceff}
+\subsubsection[{B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-B\-L\-I\-N\-K\-\_\-\-A\-N\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-E\-R\-I\-O\-D = 50\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_ad0f5c1ce14363f3c05232eceab37ceff}
 
 
-Definition at line 151 of file Robot.\-h.
+Definition at line 152 of file Robot.\-h.
 
 \hypertarget{classRobot_a9da91e6d551ed02038e935b3c755cc75}{\index{Robot@{Robot}!bt\-Client@{bt\-Client}}
 \index{bt\-Client@{bt\-Client}!Robot@{Robot}}
@@ -551,7 +553,7 @@ Definition at line 94 of file Robot.\-h.
 \subsubsection[{C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E = 3000\hspace{0.3cm}{\ttfamily [static]}}}\label{classRobot_ac40abfa06749a68604af90c00e2a3fee}
 
 
-Definition at line 116 of file Robot.\-h.
+Definition at line 117 of file Robot.\-h.
 
 \hypertarget{classRobot_a2e08d53491bb82defe2e28ee9ce1d096}{\index{Robot@{Robot}!col@{col}}
 \index{col@{col}!Robot@{Robot}}
@@ -567,12 +569,19 @@ Definition at line 91 of file Robot.\-h.
 
 Definition at line 91 of file Robot.\-h.
 
+\hypertarget{classRobot_a52d4eac720f8d9afe84ebb5f4ea4a82e}{\index{Robot@{Robot}!high\-Radiating@{high\-Radiating}}
+\index{high\-Radiating@{high\-Radiating}!Robot@{Robot}}
+\subsubsection[{high\-Radiating}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\-::high\-Radiating = false}}\label{classRobot_a52d4eac720f8d9afe84ebb5f4ea4a82e}
+
+
+Definition at line 114 of file Robot.\-h.
+
 \hypertarget{classRobot_aad5c5d6db601aac62393d47ec9385fa3}{\index{Robot@{Robot}!instance@{instance}}
 \index{instance@{instance}!Robot@{Robot}}
 \subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robot} $\ast$ Robot\-::instance = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_aad5c5d6db601aac62393d47ec9385fa3}
 
 
-Definition at line 122 of file Robot.\-h.
+Definition at line 123 of file Robot.\-h.
 
 \hypertarget{classRobot_aa2182958e636a5b3e0383643a48ca6f8}{\index{Robot@{Robot}!lcd@{lcd}}
 \index{lcd@{lcd}!Robot@{Robot}}
@@ -590,14 +599,14 @@ Definition at line 103 of file Robot.\-h.
 \subsubsection[{L\-E\-D\-\_\-\-P\-I\-N0}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-L\-E\-D\-\_\-\-P\-I\-N0 = 22\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a431ea8916b52ddfddbe6d80a09fe71e0}
 led pins and stuff 
 
-Definition at line 149 of file Robot.\-h.
+Definition at line 150 of file Robot.\-h.
 
 \hypertarget{classRobot_a4c6f4e38b77bf470d757ebea1b8c3cf0}{\index{Robot@{Robot}!L\-E\-D\-\_\-\-P\-I\-N1@{L\-E\-D\-\_\-\-P\-I\-N1}}
 \index{L\-E\-D\-\_\-\-P\-I\-N1@{L\-E\-D\-\_\-\-P\-I\-N1}!Robot@{Robot}}
 \subsubsection[{L\-E\-D\-\_\-\-P\-I\-N1}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::\-L\-E\-D\-\_\-\-P\-I\-N1 = 23\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a4c6f4e38b77bf470d757ebea1b8c3cf0}
 
 
-Definition at line 150 of file Robot.\-h.
+Definition at line 151 of file Robot.\-h.
 
 \hypertarget{classRobot_a3c7308c71db125a8840f9c82b5fec9ca}{\index{Robot@{Robot}!led\-State@{led\-State}}
 \index{led\-State@{led\-State}!Robot@{Robot}}
@@ -608,7 +617,7 @@ controls state of led when radiating
 
 
 
-Definition at line 140 of file Robot.\-h.
+Definition at line 141 of file Robot.\-h.
 
 \hypertarget{classRobot_af357e059c6c07190c92c6c9a00e2b8af}{\index{Robot@{Robot}!left\-Wheel@{left\-Wheel}}
 \index{left\-Wheel@{left\-Wheel}!Robot@{Robot}}
@@ -619,14 +628,14 @@ drive wheels
 
 
 
-Definition at line 134 of file Robot.\-h.
+Definition at line 135 of file Robot.\-h.
 
 \hypertarget{classRobot_a46298d7fb4c8c3932221c6a5ac14af9d}{\index{Robot@{Robot}!left\-Wheel\-Pin@{left\-Wheel\-Pin}}
 \index{left\-Wheel\-Pin@{left\-Wheel\-Pin}!Robot@{Robot}}
 \subsubsection[{left\-Wheel\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::left\-Wheel\-Pin = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a46298d7fb4c8c3932221c6a5ac14af9d}
 
 
-Definition at line 154 of file Robot.\-h.
+Definition at line 155 of file Robot.\-h.
 
 \hypertarget{classRobot_abdc300045bea9a31013b25682629752d}{\index{Robot@{Robot}!line\-Sensor@{line\-Sensor}}
 \index{line\-Sensor@{line\-Sensor}!Robot@{Robot}}
@@ -644,7 +653,7 @@ Definition at line 100 of file Robot.\-h.
 \subsubsection[{not\-Paused\-Time}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned long Robot\-::not\-Paused\-Time = 0l\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a4eb9957add77241230cdf010b4eced16}
 
 
-Definition at line 162 of file Robot.\-h.
+Definition at line 163 of file Robot.\-h.
 
 \hypertarget{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}{\index{Robot@{Robot}!paused@{paused}}
 \index{paused@{paused}!Robot@{Robot}}
@@ -673,35 +682,35 @@ Definition at line 113 of file Robot.\-h.
 \subsubsection[{reactor\-Tube\-Limit\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::reactor\-Tube\-Limit\-Pin = 28\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a351d754436c8f569432ef7a06641f98a}
 
 
-Definition at line 157 of file Robot.\-h.
+Definition at line 158 of file Robot.\-h.
 
 \hypertarget{classRobot_a3b2dd5b89e44fd3a7ba239554fb5b8a7}{\index{Robot@{Robot}!right\-Wheel@{right\-Wheel}}
 \index{right\-Wheel@{right\-Wheel}!Robot@{Robot}}
 \subsubsection[{right\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}Servo Robot\-::right\-Wheel\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a3b2dd5b89e44fd3a7ba239554fb5b8a7}
 
 
-Definition at line 134 of file Robot.\-h.
+Definition at line 135 of file Robot.\-h.
 
 \hypertarget{classRobot_a572525b971da4e0f272f5f1259f6c84f}{\index{Robot@{Robot}!right\-Wheel\-Pin@{right\-Wheel\-Pin}}
 \index{right\-Wheel\-Pin@{right\-Wheel\-Pin}!Robot@{Robot}}
 \subsubsection[{right\-Wheel\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::right\-Wheel\-Pin = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classRobot_a572525b971da4e0f272f5f1259f6c84f}
 
 
-Definition at line 155 of file Robot.\-h.
+Definition at line 156 of file Robot.\-h.
 
 \hypertarget{classRobot_a04bc29522467c056ae6698017f32f048}{\index{Robot@{Robot}!rotate\-Speed\-Backward@{rotate\-Speed\-Backward}}
 \index{rotate\-Speed\-Backward@{rotate\-Speed\-Backward}!Robot@{Robot}}
-\subsubsection[{rotate\-Speed\-Backward}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::rotate\-Speed\-Backward = -\/38\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a04bc29522467c056ae6698017f32f048}
+\subsubsection[{rotate\-Speed\-Backward}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::rotate\-Speed\-Backward = -\/32\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a04bc29522467c056ae6698017f32f048}
 
 
-Definition at line 159 of file Robot.\-h.
+Definition at line 160 of file Robot.\-h.
 
 \hypertarget{classRobot_a9cf41f47520ed8f848da5c6e2d0ff7b0}{\index{Robot@{Robot}!rotate\-Speed\-Forward@{rotate\-Speed\-Forward}}
 \index{rotate\-Speed\-Forward@{rotate\-Speed\-Forward}!Robot@{Robot}}
-\subsubsection[{rotate\-Speed\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::rotate\-Speed\-Forward = 43\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a9cf41f47520ed8f848da5c6e2d0ff7b0}
+\subsubsection[{rotate\-Speed\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::rotate\-Speed\-Forward = 34\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a9cf41f47520ed8f848da5c6e2d0ff7b0}
 
 
-Definition at line 158 of file Robot.\-h.
+Definition at line 159 of file Robot.\-h.
 
 \hypertarget{classRobot_a35ce5c416a079fcf6b943843ec151d63}{\index{Robot@{Robot}!row@{row}}
 \index{row@{row}!Robot@{Robot}}
@@ -723,7 +732,7 @@ the encoded data to send over i2\-C
 
 
 
-Definition at line 146 of file Robot.\-h.
+Definition at line 147 of file Robot.\-h.
 
 \hypertarget{classRobot_aa074884ad594acf20282805c811adaff}{\index{Robot@{Robot}!time\-To\-Blink\-And\-Send@{time\-To\-Blink\-And\-Send}}
 \index{time\-To\-Blink\-And\-Send@{time\-To\-Blink\-And\-Send}!Robot@{Robot}}
@@ -734,14 +743,14 @@ set by led timer interrupt
 
 
 
-Definition at line 143 of file Robot.\-h.
+Definition at line 144 of file Robot.\-h.
 
 \hypertarget{classRobot_a87ec942d7d53b1a4b1c46422f6a134eb}{\index{Robot@{Robot}!travel\-Speed@{travel\-Speed}}
 \index{travel\-Speed@{travel\-Speed}!Robot@{Robot}}
 \subsubsection[{travel\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}const int Robot\-::travel\-Speed = 30\hspace{0.3cm}{\ttfamily [private]}}}\label{classRobot_a87ec942d7d53b1a4b1c46422f6a134eb}
 
 
-Definition at line 160 of file Robot.\-h.
+Definition at line 161 of file Robot.\-h.
 
 
 

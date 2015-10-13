@@ -1,11 +1,13 @@
 var searchData=
 [
   ['radiating',['radiating',['../classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce',1,'Robot']]],
-  ['rawvalues',['rawValues',['../classLineSensor.html#a0d48bb25f8e1ee25a4757b9e201bd1a9',1,'LineSensor']]],
-  ['reactornumber',['reactorNumber',['../classGetRodFromReactor.html#ad2c4d389db38e728e540206aed467670',1,'GetRodFromReactor::reactorNumber()'],['../classGetRodFromSupply.html#aa1f52824921af63ffd7a17ed40f95b3f',1,'GetRodFromSupply::reactorNumber()'],['../classStoreRodInReactor.html#a5d989548741b48953a5bb4e20f294d72',1,'StoreRodInReactor::reactorNumber()']]],
+  ['rawvalues',['rawValues',['../classLineSensor.html#ac60b7766a763cfc7378cb6b1387a7324',1,'LineSensor']]],
+  ['reactornumber',['reactorNumber',['../classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851',1,'BackOffReactor::reactorNumber()'],['../classGetRodFromReactor.html#ad2c4d389db38e728e540206aed467670',1,'GetRodFromReactor::reactorNumber()'],['../classGetRodFromSupply.html#aa1f52824921af63ffd7a17ed40f95b3f',1,'GetRodFromSupply::reactorNumber()'],['../classStoreRodInReactor.html#a5d989548741b48953a5bb4e20f294d72',1,'StoreRodInReactor::reactorNumber()']]],
   ['reactortubelimitpin',['reactorTubeLimitPin',['../classRobot.html#a351d754436c8f569432ef7a06641f98a',1,'Robot']]],
   ['received_5fstorage',['received_storage',['../classBTClient.html#a41a7d3382ab8bbdf4b7d78b7b69ff85f',1,'BTClient']]],
   ['received_5fsupply',['received_supply',['../classBTClient.html#af00b18b695ecc4bdeea133572eb0fd6d',1,'BTClient']]],
+  ['right_5fedge',['RIGHT_EDGE',['../classLineSensor.html#a729c00cce10a00a9cb6fcfc9c6904290',1,'LineSensor']]],
+  ['right_5fthreshold',['RIGHT_THRESHOLD',['../classLineSensor.html#a8a78ded72775b1b248f9d9e60b352b49',1,'LineSensor']]],
   ['rightwheel',['rightWheel',['../classRobot.html#a3b2dd5b89e44fd3a7ba239554fb5b8a7',1,'Robot']]],
   ['rightwheelpin',['rightWheelPin',['../classRobot.html#a572525b971da4e0f272f5f1259f6c84f',1,'Robot']]],
   ['root',['root',['../classLinkedList.html#ae5e0a92c9b9b936a49a4e40a121a2b31',1,'LinkedList']]],

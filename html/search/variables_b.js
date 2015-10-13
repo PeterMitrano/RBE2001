@@ -12,12 +12,12 @@ var searchData=
   ['led_5fpin1',['LED_PIN1',['../classRobot.html#a4c6f4e38b77bf470d757ebea1b8c3cf0',1,'Robot']]],
   ['ledpin',['LEDPIN',['../classLineSensor.html#a09da44442cb9e026af2053b5d0b4f2ce',1,'LineSensor']]],
   ['ledstate',['ledState',['../classRobot.html#a3c7308c71db125a8840f9c82b5fec9ca',1,'Robot']]],
+  ['left_5fedge',['LEFT_EDGE',['../classLineSensor.html#ab9ac72fc63ec896d4b140171c5576a1a',1,'LineSensor']]],
+  ['left_5fthreshold',['LEFT_THRESHOLD',['../classLineSensor.html#a06d5f222428084879e9a0fc38d8b0b5e',1,'LineSensor']]],
   ['leftwheel',['leftWheel',['../classRobot.html#af357e059c6c07190c92c6c9a00e2b8af',1,'Robot']]],
   ['leftwheelpin',['leftWheelPin',['../classRobot.html#a46298d7fb4c8c3932221c6a5ac14af9d',1,'Robot']]],
-  ['limits',['limits',['../classLineSensor.html#ae17bcec64c67b17748d50401e79d5c6f',1,'LineSensor']]],
   ['limpin',['limPin',['../classArm.html#aade413d7d638bff08bcc0c9ac50818e1',1,'Arm']]],
   ['lineposition',['linePosition',['../classLineSensor.html#ac21af83a73e9e55500324d9d34ed2498',1,'LineSensor']]],
   ['linesensor',['lineSensor',['../classRobot.html#abdc300045bea9a31013b25682629752d',1,'Robot']]],
-  ['low_5fsum_5fthreshold',['LOW_SUM_THRESHOLD',['../classLineSensor.html#a929091ad1746a0a337c2259ba79c959a',1,'LineSensor']]],
   ['lpower',['lPower',['../classBackOffTube.html#a5eee02bb4a6756ea44206e411211aea8',1,'BackOffTube']]]
 ];

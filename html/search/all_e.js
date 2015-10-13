@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['offline',['offLine',['../classLineSensor.html#a0dea8f6d7e7e27d050feecb3e549a149',1,'LineSensor']]],
   ['on_5fpos_5fthreshold',['ON_POS_THRESHOLD',['../classLineSensor.html#a3e3c5f134159562e56fcd06e55cc7024',1,'LineSensor']]],
   ['online',['onLine',['../classLineSensor.html#ad9d3c5a694f1ff946d1137df1694b026',1,'LineSensor']]],
   ['opengripper',['OpenGripper',['../classOpenGripper.html',1,'OpenGripper'],['../classOpenGripper.html#af3ca0a56d41c4fbb98e2e5deba76a5a1',1,'OpenGripper::OpenGripper()']]],

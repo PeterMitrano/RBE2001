@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['raisearm',['RaiseArm',['../classRaiseArm.html#a91b62d0ce0bae3391a2fdb617b603f8b',1,'RaiseArm']]],
-  ['rawdown',['rawDown',['../classArm.html#a90df7bcd3c225f6fc05ef2f77c773d2e',1,'Arm']]],
-  ['readmessage',['readMessage',['../classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b',1,'BTClient']]],
-  ['remove',['remove',['../classLinkedList.html#af331637727b3ada2f806c29b9f4cc6fe',1,'LinkedList']]],
-  ['resetencoder',['resetEncoder',['../classArm.html#afb44126b438f8dc00b0bf0720c84a737',1,'Arm']]],
-  ['resettimerflags',['resetTimerFlags',['../classRobot.html#ab7c87529c987ede12b934bdfc768507e',1,'Robot']]],
-  ['robot',['Robot',['../classRobot.html#a4fc7c70ae20623f05e06f2ecb388b6c4',1,'Robot']]],
-  ['rotateccw',['rotateCCW',['../classRobot.html#ac521de09b10ea0ee7f14171d54fee195',1,'Robot']]],
-  ['rotatecw',['rotateCW',['../classRobot.html#a9aa9c5a6f1b28861ffcee6ef1c1ed90d',1,'Robot']]],
-  ['run',['run',['../classScheduler.html#a58fba108ce2748870a6288cd6f5fd1e3',1,'Scheduler']]]
+  ['pathplanner',['PathPlanner',['../classPathPlanner.html#a376f30d795cfe0a40f8923f49336f7da',1,'PathPlanner']]],
+  ['pause',['pause',['../classRobot.html#a9908dfe5a06008e6203edca94d30327a',1,'Robot']]],
+  ['pausesong',['pauseSong',['../classRobot.html#a7c4cf197187f9f7dcb883ebc58f52b93',1,'Robot']]],
+  ['plan',['plan',['../classPathPlanner.html#acfae981cdde0b63b700bb1e2e9ffc1a6',1,'PathPlanner']]],
+  ['plantoface',['planToFace',['../classPathPlanner.html#a435470288f6e2b5f99ce590db0bfc5db',1,'PathPlanner']]],
+  ['playsong',['playSong',['../classRobot.html#ad86dbbb2ad0d065f3e4c30fd4b742e1c',1,'Robot']]],
+  ['pop',['pop',['../classLinkedList.html#a00a70f924d76dcbfa3b05503caad40e6',1,'LinkedList']]],
+  ['position',['position',['../classArm.html#ab49756ee4bfdc5f573a78f29678bf1d8',1,'Arm']]],
+  ['print',['print',['../classCommand.html#a03a7f03b29c4cbb748a15c9c83233023',1,'Command']]]
 ];

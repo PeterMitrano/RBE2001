@@ -8,7 +8,7 @@ var searchData=
   ['paused',['paused',['../classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a',1,'Robot']]],
   ['pausesong',['pauseSong',['../classRobot.html#a7c4cf197187f9f7dcb883ebc58f52b93',1,'Robot']]],
   ['pcol',['pcol',['../classBTClient.html#a64bd4b5e464d0b6a57957428ef559142',1,'BTClient']]],
-  ['pin_5f0',['PIN_0',['../classLineSensor.html#a873c5b45cdfa14ff468db018e1e0055a',1,'LineSensor']]],
+  ['pins',['PINS',['../classLineSensor.html#a4a017e267d06958d81523ac733e9835d',1,'LineSensor']]],
   ['plan',['plan',['../classPathPlanner.html#acfae981cdde0b63b700bb1e2e9ffc1a6',1,'PathPlanner']]],
   ['plantoface',['planToFace',['../classPathPlanner.html#a435470288f6e2b5f99ce590db0bfc5db',1,'PathPlanner']]],
   ['playsong',['playSong',['../classRobot.html#ad86dbbb2ad0d065f3e4c30fd4b742e1c',1,'Robot']]],

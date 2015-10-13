@@ -180,23 +180,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          <span class="keywordflow">case</span> <a class="code" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52">STOP_MSG</a>:</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0">Robot::getInstance</a>()-&gt;<a class="code" href="classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a">paused</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            Serial.println(<span class="stringliteral">&quot;STOP!!!&quot;</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keywordflow">case</span> <a class="code" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66">RESUME_MSG</a>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            Serial.println(<span class="stringliteral">&quot;RESUME...&quot;</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0">Robot::getInstance</a>()-&gt;<a class="code" href="classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a">paused</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">//only these 4 should be sent by field</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">char</span> tubeInfo[17];</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        snprintf(tubeInfo,17,<span class="stringliteral">&quot;str=%02i sply=%02i&quot;</span>,<a class="code" href="classBTClient.html#a5ba419e7e6be73f5ec26f6b6c8d4ccf1">storage</a>,<a class="code" href="classBTClient.html#a3974a28859432eeef27cfd7391ed7d60">supply</a>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0">Robot::getInstance</a>()-&gt;<a class="code" href="classRobot.html#ac92db8f42fda2c7c70f51abae605039d">debugPrint</a>(tubeInfo);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;     }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keywordflow">case</span> <a class="code" href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66">RESUME_MSG</a>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0">Robot::getInstance</a>()-&gt;<a class="code" href="classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a">paused</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="comment">//only these 4 should be sent by field</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">char</span> tubeInfo[17];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        snprintf(tubeInfo,17,<span class="stringliteral">&quot;str=%02i sply=%02i&quot;</span>,<a class="code" href="classBTClient.html#a5ba419e7e6be73f5ec26f6b6c8d4ccf1">storage</a>,<a class="code" href="classBTClient.html#a3974a28859432eeef27cfd7391ed7d60">supply</a>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">//Robot::getInstance()-&gt;debugPrint(tubeInfo);</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;     }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
 <div class="ttc" id="classRobot_html_ac6f19dc31b435f8a2d43944ba49286d0"><div class="ttname"><a href="classRobot.html#ac6f19dc31b435f8a2d43944ba49286d0">Robot::getInstance</a></div><div class="ttdeci">static Robot * getInstance()</div><div class="ttdoc">lsingle accesor </div><div class="ttdef"><b>Definition:</b> <a href="Robot_8cpp_source.html#l00016">Robot.cpp:16</a></div></div>
 <div class="ttc" id="classRobot_html_a6a1fae6e6ee0a3298b9e60d3f50ad12a"><div class="ttname"><a href="classRobot.html#a6a1fae6e6ee0a3298b9e60d3f50ad12a">Robot::paused</a></div><div class="ttdeci">bool paused</div><div class="ttdoc">set by bluetooth if resume/stop message is recieve all drive motor commands depend on it being true ...</div><div class="ttdef"><b>Definition:</b> <a href="Robot_8h_source.html#l00108">Robot.h:108</a></div></div>
 <div class="ttc" id="classBTClient_html_aa4e607f3ba1fea67548e2c2864915cb8a2ec2a5bf9061a6e1fc643474d77dfdf5"><div class="ttname"><a href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a2ec2a5bf9061a6e1fc643474d77dfdf5">BTClient::SUPPLY_MSG</a></div><div class="ttdef"><b>Definition:</b> <a href="BTClient_8h_source.html#l00059">BTClient.h:59</a></div></div>
@@ -210,7 +208,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classBTClient_html_aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66"><div class="ttname"><a href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8acfa47d734d92681292809deb82e0ae66">BTClient::RESUME_MSG</a></div><div class="ttdef"><b>Definition:</b> <a href="BTClient_8h_source.html#l00062">BTClient.h:62</a></div></div>
 <div class="ttc" id="classBTClient_html_aa4e607f3ba1fea67548e2c2864915cb8"><div class="ttname"><a href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8">BTClient::MSG_TYPE</a></div><div class="ttdeci">MSG_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="BTClient_8h_source.html#l00058">BTClient.h:58</a></div></div>
 <div class="ttc" id="classBTClient_html_af00b18b695ecc4bdeea133572eb0fd6d"><div class="ttname"><a href="classBTClient.html#af00b18b695ecc4bdeea133572eb0fd6d">BTClient::received_supply</a></div><div class="ttdeci">bool received_supply</div><div class="ttdef"><b>Definition:</b> <a href="BTClient_8h_source.html#l00082">BTClient.h:82</a></div></div>
-<div class="ttc" id="classRobot_html_ac92db8f42fda2c7c70f51abae605039d"><div class="ttname"><a href="classRobot.html#ac92db8f42fda2c7c70f51abae605039d">Robot::debugPrint</a></div><div class="ttdeci">void debugPrint(char *str)</div><div class="ttdoc">print to 0,0 on lcd </div><div class="ttdef"><b>Definition:</b> <a href="Robot_8cpp_source.html#l00147">Robot.cpp:147</a></div></div>
 <div class="ttc" id="classBTClient_html_aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f"><div class="ttname"><a href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f">BTClient::RADIATION_MSG</a></div><div class="ttdef"><b>Definition:</b> <a href="BTClient_8h_source.html#l00060">BTClient.h:60</a></div></div>
 <div class="ttc" id="BTClient_8h_html"><div class="ttname"><a href="BTClient_8h.html">BTClient.h</a></div></div>
 <div class="ttc" id="classBTClient_html_aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52"><div class="ttname"><a href="classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8ae247365f4eec434df1965c3c29780a52">BTClient::STOP_MSG</a></div><div class="ttdef"><b>Definition:</b> <a href="BTClient_8h_source.html#l00061">BTClient.h:61</a></div></div>
@@ -232,7 +229,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 12 2015 13:53:54 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 13 2015 02:17:03 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

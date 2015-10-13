@@ -17,60 +17,75 @@ functions for reading the position with respect to the line
 \begin{DoxyCompactList}\small\item\em boring contsructor \end{DoxyCompactList}\item 
 void \hyperlink{classLineSensor_a555f6f7222ea1e76ed810edbde44c39c}{setup} ()
 \begin{DoxyCompactList}\small\item\em setup servos and stuff. called by main setup \end{DoxyCompactList}\item 
-int \hyperlink{classLineSensor_a71e0254f9f1e26734b551a124ea21ca3}{scale} (int sensor\-Value, int sensor\-Position)
-\begin{DoxyCompactList}\small\item\em scale sensor value between it's min and max. \end{DoxyCompactList}\item 
 void \hyperlink{classLineSensor_ab134af3ba9f3368a91e3f0e095c86b53}{calibrate\-Line\-Sensors} ()
 \begin{DoxyCompactList}\small\item\em captures min and max line sensor values \end{DoxyCompactList}\item 
 bool \hyperlink{classLineSensor_a6769cf781edb7ac4a43086cd62be01e2}{at\-Intersection} ()
 \begin{DoxyCompactList}\small\item\em returns true if both sensors are on the line \end{DoxyCompactList}\item 
+bool \hyperlink{classLineSensor_a78dc9b13b899c5ac0a18a4aef1eee774}{not\-At\-Intersection} ()
+\begin{DoxyCompactList}\small\item\em returns true if both sensors are off the line \end{DoxyCompactList}\item 
 bool \hyperlink{classLineSensor_ad9d3c5a694f1ff946d1137df1694b026}{on\-Line} ()
 \begin{DoxyCompactList}\small\item\em returns if line sensor is on the line \end{DoxyCompactList}\item 
-bool \hyperlink{classLineSensor_a0dea8f6d7e7e27d050feecb3e549a149}{off\-Line} ()
-\begin{DoxyCompactList}\small\item\em returns if line sensor is off the line \end{DoxyCompactList}\item 
+bool \hyperlink{classLineSensor_a245ec54d83927caedf553d82e6381b6f}{line\-Far\-Left} ()
+\begin{DoxyCompactList}\small\item\em returns if the line is on the far left \end{DoxyCompactList}\item 
+bool \hyperlink{classLineSensor_ac21e1169d0b4689c13b63ffb44e416c3}{line\-Far\-Right} ()
+\begin{DoxyCompactList}\small\item\em returns if the line is on the far right \end{DoxyCompactList}\item 
 void \hyperlink{classLineSensor_afc809d2aa49426d949f76f68b0154050}{cache} ()
 \begin{DoxyCompactList}\small\item\em does raw read and storage of line sensor. This must be caled every loop \end{DoxyCompactList}\item 
 int \hyperlink{classLineSensor_a74c3c2d7a454aeacae90501670d01bdc}{adjustment\-Power} ()
 \begin{DoxyCompactList}\small\item\em get how much motor power you should adjust by. from -\/100 to 100 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classLineSensor_ab9ac72fc63ec896d4b140171c5576a1a}{L\-E\-F\-T\-\_\-\-E\-D\-G\-E} = 1
+\item 
+static const int \hyperlink{classLineSensor_a729c00cce10a00a9cb6fcfc9c6904290}{R\-I\-G\-H\-T\-\_\-\-E\-D\-G\-E} = -\/1
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
+Q\-T\-R\-Sensors\-R\-C \hyperlink{classLineSensor_aeb37399c033a623b620803434f2b278f}{sensor}
+\begin{DoxyCompactList}\small\item\em the Pululo library line sensor object \end{DoxyCompactList}\item 
 float \hyperlink{classLineSensor_ac21af83a73e9e55500324d9d34ed2498}{line\-Position}
 \begin{DoxyCompactList}\small\item\em holds the line position as calculated by cache. On scale of tens \end{DoxyCompactList}\item 
 float \hyperlink{classLineSensor_a347e843234a242ded12e83badf4718ed}{last\-Line\-Position}
 \item 
-const float \hyperlink{classLineSensor_af246497cb5a3386afcc4ce864949c57f}{k\-P} = 11.\-0
+const float \hyperlink{classLineSensor_af246497cb5a3386afcc4ce864949c57f}{k\-P} = 0.\-007
 \item 
-const float \hyperlink{classLineSensor_a62c587ff3d58f72a74ae39429b7d0837}{k\-D} = 20.\-0
+const float \hyperlink{classLineSensor_a62c587ff3d58f72a74ae39429b7d0837}{k\-D} = 0.\-1
 \item 
 int \hyperlink{classLineSensor_aa5bd7119b2332eab8b6c850f8fa3d558}{derivative}
 \item 
 int \hyperlink{classLineSensor_af574319adc88f5949f03239b2bcbc222}{sum}
 \begin{DoxyCompactList}\small\item\em sum of raw line sensor values. used to detect intersections \end{DoxyCompactList}\item 
-int \hyperlink{classLineSensor_ae17bcec64c67b17748d50401e79d5c6f}{limits} \mbox{[}8\mbox{]}\mbox{[}2\mbox{]}
-\begin{DoxyCompactList}\small\item\em contains the min and maxes for each line sensor. the first row is for min, and the second row is for max \end{DoxyCompactList}\item 
-int \hyperlink{classLineSensor_a0d48bb25f8e1ee25a4757b9e201bd1a9}{raw\-Values} \mbox{[}8\mbox{]}
+unsigned int \hyperlink{classLineSensor_ac60b7766a763cfc7378cb6b1387a7324}{raw\-Values} \mbox{[}8\mbox{]}
 \begin{DoxyCompactList}\small\item\em contains the raw values for each line sensor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static const int \hyperlink{classLineSensor_a873c5b45cdfa14ff468db018e1e0055a}{P\-I\-N\-\_\-0} = 0
-\begin{DoxyCompactList}\small\item\em this assumes line sensor pins are in order. This is the first (leftmost pin) \end{DoxyCompactList}\item 
 static const int \hyperlink{classLineSensor_a09da44442cb9e026af2053b5d0b4f2ce}{L\-E\-D\-P\-I\-N} = 29
 \begin{DoxyCompactList}\small\item\em the board contains I\-R L\-E\-Ds, this pin controls those L\-E\-Ds \end{DoxyCompactList}\item 
-static const float \hyperlink{classLineSensor_a3e3c5f134159562e56fcd06e55cc7024}{O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = 0.\-4
+static unsigned char \hyperlink{classLineSensor_a4a017e267d06958d81523ac733e9835d}{P\-I\-N\-S} \mbox{[}8\mbox{]} = \{A0, A1, A2, A3, A4, A5, A6, A7\}
+\begin{DoxyCompactList}\small\item\em the other pins \end{DoxyCompactList}\item 
+static const float \hyperlink{classLineSensor_a3e3c5f134159562e56fcd06e55cc7024}{O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = 100
 \begin{DoxyCompactList}\small\item\em determines what constitutes a black line (from -\/100 to 100) these numbers may be the same, but don't have to be \end{DoxyCompactList}\item 
-static const int \hyperlink{classLineSensor_a55b9f63bd4c01990f6f2d7baa830d2ec}{I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = 0
-\begin{DoxyCompactList}\small\item\em test if we're at a line \end{DoxyCompactList}\item 
-static const int \hyperlink{classLineSensor_a929091ad1746a0a337c2259ba79c959a}{L\-O\-W\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = -\/500
+static const int \hyperlink{classLineSensor_a55b9f63bd4c01990f6f2d7baa830d2ec}{I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = 8 $\ast$ 950
+\begin{DoxyCompactList}\small\item\em if all 8 sensors are 90\% black, we've reached an intersection \end{DoxyCompactList}\item 
+static const int \hyperlink{classLineSensor_a76ae45af94dc228b239e7e9812955a6c}{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = 8 $\ast$ 300
 \item 
-static const int \hyperlink{classLineSensor_a3e7f65abc054f54cb74f8aa3eb552e89}{H\-I\-G\-H\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = -\/200
-\end{DoxyCompactItemize}
+static const int \hyperlink{classLineSensor_a06d5f222428084879e9a0fc38d8b0b5e}{L\-E\-F\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = 1000
+\item 
+static const int \hyperlink{classLineSensor_a8a78ded72775b1b248f9d9e60b352b49}{R\-I\-G\-H\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D} = -\/500
+\item 
+static const unsigned char \hyperlink{classLineSensor_aaf77268f123f217ce341efaaaf757a18}{N\-U\-M\-\_\-\-S\-E\-N\-S\-O\-R\-S} = 8
+\begin{DoxyCompactList}\small\item\em number of sensors \end{DoxyCompactList}\item 
+static const int \hyperlink{classLineSensor_ae1de9394d9e0e4ab19628316d1111d8f}{T\-I\-M\-E\-O\-U\-T} = 2500
+\begin{DoxyCompactList}\small\item\em timeout for the R\-C reading of the line sensors \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 functions for reading the position with respect to the line 
 
-Definition at line 6 of file Line\-Sensor.\-h.
+Definition at line 9 of file Line\-Sensor.\-h.
 
 
 
@@ -88,7 +103,7 @@ boring contsructor
 
 
 
-Definition at line 5 of file Line\-Sensor.\-cpp.
+Definition at line 7 of file Line\-Sensor.\-cpp.
 
 
 
@@ -106,7 +121,7 @@ get how much motor power you should adjust by. from -\/100 to 100
 
 
 
-Definition at line 52 of file Line\-Sensor.\-cpp.
+Definition at line 44 of file Line\-Sensor.\-cpp.
 
 \hypertarget{classLineSensor_a6769cf781edb7ac4a43086cd62be01e2}{\index{Line\-Sensor@{Line\-Sensor}!at\-Intersection@{at\-Intersection}}
 \index{at\-Intersection@{at\-Intersection}!LineSensor@{Line\-Sensor}}
@@ -121,7 +136,7 @@ returns true if both sensors are on the line
 
 
 
-Definition at line 48 of file Line\-Sensor.\-cpp.
+Definition at line 32 of file Line\-Sensor.\-cpp.
 
 \hypertarget{classLineSensor_afc809d2aa49426d949f76f68b0154050}{\index{Line\-Sensor@{Line\-Sensor}!cache@{cache}}
 \index{cache@{cache}!LineSensor@{Line\-Sensor}}
@@ -136,7 +151,7 @@ does raw read and storage of line sensor. This must be caled every loop
 
 
 
-Definition at line 16 of file Line\-Sensor.\-cpp.
+Definition at line 15 of file Line\-Sensor.\-cpp.
 
 \hypertarget{classLineSensor_ab134af3ba9f3368a91e3f0e095c86b53}{\index{Line\-Sensor@{Line\-Sensor}!calibrate\-Line\-Sensors@{calibrate\-Line\-Sensors}}
 \index{calibrate\-Line\-Sensors@{calibrate\-Line\-Sensors}!LineSensor@{Line\-Sensor}}
@@ -151,18 +166,52 @@ captures min and max line sensor values
 
 
 
-Definition at line 39 of file Line\-Sensor.\-cpp.
+Definition at line 24 of file Line\-Sensor.\-cpp.
 
-\hypertarget{classLineSensor_a0dea8f6d7e7e27d050feecb3e549a149}{\index{Line\-Sensor@{Line\-Sensor}!off\-Line@{off\-Line}}
-\index{off\-Line@{off\-Line}!LineSensor@{Line\-Sensor}}
-\subsubsection[{off\-Line}]{\setlength{\rightskip}{0pt plus 5cm}bool Line\-Sensor\-::off\-Line (
+\hypertarget{classLineSensor_a245ec54d83927caedf553d82e6381b6f}{\index{Line\-Sensor@{Line\-Sensor}!line\-Far\-Left@{line\-Far\-Left}}
+\index{line\-Far\-Left@{line\-Far\-Left}!LineSensor@{Line\-Sensor}}
+\subsubsection[{line\-Far\-Left}]{\setlength{\rightskip}{0pt plus 5cm}bool Line\-Sensor\-::line\-Far\-Left (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classLineSensor_a0dea8f6d7e7e27d050feecb3e549a149}
+)}}\label{classLineSensor_a245ec54d83927caedf553d82e6381b6f}
 
 
-returns if line sensor is off the line 
+returns if the line is on the far left 
+
+
+
+Definition at line 36 of file Line\-Sensor.\-cpp.
+
+\hypertarget{classLineSensor_ac21e1169d0b4689c13b63ffb44e416c3}{\index{Line\-Sensor@{Line\-Sensor}!line\-Far\-Right@{line\-Far\-Right}}
+\index{line\-Far\-Right@{line\-Far\-Right}!LineSensor@{Line\-Sensor}}
+\subsubsection[{line\-Far\-Right}]{\setlength{\rightskip}{0pt plus 5cm}bool Line\-Sensor\-::line\-Far\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLineSensor_ac21e1169d0b4689c13b63ffb44e416c3}
+
+
+returns if the line is on the far right 
+
+
+
+Definition at line 40 of file Line\-Sensor.\-cpp.
+
+\hypertarget{classLineSensor_a78dc9b13b899c5ac0a18a4aef1eee774}{\index{Line\-Sensor@{Line\-Sensor}!not\-At\-Intersection@{not\-At\-Intersection}}
+\index{not\-At\-Intersection@{not\-At\-Intersection}!LineSensor@{Line\-Sensor}}
+\subsubsection[{not\-At\-Intersection}]{\setlength{\rightskip}{0pt plus 5cm}bool Line\-Sensor\-::not\-At\-Intersection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLineSensor_a78dc9b13b899c5ac0a18a4aef1eee774}
+
+
+returns true if both sensors are off the line 
+
+
+
+Definition at line 28 of file Line\-Sensor.\-cpp.
 
 \hypertarget{classLineSensor_ad9d3c5a694f1ff946d1137df1694b026}{\index{Line\-Sensor@{Line\-Sensor}!on\-Line@{on\-Line}}
 \index{on\-Line@{on\-Line}!LineSensor@{Line\-Sensor}}
@@ -177,33 +226,7 @@ returns if line sensor is on the line
 
 
 
-Definition at line 59 of file Line\-Sensor.\-cpp.
-
-\hypertarget{classLineSensor_a71e0254f9f1e26734b551a124ea21ca3}{\index{Line\-Sensor@{Line\-Sensor}!scale@{scale}}
-\index{scale@{scale}!LineSensor@{Line\-Sensor}}
-\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}int Line\-Sensor\-::scale (
-\begin{DoxyParamCaption}
-\item[{int}]{sensor\-Value, }
-\item[{int}]{sensor\-Position}
-\end{DoxyParamCaption}
-)}}\label{classLineSensor_a71e0254f9f1e26734b551a124ea21ca3}
-
-
-scale sensor value between it's min and max. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em \-\_\-in\mbox{]}} & sensor\-Value the current value of the sensor \\
-\hline
-{\em \-\_\-in\mbox{[}} & sensor\-Position the position of the sensor given \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-number from -\/100 to 100 
-\end{DoxyReturn}
-
-
-Definition at line 32 of file Line\-Sensor.\-cpp.
+Definition at line 51 of file Line\-Sensor.\-cpp.
 
 \hypertarget{classLineSensor_a555f6f7222ea1e76ed810edbde44c39c}{\index{Line\-Sensor@{Line\-Sensor}!setup@{setup}}
 \index{setup@{setup}!LineSensor@{Line\-Sensor}}
@@ -218,7 +241,7 @@ setup servos and stuff. called by main setup
 
 
 
-Definition at line 12 of file Line\-Sensor.\-cpp.
+Definition at line 11 of file Line\-Sensor.\-cpp.
 
 
 
@@ -228,46 +251,39 @@ Definition at line 12 of file Line\-Sensor.\-cpp.
 \subsubsection[{derivative}]{\setlength{\rightskip}{0pt plus 5cm}int Line\-Sensor\-::derivative\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_aa5bd7119b2332eab8b6c850f8fa3d558}
 
 
-Definition at line 61 of file Line\-Sensor.\-h.
-
-\hypertarget{classLineSensor_a3e7f65abc054f54cb74f8aa3eb552e89}{\index{Line\-Sensor@{Line\-Sensor}!H\-I\-G\-H\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{H\-I\-G\-H\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
-\index{H\-I\-G\-H\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{H\-I\-G\-H\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!LineSensor@{Line\-Sensor}}
-\subsubsection[{H\-I\-G\-H\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-H\-I\-G\-H\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = -\/200\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a3e7f65abc054f54cb74f8aa3eb552e89}
-
-
-Definition at line 66 of file Line\-Sensor.\-h.
+Definition at line 68 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_a55b9f63bd4c01990f6f2d7baa830d2ec}{\index{Line\-Sensor@{Line\-Sensor}!I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
 \index{I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!LineSensor@{Line\-Sensor}}
-\subsubsection[{I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a55b9f63bd4c01990f6f2d7baa830d2ec}
+\subsubsection[{I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = 8 $\ast$ 950\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a55b9f63bd4c01990f6f2d7baa830d2ec}
 
 
-test if we're at a line 
+if all 8 sensors are 90\% black, we've reached an intersection 
 
 
 
-Definition at line 64 of file Line\-Sensor.\-h.
+Definition at line 71 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_a62c587ff3d58f72a74ae39429b7d0837}{\index{Line\-Sensor@{Line\-Sensor}!k\-D@{k\-D}}
 \index{k\-D@{k\-D}!LineSensor@{Line\-Sensor}}
-\subsubsection[{k\-D}]{\setlength{\rightskip}{0pt plus 5cm}const float Line\-Sensor\-::k\-D = 20.\-0\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_a62c587ff3d58f72a74ae39429b7d0837}
+\subsubsection[{k\-D}]{\setlength{\rightskip}{0pt plus 5cm}const float Line\-Sensor\-::k\-D = 0.\-1\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_a62c587ff3d58f72a74ae39429b7d0837}
 
 
-Definition at line 60 of file Line\-Sensor.\-h.
+Definition at line 67 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_af246497cb5a3386afcc4ce864949c57f}{\index{Line\-Sensor@{Line\-Sensor}!k\-P@{k\-P}}
 \index{k\-P@{k\-P}!LineSensor@{Line\-Sensor}}
-\subsubsection[{k\-P}]{\setlength{\rightskip}{0pt plus 5cm}const float Line\-Sensor\-::k\-P = 11.\-0\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_af246497cb5a3386afcc4ce864949c57f}
+\subsubsection[{k\-P}]{\setlength{\rightskip}{0pt plus 5cm}const float Line\-Sensor\-::k\-P = 0.\-007\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_af246497cb5a3386afcc4ce864949c57f}
 P\-I\-D constants for line following 
 
-Definition at line 59 of file Line\-Sensor.\-h.
+Definition at line 66 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_a347e843234a242ded12e83badf4718ed}{\index{Line\-Sensor@{Line\-Sensor}!last\-Line\-Position@{last\-Line\-Position}}
 \index{last\-Line\-Position@{last\-Line\-Position}!LineSensor@{Line\-Sensor}}
 \subsubsection[{last\-Line\-Position}]{\setlength{\rightskip}{0pt plus 5cm}float Line\-Sensor\-::last\-Line\-Position\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_a347e843234a242ded12e83badf4718ed}
 
 
-Definition at line 45 of file Line\-Sensor.\-h.
+Definition at line 52 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_a09da44442cb9e026af2053b5d0b4f2ce}{\index{Line\-Sensor@{Line\-Sensor}!L\-E\-D\-P\-I\-N@{L\-E\-D\-P\-I\-N}}
 \index{L\-E\-D\-P\-I\-N@{L\-E\-D\-P\-I\-N}!LineSensor@{Line\-Sensor}}
@@ -278,18 +294,21 @@ the board contains I\-R L\-E\-Ds, this pin controls those L\-E\-Ds
 
 
 
-Definition at line 51 of file Line\-Sensor.\-h.
+Definition at line 55 of file Line\-Sensor.\-h.
 
-\hypertarget{classLineSensor_ae17bcec64c67b17748d50401e79d5c6f}{\index{Line\-Sensor@{Line\-Sensor}!limits@{limits}}
-\index{limits@{limits}!LineSensor@{Line\-Sensor}}
-\subsubsection[{limits}]{\setlength{\rightskip}{0pt plus 5cm}int Line\-Sensor\-::limits\mbox{[}8\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_ae17bcec64c67b17748d50401e79d5c6f}
-
-
-contains the min and maxes for each line sensor. the first row is for min, and the second row is for max 
+\hypertarget{classLineSensor_ab9ac72fc63ec896d4b140171c5576a1a}{\index{Line\-Sensor@{Line\-Sensor}!L\-E\-F\-T\-\_\-\-E\-D\-G\-E@{L\-E\-F\-T\-\_\-\-E\-D\-G\-E}}
+\index{L\-E\-F\-T\-\_\-\-E\-D\-G\-E@{L\-E\-F\-T\-\_\-\-E\-D\-G\-E}!LineSensor@{Line\-Sensor}}
+\subsubsection[{L\-E\-F\-T\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-L\-E\-F\-T\-\_\-\-E\-D\-G\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{classLineSensor_ab9ac72fc63ec896d4b140171c5576a1a}
 
 
+Definition at line 43 of file Line\-Sensor.\-h.
 
-Definition at line 73 of file Line\-Sensor.\-h.
+\hypertarget{classLineSensor_a06d5f222428084879e9a0fc38d8b0b5e}{\index{Line\-Sensor@{Line\-Sensor}!L\-E\-F\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{L\-E\-F\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
+\index{L\-E\-F\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{L\-E\-F\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!LineSensor@{Line\-Sensor}}
+\subsubsection[{L\-E\-F\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-L\-E\-F\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = 1000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a06d5f222428084879e9a0fc38d8b0b5e}
+
+
+Definition at line 74 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_ac21af83a73e9e55500324d9d34ed2498}{\index{Line\-Sensor@{Line\-Sensor}!line\-Position@{line\-Position}}
 \index{line\-Position@{line\-Position}!LineSensor@{Line\-Sensor}}
@@ -300,47 +319,83 @@ holds the line position as calculated by cache. On scale of tens
 
 
 
-Definition at line 44 of file Line\-Sensor.\-h.
+Definition at line 51 of file Line\-Sensor.\-h.
 
-\hypertarget{classLineSensor_a929091ad1746a0a337c2259ba79c959a}{\index{Line\-Sensor@{Line\-Sensor}!L\-O\-W\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{L\-O\-W\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
-\index{L\-O\-W\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{L\-O\-W\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!LineSensor@{Line\-Sensor}}
-\subsubsection[{L\-O\-W\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-L\-O\-W\-\_\-\-S\-U\-M\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = -\/500\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a929091ad1746a0a337c2259ba79c959a}
+\hypertarget{classLineSensor_a76ae45af94dc228b239e7e9812955a6c}{\index{Line\-Sensor@{Line\-Sensor}!N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
+\index{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!LineSensor@{Line\-Sensor}}
+\subsubsection[{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = 8 $\ast$ 300\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a76ae45af94dc228b239e7e9812955a6c}
 
 
-Definition at line 65 of file Line\-Sensor.\-h.
+Definition at line 72 of file Line\-Sensor.\-h.
+
+\hypertarget{classLineSensor_aaf77268f123f217ce341efaaaf757a18}{\index{Line\-Sensor@{Line\-Sensor}!N\-U\-M\-\_\-\-S\-E\-N\-S\-O\-R\-S@{N\-U\-M\-\_\-\-S\-E\-N\-S\-O\-R\-S}}
+\index{N\-U\-M\-\_\-\-S\-E\-N\-S\-O\-R\-S@{N\-U\-M\-\_\-\-S\-E\-N\-S\-O\-R\-S}!LineSensor@{Line\-Sensor}}
+\subsubsection[{N\-U\-M\-\_\-\-S\-E\-N\-S\-O\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char Line\-Sensor\-::\-N\-U\-M\-\_\-\-S\-E\-N\-S\-O\-R\-S = 8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_aaf77268f123f217ce341efaaaf757a18}
+
+
+number of sensors 
+
+
+
+Definition at line 84 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_a3e3c5f134159562e56fcd06e55cc7024}{\index{Line\-Sensor@{Line\-Sensor}!O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
 \index{O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!LineSensor@{Line\-Sensor}}
-\subsubsection[{O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const float Line\-Sensor\-::\-O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = 0.\-4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a3e3c5f134159562e56fcd06e55cc7024}
+\subsubsection[{O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const float Line\-Sensor\-::\-O\-N\-\_\-\-P\-O\-S\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = 100\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a3e3c5f134159562e56fcd06e55cc7024}
 
 
 determines what constitutes a black line (from -\/100 to 100) these numbers may be the same, but don't have to be 
 
 
 
-Definition at line 56 of file Line\-Sensor.\-h.
+Definition at line 63 of file Line\-Sensor.\-h.
 
-\hypertarget{classLineSensor_a873c5b45cdfa14ff468db018e1e0055a}{\index{Line\-Sensor@{Line\-Sensor}!P\-I\-N\-\_\-0@{P\-I\-N\-\_\-0}}
-\index{P\-I\-N\-\_\-0@{P\-I\-N\-\_\-0}!LineSensor@{Line\-Sensor}}
-\subsubsection[{P\-I\-N\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-P\-I\-N\-\_\-0 = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a873c5b45cdfa14ff468db018e1e0055a}
-
-
-this assumes line sensor pins are in order. This is the first (leftmost pin) 
+\hypertarget{classLineSensor_a4a017e267d06958d81523ac733e9835d}{\index{Line\-Sensor@{Line\-Sensor}!P\-I\-N\-S@{P\-I\-N\-S}}
+\index{P\-I\-N\-S@{P\-I\-N\-S}!LineSensor@{Line\-Sensor}}
+\subsubsection[{P\-I\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Line\-Sensor\-::\-P\-I\-N\-S = \{A0, A1, A2, A3, A4, A5, A6, A7\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a4a017e267d06958d81523ac733e9835d}
 
 
+the other pins 
 
-Definition at line 48 of file Line\-Sensor.\-h.
 
-\hypertarget{classLineSensor_a0d48bb25f8e1ee25a4757b9e201bd1a9}{\index{Line\-Sensor@{Line\-Sensor}!raw\-Values@{raw\-Values}}
+
+Definition at line 58 of file Line\-Sensor.\-h.
+
+\hypertarget{classLineSensor_ac60b7766a763cfc7378cb6b1387a7324}{\index{Line\-Sensor@{Line\-Sensor}!raw\-Values@{raw\-Values}}
 \index{raw\-Values@{raw\-Values}!LineSensor@{Line\-Sensor}}
-\subsubsection[{raw\-Values}]{\setlength{\rightskip}{0pt plus 5cm}int Line\-Sensor\-::raw\-Values\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_a0d48bb25f8e1ee25a4757b9e201bd1a9}
+\subsubsection[{raw\-Values}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Line\-Sensor\-::raw\-Values\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_ac60b7766a763cfc7378cb6b1387a7324}
 
 
 contains the raw values for each line sensor 
 
 
 
-Definition at line 76 of file Line\-Sensor.\-h.
+Definition at line 81 of file Line\-Sensor.\-h.
+
+\hypertarget{classLineSensor_a729c00cce10a00a9cb6fcfc9c6904290}{\index{Line\-Sensor@{Line\-Sensor}!R\-I\-G\-H\-T\-\_\-\-E\-D\-G\-E@{R\-I\-G\-H\-T\-\_\-\-E\-D\-G\-E}}
+\index{R\-I\-G\-H\-T\-\_\-\-E\-D\-G\-E@{R\-I\-G\-H\-T\-\_\-\-E\-D\-G\-E}!LineSensor@{Line\-Sensor}}
+\subsubsection[{R\-I\-G\-H\-T\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-R\-I\-G\-H\-T\-\_\-\-E\-D\-G\-E = -\/1\hspace{0.3cm}{\ttfamily [static]}}}\label{classLineSensor_a729c00cce10a00a9cb6fcfc9c6904290}
+
+
+Definition at line 43 of file Line\-Sensor.\-h.
+
+\hypertarget{classLineSensor_a8a78ded72775b1b248f9d9e60b352b49}{\index{Line\-Sensor@{Line\-Sensor}!R\-I\-G\-H\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{R\-I\-G\-H\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
+\index{R\-I\-G\-H\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{R\-I\-G\-H\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!LineSensor@{Line\-Sensor}}
+\subsubsection[{R\-I\-G\-H\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-R\-I\-G\-H\-T\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D = -\/500\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_a8a78ded72775b1b248f9d9e60b352b49}
+
+
+Definition at line 75 of file Line\-Sensor.\-h.
+
+\hypertarget{classLineSensor_aeb37399c033a623b620803434f2b278f}{\index{Line\-Sensor@{Line\-Sensor}!sensor@{sensor}}
+\index{sensor@{sensor}!LineSensor@{Line\-Sensor}}
+\subsubsection[{sensor}]{\setlength{\rightskip}{0pt plus 5cm}Q\-T\-R\-Sensors\-R\-C Line\-Sensor\-::sensor\hspace{0.3cm}{\ttfamily [private]}}}\label{classLineSensor_aeb37399c033a623b620803434f2b278f}
+
+
+the Pululo library line sensor object 
+
+
+
+Definition at line 48 of file Line\-Sensor.\-h.
 
 \hypertarget{classLineSensor_af574319adc88f5949f03239b2bcbc222}{\index{Line\-Sensor@{Line\-Sensor}!sum@{sum}}
 \index{sum@{sum}!LineSensor@{Line\-Sensor}}
@@ -351,7 +406,18 @@ sum of raw line sensor values. used to detect intersections
 
 
 
-Definition at line 69 of file Line\-Sensor.\-h.
+Definition at line 78 of file Line\-Sensor.\-h.
+
+\hypertarget{classLineSensor_ae1de9394d9e0e4ab19628316d1111d8f}{\index{Line\-Sensor@{Line\-Sensor}!T\-I\-M\-E\-O\-U\-T@{T\-I\-M\-E\-O\-U\-T}}
+\index{T\-I\-M\-E\-O\-U\-T@{T\-I\-M\-E\-O\-U\-T}!LineSensor@{Line\-Sensor}}
+\subsubsection[{T\-I\-M\-E\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Line\-Sensor\-::\-T\-I\-M\-E\-O\-U\-T = 2500\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classLineSensor_ae1de9394d9e0e4ab19628316d1111d8f}
+
+
+timeout for the R\-C reading of the line sensors 
+
+
+
+Definition at line 87 of file Line\-Sensor.\-h.
 
 
 

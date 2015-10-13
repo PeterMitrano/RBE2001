@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['backoffreactor',['BackOffReactor',['../classBackOffReactor.html',1,'BackOffReactor'],['../classBackOffReactor.html#a4c7c2c714dcdab2d80f1ba851beab5b8',1,'BackOffReactor::BackOffReactor()']]],
+  ['backoffreactor_2ecpp',['BackOffReactor.cpp',['../BackOffReactor_8cpp.html',1,'']]],
+  ['backoffreactor_2eh',['BackOffReactor.h',['../BackOffReactor_8h.html',1,'']]],
   ['backofftime',['backOffTime',['../classBackOffTube.html#a46fdecac50000c6b1e9ecae3e42ea4b4',1,'BackOffTube']]],
   ['backofftube',['BackOffTube',['../classBackOffTube.html',1,'BackOffTube'],['../classBackOffTube.html#ab8fb886043a6df04258ac22415b543dd',1,'BackOffTube::BackOffTube()'],['../classBackOffTube.html#a6fedeb5bfc92b531a300ce2d95a1a3bb',1,'BackOffTube::BackOffTube(int leftSpeed, int rightSpeed)']]],
   ['backofftube_2ecpp',['BackOffTube.cpp',['../BackOffTube_8cpp.html',1,'']]],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scoottime',['scootTime',['../classScootPastIntersection.html#acfb41e5180724c0ffb71c841e0bb9ec3',1,'ScootPastIntersection']]],
+  ['sensor',['sensor',['../classLineSensor.html#aeb37399c033a623b620803434f2b278f',1,'LineSensor']]],
   ['setpoint',['setpoint',['../classArm.html#aa168ca685ff8170699ca535590c2af14',1,'Arm']]],
   ['slave_5fid',['SLAVE_ID',['../Util_8h.html#a2286162d279f2958046080d0a703332e',1,'Util.h']]],
   ['soft',['SOFT',['../classCloseGripper.html#a2b6cac5f41e2d57f180fdcf18aacae45',1,'CloseGripper']]],
