@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Here are the dank kids who made this:  <a href="https://petermitrano.github.io">Peter Mitrano</a>,  Chris O'Shea,  Travis Norris</p>
-<p>Friggen verison number:  3.14159</p>
+<p>Pictures and Videos are <a href="https://goo.gl/photos/xsBYmbexsEy4SRKu7">here</a></p>
 <h1><a class="anchor" id="Introduction"></a>
 Introduction</h1>
 <p>Sometimes figuring out how a robot works is hard, so we made this nice documentation. Steve operates on a paradigm called "Command Based Programming", as seen in <a href="https://wpilib.screenstepslive.com/s/4485/m/13809/l/241892-what-is-command-based-programming">WPILib</a> Essentially, the main program flow is a combination of commands and command groups. Them main advantages of command based are that it makes changing the robot's routine easy. Base commands like <a class="el" href="classRaiseArm.html" title="raises the arm ">RaiseArm</a> and <a class="el" href="classDriveUntilIntersection.html" title="drives until there is an intersection ">DriveUntilIntersection</a> are defined, and then composed into commands groups. In our program, the root command group is <a class="el" href="classGetDemRods.html" title="Overall program command. Composed of nine commands which together complete the whole task...">GetDemRods</a>, which is started in the setup. A <a class="el" href="classScheduler.html" title="is the master of all commands. It knows executes the inialize, execute, and end functions of each com...">Scheduler</a> class is used to keep track of which methods of which commands should run each loop. Along side our command based programming, there are a handful of time-based operations that are called directly in loop. These include:</p>
@@ -94,11 +94,12 @@ Introduction</h1>
 <li><a class="el" href="classLineSensor.html#afc809d2aa49426d949f76f68b0154050">LineSensor::cache</a></li>
 <li><a class="el" href="classArm.html#a009c19e5b213f692c24eab792cc40c47">Arm::control</a></li>
 </ul>
-<p>These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, <a class="el" href="classRobot.html#a4215f7e880311c2118f387df75effaf2">Robot::blinkLEDs</a> is controlled by the <a class="el" href="classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce">Robot::radiating</a> variable, which is set at the end of commands like <a class="el" href="classGetRodFromReactor.html" title="Navigate to reactor, pick up rod, and turn around. ">GetRodFromReactor</a>. </p>
+<p>These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, <a class="el" href="classRobot.html#a4215f7e880311c2118f387df75effaf2">Robot::blinkLEDs</a> is controlled by the <a class="el" href="classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce">Robot::radiating</a> variable, which is set at the end of commands like <a class="el" href="classGetRodFromReactor.html" title="Navigate to reactor, pick up rod, and turn around. ">GetRodFromReactor</a>.</p>
+<p>Our project was also featured on Developers Swearing! A twitter full of angry commit messages. <a href="https://twitter.com/gitlost/status/650595667237187584">Here's the tweet</a> </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 13 2015 12:12:01 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 13 2015 13:43:42 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

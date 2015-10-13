@@ -1,6 +1,6 @@
 Here are the dank kids who made this\-:  \href{https://petermitrano.github.io}{\tt Peter Mitrano},  Chris O'Shea,  Travis Norris
 
-Friggen verison number\-:  3.\-14159\hypertarget{index_Introduction}{}\section{Introduction}\label{index_Introduction}
+Pictures and Videos are \href{https://goo.gl/photos/xsBYmbexsEy4SRKu7}{\tt here}\hypertarget{index_Introduction}{}\section{Introduction}\label{index_Introduction}
 Sometimes figuring out how a robot works is hard, so we made this nice documentation. Steve operates on a paradigm called \char`\"{}\-Command Based Programming\char`\"{}, as seen in \href{https://wpilib.screenstepslive.com/s/4485/m/13809/l/241892-what-is-command-based-programming}{\tt W\-P\-I\-Lib} Essentially, the main program flow is a combination of commands and command groups. Them main advantages of command based are that it makes changing the robot's routine easy. Base commands like \hyperlink{classRaiseArm}{Raise\-Arm} and \hyperlink{classDriveUntilIntersection}{Drive\-Until\-Intersection} are defined, and then composed into commands groups. In our program, the root command group is \hyperlink{classGetDemRods}{Get\-Dem\-Rods}, which is started in the setup. A \hyperlink{classScheduler}{Scheduler} class is used to keep track of which methods of which commands should run each loop. Along side our command based programming, there are a handful of time-\/based operations that are called directly in loop. These include\-:
 \begin{DoxyItemize}
 \item \hyperlink{classRobot_ad86dbbb2ad0d065f3e4c30fd4b742e1c}{Robot\-::play\-Song}
@@ -12,4 +12,6 @@ Sometimes figuring out how a robot works is hard, so we made this nice documenta
 \item \hyperlink{classArm_a009c19e5b213f692c24eab792cc40c47}{Arm\-::control}
 \end{DoxyItemize}
 
-These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, \hyperlink{classRobot_a4215f7e880311c2118f387df75effaf2}{Robot\-::blink\-L\-E\-Ds} is controlled by the \hyperlink{classRobot_a77f62d85ab1cf34e79c2a3acd470a4ce}{Robot\-::radiating} variable, which is set at the end of commands like \hyperlink{classGetRodFromReactor}{Get\-Rod\-From\-Reactor}. 
+These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, \hyperlink{classRobot_a4215f7e880311c2118f387df75effaf2}{Robot\-::blink\-L\-E\-Ds} is controlled by the \hyperlink{classRobot_a77f62d85ab1cf34e79c2a3acd470a4ce}{Robot\-::radiating} variable, which is set at the end of commands like \hyperlink{classGetRodFromReactor}{Get\-Rod\-From\-Reactor}.
+
+Our project was also featured on Developers Swearing! A twitter full of angry commit messages. \href{https://twitter.com/gitlost/status/650595667237187584}{\tt Here's the tweet} 
