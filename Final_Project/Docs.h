@@ -6,8 +6,7 @@
  * \Author Chris O'Shea,
  * \Author Travis Norris
  *
- * Friggen verison number:
- * \Version 3.14159
+ * Pictures and Videos are <a href="https://goo.gl/photos/xsBYmbexsEy4SRKu7" >here</a>
  *
  * \section Introduction
  * Sometimes figuring out how a robot works is hard, so we made this nice documentation.
@@ -23,4 +22,8 @@
  *  - \link Arm::control \endlink
  *
  * These functions use flags to determine if they should spin empty or do some work, and commands interract with them by setting those flags. For instance, \link Robot::blinkLEDs \endlink is controlled by the \link Robot::radiating \endlink variable, which is set at the end of commands like GetRodFromReactor.
+ *
+ * Our project was also featured on Developers Swearing! A twitter full of angry commit messages.
+ * <a href='https://twitter.com/gitlost/status/650595667237187584'>Here's the tweet</a>
+ *
  */
