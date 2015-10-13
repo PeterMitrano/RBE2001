@@ -43,5 +43,5 @@ class BackOffTube : public Command {
     /** \brief
     * the time the robot drives back for
     */
-    const int backOffTime = 650;
+    const int backOffTime = 550;
 };

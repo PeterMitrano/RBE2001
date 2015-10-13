@@ -1,6 +1,6 @@
 #pragma once
 /** \brief
-* calibrates the line sensor 
+* calibrates the line sensor
 */
 #include "Command.h"
 #include "Robot.h"
@@ -24,13 +24,13 @@ class CalibrateLineSensor : public Command {
     bool isFinished();
 
     /** \brief
-    * stops the robot 
+    * stops the robot
     */
     void end();
   private:
 
     /** \brief
-    * defines how long the command runs for 
+    * defines how long the command runs for
     */
-    const static int CALIBRATE_TIME = 2000;
+    const static int CALIBRATE_TIME = 3400;
 };

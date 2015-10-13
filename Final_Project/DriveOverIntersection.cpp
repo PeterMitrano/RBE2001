@@ -3,7 +3,6 @@
 DriveOverIntersection::DriveOverIntersection() : Command("drive over intersection"){}
 
 void DriveOverIntersection::initialize(){
-  Robot::getInstance()->setSong(13,true);
 }
 
 void DriveOverIntersection::execute(){
@@ -12,7 +11,7 @@ void DriveOverIntersection::execute(){
 }
 
 bool DriveOverIntersection::isFinished(){
-  return !(Robot::getInstance()->lineSensor.atIntersection());
+  return Robot::getInstance()->lineSensor.notAtIntersection();
 }
 
 void DriveOverIntersection::end(){

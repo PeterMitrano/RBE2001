@@ -4,11 +4,10 @@
 #include "LowerArm.h"
 #include "CloseGripper.h"
 #include "PathPlanner.h"
-#include "BackOffTube.h"
+#include "BackOffReactor.h"
 
 StoreRodInReactor::StoreRodInReactor(const int reactorNumber) : CommandGroup("store rod in reactor") {
   this->reactorNumber = reactorNumber;
-  Robot::getInstance()->setSong(9,false);
 }
 
 void StoreRodInReactor::initialize(){
@@ -28,7 +27,7 @@ void StoreRodInReactor::initialize(){
   addSequential(new LowerArm());
   addSequential(new OpenGripper());
   addSequential(new RaiseArm());
-  addSequential(new BackOffTube(-46,-28));
+  addSequential(new BackOffReactor(reactorNumber));
 }
 
 void StoreRodInReactor::end(){

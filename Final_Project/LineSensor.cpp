@@ -2,11 +2,10 @@
 #include "Robot.h"
 #include <Arduino.h>
 
-LineSensor::LineSensor(){
-  for (int i=0;i<8;i++){
-    limits[i][0] = 1000;
-    limits[i][1] = -1000;
-  }
+unsigned char LineSensor::PINS[] = {A0, A1, A2, A3, A4, A5, A6, A7};
+
+LineSensor::LineSensor() :
+  sensor(PINS, NUM_SENSORS, TIMEOUT, LEDPIN){
 }
 
 void LineSensor::setup(){
@@ -14,39 +13,33 @@ void LineSensor::setup(){
 }
 
 void LineSensor::cache(){
+  //dividing by half of max line sensor values makes linePosition = 0 when we're centered
+  linePosition = sensor.readLine(rawValues) - ((NUM_SENSORS - 1 ) * 1000 / 2);
   sum = 0;
-  int wsum = 0;
-  for (int j = 0, i = PIN_0; i < PIN_0 + 8; i++, j++){
-    //number 3 is broken, so ignore it and it's complement
-    if (i != 3){
-
-     //scale the value to -100<x<100
-     int scaled = scale(analogRead(i), i);
-     sum += scaled;
-     wsum += scaled*(i-4);
-    }
+  for (int i=0;i<NUM_SENSORS;i++){
+    sum += rawValues[i];
   }
-  linePosition = wsum /((float) sum);
-}
-
-int LineSensor::scale(int sensorValue, int sensorPosition){
-  int min = limits[sensorPosition][0];
-  int max = limits[sensorPosition][1];
-
-  return map(sensorValue, min, max, -100, 100);
+  Serial.println(linePosition);
 }
 
 void LineSensor::calibrateLineSensors(){
-  //read the raw values
-  for (int i = PIN_0; i < PIN_0 + 8; i++){
-    int raw = analogRead(i);
-    limits[i][0] = raw < limits[i][0] ? raw : limits[i][0];
-    limits[i][1] = raw > limits[i][1] ? raw : limits[i][1];
-  }
+  sensor.calibrate();
+}
+
+bool LineSensor::notAtIntersection(){
+  return sum < NO_INTERSECTION_THRESHOLD;
 }
 
 bool LineSensor::atIntersection(){
   return sum > INTERSECTION_THRESHOLD;
+}
+
+bool LineSensor::lineFarLeft(){
+  return linePosition > LEFT_THRESHOLD;
+}
+
+bool LineSensor::lineFarRight(){
+  return linePosition < RIGHT_THRESHOLD;
 }
 
 int LineSensor::adjustmentPower(){
@@ -57,6 +50,5 @@ int LineSensor::adjustmentPower(){
 }
 
 bool LineSensor::onLine(){
-  return abs(linePosition) < ON_POS_THRESHOLD &&
-    (sum > LOW_SUM_THRESHOLD && sum < HIGH_SUM_THRESHOLD);
+  return abs(linePosition) < ON_POS_THRESHOLD;
 }

@@ -6,7 +6,6 @@ TurnUntilLine::TurnUntilLine(int direction) : Command("turn unti line"){
 }
 
 void TurnUntilLine::initialize(){
-  Robot::getInstance()->setSong(2,false);
 }
 
 void TurnUntilLine::execute(){

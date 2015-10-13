@@ -3,7 +3,7 @@
 DriveUntilReactorTube::DriveUntilReactorTube() : Command("drive until reactor tube"){}
 
 void DriveUntilReactorTube::initialize(){
-
+  Robot::getInstance()->setSong(4, false);
 }
 
 void DriveUntilReactorTube::execute(){

@@ -67,7 +67,7 @@ void Robot::stopDriving(){
 }
 
 void Robot::driveFwd(){
-  drive(travelSpeed+10,travelSpeed+10);
+  drive(travelSpeed,travelSpeed);
 }
 
 
@@ -76,8 +76,8 @@ void Robot::driveBwd(){
 }
 
 void Robot::followLine() {
-  int leftPower = travelSpeed + lineSensor.adjustmentPower();
-  int rightPower = travelSpeed - lineSensor.adjustmentPower();
+  int leftPower = travelSpeed - lineSensor.adjustmentPower();
+  int rightPower = travelSpeed + lineSensor.adjustmentPower();
   drive(leftPower, rightPower);
 }
 

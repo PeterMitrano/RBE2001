@@ -38,15 +38,14 @@ void loop() {
   if (!digitalRead(panicPin)){
     paused = !paused;
   }
-
+  Serial.println(freeMemory());
   steve->btClient.readMessage();
   steve->btClient.sendHeartbeat();
-  steve->debugPrint2(freeMemory());
 
   if (!paused){
 
     // Scheduler is in charge of running all the commands, so it must always be called
-    Scheduler::getInstance()->run();
+     Scheduler::getInstance()->run();
 
     // we also a few special functions, like cache and controlArm, which must run continuously, outside of all commands
     // while these could be done with commands, it's easier to just functions

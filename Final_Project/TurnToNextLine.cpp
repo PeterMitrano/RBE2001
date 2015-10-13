@@ -1,15 +1,20 @@
 #include "TurnToNextLine.h"
 
-#include "TurnOffLine.h"
-#include "TurnUntilLine.h"
+#include "TurnToEdge.h"
 #include "PathPlanner.h"
+#include "TurnUntilLine.h"
 
 TurnToNextLine::TurnToNextLine(int direction) : CommandGroup("turn to next line"){
-  //0 represents clockwise
-  //1 represent counter clockwise
-  this->direction = direction;
-  addSequential(new TurnOffLine(direction));
-  addSequential(new TurnUntilLine(direction));
+  if (direction == PathPlanner::CW){
+    addSequential(new TurnToEdge(LineSensor::LEFT_EDGE, PathPlanner::CW));
+    addSequential(new TurnToEdge(LineSensor::RIGHT_EDGE, PathPlanner::CW));
+    addSequential(new TurnUntilLine(PathPlanner::CW));
+  }
+  else if (direction == PathPlanner::CCW){
+    addSequential(new TurnToEdge(LineSensor::RIGHT_EDGE, PathPlanner::CCW));
+    addSequential(new TurnToEdge(LineSensor::LEFT_EDGE, PathPlanner::CCW));
+    addSequential(new TurnUntilLine(PathPlanner::CCW));
+  }
 }
 
 TurnToNextLine::TurnToNextLine() : TurnToNextLine(PathPlanner::CW){

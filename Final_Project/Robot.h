@@ -148,15 +148,15 @@ class Robot {
     /** \breif led pins and stuff*/
     static const int LED_PIN0 = 22,
                  LED_PIN1 = 23,
-                 BLINK_AND_SEND_PERIOD = 100; // in ms
+                 BLINK_AND_SEND_PERIOD = 50; // in ms
 
     /*can't figure out how to make these private and still have attach work */
     static const int leftWheelPin = 5;
     static const int rightWheelPin = 4;
 
     const int reactorTubeLimitPin = 28;
-    const int rotateSpeedForward = 43;
-    const int rotateSpeedBackward = -38;
+    const int rotateSpeedForward = 34;
+    const int rotateSpeedBackward = -32;
     const int travelSpeed = 30;
 
     static volatile unsigned long notPausedTime;

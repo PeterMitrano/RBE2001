@@ -4,8 +4,6 @@
 #include "DriveThroughIntersection.h"
 #include "DriveUntilReactorTube.h"
 #include "TurnToNextLine.h"
-#include "TurnUntilLine.h"
-#include "TurnOffLine.h"
 #include "Robot.h"
 
 PathPlanner::PathPlanner(){
@@ -18,6 +16,7 @@ PathPlanner::PathPlanner(){
 CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   char str[17];
   snprintf(str,17,"(%i,%i) to (%i,%i)",row,col,destRow,destCol);
+  Robot::getInstance()->debugPrint2(str);
 
   int dist;
   if (col != destCol || row!=destRow){
@@ -82,15 +81,12 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   Robot::getInstance()->col = destCol;
   Robot::getInstance()->direction = destDirection;
 
- // Robot::getInstance()->debugPrint2(str);
   Serial.println(str);
 
   return path;
 }
 
 void PathPlanner::planToFace(int destDirection){
-  
-  Robot::getInstance()->debugPrint2(freeMemory());
 
   // turning is dependant on location
   // some places (in from of storage/supply) don't have intersections

@@ -7,8 +7,8 @@
 #include "OpenGripper.h"
 
 CalibrateRoutine::CalibrateRoutine(): CommandGroup("calibrate routine"){
-  addParallel(new OpenGripper());
-  addParallel(new RaiseArm());
   addSequential(new CalibrateLineSensor());
+  addParallel(new OpenGripper());
+  addSequential(new RaiseArm());
   addSequential(new TurnUntilLine(PathPlanner::CW));
 }

@@ -1,17 +1,12 @@
 #include "GetRodFromReactor.h"
-#include "OpenGripper.h"
 #include "CloseGripper.h"
 #include "LowerArm.h"
 #include "RaiseArm.h"
-#include "DriveThroughIntersection.h"
-#include "BackOffTube.h"
-#include "DriveUntilReactorTube.h"
-#include "TurnToNextLine.h"
 #include "PathPlanner.h"
+#include "BackOffReactor.h"
 
 GetRodFromReactor::GetRodFromReactor(const int reactorNumber) : CommandGroup("get rod from reactor") {
   this->reactorNumber = reactorNumber;
-  Serial.println("noting to go to a reactor");
 }
 
 void GetRodFromReactor::initialize(){
@@ -30,7 +25,7 @@ void GetRodFromReactor::initialize(){
   addSequential(new LowerArm());
   addSequential(new CloseGripper(CloseGripper::SOFT));
   addSequential(new RaiseArm());
-  addSequential(new BackOffTube(-46,-28));
+  addSequential(new BackOffReactor(reactorNumber));
 }
 
 void GetRodFromReactor::end(){
