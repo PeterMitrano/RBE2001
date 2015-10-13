@@ -3,6 +3,11 @@
 }
 
 
+Backs off reactor and turns around.  
+
+
+
+
 {\ttfamily \#include $<$Back\-Off\-Reactor.\-h$>$}
 
 Inheritance diagram for Back\-Off\-Reactor\-:\begin{figure}[H]
@@ -15,21 +20,21 @@ Inheritance diagram for Back\-Off\-Reactor\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classBackOffReactor_a4c7c2c714dcdab2d80f1ba851beab5b8}{Back\-Off\-Reactor} (int \hyperlink{classBackOffReactor_ae5b8f5714a059f48405fd6ab7b3de851}{reactor\-Number})
-\item 
+\begin{DoxyCompactList}\small\item\em constructor needs to take which reactor you're going to \end{DoxyCompactList}\item 
 void \hyperlink{classBackOffReactor_a8e18c33979bac064a061382c8890a6b7}{initialize} ()
-\begin{DoxyCompactList}\small\item\em run once in the first iteration of the command's life. this will be overrided by individual commands \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em sets a song to play \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{classBackOffReactor_ae5b8f5714a059f48405fd6ab7b3de851}{reactor\-Number}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em internal value of which reactor you're going to \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+Backs off reactor and turns around. 
 
-
-Definition at line 6 of file Back\-Off\-Reactor.\-h.
+Definition at line 8 of file Back\-Off\-Reactor.\-h.
 
 
 
@@ -41,6 +46,10 @@ Definition at line 6 of file Back\-Off\-Reactor.\-h.
 \item[{int}]{reactor\-Number}
 \end{DoxyParamCaption}
 )}}\label{classBackOffReactor_a4c7c2c714dcdab2d80f1ba851beab5b8}
+
+
+constructor needs to take which reactor you're going to 
+
 
 
 Definition at line 8 of file Back\-Off\-Reactor.\-cpp.
@@ -57,7 +66,7 @@ Definition at line 8 of file Back\-Off\-Reactor.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBackOffReactor_a8e18c33979bac064a061382c8890a6b7}
 
 
-run once in the first iteration of the command's life. this will be overrided by individual commands 
+sets a song to play 
 
 
 
@@ -75,7 +84,11 @@ Definition at line 15 of file Back\-Off\-Reactor.\-cpp.
 \subsubsection[{reactor\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Back\-Off\-Reactor\-::reactor\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{classBackOffReactor_ae5b8f5714a059f48405fd6ab7b3de851}
 
 
-Definition at line 11 of file Back\-Off\-Reactor.\-h.
+internal value of which reactor you're going to 
+
+
+
+Definition at line 18 of file Back\-Off\-Reactor.\-h.
 
 
 

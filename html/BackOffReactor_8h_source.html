@@ -92,27 +92,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="BackOffReactor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Robot_8h.html">Robot.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="CommandGroup_8h.html">CommandGroup.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classBackOffReactor.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBackOffReactor.html">BackOffReactor</a> : <span class="keyword">public</span> <a class="code" href="classCommandGroup.html">CommandGroup</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classBackOffReactor.html#a4c7c2c714dcdab2d80f1ba851beab5b8">BackOffReactor</a>(<span class="keywordtype">int</span> <a class="code" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">reactorNumber</a>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBackOffReactor.html#a8e18c33979bac064a061382c8890a6b7">initialize</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">   11</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">reactorNumber</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Robot_8h.html">Robot.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="CommandGroup_8h.html">CommandGroup.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classBackOffReactor.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBackOffReactor.html">BackOffReactor</a> : <span class="keyword">public</span> <a class="code" href="classCommandGroup.html">CommandGroup</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classBackOffReactor.html#a4c7c2c714dcdab2d80f1ba851beab5b8">BackOffReactor</a>(<span class="keywordtype">int</span> <a class="code" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">reactorNumber</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBackOffReactor.html#a8e18c33979bac064a061382c8890a6b7">initialize</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">reactorNumber</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
 <div class="ttc" id="classCommandGroup_html"><div class="ttname"><a href="classCommandGroup.html">CommandGroup</a></div><div class="ttdoc">grouping commands is a useful abstraction. Commands groups execute commands in parallel or series ...</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroup_8h_source.html#l00009">CommandGroup.h:9</a></div></div>
-<div class="ttc" id="classBackOffReactor_html_a8e18c33979bac064a061382c8890a6b7"><div class="ttname"><a href="classBackOffReactor.html#a8e18c33979bac064a061382c8890a6b7">BackOffReactor::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">run once in the first iteration of the command&#39;s life. this will be overrided by individual commands ...</div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8cpp_source.html#l00015">BackOffReactor.cpp:15</a></div></div>
-<div class="ttc" id="classBackOffReactor_html"><div class="ttname"><a href="classBackOffReactor.html">BackOffReactor</a></div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8h_source.html#l00006">BackOffReactor.h:6</a></div></div>
+<div class="ttc" id="classBackOffReactor_html_a8e18c33979bac064a061382c8890a6b7"><div class="ttname"><a href="classBackOffReactor.html#a8e18c33979bac064a061382c8890a6b7">BackOffReactor::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">sets a song to play </div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8cpp_source.html#l00015">BackOffReactor.cpp:15</a></div></div>
+<div class="ttc" id="classBackOffReactor_html"><div class="ttname"><a href="classBackOffReactor.html">BackOffReactor</a></div><div class="ttdoc">Backs off reactor and turns around. </div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8h_source.html#l00008">BackOffReactor.h:8</a></div></div>
 <div class="ttc" id="Robot_8h_html"><div class="ttname"><a href="Robot_8h.html">Robot.h</a></div></div>
-<div class="ttc" id="classBackOffReactor_html_a4c7c2c714dcdab2d80f1ba851beab5b8"><div class="ttname"><a href="classBackOffReactor.html#a4c7c2c714dcdab2d80f1ba851beab5b8">BackOffReactor::BackOffReactor</a></div><div class="ttdeci">BackOffReactor(int reactorNumber)</div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8cpp_source.html#l00008">BackOffReactor.cpp:8</a></div></div>
-<div class="ttc" id="classBackOffReactor_html_ae5b8f5714a059f48405fd6ab7b3de851"><div class="ttname"><a href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">BackOffReactor::reactorNumber</a></div><div class="ttdeci">int reactorNumber</div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8h_source.html#l00011">BackOffReactor.h:11</a></div></div>
+<div class="ttc" id="classBackOffReactor_html_a4c7c2c714dcdab2d80f1ba851beab5b8"><div class="ttname"><a href="classBackOffReactor.html#a4c7c2c714dcdab2d80f1ba851beab5b8">BackOffReactor::BackOffReactor</a></div><div class="ttdeci">BackOffReactor(int reactorNumber)</div><div class="ttdoc">constructor needs to take which reactor you&#39;re going to </div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8cpp_source.html#l00008">BackOffReactor.cpp:8</a></div></div>
+<div class="ttc" id="classBackOffReactor_html_ae5b8f5714a059f48405fd6ab7b3de851"><div class="ttname"><a href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">BackOffReactor::reactorNumber</a></div><div class="ttdeci">int reactorNumber</div><div class="ttdoc">internal value of which reactor you&#39;re going to </div><div class="ttdef"><b>Definition:</b> <a href="BackOffReactor_8h_source.html#l00018">BackOffReactor.h:18</a></div></div>
 <div class="ttc" id="CommandGroup_8h_html"><div class="ttname"><a href="CommandGroup_8h.html">CommandGroup.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 13 2015 02:17:03 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 13 2015 12:07:31 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

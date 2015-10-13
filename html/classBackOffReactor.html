@@ -93,6 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Backs off reactor and turns around.  
+ <a href="classBackOffReactor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="BackOffReactor_8h_source.html">BackOffReactor.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BackOffReactor:</div>
@@ -108,9 +111,10 @@ Inheritance diagram for BackOffReactor:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c7c2c714dcdab2d80f1ba851beab5b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackOffReactor.html#a4c7c2c714dcdab2d80f1ba851beab5b8">BackOffReactor</a> (int <a class="el" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">reactorNumber</a>)</td></tr>
+<tr class="memdesc:a4c7c2c714dcdab2d80f1ba851beab5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor needs to take which reactor you're going to  <a href="#a4c7c2c714dcdab2d80f1ba851beab5b8">More...</a><br/></td></tr>
 <tr class="separator:a4c7c2c714dcdab2d80f1ba851beab5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e18c33979bac064a061382c8890a6b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackOffReactor.html#a8e18c33979bac064a061382c8890a6b7">initialize</a> ()</td></tr>
-<tr class="memdesc:a8e18c33979bac064a061382c8890a6b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">run once in the first iteration of the command's life. this will be overrided by individual commands  <a href="#a8e18c33979bac064a061382c8890a6b7">More...</a><br/></td></tr>
+<tr class="memdesc:a8e18c33979bac064a061382c8890a6b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets a song to play  <a href="#a8e18c33979bac064a061382c8890a6b7">More...</a><br/></td></tr>
 <tr class="separator:a8e18c33979bac064a061382c8890a6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classCommandGroup"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classCommandGroup')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classCommandGroup.html">CommandGroup</a></td></tr>
 <tr class="memitem:a0167d59d8a96fbc0c1999f19610c7358 inherit pub_methods_classCommandGroup"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandGroup.html#a0167d59d8a96fbc0c1999f19610c7358">CommandGroup</a> (const String <a class="el" href="classCommand.html#a19f7ad73ca8599ad47f9b7bcccc52610">name</a>)</td></tr>
@@ -165,6 +169,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ae5b8f5714a059f48405fd6ab7b3de851"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851">reactorNumber</a></td></tr>
+<tr class="memdesc:ae5b8f5714a059f48405fd6ab7b3de851"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal value of which reactor you're going to  <a href="#ae5b8f5714a059f48405fd6ab7b3de851">More...</a><br/></td></tr>
 <tr class="separator:ae5b8f5714a059f48405fd6ab7b3de851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -181,8 +186,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a19f7ad73ca8599ad47f9b7bcccc52610 inherit pub_attribs_classCommand"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="BackOffReactor_8h_source.html#l00006">6</a> of file <a class="el" href="BackOffReactor_8h_source.html">BackOffReactor.h</a>.</p>
+<div class="textblock"><p>Backs off reactor and turns around. </p>
+
+<p>Definition at line <a class="el" href="BackOffReactor_8h_source.html#l00008">8</a> of file <a class="el" href="BackOffReactor_8h_source.html">BackOffReactor.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4c7c2c714dcdab2d80f1ba851beab5b8"></a>
 <div class="memitem">
@@ -197,6 +203,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>constructor needs to take which reactor you're going to </p>
 
 <p>Definition at line <a class="el" href="BackOffReactor_8cpp_source.html#l00008">8</a> of file <a class="el" href="BackOffReactor_8cpp_source.html">BackOffReactor.cpp</a>.</p>
 
@@ -224,7 +232,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>run once in the first iteration of the command's life. this will be overrided by individual commands </p>
+<p>sets a song to play </p>
 
 <p>Reimplemented from <a class="el" href="classCommandGroup.html#a99800c5dbd05ab750aa0bb27518d0467">CommandGroup</a>.</p>
 
@@ -251,7 +259,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BackOffReactor_8h_source.html#l00011">11</a> of file <a class="el" href="BackOffReactor_8h_source.html">BackOffReactor.h</a>.</p>
+<p>internal value of which reactor you're going to </p>
+
+<p>Definition at line <a class="el" href="BackOffReactor_8h_source.html#l00018">18</a> of file <a class="el" href="BackOffReactor_8h_source.html">BackOffReactor.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +272,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 13 2015 02:17:03 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 13 2015 12:07:32 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
