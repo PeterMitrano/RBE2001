@@ -33,5 +33,6 @@ void GetRodFromSupply::initialize(){
 
 void GetRodFromSupply::end(){
   Robot::getInstance()->radiating = true;
+  Robot::getInstance()->highRadiating = true;
 }
 

@@ -15,7 +15,13 @@ PathPlanner::PathPlanner(){
 
 CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
   char str[17];
-  snprintf(str,17,"(%i,%i) to (%i,%i)",row,col,destRow,destCol);
+  snprintf(str,17,"(%i,%i,%i)->(%i,%i,%i)",
+      row,
+      col,
+      direction,
+      destRow,
+      destCol,
+      destDirection);
   Robot::getInstance()->debugPrint2(str);
 
   int dist;

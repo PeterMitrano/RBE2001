@@ -111,6 +111,7 @@ class Robot {
      * to turn off LEDs, set this to false
      */
     bool radiating = false;
+    bool highRadiating = false;
 
 
     static const int CALIBRATE_TIME = 3000;

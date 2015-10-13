@@ -68,7 +68,7 @@ class LineSensor {
     int derivative;
 
     /** \brief if all 8 sensors are 90% black, we've reached an intersection */
-    const static int INTERSECTION_THRESHOLD = 8 * 700;
+    const static int INTERSECTION_THRESHOLD = 8 * 950;
     const static int NO_INTERSECTION_THRESHOLD = 8 * 300;
 
     const static int LEFT_THRESHOLD = 1000;

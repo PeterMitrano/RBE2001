@@ -88,10 +88,8 @@ void BTClient::readMessage(){
             break;
           case STOP_MSG:
             Robot::getInstance()->paused = true;
-            Serial.println("STOP!!!");
             break;
           case RESUME_MSG:
-            Serial.println("RESUME...");
             Robot::getInstance()->paused = false;
           default:
             //only these 4 should be sent by field
@@ -99,7 +97,7 @@ void BTClient::readMessage(){
 				}
         char tubeInfo[17];
         snprintf(tubeInfo,17,"str=%02i sply=%02i",storage,supply);
-        Robot::getInstance()->debugPrint(tubeInfo);
+        //Robot::getInstance()->debugPrint(tubeInfo);
      }
     }
   }

@@ -32,4 +32,5 @@ void StoreRodInReactor::initialize(){
 
 void StoreRodInReactor::end(){
   Robot::getInstance()->radiating = false;
+  Robot::getInstance()->highRadiating = false;
 }

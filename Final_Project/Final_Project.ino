@@ -38,7 +38,6 @@ void loop() {
   if (!digitalRead(panicPin)){
     paused = !paused;
   }
-  Serial.println(freeMemory());
   steve->btClient.readMessage();
   steve->btClient.sendHeartbeat();
 
@@ -54,6 +53,9 @@ void loop() {
     steve->blinkLEDs();
     steve->arm.control();
     steve->resetTimerFlags();
+    char str[17];
+    snprintf(str,17,"I'm at (%i,%i)",steve->row, steve->col);
+    steve->debugPrint(str);
   }
   else {
     steve->stopDriving();

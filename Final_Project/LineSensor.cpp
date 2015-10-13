@@ -19,7 +19,6 @@ void LineSensor::cache(){
   for (int i=0;i<NUM_SENSORS;i++){
     sum += rawValues[i];
   }
-  Serial.println(linePosition);
 }
 
 void LineSensor::calibrateLineSensors(){
