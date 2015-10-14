@@ -16,7 +16,7 @@ class CloseGripper: public Command {
     void initialize();
 
     /** \brief
-    * does nothing 
+    * does nothing
     */
     void execute();
 
@@ -25,11 +25,11 @@ class CloseGripper: public Command {
     bool isFinished();
 
     /** \brief
-    * does nothing 
+    * does nothing
     */
     void end();
     const static int HARD = 180,
-          SOFT = 165;
+          SOFT = 162;
   private:
     int force;
 };

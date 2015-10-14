@@ -19,5 +19,5 @@ void BackOffReactor::initialize(){
   else if (reactorNumber == 2){
     Robot::getInstance()->direction = PathPlanner::WEST;
   }
-  Robot::getInstance()->setSong(9, false);
+  Robot::getInstance()->setSong(8, false);
 }

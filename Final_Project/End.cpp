@@ -3,7 +3,7 @@
 End::End() : Command("END!!!"){}
 
 void End::initialize(){
-  Robot::getInstance()->pauseSong();
+  Robot::getInstance()->setSong(6, true);
 }
 
 void End::execute(){}

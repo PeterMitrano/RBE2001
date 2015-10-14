@@ -5,6 +5,7 @@
 
 Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;
+bool Robot::paused = false;
 volatile unsigned long Robot::notPausedTime = 0l;
 
 Robot::Robot() : lcd(40,41,42,43,44,45) {
@@ -173,5 +174,7 @@ unsigned long Robot::getTime(){
 }
 
 void Robot::incrementTime(){
-  notPausedTime++;
+  if (!paused) {
+    notPausedTime++;
+  }
 }

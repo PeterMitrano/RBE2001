@@ -105,7 +105,7 @@ class Robot {
     /** \brief set by bluetooth if resume/stop message is recieve
      * all drive motor commands depend on it being true
      */
-    bool paused;
+    static bool paused;
 
     /** \brief flag for blinking LEDs based on radiaiton
      * to turn off LEDs, set this to false
