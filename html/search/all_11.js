@@ -11,7 +11,6 @@ var searchData=
   ['senddebugstring',['sendDebugString',['../classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c',1,'BTClient']]],
   ['sendheartbeat',['sendHeartbeat',['../classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f',1,'BTClient']]],
   ['sendradiationalert',['sendRadiationAlert',['../classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10',1,'BTClient']]],
-  ['sendstatus',['sendStatus',['../classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a',1,'BTClient']]],
   ['sensor',['sensor',['../classLineSensor.html#aeb37399c033a623b620803434f2b278f',1,'LineSensor']]],
   ['set',['set',['../classLinkedList.html#a08ce5b6527cefbd221324569fdb10969',1,'LinkedList']]],
   ['setpoint',['setpoint',['../classArm.html#aa168ca685ff8170699ca535590c2af14',1,'Arm']]],

@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 1088.435374
+%%BoundingBox: 0 0 500 1020.408163
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.459375 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.490000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 16 def
+/rows 15 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -178,7 +178,6 @@ boxfont setfont
 (CalibrateLineSensor) cw
 (CloseGripper) cw
 (CommandGroup) cw
-(Drive) cw
 (DriveOverIntersection) cw
 (DriveUntilIntersection) cw
 (DriveUntilReactorTube) cw
@@ -200,13 +199,12 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Command) 0.000000 15.000000 box
- (BackOffTube) 1.000000 14.000000 box
- (CalibrateLineSensor) 1.000000 13.000000 box
- (CloseGripper) 1.000000 12.000000 box
- (CommandGroup) 1.000000 11.000000 box
-1.000000 11.000000 mark
- (Drive) 1.000000 10.000000 box
+ (Command) 0.000000 14.000000 box
+ (BackOffTube) 1.000000 13.000000 box
+ (CalibrateLineSensor) 1.000000 12.000000 box
+ (CloseGripper) 1.000000 11.000000 box
+ (CommandGroup) 1.000000 10.000000 box
+1.000000 10.000000 mark
  (DriveOverIntersection) 1.000000 9.000000 box
  (DriveUntilIntersection) 1.000000 8.000000 box
  (DriveUntilReactorTube) 1.000000 7.000000 box
@@ -221,9 +219,7 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 0.000000 14.250000 out
-solid
-0 0.000000 14.500000 hedge
+1 0.000000 13.250000 out
 solid
 0 0.000000 13.500000 hedge
 solid
@@ -253,4 +249,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 15.000000 0.500000 vedge
+0.000000 14.000000 0.500000 vedge

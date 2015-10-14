@@ -1,6 +1,7 @@
 var searchData=
 [
   ['radiating',['radiating',['../classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce',1,'Robot']]],
+  ['radiation_5fperiod',['RADIATION_PERIOD',['../classBTClient.html#af104d8cffa9b3360c2b28acf07acc03a',1,'BTClient']]],
   ['rawvalues',['rawValues',['../classLineSensor.html#ac60b7766a763cfc7378cb6b1387a7324',1,'LineSensor']]],
   ['reactornumber',['reactorNumber',['../classBackOffReactor.html#ae5b8f5714a059f48405fd6ab7b3de851',1,'BackOffReactor::reactorNumber()'],['../classGetRodFromReactor.html#ad2c4d389db38e728e540206aed467670',1,'GetRodFromReactor::reactorNumber()'],['../classGetRodFromSupply.html#aa1f52824921af63ffd7a17ed40f95b3f',1,'GetRodFromSupply::reactorNumber()'],['../classStoreRodInReactor.html#a5d989548741b48953a5bb4e20f294d72',1,'StoreRodInReactor::reactorNumber()']]],
   ['reactortubelimitpin',['reactorTubeLimitPin',['../classRobot.html#a351d754436c8f569432ef7a06641f98a',1,'Robot']]],

@@ -128,9 +128,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a57a82b64a1233a66450c1d9ebe48774c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c">sendDebugString</a> (String message)</td></tr>
 <tr class="memdesc:a57a82b64a1233a66450c1d9ebe48774c"><td class="mdescLeft">&#160;</td><td class="mdescRight">send string to field computer for debugging  <a href="#a57a82b64a1233a66450c1d9ebe48774c">More...</a><br/></td></tr>
 <tr class="separator:a57a82b64a1233a66450c1d9ebe48774c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a">sendStatus</a> ()</td></tr>
-<tr class="memdesc:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">send status  <a href="#a8820e63eebe5ab16fac9b7cb522fc55a">More...</a><br/></td></tr>
-<tr class="separator:a8820e63eebe5ab16fac9b7cb522fc55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e827d16926d45a4b7c18dda0e59837b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a8e827d16926d45a4b7c18dda0e59837b">readMessage</a> ()</td></tr>
 <tr class="memdesc:a8e827d16926d45a4b7c18dda0e59837b"><td class="mdescLeft">&#160;</td><td class="mdescRight">read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful  <a href="#a8e827d16926d45a4b7c18dda0e59837b">More...</a><br/></td></tr>
 <tr class="separator:a8e827d16926d45a4b7c18dda0e59837b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,8 +175,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a64bd4b5e464d0b6a57957428ef559142"><td class="memItemLeft" align="right" valign="top">ReactorProtocol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a64bd4b5e464d0b6a57957428ef559142">pcol</a></td></tr>
 <tr class="memdesc:a64bd4b5e464d0b6a57957428ef559142"><td class="mdescLeft">&#160;</td><td class="mdescRight">protocol decoder  <a href="#a64bd4b5e464d0b6a57957428ef559142">More...</a><br/></td></tr>
 <tr class="separator:a64bd4b5e464d0b6a57957428ef559142"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a946cc60b431ec813642b97b0c4b76cf3"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a946cc60b431ec813642b97b0c4b76cf3">lastSent</a></td></tr>
-<tr class="separator:a946cc60b431ec813642b97b0c4b76cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d60a64f08c8f4f8f384fc03444d643"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a43d60a64f08c8f4f8f384fc03444d643">lastSentHeartbeat</a></td></tr>
+<tr class="separator:a43d60a64f08c8f4f8f384fc03444d643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905901f9d8ca2a1ac3f63b1cd1ec6151"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a905901f9d8ca2a1ac3f63b1cd1ec6151">lastSentRadiation</a></td></tr>
+<tr class="separator:a905901f9d8ca2a1ac3f63b1cd1ec6151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a7d3382ab8bbdf4b7d78b7b69ff85f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a41a7d3382ab8bbdf4b7d78b7b69ff85f">received_storage</a> = false</td></tr>
 <tr class="separator:a41a7d3382ab8bbdf4b7d78b7b69ff85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af00b18b695ecc4bdeea133572eb0fd6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#af00b18b695ecc4bdeea133572eb0fd6d">received_supply</a> = false</td></tr>
@@ -192,8 +191,10 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:a9467446e5173d60a224c22f07dbba8de"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a9467446e5173d60a224c22f07dbba8de">HEARTBEAT_PERIOD</a> = 1500</td></tr>
-<tr class="separator:a9467446e5173d60a224c22f07dbba8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a636a5a8d0bd9c61d7a1e5566e3cfd"><td class="memItemLeft" align="right" valign="top">static const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#a83a636a5a8d0bd9c61d7a1e5566e3cfd">HEARTBEAT_PERIOD</a> = 1500</td></tr>
+<tr class="separator:a83a636a5a8d0bd9c61d7a1e5566e3cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af104d8cffa9b3360c2b28acf07acc03a"><td class="memItemLeft" align="right" valign="top">static const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBTClient.html#af104d8cffa9b3360c2b28acf07acc03a">RADIATION_PERIOD</a> = 750</td></tr>
+<tr class="separator:af104d8cffa9b3360c2b28acf07acc03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>functions for parsing and sending bluetooth messages Bluetooth is checked every loop and stored in member variables in this clas when a command wants to get the location of the tubes, it can do so instantaneously by looking at the last stored value </p>
@@ -240,7 +241,7 @@ Static Private Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00058">58</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00055">55</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +347,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>read from Serial3 and store into Message instance returns Message if successful, null if unsuccessful </p>
 
-<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00071">71</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00078">78</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +385,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>send the given data to the field computer </p>
 
-<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00059">59</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00071">71</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +422,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>send 0x00 to field computer </p>
 
-<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00047">47</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00062">62</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -441,25 +442,6 @@ Static Private Attributes</h2></td></tr>
 <p>send 0xff to the field computer </p>
 
 <p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00043">43</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8820e63eebe5ab16fac9b7cb522fc55a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BTClient::sendStatus </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>send status </p>
-
-<p>Definition at line <a class="el" href="BTClient_8cpp_source.html#l00051">51</a> of file <a class="el" href="BTClient_8cpp_source.html">BTClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +485,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>master object </p>
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00073">73</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00070">70</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -517,11 +499,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00054">54</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00051">51</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9467446e5173d60a224c22f07dbba8de"></a>
+<a class="anchor" id="a83a636a5a8d0bd9c61d7a1e5566e3cfd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -529,7 +511,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int BTClient::HEARTBEAT_PERIOD = 1500</td>
+          <td class="memname">const unsigned long BTClient::HEARTBEAT_PERIOD = 1500</td>
         </tr>
       </table>
   </td>
@@ -539,11 +521,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00078">78</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00075">75</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a946cc60b431ec813642b97b0c4b76cf3"></a>
+<a class="anchor" id="a43d60a64f08c8f4f8f384fc03444d643"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -551,7 +533,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long BTClient::lastSent</td>
+          <td class="memname">unsigned long BTClient::lastSentHeartbeat</td>
         </tr>
       </table>
   </td>
@@ -561,7 +543,29 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00080">80</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00078">78</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a905901f9d8ca2a1ac3f63b1cd1ec6151"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long BTClient::lastSentRadiation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00078">78</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -577,7 +581,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>status variables for sending messages </p>
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00054">54</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00051">51</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -591,7 +595,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00054">54</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00051">51</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -615,6 +619,28 @@ Static Private Attributes</h2></td></tr>
 
 <p>protocol decoder </p>
 
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00073">73</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af104d8cffa9b3360c2b28acf07acc03a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long BTClient::RADIATION_PERIOD = 750</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>Definition at line <a class="el" href="BTClient_8h_source.html#l00076">76</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
@@ -637,7 +663,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00081">81</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00079">79</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -659,7 +685,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00082">82</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00080">80</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -683,7 +709,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>raw integer (or hex if you want) representation for storage and supply </p>
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00085">85</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00083">83</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -705,7 +731,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00085">85</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
+<p>Definition at line <a class="el" href="BTClient_8h_source.html#l00083">83</a> of file <a class="el" href="BTClient_8h_source.html">BTClient.h</a>.</p>
 
 </div>
 </div>
@@ -716,7 +742,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 14 2015 11:12:23 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 14 2015 17:37:06 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

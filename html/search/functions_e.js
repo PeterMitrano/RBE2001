@@ -6,7 +6,6 @@ var searchData=
   ['senddebugstring',['sendDebugString',['../classBTClient.html#a57a82b64a1233a66450c1d9ebe48774c',1,'BTClient']]],
   ['sendheartbeat',['sendHeartbeat',['../classBTClient.html#a4bf8f58f2c83834cab585e69c55c171f',1,'BTClient']]],
   ['sendradiationalert',['sendRadiationAlert',['../classBTClient.html#a70cc30b8de8632bd6fb81972a9409a10',1,'BTClient']]],
-  ['sendstatus',['sendStatus',['../classBTClient.html#a8820e63eebe5ab16fac9b7cb522fc55a',1,'BTClient']]],
   ['set',['set',['../classLinkedList.html#a08ce5b6527cefbd221324569fdb10969',1,'LinkedList']]],
   ['setsong',['setSong',['../classRobot.html#a87e94e8db5092976d1125c674cf2b519',1,'Robot']]],
   ['settimeout',['setTimeout',['../classCommand.html#adfbbaa47b15c80c2a713d24e48b843a8',1,'Command']]],

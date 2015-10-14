@@ -2,6 +2,7 @@ var searchData=
 [
   ['radiating',['radiating',['../classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce',1,'Robot']]],
   ['radiation_5fmsg',['RADIATION_MSG',['../classBTClient.html#aa4e607f3ba1fea67548e2c2864915cb8a6a321a640ef7a6d5e9bbc48c66f0129f',1,'BTClient']]],
+  ['radiation_5fperiod',['RADIATION_PERIOD',['../classBTClient.html#af104d8cffa9b3360c2b28acf07acc03a',1,'BTClient']]],
   ['raisearm',['RaiseArm',['../classRaiseArm.html',1,'RaiseArm'],['../classRaiseArm.html#a91b62d0ce0bae3391a2fdb617b603f8b',1,'RaiseArm::RaiseArm()']]],
   ['raisearm_2ecpp',['RaiseArm.cpp',['../RaiseArm_8cpp.html',1,'']]],
   ['raisearm_2eh',['RaiseArm.h',['../RaiseArm_8h.html',1,'']]],

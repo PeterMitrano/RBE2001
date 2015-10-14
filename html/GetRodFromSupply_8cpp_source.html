@@ -112,8 +112,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classPathPlanner.html">PathPlanner</a> *planner = <span class="keyword">new</span> <a class="code" href="classPathPlanner.html">PathPlanner</a>();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classCommandGroup.html">CommandGroup</a> *pathToStorage = planner-&gt;<a class="code" href="classPathPlanner.html#acfae981cdde0b63b700bb1e2e9ffc1a6">plan</a>(destRow, destCol, destDirection);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classCommandGroup.html#a6b75192504dc74794651e0d82bb83488">addSequential</a>(<span class="keyword">new</span> <a class="code" href="classRaiseArm.html">RaiseArm</a>());</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classCommandGroup.html#a6b75192504dc74794651e0d82bb83488">addSequential</a>(<span class="keyword">new</span> <a class="code" href="classOpenGripper.html">OpenGripper</a>());</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classCommandGroup.html#a8709a47f6f44a6993cd9f705b360054b">addParallel</a>(<span class="keyword">new</span> <a class="code" href="classRaiseArm.html">RaiseArm</a>());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classCommandGroup.html#a8709a47f6f44a6993cd9f705b360054b">addParallel</a>(<span class="keyword">new</span> <a class="code" href="classOpenGripper.html">OpenGripper</a>());</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classCommandGroup.html#a6b75192504dc74794651e0d82bb83488">addSequential</a>(pathToStorage);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classCommandGroup.html#a6b75192504dc74794651e0d82bb83488">addSequential</a>(<span class="keyword">new</span> <a class="code" href="classCloseGripper.html">CloseGripper</a>(<a class="code" href="classCloseGripper.html#af1d1dab59b0bddacb0e82e676e47797a">CloseGripper::HARD</a>));</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classCommandGroup.html#a6b75192504dc74794651e0d82bb83488">addSequential</a>(<span class="keyword">new</span> <a class="code" href="classBackOffTube.html">BackOffTube</a>(-23,-23));</div>
@@ -138,6 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classRobot_html_a77f62d85ab1cf34e79c2a3acd470a4ce"><div class="ttname"><a href="classRobot.html#a77f62d85ab1cf34e79c2a3acd470a4ce">Robot::radiating</a></div><div class="ttdeci">bool radiating</div><div class="ttdoc">flag for blinking LEDs based on radiaiton to turn off LEDs, set this to false </div><div class="ttdef"><b>Definition:</b> <a href="Robot_8h_source.html#l00113">Robot.h:113</a></div></div>
 <div class="ttc" id="classCloseGripper_html_af1d1dab59b0bddacb0e82e676e47797a"><div class="ttname"><a href="classCloseGripper.html#af1d1dab59b0bddacb0e82e676e47797a">CloseGripper::HARD</a></div><div class="ttdeci">static const int HARD</div><div class="ttdef"><b>Definition:</b> <a href="CloseGripper_8h_source.html#l00031">CloseGripper.h:31</a></div></div>
 <div class="ttc" id="DriveUntilReactorTube_8h_html"><div class="ttname"><a href="DriveUntilReactorTube_8h.html">DriveUntilReactorTube.h</a></div></div>
+<div class="ttc" id="classCommandGroup_html_a8709a47f6f44a6993cd9f705b360054b"><div class="ttname"><a href="classCommandGroup.html#a8709a47f6f44a6993cd9f705b360054b">CommandGroup::addParallel</a></div><div class="ttdeci">void addParallel(Command *command)</div><div class="ttdef"><b>Definition:</b> <a href="CommandGroup_8cpp_source.html#l00010">CommandGroup.cpp:10</a></div></div>
 <div class="ttc" id="OpenGripper_8h_html"><div class="ttname"><a href="OpenGripper_8h.html">OpenGripper.h</a></div></div>
 <div class="ttc" id="classGetRodFromSupply_html_a6cd4c581c1a6a0aac1ccf6667e532757"><div class="ttname"><a href="classGetRodFromSupply.html#a6cd4c581c1a6a0aac1ccf6667e532757">GetRodFromSupply::end</a></div><div class="ttdeci">void end()</div><div class="ttdoc">called once at the end, once isFinished() returned true. this will be overrided by individual command...</div><div class="ttdef"><b>Definition:</b> <a href="GetRodFromSupply_8cpp_source.html#l00034">GetRodFromSupply.cpp:34</a></div></div>
 <div class="ttc" id="PathPlanner_8h_html"><div class="ttname"><a href="PathPlanner_8h.html">PathPlanner.h</a></div></div>
@@ -156,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 14 2015 11:12:22 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 14 2015 17:37:06 for RBE 2001 Group #1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
