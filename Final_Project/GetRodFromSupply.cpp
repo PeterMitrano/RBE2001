@@ -20,8 +20,8 @@ void GetRodFromSupply::initialize(){
   PathPlanner *planner = new PathPlanner();
   CommandGroup *pathToStorage = planner->plan(destRow, destCol, destDirection);
 
-  addSequential(new RaiseArm());
-  addSequential(new OpenGripper());
+  addParallel(new RaiseArm());
+  addParallel(new OpenGripper());
   addSequential(pathToStorage);
 	addSequential(new CloseGripper(CloseGripper::HARD));
 	addSequential(new BackOffTube(-23,-23));
