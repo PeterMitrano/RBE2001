@@ -75,8 +75,6 @@ int \hyperlink{classRobot_ac25b4dfc2e9e5aa86ec5684d075d32b8}{direction}
 \begin{DoxyCompactList}\small\item\em the object for tracking position over the lines \end{DoxyCompactList}\item 
 Liquid\-Crystal \hyperlink{classRobot_aa2182958e636a5b3e0383643a48ca6f8}{lcd}
 \begin{DoxyCompactList}\small\item\em lcd to debug \end{DoxyCompactList}\item 
-bool \hyperlink{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}{paused}
-\begin{DoxyCompactList}\small\item\em set by bluetooth if resume/stop message is recieve all drive motor commands depend on it being true \end{DoxyCompactList}\item 
 bool \hyperlink{classRobot_a77f62d85ab1cf34e79c2a3acd470a4ce}{radiating} = false
 \begin{DoxyCompactList}\small\item\em flag for blinking L\-E\-Ds based on radiaiton to turn off L\-E\-Ds, set this to false \end{DoxyCompactList}\item 
 bool \hyperlink{classRobot_a52d4eac720f8d9afe84ebb5f4ea4a82e}{high\-Radiating} = false
@@ -84,6 +82,8 @@ bool \hyperlink{classRobot_a52d4eac720f8d9afe84ebb5f4ea4a82e}{high\-Radiating} =
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+static bool \hyperlink{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}{paused} = false
+\begin{DoxyCompactList}\small\item\em set by bluetooth if resume/stop message is recieve all drive motor commands depend on it being true \end{DoxyCompactList}\item 
 static const int \hyperlink{classRobot_ac40abfa06749a68604af90c00e2a3fee}{C\-A\-L\-I\-B\-R\-A\-T\-E\-\_\-\-T\-I\-M\-E} = 3000
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
@@ -161,7 +161,7 @@ there's only one robot, so use private constructor and instance
 
 
 
-Definition at line 10 of file Robot.\-cpp.
+Definition at line 11 of file Robot.\-cpp.
 
 
 
@@ -182,7 +182,7 @@ true when limit switch is hit
 \end{DoxyReturn}
 
 
-Definition at line 114 of file Robot.\-cpp.
+Definition at line 115 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ace271ca13d78102450dbd929b4302560}{\index{Robot@{Robot}!back\-Up@{back\-Up}}
 \index{back\-Up@{back\-Up}!Robot@{Robot}}
@@ -198,7 +198,7 @@ blindly back up
 
 
 
-Definition at line 87 of file Robot.\-cpp.
+Definition at line 88 of file Robot.\-cpp.
 
 \hypertarget{classRobot_afb5418d31b61a64e0930fd1fb495c8c9}{\index{Robot@{Robot}!blink\-And\-Send\-Interrupt@{blink\-And\-Send\-Interrupt}}
 \index{blink\-And\-Send\-Interrupt@{blink\-And\-Send\-Interrupt}!Robot@{Robot}}
@@ -213,7 +213,7 @@ interrupt changes state of L\-E\-D blink and send i2c
 
 
 
-Definition at line 46 of file Robot.\-cpp.
+Definition at line 47 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a4215f7e880311c2118f387df75effaf2}{\index{Robot@{Robot}!blink\-L\-E\-Ds@{blink\-L\-E\-Ds}}
 \index{blink\-L\-E\-Ds@{blink\-L\-E\-Ds}!Robot@{Robot}}
@@ -228,7 +228,7 @@ inidicate radiation by blinking L\-E\-Ds every 1/5th of a second
 
 
 
-Definition at line 50 of file Robot.\-cpp.
+Definition at line 51 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ac92db8f42fda2c7c70f51abae605039d}{\index{Robot@{Robot}!debug\-Print@{debug\-Print}}
 \index{debug\-Print@{debug\-Print}!Robot@{Robot}}
@@ -243,7 +243,7 @@ print to 0,0 on lcd
 
 
 
-Definition at line 150 of file Robot.\-cpp.
+Definition at line 151 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a99842e804accd91c9b1a246f04a1336b}{\index{Robot@{Robot}!debug\-Print@{debug\-Print}}
 \index{debug\-Print@{debug\-Print}!Robot@{Robot}}
@@ -254,7 +254,7 @@ Definition at line 150 of file Robot.\-cpp.
 )}}\label{classRobot_a99842e804accd91c9b1a246f04a1336b}
 
 
-Definition at line 143 of file Robot.\-cpp.
+Definition at line 144 of file Robot.\-cpp.
 
 \hypertarget{classRobot_aeec39516d614f74a4512e1cb0d309f30}{\index{Robot@{Robot}!debug\-Print2@{debug\-Print2}}
 \index{debug\-Print2@{debug\-Print2}!Robot@{Robot}}
@@ -265,7 +265,7 @@ Definition at line 143 of file Robot.\-cpp.
 )}}\label{classRobot_aeec39516d614f74a4512e1cb0d309f30}
 
 
-Definition at line 164 of file Robot.\-cpp.
+Definition at line 165 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a1ab0c3edf15750d4f1cd5de56b1547dd}{\index{Robot@{Robot}!debug\-Print2@{debug\-Print2}}
 \index{debug\-Print2@{debug\-Print2}!Robot@{Robot}}
@@ -276,7 +276,7 @@ Definition at line 164 of file Robot.\-cpp.
 )}}\label{classRobot_a1ab0c3edf15750d4f1cd5de56b1547dd}
 
 
-Definition at line 157 of file Robot.\-cpp.
+Definition at line 158 of file Robot.\-cpp.
 
 \hypertarget{classRobot_aad8723ec56e9fc8ca17da5ef79de37d6}{\index{Robot@{Robot}!drive@{drive}}
 \index{drive@{drive}!Robot@{Robot}}
@@ -292,7 +292,7 @@ low level function for setting motor power input is limited between -\/100 (full
 
 
 
-Definition at line 100 of file Robot.\-cpp.
+Definition at line 101 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ac8d0a3e0308350bc1fc3a2a78be2aaca}{\index{Robot@{Robot}!drive\-Bwd@{drive\-Bwd}}
 \index{drive\-Bwd@{drive\-Bwd}!Robot@{Robot}}
@@ -307,7 +307,7 @@ backward drive
 
 
 
-Definition at line 77 of file Robot.\-cpp.
+Definition at line 78 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a35897f5e7b5c8b29cc6d386c6089abea}{\index{Robot@{Robot}!drive\-Fwd@{drive\-Fwd}}
 \index{drive\-Fwd@{drive\-Fwd}!Robot@{Robot}}
@@ -322,7 +322,7 @@ forward drive no line track
 
 
 
-Definition at line 72 of file Robot.\-cpp.
+Definition at line 73 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a6e3caf6e0346f6a54557eb57a79fc4f4}{\index{Robot@{Robot}!follow\-Line@{follow\-Line}}
 \index{follow\-Line@{follow\-Line}!Robot@{Robot}}
@@ -337,7 +337,7 @@ uses line sensor to follow line following is done by a weighted power to each wh
 
 
 
-Definition at line 81 of file Robot.\-cpp.
+Definition at line 82 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ac6f19dc31b435f8a2d43944ba49286d0}{\index{Robot@{Robot}!get\-Instance@{get\-Instance}}
 \index{get\-Instance@{get\-Instance}!Robot@{Robot}}
@@ -352,7 +352,7 @@ lsingle accesor
 
 
 
-Definition at line 16 of file Robot.\-cpp.
+Definition at line 17 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a7fa6a61bffbc8e1e6ba1dd01fd297d63}{\index{Robot@{Robot}!get\-Time@{get\-Time}}
 \index{get\-Time@{get\-Time}!Robot@{Robot}}
@@ -367,7 +367,7 @@ returns the time while not paused. used by commands that run based on time
 
 
 
-Definition at line 171 of file Robot.\-cpp.
+Definition at line 172 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a1e33a376bf08bdbe5ac0d84221d06be9}{\index{Robot@{Robot}!increment\-Time@{increment\-Time}}
 \index{increment\-Time@{increment\-Time}!Robot@{Robot}}
@@ -382,7 +382,7 @@ increment time counter
 
 
 
-Definition at line 175 of file Robot.\-cpp.
+Definition at line 176 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a9908dfe5a06008e6203edca94d30327a}{\index{Robot@{Robot}!pause@{pause}}
 \index{pause@{pause}!Robot@{Robot}}
@@ -408,7 +408,7 @@ sends correct int over i2c to slave to plause song
 
 
 
-Definition at line 135 of file Robot.\-cpp.
+Definition at line 136 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ad86dbbb2ad0d065f3e4c30fd4b742e1c}{\index{Robot@{Robot}!play\-Song@{play\-Song}}
 \index{play\-Song@{play\-Song}!Robot@{Robot}}
@@ -423,7 +423,7 @@ sends the encoded data over i2c to the slave
 
 
 
-Definition at line 127 of file Robot.\-cpp.
+Definition at line 128 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ab7c87529c987ede12b934bdfc768507e}{\index{Robot@{Robot}!reset\-Timer\-Flags@{reset\-Timer\-Flags}}
 \index{reset\-Timer\-Flags@{reset\-Timer\-Flags}!Robot@{Robot}}
@@ -438,7 +438,7 @@ sets all timer flags to false
 
 
 
-Definition at line 139 of file Robot.\-cpp.
+Definition at line 140 of file Robot.\-cpp.
 
 \hypertarget{classRobot_ac521de09b10ea0ee7f14171d54fee195}{\index{Robot@{Robot}!rotate\-C\-C\-W@{rotate\-C\-C\-W}}
 \index{rotate\-C\-C\-W@{rotate\-C\-C\-W}!Robot@{Robot}}
@@ -453,7 +453,7 @@ fixed power rotate
 
 
 
-Definition at line 95 of file Robot.\-cpp.
+Definition at line 96 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a9aa9c5a6f1b28861ffcee6ef1c1ed90d}{\index{Robot@{Robot}!rotate\-C\-W@{rotate\-C\-W}}
 \index{rotate\-C\-W@{rotate\-C\-W}!Robot@{Robot}}
@@ -468,7 +468,7 @@ fixed power rotate
 
 
 
-Definition at line 91 of file Robot.\-cpp.
+Definition at line 92 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a87e94e8db5092976d1125c674cf2b519}{\index{Robot@{Robot}!set\-Song@{set\-Song}}
 \index{set\-Song@{set\-Song}!Robot@{Robot}}
@@ -484,7 +484,7 @@ sends correct int over i2c to slave to play song. Simple protocol is used to enc
 
 
 
-Definition at line 119 of file Robot.\-cpp.
+Definition at line 120 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a1fc37e3c329d59795f6adf44199d4df9}{\index{Robot@{Robot}!setup@{setup}}
 \index{setup@{setup}!Robot@{Robot}}
@@ -499,7 +499,7 @@ lsetup servos and stuff. called by main setup
 
 
 
-Definition at line 23 of file Robot.\-cpp.
+Definition at line 24 of file Robot.\-cpp.
 
 \hypertarget{classRobot_a959f64b4829ade78bb332f205b50ee70}{\index{Robot@{Robot}!stop\-Driving@{stop\-Driving}}
 \index{stop\-Driving@{stop\-Driving}!Robot@{Robot}}
@@ -514,7 +514,7 @@ stop driving
 
 
 
-Definition at line 68 of file Robot.\-cpp.
+Definition at line 69 of file Robot.\-cpp.
 
 
 
@@ -657,7 +657,7 @@ Definition at line 163 of file Robot.\-h.
 
 \hypertarget{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}{\index{Robot@{Robot}!paused@{paused}}
 \index{paused@{paused}!Robot@{Robot}}
-\subsubsection[{paused}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\-::paused}}\label{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}
+\subsubsection[{paused}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\-::paused = false\hspace{0.3cm}{\ttfamily [static]}}}\label{classRobot_a6a1fae6e6ee0a3298b9e60d3f50ad12a}
 
 
 set by bluetooth if resume/stop message is recieve all drive motor commands depend on it being true 
