@@ -40,6 +40,7 @@ void loop() {
   }
   steve->btClient.readMessage();
   steve->btClient.sendHeartbeat();
+  steve->btClient.sendRadiationAlert();
 
   if (!paused){
 

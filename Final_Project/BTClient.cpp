@@ -41,31 +41,38 @@ int BTClient::openStorageTube(){
 }
 
 void BTClient::sendRadiationAlert(){
-  sendData(RADIATION_MSG, NULL);
+  unsigned long t = millis();
+  unsigned long dt = t - lastSentRadiation;
+  if (dt > RADIATION_PERIOD){
+    lastSentRadiation = t;
+    byte data[3];
+
+    if (Robot::getInstance()->radiating){
+
+      data[0] = 0x2C;
+
+      if (Robot::getInstance()->highRadiating){
+        data[0] = 0xFF;
+      }
+      sendData(RADIATION_MSG, data);
+    }
+  }
 }
 
 void BTClient::sendHeartbeat(){
-  sendData(HEARTBEAT_MSG, NULL);
-}
-
-void BTClient::sendStatus(){
-  byte status[3];
-//  = {movementStatus,
-//    gripperStatus,
-//    operationStatus};
-  sendData(STATUS_MSG, status);
+  unsigned long t = millis();
+  unsigned long dt = t - lastSentHeartbeat;
+  if (dt > HEARTBEAT_PERIOD){
+    lastSentHeartbeat = t;
+    sendData(HEARTBEAT_MSG, NULL);
+  }
 }
 
 void BTClient::sendData(MSG_TYPE type, byte data[3]){
-  unsigned long t = millis();
-  unsigned long dt = t - lastSent;
-  if (dt > HEARTBEAT_PERIOD){
-    lastSent = t;
-    byte pkt[10];
-    pcol.setDst(0x00);
-    int sz = pcol.createPkt(type, data, pkt);
-    btMaster.sendPkt(pkt, sz);
-  }
+  byte pkt[10];
+  pcol.setDst(0x00);
+  int sz = pcol.createPkt(type, data, pkt);
+  btMaster.sendPkt(pkt, sz);
 }
 
 void BTClient::readMessage(){

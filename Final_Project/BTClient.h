@@ -42,9 +42,6 @@ class BTClient {
     /** \brief send string to field computer for debugging */
     void sendDebugString(String message);
 
-    /** \brief send status */
-    void sendStatus();
-
     /** \brief read from Serial3 and store into Message instance
      * returns Message if successful, null if unsuccessful
      */
@@ -75,9 +72,10 @@ class BTClient {
     /** \brief protocol decoder */
     ReactorProtocol pcol;
 
-    static const int HEARTBEAT_PERIOD = 1500;
+    static const unsigned long HEARTBEAT_PERIOD = 1500,
+                 RADIATION_PERIOD = 750;
 
-    unsigned long lastSent;
+    unsigned long lastSentHeartbeat, lastSentRadiation;
     bool received_storage = false,
          received_supply = false;
 
