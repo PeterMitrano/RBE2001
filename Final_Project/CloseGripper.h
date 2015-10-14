@@ -28,9 +28,20 @@ class CloseGripper: public Command {
     * does nothing
     */
     void end();
-    const static int HARD = 180,
-          SOFT = 162;
+
+    /** \brief HARD is used when we close the gripper all the way.
+     * This is used when we pick up tubes from supply
+     */
+    const static int HARD = 180;
+
+    /** \brief SOFT is used when we close the gripper part of the way.
+     * this is used when we pick up tubes from the reactor
+     */
+    const static int SOFT = 162;
+
   private:
+
+    /** \brief force to grip with */
     int force;
 };
 

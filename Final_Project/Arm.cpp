@@ -1,7 +1,7 @@
 #include "Arm.h"
 #include "Robot.h"
 
-Arm::Arm() : encoder(encAPin, encBPin), gripper() {
+Arm::Arm() : gripper() {
   derivative = -1;
   setpoint = 500;
 }
@@ -9,7 +9,6 @@ Arm::Arm() : encoder(encAPin, encBPin), gripper() {
 void Arm::setup() {
   pinMode(motorFwdPin, OUTPUT);
   pinMode(motorRevPin, OUTPUT);
-  pinMode(limPin, INPUT_PULLUP);
 
   gripper.setup();
 }
@@ -17,6 +16,9 @@ void Arm::setup() {
 void Arm::control(){
   unsigned long t = millis();
   unsigned long dt = t - lastControlTime;
+
+  // since loop can vary in execution time, we wait for CONTROL_TIME to update PID
+  // this could easily be replaced by dividing by loop time for integral and derivative, but this was easier
   if (dt > CONTROL_TIME){
     long pos = position();
     long error = setpoint - pos;
@@ -26,8 +28,11 @@ void Arm::control(){
     }
 
     integral += error;
+
+    //integral cap
     integral = integral < MAX_INTEGRAL ? integral : MAX_INTEGRAL;
     integral = integral > -MAX_INTEGRAL ? integral : -MAX_INTEGRAL;
+
     derivative = error - lastError;
 
     int val = kP * error + kI * integral + kD * derivative;
@@ -52,30 +57,15 @@ void Arm::stop(){
 
 bool Arm::atPosition(){
   int diff = abs(position() - setpoint);
-  return diff < tolerance;
-}
-
-int Arm::_position(){
-  return encoder.read();
+  return diff < TOLERANCE;
 }
 
 int Arm::position(){
   return analogRead(potPin);
 }
 
-bool Arm::atLim(){
-  return !digitalRead(limPin);
-}
-
-void Arm::rawDown(){
-  drive(-60);
-}
-
-void Arm::resetEncoder(){
-  encoder.write(0);
-}
-
 void Arm::drive(int power) {
+  // limit the power
   if (power > 100) power = 100;
   if (power < -100) power = -100;
 
@@ -92,9 +82,5 @@ void Arm::drive(int power) {
     int revAdjusted = map(power, -100, 0, 255, 0);
     analogWrite(motorFwdPin, 0);
     analogWrite(motorRevPin, revAdjusted);
-  }
-  else {
-    analogWrite(motorFwdPin, 0);
-    analogWrite(motorRevPin, 0);
   }
 }

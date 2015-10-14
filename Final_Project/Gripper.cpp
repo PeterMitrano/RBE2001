@@ -10,10 +10,8 @@ void Gripper::setup(){
 
 void Gripper::cls(int force = CloseGripper::SOFT){
   motor.write(force);
-  Robot::getInstance()->btClient.gripperStatus = 1;
 }
 
 void Gripper::opn(){
-  Robot::getInstance()->btClient.gripperStatus = 2;
   motor.write(0);
 }

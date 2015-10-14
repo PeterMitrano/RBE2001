@@ -2,6 +2,7 @@
 #include "PathPlanner.h"
 #include <stdlib.h>
 #include <Wire.h>
+#include "Util.h"
 
 Robot *Robot::instance = NULL;
 bool Robot::timeToBlinkAndSend = false;

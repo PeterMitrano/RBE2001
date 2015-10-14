@@ -1,5 +1,6 @@
 #include "BTClient.h"
 #include "Robot.h"
+#include "Util.h"
 
 BTClient::BTClient() :
   pcol(byte(::TEAM_NUMBER)) {
@@ -23,10 +24,6 @@ int BTClient::availableSupplyTube(){
   else {
     return -1;
   }
-}
-
-bool BTClient::isRodAt(int column){
-  return availableSupplyTube() == column;
 }
 
 int BTClient::openStorageTube(){
@@ -81,30 +78,35 @@ void BTClient::readMessage(){
   byte messageType;
 
   if (btMaster.readPacket(pkt)){
+
     //don't care about ones not for us
     if (pkt[4] == TEAM_NUMBER || pkt[4] == 0){
+
       if (pcol.getData(pkt,rawData,messageType)){
+
 				switch(messageType){
           case STORAGE_MSG:
-            received_storage = true;
             storage = rawData[0];
             break;
+
           case SUPPLY_MSG:
-            received_supply = true;
             supply = rawData[0];
             break;
+
           case STOP_MSG:
             Robot::getInstance()->paused = true;
             break;
+
           case RESUME_MSG:
             Robot::getInstance()->paused = false;
+
           default:
-            //only these 4 should be sent by field
+            // only these 4 should be sent by field
+            // maybe we should complain if we get here...
             break;
 				}
         char tubeInfo[17];
         snprintf(tubeInfo,17,"str=%02i sply=%02i",storage,supply);
-        //Robot::getInstance()->debugPrint(tubeInfo);
      }
     }
   }

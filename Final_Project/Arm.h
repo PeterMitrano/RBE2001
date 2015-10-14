@@ -1,9 +1,7 @@
-
 #pragma once
 /** \brief functions here control the 4 bar linkage/slider crank
  */
 
-#include <Encoder.h>
 #include <Servo.h>
 #include "Gripper.h"
 #include <Arduino.h>
@@ -36,19 +34,8 @@ class Arm {
     /** \brief return true if position is within tolerance of setpoint */
     bool atPosition();
 
-    /** \brief return position in encoder counts */
-    int _position();
+    /** \brief return position from 0 to 1024 */
     int position();
-
-    /** \brief returns true if limit switch is hit */
-    bool atLim();
-
-    /** \brief drives the arm down very slowly.
-     * used in calibrating */
-    void rawDown();
-
-    /** \brief sets encoder count to 0 */
-    void resetEncoder();
 
     /** \brief gripper object is part of the arm */
     Gripper gripper;
@@ -58,21 +45,14 @@ class Arm {
     /** \brief raw function for controlling */
     void drive(int power);
 
-    Encoder encoder;
-
-    int potPin = 9;
-    int motorFwdPin = 10;
-    int motorRevPin = 9;
-    int encAPin = 19;
-    int encBPin = 18;
-    int limPin = 25;
+    /** pin numbers */
+    int potPin = 9,
+        motorFwdPin = 10,
+        motorRevPin = 9;
 
     /** \brief last time in millis that the PID was run.
      * used to only update PID every CONTROL_TIME */
     unsigned long lastControlTime = 0;
-
-    /** \brief constant in millis for how often to calculate PID */
-    const unsigned long CONTROL_TIME = 50l;
 
     /** \brief used by PID to computer derivative */
     long derivative = 0;
@@ -83,9 +63,14 @@ class Arm {
     /** \brief last error in encoder ticks */
     long lastError = 0;
 
+    /** \brief setpoint for the arm. Command to control the arm set this indirectly */
+    long setpoint = 0;
+
+    /** \brief constant in millis for how often to calculate PID */
+    const unsigned long CONTROL_TIME = 50l;
+
     /** \brief how many encoder ticks until we're considered at our setpoint */
-    const long _tolerance = 100;
-    const long tolerance = 12;
+    const long TOLERANCE = 12;
 
     /** \brief PI constants */
     const double kP = 0.65;
@@ -95,8 +80,6 @@ class Arm {
     /** \brief absolute value cap of integral.
      * this protects us from <a href = "https://en.wikipedia.org/wiki/Integral_windup">integral windup</a> */
     const long MAX_INTEGRAL = 500l;
-
-    long setpoint = 0;
 
     /** positions */
     const long UP_POSITION = 800l;

@@ -8,7 +8,6 @@
 BackOffReactor::BackOffReactor(int reactorNumber){
   this->reactorNumber = reactorNumber;
   addSequential(new BackOffTube(-60,-60));
-  //sketchy bullshit because turning right by the rod is really fucking hard
   addSequential(new TurnToNextLine());
 }
 
@@ -19,5 +18,7 @@ void BackOffReactor::initialize(){
   else if (reactorNumber == 2){
     Robot::getInstance()->direction = PathPlanner::WEST;
   }
+
+  // look in tracks.txt for what songs are what
   Robot::getInstance()->setSong(8, false);
 }

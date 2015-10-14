@@ -1,7 +1,9 @@
 #pragma once
+
 /** \brief
 * backs off of the tube
 */
+
 #include "Robot.h"
 #include "Command.h"
 
@@ -34,6 +36,7 @@ class BackOffTube : public Command {
     * stops the robot
     */
     void end();
+
   private:
     /** \brief
     * variables used for the command
@@ -41,7 +44,7 @@ class BackOffTube : public Command {
     int rPower,lPower;
 
     /** \brief
-    * the time the robot drives back for
+    * the time the robot drives back for in milliseconds
     */
     const int backOffTime = 550;
 };

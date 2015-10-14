@@ -7,6 +7,7 @@ CloseGripper::CloseGripper(int force) : Command("close gripper") {
 }
 
 void CloseGripper::initialize(){
+  //just give 400ms to close the gripper
   setTimeout(400);
   Robot::getInstance()->arm.gripper.cls(force);
 }
