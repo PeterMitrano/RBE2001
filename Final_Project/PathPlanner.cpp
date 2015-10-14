@@ -77,17 +77,9 @@ CommandGroup *PathPlanner::plan(int destRow, int destCol, int destDirection){
     path->addSequential(new DriveUntilReactorTube());
   }
 
-  for (int i = 0; i < path->commands.size(); i++){
-    Serial.print("  ");
-    Serial.println(path->commands.get(i)->name);
-  }
-  Serial.println("...]");
-
   Robot::getInstance()->row = destRow;
   Robot::getInstance()->col = destCol;
   Robot::getInstance()->direction = destDirection;
-
-  Serial.println(str);
 
   return path;
 }
